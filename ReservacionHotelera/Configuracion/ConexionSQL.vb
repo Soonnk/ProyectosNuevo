@@ -68,8 +68,8 @@ Public Class ConexionSQL
     Public Function stringConn() As String
 
         Dim cadena As String
-
-        cadena = "Data Source= .\CNLEHF ;Initial Catalog= CNLEHFDB ;User Id= ESTRATEGA ;Password= 1234 ;pooling=no;"
+        'Posibilidad de cambio en el usuario si se requiere
+        cadena = "Data Source= .\CNLEHF ;Initial Catalog= CNLEHFDB ;User Id= usuario1 ;Password= 1234 ;pooling=no;"
 
         Return cadena
 
