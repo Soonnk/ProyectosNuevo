@@ -1,4 +1,4 @@
-﻿Public Class Clientes
+﻿Public Class eClientes
     Private id As Integer
     Private nombre As String
     Private apellido As String

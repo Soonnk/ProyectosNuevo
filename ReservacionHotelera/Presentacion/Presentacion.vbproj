@@ -73,13 +73,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -94,6 +87,42 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="pAgregarClientes.Designer.vb">
+      <DependentUpon>pAgregarClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pAgregarClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pAgregarHabitaciones.Designer.vb">
+      <DependentUpon>pAgregarHabitaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pAgregarHabitaciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pAgregarReservaciones.Designer.vb">
+      <DependentUpon>pAgregarReservaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pAgregarReservaciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pConsultarClientes.Designer.vb">
+      <DependentUpon>pConsultarClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pConsultarClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pConsultarHabitaciones.Designer.vb">
+      <DependentUpon>pConsultarHabitaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pConsultarHabitaciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pConsultarReservaciones.Designer.vb">
+      <DependentUpon>pConsultarReservaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pConsultarReservaciones.vb">
+      <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,4 @@
-﻿Public Class Clientes
+﻿Public Class nClientes
     'nueva clase
 
 

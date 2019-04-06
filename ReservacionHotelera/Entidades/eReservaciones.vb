@@ -1,4 +1,4 @@
-﻿Public Class Reservaciones
+﻿Public Class eReservaciones
     Private id As Integer
     Private numeroHabitaciones As Integer
     Private formaPago As String
@@ -7,10 +7,10 @@
     Private fechaSalida As Date
     Private horaSalida As DateTime
     Private precioTotal As Decimal
-     Private atendio As String
+    Private atendio As String
     Private estatus As Char
-    Private habitacion As Habitaciones
-    Private cliente As Clientes
+    Private habitacion As eHabitaciones
+    Private cliente As eClientes
     Public Sub New()
         Me.numeroHabitaciones = 0
         Me.formaPago = ""
@@ -115,19 +115,19 @@
             End If
         End Set
     End Property
-    Public Property FullHabitacion() As Habitaciones
+    Public Property FullHabitacion() As eHabitaciones
         Get
             Return Me.habitacion
         End Get
-        Set(value As Habitaciones)
+        Set(value As eHabitaciones)
             habitacion = value
         End Set
     End Property
-    Public Property FullCliente() As Clientes
+    Public Property FullCliente() As eClientes
         Get
             Return Me.cliente
         End Get
-        Set(value As Clientes)
+        Set(value As eClientes)
             cliente = value
         End Set
     End Property
