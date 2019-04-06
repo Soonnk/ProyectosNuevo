@@ -9,23 +9,15 @@
     Private telefono As String
     Private correo As String
 
-    Public Sub New(ByVal nombre As String,
-                   ByVal apellido As String,
-                   ByVal direccion As String,
-                   ByVal municipio As String,
-                   ByVal estado As String,
-                   ByVal pais As String,
-                   ByVal telefono As String,
-                   ByVal correo As String
-                  )
-        Me.nombre = nombre
-        Me.apellido = apellido
-        Me.direccion = direccion
-        Me.municipio = municipio
-        Me.estado = estado
-        Me.pais = pais
-        Me.telefono = telefono
-        Me.correo = correo
+    Public Sub New()
+        Me.nombre = ""
+        Me.apellido = ""
+        Me.direccion = ""
+        Me.municipio = ""
+        Me.estado = ""
+        Me.pais = ""
+        Me.telefono = ""
+        Me.correo = ""
     End Sub
 
     Public Property FullNombre() As String
