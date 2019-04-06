@@ -30,7 +30,7 @@
         Get
             Return Me._id
         End Get
-        Set(value As Integer)
+        Set(ByVal value As Integer)
             If value <> "" Then
                 _id = value
             End If
@@ -40,7 +40,7 @@
         Get
             Return Me._numeroHabitaciones
         End Get
-        Set(value As Integer)
+        Set(ByVal value As Integer)
             If value <> "" Then
                 _numeroHabitaciones = value
             End If
@@ -50,7 +50,7 @@
         Get
             Return Me._formaPago
         End Get
-        Set(value As String)
+        Set(ByVal value As String)
             If value <> "" Then
                 _formaPago = value
             End If
@@ -60,7 +60,7 @@
         Get
             Return Me._fechaLlegada
         End Get
-        Set(value As Date)
+        Set(ByVal value As Date)
             If value <> "" Then
                 _fechaLlegada = value
             End If
@@ -70,7 +70,7 @@
         Get
             Return Me._horaLlegada
         End Get
-        Set(value As DateTime)
+        Set(ByVal value As DateTime)
             If value <> "" Then
                 _horaLlegada = value
             End If
@@ -80,7 +80,7 @@
         Get
             Return Me._fechaSalida
         End Get
-        Set(value As Date)
+        Set(ByVal value As Date)
             If value <> "" Then
                 _fechaSalida = value
             End If
@@ -90,7 +90,7 @@
         Get
             Return Me._horaSalida
         End Get
-        Set(value As DateTime)
+        Set(ByVal value As DateTime)
             If value <> "" Then
                 _horaSalida = value
             End If
@@ -100,7 +100,7 @@
         Get
             Return Me._precioTotal
         End Get
-        Set(value As Decimal)
+        Set(ByVal value As Decimal)
             If value <> "" Then
                 _precioTotal = value
             End If
@@ -110,7 +110,7 @@
         Get
             Return Me._atendio
         End Get
-        Set(value As String)
+        Set(ByVal value As String)
             If value <> "" Then
                 _atendio = value
             End If
@@ -120,7 +120,7 @@
         Get
             Return Me._estatus
         End Get
-        Set(value As Char)
+        Set(ByVal value As Char)
             If value <> "" Then
                 _estatus = value
             End If
@@ -130,7 +130,7 @@
         Get
             Return Me._habitacion
         End Get
-        Set(value As Habitaciones)
+        Set(ByVal value As Habitaciones)
             _habitacion = value
         End Set
     End Property
@@ -138,7 +138,7 @@
         Get
             Return Me._cliente
         End Get
-        Set(value As Clientes)
+        Set(ByVal value As Clientes)
             _cliente = value
         End Set
     End Property

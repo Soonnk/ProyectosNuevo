@@ -25,7 +25,7 @@
         Get
             Return Me._id
         End Get
-        Set(value As String)
+        Set(ByVal value As String)
             If value <> "" Then
                 _id = value
             End If
@@ -35,7 +35,7 @@
         Get
             Return Me._nombre
         End Get
-        Set(value As String)
+        Set(ByVal value As String)
             If value <> "" Then
                 _nombre = value
             End If
@@ -45,7 +45,7 @@
         Get
             Return Me._apellido
         End Get
-        Set(value As String)
+        Set(ByVal value As String)
             If value <> "" Then
                 _apellido = value
             End If
@@ -55,7 +55,7 @@
         Get
             Return Me._direccion
         End Get
-        Set(value As String)
+        Set(ByVal value As String)
             If value <> "" Then
                 _direccion = value
             End If
@@ -65,7 +65,7 @@
         Get
             Return Me._municipio
         End Get
-        Set(value As String)
+        Set(ByVal value As String)
             If value <> "" Then
                 _municipio = value
             End If
@@ -75,7 +75,7 @@
         Get
             Return Me._estado
         End Get
-        Set(value As String)
+        Set(ByVal value As String)
             If value <> "" Then
                 estado = value
             End If
@@ -85,7 +85,7 @@
         Get
             Return Me._pais
         End Get
-        Set(value As String)
+        Set(ByVal value As String)
             If value <> "" Then
                 _pais = value
             End If
@@ -95,7 +95,7 @@
         Get
             Return Me._telefono
         End Get
-        Set(value As String)
+        Set(ByVal value As String)
             If value <> "" Then
                 _telefono = value
             End If
@@ -105,7 +105,7 @@
         Get
             Return Me._correo
         End Get
-        Set(value As String)
+        Set(ByVal value As String)
             If value <> "" Then
                 _correo = value
             End If

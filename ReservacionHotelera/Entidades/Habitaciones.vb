@@ -14,7 +14,7 @@
         Get
             Return Me._id
         End Get
-        Set(value As String)
+        Set(ByVal value As String)
             If value <> "" Then
                 _id = value
             End If
@@ -24,7 +24,7 @@
         Get
             Return Me._descripcion
         End Get
-        Set(value As String)
+        Set(ByVal value As String)
             If value <> "" Then
                 _descripcion = value
             End If
@@ -34,7 +34,7 @@
         Get
             Return Me._capacidad
         End Get
-        Set(value As Integer)
+        Set(ByVal value As Integer)
             If value <> "" Then
                 _capacidad = value
             End If
@@ -44,7 +44,7 @@
         Get
             Return Me._precioPorNoche
         End Get
-        Set(value As Decimal)
+        Set(ByVal value As Decimal)
             If value <> "" Then
                 _precioPorNoche = value
             End If
