@@ -11,29 +11,18 @@
     Private estatus As Char
     Private habitacion As Habitaciones
     Private cliente As Clientes
-    Public Sub New(ByVal numeroHabitaciones As Integer,
-                   ByVal formaPago As String,
-                   ByVal fechaLlegada As Date,
-                   ByVal horaLlegada As DateTime,
-                   ByVal fechaSalida As Date,
-                   ByVal horaSalida As DateTime,
-                   ByVal precioTotal As Decimal,
-                   ByVal atendio As String,
-                   ByVal estatus As Char,
-                   ByVal habitacion As Habitaciones,
-                   ByVal cliente As Clientes
-                  )
-        Me.numeroHabitaciones = numeroHabitaciones
-        Me.formaPago = formaPago
-        Me.fechaLlegada = fechaLlegada
-        Me.horaLlegada = horaLlegada
-        Me.fechaSalida = fechaSalida
-        Me.horaSalida = horaSalida
-        Me.precioTotal = precioTotal
-        Me.atendio = atendio
-        Me.estatus = estatus
-        Me.habitacion = habitacion
-        Me.cliente = cliente
+    Public Sub New()
+        Me.numeroHabitaciones = 0
+        Me.formaPago = ""
+        Me.fechaLlegada = Today()
+        Me.horaLlegada = Now()
+        Me.fechaSalida = Today()
+        Me.horaSalida = Now()
+        Me.precioTotal = 0
+        Me.atendio = ""
+        Me.estatus = "A"
+        Me.habitacion = Nothing
+        Me.cliente = Nothing
     End Sub
 
     Public Property FullNumeroHabitaciones() As Integer
