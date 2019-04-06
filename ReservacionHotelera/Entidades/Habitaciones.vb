@@ -4,12 +4,10 @@
     Private capacidad As Integer
     Private precioPorNoche As Decimal
 
-    Public Sub New(ByVal descripcion As String,
-                   ByVal capacidad As Integer,
-                   ByVal precioPorNoche As Decimal)
-        Me.descripcion = descripcion
-        Me.capacidad = capacidad
-        Me.precioPorNoche = precioPorNoche
+    Public Sub New()
+        Me.descripcion = ""
+        Me.capacidad = 0
+        Me.precioPorNoche = 0
     End Sub
     Public Property FullDescripcion() As String
         Get
