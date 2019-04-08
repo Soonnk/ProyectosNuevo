@@ -1,4 +1,4 @@
-﻿Public Class eReservaciones
+﻿Public Class Reservaciones
     Private _id As Integer
     Private _numeroHabitaciones As Integer
     Private _formaPago As String
@@ -9,8 +9,8 @@
     Private _precioTotal As Decimal
     Private _atendio As String
     Private _estatus As Char
-    Private _habitacion As eHabitaciones
-    Private _cliente As eClientes
+    Private _habitacion As Habitaciones
+    Private _cliente As Clientes
     Public Sub New()
         Me._id = 0
         Me._numeroHabitaciones = 0
@@ -126,19 +126,19 @@
             End If
         End Set
     End Property
-    Public Property Habitacion() As eHabitaciones
+    Public Property Habitacion() As Habitaciones
         Get
             Return Me._habitacion
         End Get
-        Set(ByVal value As eHabitaciones)
+        Set(ByVal value As Habitaciones)
             _habitacion = value
         End Set
     End Property
-    Public Property Cliente() As eClientes
+    Public Property Cliente() As Clientes
         Get
             Return Me._cliente
         End Get
-        Set(ByVal value As eClientes)
+        Set(ByVal value As Clientes)
             _cliente = value
         End Set
     End Property

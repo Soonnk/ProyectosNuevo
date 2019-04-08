@@ -1,4 +1,4 @@
-﻿Public Class eHabitaciones
+﻿Public Class Habitaciones
     Private _id As Integer
     Private _descripcion As String
     Private _capacidad As Integer
