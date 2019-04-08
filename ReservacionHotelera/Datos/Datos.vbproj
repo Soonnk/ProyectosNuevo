@@ -103,5 +103,15 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Configuracion\Configuracion.vbproj">
+      <Project>{2c02e747-77cd-414d-8774-1907365cbd64}</Project>
+      <Name>Configuracion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.vbproj">
+      <Project>{7c9e132c-1dea-4a6c-a4c9-9ed10d9bdacb}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
