@@ -126,19 +126,19 @@
             End If
         End Set
     End Property
-    Public Property Habitacion() As Habitaciones
+    Public Property Habitacion() As eHabitaciones
         Get
             Return Me._habitacion
         End Get
-        Set(ByVal value As Habitaciones)
+        Set(ByVal value As eHabitaciones)
             _habitacion = value
         End Set
     End Property
-    Public Property Cliente() As Clientes
+    Public Property Cliente() As eClientes
         Get
             Return Me._cliente
         End Get
-        Set(ByVal value As Clientes)
+        Set(ByVal value As eClientes)
             _cliente = value
         End Set
     End Property
