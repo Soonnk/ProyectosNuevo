@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clientes.vb" />
+    <Compile Include="clsSQL.vb" />
     <Compile Include="Habitaciones.vb" />
     <Compile Include="Reservaciones.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -101,6 +102,15 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.vbproj">
+      <Project>{7c9e132c-1dea-4a6c-a4c9-9ed10d9bdacb}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
