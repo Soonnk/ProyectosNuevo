@@ -1,104 +1,116 @@
 ﻿Public Class eClientes
-    Private id As Integer
-    Private nombre As String
-    Private apellido As String
-    Private direccion As String
-    Private municipio As String
-    Private estado As String
-    Private pais As String
-    Private telefono As String
-    Private correo As String
+    Private _id As Integer
+    Private _nombre As String
+    Private _apellido As String
+    Private _direccion As String
+    Private _municipio As String
+    Private _estado As String
+    Private _pais As String
+    Private _telefono As String
+    Private _correo As String
 
     Public Sub New()
-        Me.nombre = ""
-        Me.apellido = ""
-        Me.direccion = ""
-        Me.municipio = ""
-        Me.estado = ""
-        Me.pais = ""
-        Me.telefono = ""
-        Me.correo = ""
+        Me._id = 0
+        Me._nombre = ""
+        Me._apellido = ""
+        Me._direccion = ""
+        Me._municipio = ""
+        Me._estado = ""
+        Me._pais = ""
+        Me._telefono = ""
+        Me._correo = ""
     End Sub
 
-    Public Property FullNombre() As String
+    Public Property Id() As String
         Get
-            Return Me.nombre
+            Return Me._id
         End Get
-        Set(value As String)
+        Set(ByVal value As String)
             If value <> "" Then
-                nombre = value
+                _id = value
             End If
         End Set
     End Property
-    Public Property FullApellido() As String
+    Public Property Nombre() As String
         Get
-            Return Me.apellido
+            Return Me._nombre
         End Get
-        Set(value As String)
+        Set(ByVal value As String)
             If value <> "" Then
-                apellido = value
+                _nombre = value
             End If
         End Set
     End Property
-    Public Property FullDireccion() As String
+    Public Property Apellido() As String
         Get
-            Return Me.direccion
+            Return Me._apellido
         End Get
-        Set(value As String)
+        Set(ByVal value As String)
             If value <> "" Then
-                direccion = value
+                _apellido = value
             End If
         End Set
     End Property
-    Public Property FullMunicipio() As String
+    Public Property Direccion() As String
         Get
-            Return Me.municipio
+            Return Me._direccion
         End Get
-        Set(value As String)
+        Set(ByVal value As String)
             If value <> "" Then
-                municipio = value
+                _direccion = value
             End If
         End Set
     End Property
-    Public Property FullEstado() As String
+    Public Property Municipio() As String
         Get
-            Return Me.estado
+            Return Me._municipio
         End Get
-        Set(value As String)
+        Set(ByVal value As String)
             If value <> "" Then
-                estado = value
+                _municipio = value
             End If
         End Set
     End Property
-    Public Property FullPais() As String
+    Public Property Estado() As String
         Get
-            Return Me.pais
+            Return Me._estado
         End Get
-        Set(value As String)
+        Set(ByVal value As String)
             If value <> "" Then
-                pais = value
+                Estado = value
             End If
         End Set
     End Property
-    Public Property FullTelefono() As String
+    Public Property Pais() As String
         Get
-            Return Me.telefono
+            Return Me._pais
         End Get
-        Set(value As String)
+        Set(ByVal value As String)
             If value <> "" Then
-                telefono = value
+                _pais = value
             End If
         End Set
     End Property
-    Public Property FullCorreo() As String
+    Public Property Telefono() As String
         Get
-            Return Me.correo
+            Return Me._telefono
         End Get
-        Set(value As String)
+        Set(ByVal value As String)
             If value <> "" Then
-                correo = value
+                _telefono = value
             End If
         End Set
     End Property
+    Public Property Correo() As String
+        Get
+            Return Me._correo
+        End Get
+        Set(ByVal value As String)
+            If value <> "" Then
+                _correo = value
+            End If
+        End Set
+    End Property
+
 
 End Class

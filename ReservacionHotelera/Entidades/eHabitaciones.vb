@@ -1,41 +1,52 @@
 ﻿Public Class eHabitaciones
-    Private id As Integer
-    Private descripcion As String
-    Private capacidad As Integer
-    Private precioPorNoche As Decimal
+    Private _id As Integer
+    Private _descripcion As String
+    Private _capacidad As Integer
+    Private _precioPorNoche As Decimal
 
     Public Sub New()
-        Me.descripcion = ""
-        Me.capacidad = 0
-        Me.precioPorNoche = 0
+        Me._id = 0
+        Me._descripcion = ""
+        Me._capacidad = 0
+        Me._precioPorNoche = 0
     End Sub
-    Public Property FullDescripcion() As String
+    Public Property Id() As String
         Get
-            Return Me.descripcion
+            Return Me._id
         End Get
-        Set(value As String)
+        Set(ByVal value As String)
             If value <> "" Then
-                descripcion = value
+                _id = value
             End If
         End Set
     End Property
-    Public Property FullCapacidad() As Integer
+    Public Property Descripcion() As String
         Get
-            Return Me.capacidad
+            Return Me._descripcion
         End Get
-        Set(value As Integer)
+        Set(ByVal value As String)
             If value <> "" Then
-                capacidad = value
+                _descripcion = value
             End If
         End Set
     End Property
-    Public Property FullprecioPorNoche() As Decimal
+    Public Property Capacidad() As Integer
         Get
-            Return Me.precioPorNoche
+            Return Me._capacidad
         End Get
-        Set(value As Decimal)
+        Set(ByVal value As Integer)
             If value <> "" Then
-                precioPorNoche = value
+                _capacidad = value
+            End If
+        End Set
+    End Property
+    Public Property PrecioPorNoche() As Decimal
+        Get
+            Return Me._precioPorNoche
+        End Get
+        Set(ByVal value As Decimal)
+            If value <> "" Then
+                _precioPorNoche = value
             End If
         End Set
     End Property
