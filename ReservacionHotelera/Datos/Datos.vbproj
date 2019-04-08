@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clientes.vb" />
+    <Compile Include="clsSQL.vb" />
     <Compile Include="Habitaciones.vb" />
     <Compile Include="Reservaciones.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
