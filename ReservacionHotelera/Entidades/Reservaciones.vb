@@ -1,6 +1,5 @@
 ﻿Public Class Reservaciones
     Private _id As Integer
-    Private _numeroHabitaciones As Integer
     Private _formaPago As String
     Private _fechaLlegada As Date
     Private _horaLlegada As DateTime
@@ -13,7 +12,6 @@
     Private _cliente As Clientes
     Public Sub New()
         Me._id = 0
-        Me._numeroHabitaciones = 0
         Me._formaPago = ""
         Me._fechaLlegada = Today()
         Me._horaLlegada = Now()
@@ -33,16 +31,6 @@
         Set(ByVal value As Integer)
             If value <> "" Then
                 _id = value
-            End If
-        End Set
-    End Property
-    Public Property NumeroHabitaciones() As Integer
-        Get
-            Return Me._numeroHabitaciones
-        End Get
-        Set(ByVal value As Integer)
-            If value <> "" Then
-                _numeroHabitaciones = value
             End If
         End Set
     End Property
