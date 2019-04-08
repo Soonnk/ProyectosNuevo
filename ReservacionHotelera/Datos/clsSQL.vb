@@ -61,7 +61,16 @@ Public Class clsSQL
             Return Nothing
         End Try
     End Function
-
+    Public Function RegresarDatos(ByVal query As String) As DataTable
+        Try
+            Dim dt As DataTable
+            adaptador = New SqlDataAdapter(query, StringConn)
+            adaptador.Fill(dt)
+            Return dt
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
     Public Sub Update()
         Try
             Dim oCmdBuilder As New SqlCommandBuilder(adaptador)
