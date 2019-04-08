@@ -1,134 +1,145 @@
 ﻿Public Class eReservaciones
-    Private id As Integer
-    Private numeroHabitaciones As Integer
-    Private formaPago As String
-    Private fechaLlegada As Date
-    Private horaLlegada As DateTime
-    Private fechaSalida As Date
-    Private horaSalida As DateTime
-    Private precioTotal As Decimal
-    Private atendio As String
-    Private estatus As Char
-    Private habitacion As eHabitaciones
-    Private cliente As eClientes
+    Private _id As Integer
+    Private _numeroHabitaciones As Integer
+    Private _formaPago As String
+    Private _fechaLlegada As Date
+    Private _horaLlegada As DateTime
+    Private _fechaSalida As Date
+    Private _horaSalida As DateTime
+    Private _precioTotal As Decimal
+    Private _atendio As String
+    Private _estatus As Char
+    Private _habitacion As eHabitaciones
+    Private _cliente As eClientes
     Public Sub New()
-        Me.numeroHabitaciones = 0
-        Me.formaPago = ""
-        Me.fechaLlegada = Today()
-        Me.horaLlegada = Now()
-        Me.fechaSalida = Today()
-        Me.horaSalida = Now()
-        Me.precioTotal = 0
-        Me.atendio = ""
-        Me.estatus = "A"
-        Me.habitacion = Nothing
-        Me.cliente = Nothing
+        Me._id = 0
+        Me._numeroHabitaciones = 0
+        Me._formaPago = ""
+        Me._fechaLlegada = Today()
+        Me._horaLlegada = Now()
+        Me._fechaSalida = Today()
+        Me._horaSalida = Now()
+        Me._precioTotal = 0
+        Me._atendio = ""
+        Me._estatus = "A"
+        Me._habitacion = Nothing
+        Me._cliente = Nothing
     End Sub
 
-    Public Property FullNumeroHabitaciones() As Integer
+    Public Property Id() As Integer
         Get
-            Return Me.numeroHabitaciones
+            Return Me._id
         End Get
-        Set(value As Integer)
+        Set(ByVal value As Integer)
             If value <> "" Then
-                numeroHabitaciones = value
+                _id = value
             End If
         End Set
     End Property
-    Public Property FullFormaPago() As String
+    Public Property NumeroHabitaciones() As Integer
         Get
-            Return Me.formaPago
+            Return Me._numeroHabitaciones
         End Get
-        Set(value As String)
+        Set(ByVal value As Integer)
             If value <> "" Then
-                formaPago = value
+                _numeroHabitaciones = value
             End If
         End Set
     End Property
-    Public Property FullFechaLlegada() As Date
+    Public Property FormaPago() As String
         Get
-            Return Me.fechaLlegada
+            Return Me._formaPago
         End Get
-        Set(value As Date)
+        Set(ByVal value As String)
             If value <> "" Then
-                fechaLlegada = value
+                _formaPago = value
             End If
         End Set
     End Property
-    Public Property FullHoraLlegada() As DateTime
+    Public Property FechaLlegada() As Date
         Get
-            Return Me.horaLlegada
+            Return Me._fechaLlegada
         End Get
-        Set(value As DateTime)
+        Set(ByVal value As Date)
             If value <> "" Then
-                horaLlegada = value
+                _fechaLlegada = value
             End If
         End Set
     End Property
-    Public Property FullFechaSalida() As Date
+    Public Property HoraLlegada() As DateTime
         Get
-            Return Me.fechaSalida
+            Return Me._horaLlegada
         End Get
-        Set(value As Date)
+        Set(ByVal value As DateTime)
             If value <> "" Then
-                fechaSalida = value
+                _horaLlegada = value
             End If
         End Set
     End Property
-    Public Property FullHoraSalida() As DateTime
+    Public Property FechaSalida() As Date
         Get
-            Return Me.horaSalida
+            Return Me._fechaSalida
         End Get
-        Set(value As DateTime)
+        Set(ByVal value As Date)
             If value <> "" Then
-                horaSalida = value
+                _fechaSalida = value
             End If
         End Set
     End Property
-    Public Property FullPrecioTotal() As Decimal
+    Public Property HoraSalida() As DateTime
         Get
-            Return Me.precioTotal
+            Return Me._horaSalida
         End Get
-        Set(value As Decimal)
+        Set(ByVal value As DateTime)
             If value <> "" Then
-                precioTotal = value
+                _horaSalida = value
             End If
         End Set
     End Property
-    Public Property FullAtendio() As String
+    Public Property PrecioTotal() As Decimal
         Get
-            Return Me.atendio
+            Return Me._precioTotal
         End Get
-        Set(value As String)
+        Set(ByVal value As Decimal)
             If value <> "" Then
-                atendio = value
+                _precioTotal = value
             End If
         End Set
     End Property
-    Public Property FullEstatus() As Char
+    Public Property Atendio() As String
         Get
-            Return Me.estatus
+            Return Me._atendio
         End Get
-        Set(value As Char)
+        Set(ByVal value As String)
             If value <> "" Then
-                estatus = value
+                _atendio = value
             End If
         End Set
     End Property
-    Public Property FullHabitacion() As eHabitaciones
+    Public Property Estatus() As Char
         Get
-            Return Me.habitacion
+            Return Me._estatus
         End Get
-        Set(value As eHabitaciones)
-            habitacion = value
+        Set(ByVal value As Char)
+            If value <> "" Then
+                _estatus = value
+            End If
         End Set
     End Property
-    Public Property FullCliente() As eClientes
+    Public Property Habitacion() As eHabitaciones
         Get
-            Return Me.cliente
+            Return Me._habitacion
         End Get
-        Set(value As eClientes)
-            cliente = value
+        Set(ByVal value As eHabitaciones)
+            _habitacion = value
+        End Set
+    End Property
+    Public Property Cliente() As eClientes
+        Get
+            Return Me._cliente
+        End Get
+        Set(ByVal value As eClientes)
+            _cliente = value
         End Set
     End Property
 End Class
