@@ -90,6 +90,7 @@ Public Class Reservaciones
             Next
 
         End With
+        reservacion.Id = id
         Return obj.commandSQL(batch)
     End Function
 
