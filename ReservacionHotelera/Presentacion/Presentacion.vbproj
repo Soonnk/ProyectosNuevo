@@ -153,6 +153,9 @@
     <EmbeddedResource Include="pConsultarHabitaciones.resx">
       <DependentUpon>pConsultarHabitaciones.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="pConsultarReservaciones.resx">
+      <DependentUpon>pConsultarReservaciones.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
