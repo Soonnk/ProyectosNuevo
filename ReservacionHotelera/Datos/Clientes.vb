@@ -53,7 +53,7 @@
     End Sub
 
 
-    Public Function Borrar(ByVal _id As Integer) As Boolean
+    Public Function BorrarCliente(ByVal _id As Integer) As Boolean
         Dim Query As String
         Try
             Query = "DELETE FROM Clientes WHERE Id = " & _id
