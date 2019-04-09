@@ -29,7 +29,7 @@
         End Try
     End Function
 
-    Public Function Insertar(ByVal entHabitaciones As Entidades.Habitaciones) As Boolean
+    Public Function InsertarHabitacion(ByVal entHabitaciones As Entidades.Habitaciones) As Boolean
         Dim Query As String
         Try
             Query = "INSERT INTO Habitaciones (Descripcion, Capacidad, Precio por noche) VALUES ('" & entHabitaciones.Descripcion & "','" & entHabitaciones.Capacidad & "','" & entHabitaciones.PrecioPorNoche & "')"
@@ -41,7 +41,7 @@
 
     End Function
 
-    Public Sub Update()
+    Public Sub UpdateHabitacion()
         Try
             obj.Update()
         Finally
@@ -49,7 +49,7 @@
     End Sub
 
 
-    Public Function Borrar(ByVal _Id As Integer) As Boolean
+    Public Function BorrarHabitacion(ByVal _Id As Integer) As Boolean
         Dim Query As String
         Try
             Query = "DELETE FROM Habitaciones WHERE Id = " & _Id
