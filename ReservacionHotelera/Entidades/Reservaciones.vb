@@ -8,7 +8,7 @@
     Private _precioTotal As Decimal
     Private _atendio As String
     Private _estatus As Char
-    Private _habitacion As Habitaciones
+    Private _habitaciones As List(Of Habitaciones)
     Private _cliente As Clientes
     Public Sub New()
         Me._id = 0
@@ -20,7 +20,7 @@
         Me._precioTotal = 0
         Me._atendio = ""
         Me._estatus = "A"
-        Me._habitacion = Nothing
+        Me._habitaciones = New List(Of Habitaciones)
         Me._cliente = Nothing
     End Sub
 
@@ -114,14 +114,20 @@
             End If
         End Set
     End Property
-    Public Property Habitacion() As Habitaciones
+    Public Property Habitacion() As List(Of Habitaciones)
         Get
-            Return Me._habitacion
+            Return Me._habitaciones
         End Get
-        Set(ByVal value As Habitaciones)
-            _habitacion = value
+        Set(ByVal value As List(Of Habitaciones))
+            _habitaciones = value
         End Set
     End Property
+    Public Sub AgregarHabitacion(ByRef habitacion As Habitaciones)
+        Me._habitaciones.Add(habitacion)
+    End Sub
+    Public Sub RemoverHabitacion(ByRef habitacion As Habitaciones)
+        Me._habitaciones.Remove(habitacion)
+    End Sub
     Public Property Cliente() As Clientes
         Get
             Return Me._cliente

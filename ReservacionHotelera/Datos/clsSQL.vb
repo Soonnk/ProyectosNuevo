@@ -80,5 +80,15 @@ Public Class clsSQL
 
         End Try
     End Sub
+    Public Function Incrementar(ByVal tabla As String) As Integer
+        Try
+            Dim dt As DataTable
+            adaptador = New SqlDataAdapter("SELECT MAX(id) FROM " & tabla, StringConn)
+            adaptador.Fill(dt)
 
+            Return CInt(dt.Rows(0).Item(0)) + 1
+        Catch ex As Exception
+
+        End Try
+    End Function
 End Class
