@@ -150,6 +150,9 @@
     <EmbeddedResource Include="pAgregarHabitaciones.resx">
       <DependentUpon>pAgregarHabitaciones.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="pAgregarReservaciones.resx">
+      <DependentUpon>pAgregarReservaciones.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="pConsultarHabitaciones.resx">
       <DependentUpon>pConsultarHabitaciones.vb</DependentUpon>
     </EmbeddedResource>
