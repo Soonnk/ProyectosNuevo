@@ -1,8 +1,5 @@
 ﻿Public Class pAgregarClientes
 
-
-
-
     Public TipoForma As enuTipoForma
     Public Enum enuTipoForma
         Nuevo

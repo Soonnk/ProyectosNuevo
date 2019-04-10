@@ -6,12 +6,13 @@
     Dim ds As DataSet
     Dim onegocio As New Negocios.Clientes
     Public Sub Cargar()
+        Dim dt As New DataTable
         Try
 
-            onegocio.Cargar()
-            ds = onegocio.ds
-            Me.GridControl1.DataSource = ds
-            Me.GridControl1.DataMember = "Datos"
+            dt = onegocio.Cargar()
+
+            Me.GridControl1.DataSource = dt
+
 
 
         Catch ex As Exception
@@ -53,10 +54,7 @@
         End Try
     End Sub
 
-
-
-
-
-
-
+    Private Sub pConsultarClientes_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Cargar()
+    End Sub
 End Class

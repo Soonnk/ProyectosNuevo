@@ -2,14 +2,14 @@
     Dim oDatos As New Datos.Clientes
     Public ds As DataSet
 
-    Public Sub Cargar()
+    Public Function Cargar() As DataTable
         Try
-            oDatos.Cargar()
-            ds = oDatos.ds
+            Return oDatos.Cargar()
+
         Finally
 
         End Try
-    End Sub
+    End Function
 
     Public Function CargarCliente(ByVal _id) As Entidades.Clientes
         Try
