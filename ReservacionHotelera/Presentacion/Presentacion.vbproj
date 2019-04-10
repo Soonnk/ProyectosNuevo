@@ -163,6 +163,9 @@
     <EmbeddedResource Include="pAgregarReservaciones.resx">
       <DependentUpon>pAgregarReservaciones.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="pConsultarClientes.resx">
+      <DependentUpon>pConsultarClientes.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="pConsultarHabitaciones.resx">
       <DependentUpon>pConsultarHabitaciones.vb</DependentUpon>
     </EmbeddedResource>
