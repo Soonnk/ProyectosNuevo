@@ -18,7 +18,12 @@
 
         End Try
     End Sub
+    Public modo As tipo
     Private _mdiPrincipal As mdiPrincipal
+    Enum tipo
+        Nuevo
+        Editar
+    End Enum
     Private ReadOnly Property mdiPrincipal1() As mdiPrincipal
         Get
             If Me.ParentForm Is Nothing Then
