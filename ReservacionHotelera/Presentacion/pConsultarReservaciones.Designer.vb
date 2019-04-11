@@ -28,9 +28,9 @@ Partial Class pConsultarReservaciones
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.I = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.LayoutControlGroup2 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControl2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -93,10 +93,16 @@ Partial Class pConsultarReservaciones
         'I
         '
         Me.I.Caption = "Folio"
-        Me.I.FieldName = "id"
+        Me.I.FieldName = "nombre_cliente"
         Me.I.Name = "I"
         Me.I.Visible = True
         Me.I.VisibleIndex = 0
+        '
+        'GridColumn1
+        '
+        Me.GridColumn1.Name = "GridColumn1"
+        Me.GridColumn1.Visible = True
+        Me.GridColumn1.VisibleIndex = 1
         '
         'LayoutControlGroup2
         '
@@ -116,12 +122,6 @@ Partial Class pConsultarReservaciones
         Me.LayoutControlItem1.Size = New System.Drawing.Size(780, 430)
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem1.TextVisible = False
-        '
-        'GridColumn1
-        '
-        Me.GridColumn1.Name = "GridColumn1"
-        Me.GridColumn1.Visible = True
-        Me.GridColumn1.VisibleIndex = 1
         '
         'pConsultarReservaciones
         '
