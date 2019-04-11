@@ -8,7 +8,7 @@ Public Class clsSQL
     Public Function StringConn() As String
         Dim cadena As String
         Try
-            cadena = Configuracion.ConfigManager.GetValue("SQLCnnString")
+            cadena = "Data Source=192.168.0.108;Initial Catalog=Hoteles;User id=usuario1; Password=12345"
             Return cadena
         Finally
 
@@ -88,7 +88,7 @@ Public Class clsSQL
 
             Return CInt(dt.Rows(0).Item(0)) + 1
         Catch ex As Exception
-
+            Return Nothing
         End Try
     End Function
 End Class
