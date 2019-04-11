@@ -25,17 +25,22 @@ Partial Class pAgregarReservaciones
         Me.LayoutControl1 = New DevExpress.XtraLayout.LayoutControl()
         Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
         Me.LayoutControl2 = New DevExpress.XtraLayout.LayoutControl()
+        Me.gridDetalle = New DevExpress.XtraGrid.GridControl()
+        Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.GridColumn2 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn3 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.btnGuardar = New DevExpress.XtraEditors.SimpleButton()
-        Me.cmbHabitacion = New DevExpress.XtraEditors.ComboBoxEdit()
         Me.btnAgregar = New DevExpress.XtraEditors.SimpleButton()
         Me.lblTotal = New DevExpress.XtraEditors.LabelControl()
-        Me.lstHabitaciones = New DevExpress.XtraEditors.ListBoxControl()
         Me.cmbFormaPago = New DevExpress.XtraScheduler.UI.ResourcesComboBoxControl()
         Me.tpkSalida = New DevExpress.XtraEditors.TimeEdit()
         Me.tpkLlegada = New DevExpress.XtraEditors.TimeEdit()
         Me.dtpSalida = New DevExpress.XtraEditors.DateEdit()
         Me.dtpLlegada = New DevExpress.XtraEditors.DateEdit()
         Me.txtId = New DevExpress.XtraEditors.TextEdit()
+        Me.cmbHabitacion = New DevExpress.XtraEditors.ComboBoxEdit()
         Me.LayoutControlGroup2 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem2 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem4 = New DevExpress.XtraLayout.LayoutControlItem()
@@ -43,13 +48,13 @@ Partial Class pAgregarReservaciones
         Me.LayoutControlItem6 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem7 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem8 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem3 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem11 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem10 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.EmptySpaceItem2 = New DevExpress.XtraLayout.EmptySpaceItem()
         Me.EmptySpaceItem1 = New DevExpress.XtraLayout.EmptySpaceItem()
         Me.LayoutControlItem12 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem9 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem13 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -58,8 +63,8 @@ Partial Class pAgregarReservaciones
         Me.GroupControl1.SuspendLayout()
         CType(Me.LayoutControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl2.SuspendLayout()
-        CType(Me.cmbHabitacion.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lstHabitaciones, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gridDetalle, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cmbFormaPago.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tpkSalida.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tpkLlegada.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -68,6 +73,7 @@ Partial Class pAgregarReservaciones
         CType(Me.dtpLlegada.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dtpLlegada.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtId.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cmbHabitacion.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -75,13 +81,13 @@ Partial Class pAgregarReservaciones
         CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmptySpaceItem2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem13, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -108,17 +114,17 @@ Partial Class pAgregarReservaciones
         '
         'LayoutControl2
         '
+        Me.LayoutControl2.Controls.Add(Me.gridDetalle)
         Me.LayoutControl2.Controls.Add(Me.btnGuardar)
-        Me.LayoutControl2.Controls.Add(Me.cmbHabitacion)
         Me.LayoutControl2.Controls.Add(Me.btnAgregar)
         Me.LayoutControl2.Controls.Add(Me.lblTotal)
-        Me.LayoutControl2.Controls.Add(Me.lstHabitaciones)
         Me.LayoutControl2.Controls.Add(Me.cmbFormaPago)
         Me.LayoutControl2.Controls.Add(Me.tpkSalida)
         Me.LayoutControl2.Controls.Add(Me.tpkLlegada)
         Me.LayoutControl2.Controls.Add(Me.dtpSalida)
         Me.LayoutControl2.Controls.Add(Me.dtpLlegada)
         Me.LayoutControl2.Controls.Add(Me.txtId)
+        Me.LayoutControl2.Controls.Add(Me.cmbHabitacion)
         Me.LayoutControl2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.LayoutControl2.Location = New System.Drawing.Point(2, 20)
         Me.LayoutControl2.Name = "LayoutControl2"
@@ -126,6 +132,58 @@ Partial Class pAgregarReservaciones
         Me.LayoutControl2.Size = New System.Drawing.Size(509, 404)
         Me.LayoutControl2.TabIndex = 0
         Me.LayoutControl2.Text = "LayoutControl2"
+        '
+        'gridDetalle
+        '
+        Me.gridDetalle.Location = New System.Drawing.Point(12, 134)
+        Me.gridDetalle.MainView = Me.GridView1
+        Me.gridDetalle.Name = "gridDetalle"
+        Me.gridDetalle.Size = New System.Drawing.Size(485, 215)
+        Me.gridDetalle.TabIndex = 13
+        Me.gridDetalle.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
+        '
+        'GridView1
+        '
+        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn2, Me.GridColumn3, Me.GridColumn4, Me.GridColumn5})
+        Me.GridView1.GridControl = Me.gridDetalle
+        Me.GridView1.Name = "GridView1"
+        Me.GridView1.OptionsView.ShowGroupPanel = False
+        '
+        'GridColumn2
+        '
+        Me.GridColumn2.Caption = "Descripcion"
+        Me.GridColumn2.FieldName = "descripcion"
+        Me.GridColumn2.Name = "GridColumn2"
+        Me.GridColumn2.Visible = True
+        Me.GridColumn2.VisibleIndex = 0
+        Me.GridColumn2.Width = 248
+        '
+        'GridColumn3
+        '
+        Me.GridColumn3.Caption = "Precio"
+        Me.GridColumn3.FieldName = "precioPorNoche"
+        Me.GridColumn3.Name = "GridColumn3"
+        Me.GridColumn3.Visible = True
+        Me.GridColumn3.VisibleIndex = 1
+        Me.GridColumn3.Width = 55
+        '
+        'GridColumn4
+        '
+        Me.GridColumn4.Caption = "Total de Noches"
+        Me.GridColumn4.FieldName = "noches"
+        Me.GridColumn4.Name = "GridColumn4"
+        Me.GridColumn4.Visible = True
+        Me.GridColumn4.VisibleIndex = 2
+        Me.GridColumn4.Width = 90
+        '
+        'GridColumn5
+        '
+        Me.GridColumn5.Caption = "Subtotal"
+        Me.GridColumn5.FieldName = "subtotal"
+        Me.GridColumn5.Name = "GridColumn5"
+        Me.GridColumn5.Visible = True
+        Me.GridColumn5.VisibleIndex = 3
+        Me.GridColumn5.Width = 74
         '
         'btnGuardar
         '
@@ -135,15 +193,6 @@ Partial Class pAgregarReservaciones
         Me.btnGuardar.StyleController = Me.LayoutControl2
         Me.btnGuardar.TabIndex = 9
         Me.btnGuardar.Text = "Guardar"
-        '
-        'cmbHabitacion
-        '
-        Me.cmbHabitacion.Location = New System.Drawing.Point(114, 108)
-        Me.cmbHabitacion.Name = "cmbHabitacion"
-        Me.cmbHabitacion.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.cmbHabitacion.Size = New System.Drawing.Size(308, 20)
-        Me.cmbHabitacion.StyleController = Me.LayoutControl2
-        Me.cmbHabitacion.TabIndex = 7
         '
         'btnAgregar
         '
@@ -163,15 +212,6 @@ Partial Class pAgregarReservaciones
         Me.lblTotal.StyleController = Me.LayoutControl2
         Me.lblTotal.TabIndex = 12
         Me.lblTotal.Text = "Total"
-        '
-        'lstHabitaciones
-        '
-        Me.lstHabitaciones.Cursor = System.Windows.Forms.Cursors.Default
-        Me.lstHabitaciones.Location = New System.Drawing.Point(12, 134)
-        Me.lstHabitaciones.Name = "lstHabitaciones"
-        Me.lstHabitaciones.Size = New System.Drawing.Size(485, 215)
-        Me.lstHabitaciones.StyleController = Me.LayoutControl2
-        Me.lstHabitaciones.TabIndex = 11
         '
         'cmbFormaPago
         '
@@ -232,11 +272,20 @@ Partial Class pAgregarReservaciones
         Me.txtId.StyleController = Me.LayoutControl2
         Me.txtId.TabIndex = 1
         '
+        'cmbHabitacion
+        '
+        Me.cmbHabitacion.Location = New System.Drawing.Point(114, 108)
+        Me.cmbHabitacion.Name = "cmbHabitacion"
+        Me.cmbHabitacion.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.cmbHabitacion.Size = New System.Drawing.Size(308, 20)
+        Me.cmbHabitacion.StyleController = Me.LayoutControl2
+        Me.cmbHabitacion.TabIndex = 7
+        '
         'LayoutControlGroup2
         '
         Me.LayoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
         Me.LayoutControlGroup2.GroupBordersVisible = False
-        Me.LayoutControlGroup2.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem2, Me.LayoutControlItem4, Me.LayoutControlItem5, Me.LayoutControlItem6, Me.LayoutControlItem7, Me.LayoutControlItem8, Me.LayoutControlItem3, Me.LayoutControlItem11, Me.LayoutControlItem10, Me.EmptySpaceItem2, Me.EmptySpaceItem1, Me.LayoutControlItem12, Me.LayoutControlItem9})
+        Me.LayoutControlGroup2.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem2, Me.LayoutControlItem4, Me.LayoutControlItem5, Me.LayoutControlItem6, Me.LayoutControlItem7, Me.LayoutControlItem8, Me.LayoutControlItem11, Me.LayoutControlItem10, Me.EmptySpaceItem2, Me.EmptySpaceItem1, Me.LayoutControlItem12, Me.LayoutControlItem9, Me.LayoutControlItem13})
         Me.LayoutControlGroup2.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup2.Name = "LayoutControlGroup2"
         Me.LayoutControlGroup2.Size = New System.Drawing.Size(509, 404)
@@ -296,15 +345,6 @@ Partial Class pAgregarReservaciones
         Me.LayoutControlItem8.Text = "Forma de Pago"
         Me.LayoutControlItem8.TextSize = New System.Drawing.Size(99, 13)
         '
-        'LayoutControlItem3
-        '
-        Me.LayoutControlItem3.Control = Me.lstHabitaciones
-        Me.LayoutControlItem3.Location = New System.Drawing.Point(0, 122)
-        Me.LayoutControlItem3.Name = "LayoutControlItem3"
-        Me.LayoutControlItem3.Size = New System.Drawing.Size(489, 219)
-        Me.LayoutControlItem3.TextSize = New System.Drawing.Size(0, 0)
-        Me.LayoutControlItem3.TextVisible = False
-        '
         'LayoutControlItem11
         '
         Me.LayoutControlItem11.Control = Me.cmbHabitacion
@@ -357,6 +397,15 @@ Partial Class pAgregarReservaciones
         Me.LayoutControlItem9.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem9.TextVisible = False
         '
+        'LayoutControlItem13
+        '
+        Me.LayoutControlItem13.Control = Me.gridDetalle
+        Me.LayoutControlItem13.Location = New System.Drawing.Point(0, 122)
+        Me.LayoutControlItem13.Name = "LayoutControlItem13"
+        Me.LayoutControlItem13.Size = New System.Drawing.Size(489, 219)
+        Me.LayoutControlItem13.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem13.TextVisible = False
+        '
         'LayoutControlGroup1
         '
         Me.LayoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
@@ -390,8 +439,8 @@ Partial Class pAgregarReservaciones
         Me.GroupControl1.ResumeLayout(False)
         CType(Me.LayoutControl2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LayoutControl2.ResumeLayout(False)
-        CType(Me.cmbHabitacion.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lstHabitaciones, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gridDetalle, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cmbFormaPago.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tpkSalida.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tpkLlegada.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -400,6 +449,7 @@ Partial Class pAgregarReservaciones
         CType(Me.dtpLlegada.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dtpLlegada.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtId.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cmbHabitacion.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).EndInit()
@@ -407,13 +457,13 @@ Partial Class pAgregarReservaciones
         CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmptySpaceItem2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem12, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem13, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -437,17 +487,22 @@ Partial Class pAgregarReservaciones
     Friend WithEvents LayoutControlItem6 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem7 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents lblTotal As DevExpress.XtraEditors.LabelControl
-    Friend WithEvents lstHabitaciones As DevExpress.XtraEditors.ListBoxControl
     Friend WithEvents cmbFormaPago As DevExpress.XtraScheduler.UI.ResourcesComboBoxControl
     Friend WithEvents LayoutControlItem8 As DevExpress.XtraLayout.LayoutControlItem
-    Friend WithEvents LayoutControlItem3 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem9 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents btnGuardar As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents cmbHabitacion As DevExpress.XtraEditors.ComboBoxEdit
     Friend WithEvents btnAgregar As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents LayoutControlItem11 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem10 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents EmptySpaceItem2 As DevExpress.XtraLayout.EmptySpaceItem
     Friend WithEvents EmptySpaceItem1 As DevExpress.XtraLayout.EmptySpaceItem
     Friend WithEvents LayoutControlItem12 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents gridDetalle As DevExpress.XtraGrid.GridControl
+    Friend WithEvents GridView1 As DevExpress.XtraGrid.Views.Grid.GridView
+    Friend WithEvents GridColumn2 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn3 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn4 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn5 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents LayoutControlItem13 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents cmbHabitacion As DevExpress.XtraEditors.ComboBoxEdit
 End Class
