@@ -26,9 +26,7 @@
             Return Me._id
         End Get
         Set(ByVal value As String)
-            If value <> "" Then
-                _id = value
-            End If
+            _id = value
         End Set
     End Property
     Public Property Nombre() As String
@@ -76,8 +74,8 @@
             Return Me._estado
         End Get
         Set(ByVal value As String)
-            If value <> "" Then
-                Estado = value
+            If value IsNot Nothing Then
+                _estado = value
             End If
         End Set
     End Property

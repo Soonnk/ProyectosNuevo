@@ -9,6 +9,7 @@
         Dim dt As New DataTable
         Try
             dt = onegocio.Cargar()
+
             Me.GridControl1.DataSource = dt
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -26,10 +27,7 @@
         Try
             Dim formulario As New pAgregarClientes
             formulario.TipoForma = pAgregarClientes.enuTipoForma.Nuevo
-            formulario.Forma = Me
             formulario.ShowDialog()
-
-
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
