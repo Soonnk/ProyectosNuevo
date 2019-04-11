@@ -2,15 +2,17 @@
     Dim obj As New clsSQL
     Public ds As DataSet
 
-    Public Sub Cargar()
+    Public Function Cargar() As DataTable
+        Dim dt As New DataTable
         Dim Query As String
         Try
             Query = "SELECT * FROM Clientes"
-            ds = obj.CargarDatos(Query)
+            dt = obj.RegresarDatos(Query)
+            Return dt
         Finally
 
         End Try
-    End Sub
+    End Function
 
     Public Function CargarCliente(ByVal _id) As Entidades.Clientes
         Dim query As String = "SELECT * FROM Clientes WHERE Id = " & _id
