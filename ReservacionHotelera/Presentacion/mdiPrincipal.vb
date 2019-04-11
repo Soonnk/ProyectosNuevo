@@ -1,34 +1,52 @@
 ﻿Public Class mdiPrincipal
-    'Habitacion
-    Private Sub AgregarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgregarToolStripMenuItem.Click
-        pAgregarHabitaciones.ShowDialog()
+    Public activo As String
+    Private Sub BarButtonItem5_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem5.ItemClick
+        Try
+            Dim frmHabitacion As New pConsultarHabitaciones
+            frmHabitacion.MdiParent = Me
+            frmHabitacion.Show()
+        Catch ex As Exception
+
+        End Try
     End Sub
 
-    Private Sub ConsultarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarToolStripMenuItem.Click
-        pConsultarHabitaciones.ShowDialog()
+    Private Sub BarButtonItem6_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem6.ItemClick
+        Try
+            Dim frmCliente As New pConsultarClientes
+
+            frmCliente.MdiParent = Me
+            frmCliente.Show()
+        Catch ex As Exception
+
+        End Try
     End Sub
 
+    Private Sub BarButtonItem8_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem8.ItemClick
+        Try
+            Dim frmReservacion As New pConsultarClientes
 
-    'Cliente
-    Private Sub AgregarToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles AgregarToolStripMenuItem1.Click
-        pAgregarClientes.ShowDialog()
+            frmReservacion.MdiParent = Me
+            frmReservacion.Show()
+        Catch ex As Exception
+
+        End Try
     End Sub
 
-    Private Sub ConsultarToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ConsultarToolStripMenuItem1.Click
-        pConsultarClientes.ShowDialog()
-    End Sub
+    Private Sub BarButtonItem4_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnNuevo.ItemClick
 
+        Try
+            Dim frmActivo As Form = Me.ActiveMdiChild
+            Select Case activo
+                Case "habitaciones"
+                    Dim frmNuevo As New pAgregarHabitaciones
+                    'frmEditar.modo = pAgregarHabitaciones.tipo.Editar
+                    'frmEditar = frmActivo
+                    'frmEditar.consultarHabitacion
+                    frmNuevo.modo = pAgregarHabitaciones.tipo.Nuevo
+                    frmNuevo.ShowDialog()
+            End Select
+        Catch ex As Exception
 
-    'Reservacion
-    Private Sub AgregarToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles AgregarToolStripMenuItem2.Click
-        pAgregarReservaciones.ShowDialog()
-    End Sub
-
-    Private Sub ConsultarToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ConsultarToolStripMenuItem2.Click
-        pConsultarReservaciones.ShowDialog()
-    End Sub
-
-    Private Sub mdiPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        End Try
     End Sub
 End Class

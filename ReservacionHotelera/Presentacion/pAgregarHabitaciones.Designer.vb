@@ -149,7 +149,7 @@ Partial Class pAgregarHabitaciones
         '
         Me.txtPrecioPorNoche.Location = New System.Drawing.Point(85, 74)
         Me.txtPrecioPorNoche.Name = "txtPrecioPorNoche"
-        Me.txtPrecioPorNoche.Size = New System.Drawing.Size(139, 20)
+        Me.txtPrecioPorNoche.Size = New System.Drawing.Size(140, 20)
         Me.txtPrecioPorNoche.StyleController = Me.LayoutControl2
         Me.txtPrecioPorNoche.TabIndex = 6
         '
@@ -229,7 +229,7 @@ Partial Class pAgregarHabitaciones
         Me.LayoutControlItem6.Control = Me.txtPrecioPorNoche
         Me.LayoutControlItem6.Location = New System.Drawing.Point(0, 72)
         Me.LayoutControlItem6.Name = "LayoutControlItem6"
-        Me.LayoutControlItem6.Size = New System.Drawing.Size(226, 25)
+        Me.LayoutControlItem6.Size = New System.Drawing.Size(227, 25)
         Me.LayoutControlItem6.Text = "Precio por noche"
         Me.LayoutControlItem6.TextSize = New System.Drawing.Size(80, 13)
         '
@@ -244,9 +244,9 @@ Partial Class pAgregarHabitaciones
         'EmptySpaceItem6
         '
         Me.EmptySpaceItem6.AllowHotTrack = False
-        Me.EmptySpaceItem6.Location = New System.Drawing.Point(226, 72)
+        Me.EmptySpaceItem6.Location = New System.Drawing.Point(227, 72)
         Me.EmptySpaceItem6.Name = "EmptySpaceItem6"
-        Me.EmptySpaceItem6.Size = New System.Drawing.Size(228, 25)
+        Me.EmptySpaceItem6.Size = New System.Drawing.Size(227, 25)
         Me.EmptySpaceItem6.TextSize = New System.Drawing.Size(0, 0)
         '
         'LayoutControlGroup1
@@ -322,6 +322,7 @@ Partial Class pAgregarHabitaciones
         Me.Controls.Add(Me.LayoutControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "pAgregarHabitaciones"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "pHabitaciones"
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LayoutControl1.ResumeLayout(False)

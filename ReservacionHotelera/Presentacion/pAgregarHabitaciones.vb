@@ -1,8 +1,26 @@
 ﻿Public Class pAgregarHabitaciones
+    Public modo As tipo
+    Private _mdiPrincipal As mdiPrincipal
+
+    Enum tipo
+        Nuevo
+        Editar
+    End Enum
     Private Sub pAgregarHabitaciones_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Cargar()
+        'Me.mdiPrincipal1.activo = "habitaciones"
     End Sub
+    Public Sub consultarHabitacion(ByRef row As DataRow)
+        Try
+            txtId.EditValue = row("id")
+            txtDescripcion.EditValue = row("descipcion")
+            txtCapacidad.EditValue = row("capacidad")
+            txtPrecioPorNoche.EditValue = row("precioPorNoche")
 
+        Catch ex As Exception
+
+        End Try
+    End Sub
     Private Sub GroupControl1_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
@@ -30,28 +48,26 @@
         Agregar
         Modificar
     End Enum
-
-
-    Public Forma As New pConsultarHabitaciones
+    'Public Forma As New pAgregarHabitaciones
 
     Public _Id2 As Integer
 
     Private Sub Guardar()
         Try
             Dim hNegocio As New Negocios.Habitaciones
-            llenarEntidad()
+
             Select Case TipoForma
                 Case enuTipoForma.Agregar
                     If hNegocio.Insertar(llenarEntidad) = True Then
                         MessageBox.Show("Datos guardados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        Forma.Cargar()
+                        'Forma.Cargar()
                         Me.Close()
                     Else
                         MessageBox.Show("No se pudo guardar los datos", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End If
             End Select
         Catch ex As Exception
-            MessageBox.Show(ex.StackTrace)
+            MessageBox.Show(ex.Message)
         End Try
     End Sub
 
@@ -60,9 +76,9 @@
     Private Function llenarEntidad() As Entidades.Habitaciones
         Dim hEntidad As New Entidades.Habitaciones
 
-        hEntidad.Descripcion = Me.txtDescripcion.EditValue
-        hEntidad.Capacidad = Me.txtCapacidad.EditValue
-        hEntidad.PrecioPorNoche = Me.txtPrecioPorNoche.EditValue
+        hEntidad.Descripcion = Me.txtDescripcion.Text
+        hEntidad.Capacidad = Me.txtCapacidad.Text
+        hEntidad.PrecioPorNoche = Me.txtPrecioPorNoche.Text
 
         Return hEntidad
 
@@ -72,9 +88,9 @@
         Try
             Select Case TipoForma
                 Case enuTipoForma.Agregar
-                    Me.Text = "Agregar Habitación"
+                    Me.Text = ".: Agregar Habitación :."
                 Case enuTipoForma.Modificar
-                    Me.Text = "Modificar Habitación"
+                    Me.Text = ".: Modificar Habitación :."
                     cargarHabitacion()
             End Select
         Catch ex As Exception
@@ -84,8 +100,8 @@
 
 
     Public Sub cargarHabitacion()
-        Dim hNegocio As New Negocios.Habitaciones
-        Dim hEntidad As New Entidades.Habitaciones
+        Dim hNegocio As Negocios.Habitaciones
+        Dim hEntidad As Entidades.Habitaciones
         Try
             hEntidad = hNegocio.cargarHabitaciones(_Id2)
             Me.txtDescripcion.Text = hEntidad.Descripcion
