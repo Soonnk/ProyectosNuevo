@@ -25,6 +25,7 @@ Public Class clsSQL
             cnn.Dispose()
             Return True
         Catch ex As Exception
+            MsgBox(ex)
             Return Nothing
         End Try
     End Function

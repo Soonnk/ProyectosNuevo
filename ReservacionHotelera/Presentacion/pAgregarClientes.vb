@@ -20,7 +20,7 @@
         Return eCliente
     End Function
 
-    Private Sub Guardar()
+    Private Sub GuardarCliente()
         Try
             Dim oNegocio As New Negocios.Clientes
 
@@ -70,7 +70,7 @@
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-        Guardar()
+        GuardarCliente()
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
