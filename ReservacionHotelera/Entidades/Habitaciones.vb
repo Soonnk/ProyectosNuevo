@@ -15,9 +15,7 @@
             Return Me._id
         End Get
         Set(ByVal value As String)
-            If value <> "" Then
-                _id = value
-            End If
+            _id = value
         End Set
     End Property
     Public Property Descripcion() As String
@@ -35,9 +33,7 @@
             Return Me._capacidad
         End Get
         Set(ByVal value As Integer)
-            If value <> "" Then
-                _capacidad = value
-            End If
+            _capacidad = value
         End Set
     End Property
     Public Property PrecioPorNoche() As Decimal
@@ -45,9 +41,7 @@
             Return Me._precioPorNoche
         End Get
         Set(ByVal value As Decimal)
-            If value <> "" Then
-                _precioPorNoche = value
-            End If
+            _precioPorNoche = value
         End Set
     End Property
 End Class
