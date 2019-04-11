@@ -2,28 +2,30 @@
     Dim obj As New clsSQL
     Public ds As DataSet
 
-    Public Sub Cargar()
+    Public Function Cargar() As DataTable
+        Dim dt As New DataTable
         Dim Query As String
         Try
             Query = "SELECT * FROM Habitaciones"
-            ds = obj.CargarDatos(Query)
+            dt = obj.RegresarDatos(Query)
+            Return dt
         Finally
 
         End Try
-    End Sub
+    End Function
 
     Public Function CargarHabitaciones(ByVal _id) As Entidades.Habitaciones
         Dim query As String = "SELECT * FROM Habitaciones WHERE Id = " & _id
         Try
             ds = obj.CargarDatos(query)
 
-            Dim Entidad As New Entidades.Habitaciones
+            Dim hEntidad As New Entidades.Habitaciones
             With ds.Tables("Datos").Rows(0)
-                Entidad.Descripcion = .Item("Descripcion")
-                Entidad.Capacidad = .Item("Capacidad")
-                Entidad.PrecioPorNoche = .Item("Precio por noche")
+                hEntidad.Descripcion = .Item("Descripcion")
+                hEntidad.Capacidad = .Item("Capacidad")
+                hEntidad.PrecioPorNoche = .Item("Precio por noche")
             End With
-            Return Entidad
+            Return hEntidad
         Finally
 
         End Try

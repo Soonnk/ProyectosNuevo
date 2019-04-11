@@ -1,15 +1,15 @@
 ﻿Public Class Habitaciones
     Dim hDatos As New Datos.Habitaciones
     Public ds As DataSet
-    Public Sub Cargar()
+    Public Function Cargar() As DataTable
         Try
-            hDatos.Cargar()
-            ds = hDatos.ds
+            Return hDatos.Cargar()
+
         Finally
 
         End Try
-    End Sub
-    Public Function Habitaciones(ByVal _id) As Entidades.Habitaciones
+    End Function
+    Public Function cargarHabitaciones(ByVal _id) As Entidades.Habitaciones
         Try
             Return hDatos.CargarHabitaciones(_id)
         Finally
