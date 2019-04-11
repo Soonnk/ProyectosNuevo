@@ -15,7 +15,7 @@
     End Function
 
     Public Function CargarCliente(ByVal _id) As Entidades.Clientes
-        Dim query As String = "SELECT * FROM Clientes WHERE Id = " & _id
+        Dim query As String = "SELECT * FROM Clientes WHERE IdCliente = " & _id
         Try
             ds = obj.CargarDatos(query)
 
@@ -43,7 +43,9 @@
             Query = "INSERT INTO Cliente(nombre,apellido,direccion,municipio,estado,pais,telefono,correo) VALUES ('" & entCliente.Nombre & "','" & entCliente.Apellido & "','" & entCliente.Direccion & "','" & entCliente.Municipio & "', '" & entCliente.Estado & "','" & entCliente.Pais & "','" & entCliente.Telefono & "', '" & entCliente.Correo & "')"
             Return obj.commandSQL(Query)
         Catch ex As Exception
-            Return Nothing
+            MsgBox(ex)
+            'Return Nothing
+            Return False
         End Try
     End Function
 
@@ -58,12 +60,13 @@
     Public Function BorrarCliente(ByVal _id As Integer) As Boolean
         Dim Query As String
         Try
-            Query = "DELETE FROM Clientes WHERE Id = " & _id
-            obj.commandSQL(Query)
+            Query = "DELETE FROM Clientes WHERE IdCliente = " & _id
+            Return obj.commandSQL(Query)
 
         Catch ex As Exception
-            Return Nothing
+            Return False
         End Try
+
     End Function
 
 
