@@ -20,44 +20,42 @@ Partial Class mdiPrincipal
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(mdiPrincipal))
         Me.RibbonControl = New DevExpress.XtraBars.Ribbon.RibbonControl()
         Me.BarButtonItem1 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem2 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem3 = New DevExpress.XtraBars.BarButtonItem()
+        Me.btnNuevo = New DevExpress.XtraBars.BarButtonItem()
         Me.RibbonStatusBar = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
         Me.XtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(Me.components)
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AgregarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ConsultarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ModificarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AgregarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ConsultarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EliminarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ModificarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReservacionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AgregarToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ConsultarToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CancelarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ModificarToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BarButtonItem4 = New DevExpress.XtraBars.BarButtonItem()
+        Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
+        Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.BarButtonItem5 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem6 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem7 = New DevExpress.XtraBars.BarButtonItem()
+        Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.BarButtonItem8 = New DevExpress.XtraBars.BarButtonItem()
+        Me.RibbonPage2 = New DevExpress.XtraBars.Ribbon.RibbonPage()
+        Me.RibbonPageGroup3 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.BarButtonItem9 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem10 = New DevExpress.XtraBars.BarButtonItem()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XtraTabbedMdiManager1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'RibbonControl
         '
         Me.RibbonControl.ExpandCollapseItem.Id = 0
-        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.BarButtonItem1, Me.BarButtonItem2, Me.BarButtonItem3, Me.BarButtonItem4})
+        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.BarButtonItem1, Me.BarButtonItem2, Me.BarButtonItem3, Me.btnNuevo, Me.BarButtonItem5, Me.BarButtonItem6, Me.BarButtonItem7, Me.BarButtonItem8, Me.BarButtonItem9, Me.BarButtonItem10})
         Me.RibbonControl.Location = New System.Drawing.Point(0, 0)
-        Me.RibbonControl.MaxItemId = 5
+        Me.RibbonControl.MaxItemId = 12
         Me.RibbonControl.Name = "RibbonControl"
-        Me.RibbonControl.QuickToolbarItemLinks.Add(Me.BarButtonItem4)
+        Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1, Me.RibbonPage2})
+        Me.RibbonControl.QuickToolbarItemLinks.Add(Me.btnNuevo)
+        Me.RibbonControl.QuickToolbarItemLinks.Add(Me.BarButtonItem9)
+        Me.RibbonControl.QuickToolbarItemLinks.Add(Me.BarButtonItem10)
         Me.RibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013
-        Me.RibbonControl.Size = New System.Drawing.Size(442, 49)
+        Me.RibbonControl.Size = New System.Drawing.Size(775, 143)
         Me.RibbonControl.StatusBar = Me.RibbonStatusBar
         '
         'BarButtonItem1
@@ -79,137 +77,107 @@ Partial Class mdiPrincipal
         Me.BarButtonItem3.Id = 3
         Me.BarButtonItem3.Name = "BarButtonItem3"
         '
+        'btnNuevo
+        '
+        Me.btnNuevo.Caption = "Nuevo"
+        Me.btnNuevo.Id = 4
+        Me.btnNuevo.ImageOptions.Image = CType(resources.GetObject("BarButtonItem4.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnNuevo.Name = "btnNuevo"
+        '
         'RibbonStatusBar
         '
         Me.RibbonStatusBar.ItemLinks.Add(Me.BarButtonItem3)
-        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 418)
+        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 462)
         Me.RibbonStatusBar.Name = "RibbonStatusBar"
         Me.RibbonStatusBar.Ribbon = Me.RibbonControl
-        Me.RibbonStatusBar.Size = New System.Drawing.Size(442, 31)
+        Me.RibbonStatusBar.Size = New System.Drawing.Size(775, 31)
         '
         'XtraTabbedMdiManager1
         '
         Me.XtraTabbedMdiManager1.MdiParent = Me
         '
-        'MenuStrip1
+        'RibbonPage1
         '
-        Me.MenuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.ClienteToolStripMenuItem, Me.ReservacionesToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 49)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(442, 24)
-        Me.MenuStrip1.TabIndex = 3
-        Me.MenuStrip1.Text = "MenuStrip1"
+        Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1, Me.RibbonPageGroup2})
+        Me.RibbonPage1.Name = "RibbonPage1"
+        Me.RibbonPage1.Text = "RibbonPage1"
         '
-        'ToolStripMenuItem1
+        'RibbonPageGroup1
         '
-        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarToolStripMenuItem, Me.ConsultarToolStripMenuItem, Me.EliminarToolStripMenuItem, Me.ModificarToolStripMenuItem})
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(88, 20)
-        Me.ToolStripMenuItem1.Text = "Habitaciones"
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.BarButtonItem5)
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.BarButtonItem6)
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.BarButtonItem7)
+        Me.RibbonPageGroup1.Name = "RibbonPageGroup1"
+        Me.RibbonPageGroup1.Text = "Catalogo"
         '
-        'AgregarToolStripMenuItem
+        'BarButtonItem5
         '
-        Me.AgregarToolStripMenuItem.Name = "AgregarToolStripMenuItem"
-        Me.AgregarToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
-        Me.AgregarToolStripMenuItem.Text = "Agregar"
+        Me.BarButtonItem5.Caption = "Habitaciones"
+        Me.BarButtonItem5.Id = 5
+        Me.BarButtonItem5.ImageOptions.Image = CType(resources.GetObject("BarButtonItem5.ImageOptions.Image"), System.Drawing.Image)
+        Me.BarButtonItem5.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem5.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BarButtonItem5.Name = "BarButtonItem5"
         '
-        'ConsultarToolStripMenuItem
+        'BarButtonItem6
         '
-        Me.ConsultarToolStripMenuItem.Name = "ConsultarToolStripMenuItem"
-        Me.ConsultarToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
-        Me.ConsultarToolStripMenuItem.Text = "Consultar"
+        Me.BarButtonItem6.Caption = "Clientes"
+        Me.BarButtonItem6.Id = 6
+        Me.BarButtonItem6.ImageOptions.Image = CType(resources.GetObject("BarButtonItem6.ImageOptions.Image"), System.Drawing.Image)
+        Me.BarButtonItem6.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem6.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BarButtonItem6.Name = "BarButtonItem6"
         '
-        'EliminarToolStripMenuItem
+        'BarButtonItem7
         '
-        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
-        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
-        Me.EliminarToolStripMenuItem.Text = "Eliminar"
+        Me.BarButtonItem7.Id = 7
+        Me.BarButtonItem7.Name = "BarButtonItem7"
         '
-        'ModificarToolStripMenuItem
+        'RibbonPageGroup2
         '
-        Me.ModificarToolStripMenuItem.Name = "ModificarToolStripMenuItem"
-        Me.ModificarToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
-        Me.ModificarToolStripMenuItem.Text = "Modificar"
+        Me.RibbonPageGroup2.ItemLinks.Add(Me.BarButtonItem8)
+        Me.RibbonPageGroup2.Name = "RibbonPageGroup2"
+        Me.RibbonPageGroup2.Text = "Procesos"
         '
-        'ClienteToolStripMenuItem
+        'BarButtonItem8
         '
-        Me.ClienteToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarToolStripMenuItem1, Me.ConsultarToolStripMenuItem1, Me.EliminarToolStripMenuItem1, Me.ModificarToolStripMenuItem1})
-        Me.ClienteToolStripMenuItem.Name = "ClienteToolStripMenuItem"
-        Me.ClienteToolStripMenuItem.Size = New System.Drawing.Size(56, 20)
-        Me.ClienteToolStripMenuItem.Text = "Cliente"
+        Me.BarButtonItem8.Caption = "Reservaciones"
+        Me.BarButtonItem8.Id = 8
+        Me.BarButtonItem8.ImageOptions.Image = CType(resources.GetObject("BarButtonItem8.ImageOptions.Image"), System.Drawing.Image)
+        Me.BarButtonItem8.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem8.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BarButtonItem8.Name = "BarButtonItem8"
         '
-        'AgregarToolStripMenuItem1
+        'RibbonPage2
         '
-        Me.AgregarToolStripMenuItem1.Name = "AgregarToolStripMenuItem1"
-        Me.AgregarToolStripMenuItem1.Size = New System.Drawing.Size(125, 22)
-        Me.AgregarToolStripMenuItem1.Text = "Agregar"
+        Me.RibbonPage2.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup3})
+        Me.RibbonPage2.Name = "RibbonPage2"
+        Me.RibbonPage2.Text = "RibbonPage2"
         '
-        'ConsultarToolStripMenuItem1
+        'RibbonPageGroup3
         '
-        Me.ConsultarToolStripMenuItem1.Name = "ConsultarToolStripMenuItem1"
-        Me.ConsultarToolStripMenuItem1.Size = New System.Drawing.Size(125, 22)
-        Me.ConsultarToolStripMenuItem1.Text = "Consultar"
+        Me.RibbonPageGroup3.Name = "RibbonPageGroup3"
+        Me.RibbonPageGroup3.Text = "RibbonPageGroup3"
         '
-        'EliminarToolStripMenuItem1
+        'BarButtonItem9
         '
-        Me.EliminarToolStripMenuItem1.Name = "EliminarToolStripMenuItem1"
-        Me.EliminarToolStripMenuItem1.Size = New System.Drawing.Size(125, 22)
-        Me.EliminarToolStripMenuItem1.Text = "Eliminar"
+        Me.BarButtonItem9.Caption = "Editar"
+        Me.BarButtonItem9.Id = 9
+        Me.BarButtonItem9.ImageOptions.Image = CType(resources.GetObject("BarButtonItem9.ImageOptions.Image"), System.Drawing.Image)
+        Me.BarButtonItem9.Name = "BarButtonItem9"
         '
-        'ModificarToolStripMenuItem1
+        'BarButtonItem10
         '
-        Me.ModificarToolStripMenuItem1.Name = "ModificarToolStripMenuItem1"
-        Me.ModificarToolStripMenuItem1.Size = New System.Drawing.Size(125, 22)
-        Me.ModificarToolStripMenuItem1.Text = "Modificar"
-        '
-        'ReservacionesToolStripMenuItem
-        '
-        Me.ReservacionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarToolStripMenuItem2, Me.ConsultarToolStripMenuItem2, Me.CancelarToolStripMenuItem, Me.ModificarToolStripMenuItem2})
-        Me.ReservacionesToolStripMenuItem.Name = "ReservacionesToolStripMenuItem"
-        Me.ReservacionesToolStripMenuItem.Size = New System.Drawing.Size(93, 20)
-        Me.ReservacionesToolStripMenuItem.Text = "Reservaciones"
-        '
-        'AgregarToolStripMenuItem2
-        '
-        Me.AgregarToolStripMenuItem2.Name = "AgregarToolStripMenuItem2"
-        Me.AgregarToolStripMenuItem2.Size = New System.Drawing.Size(125, 22)
-        Me.AgregarToolStripMenuItem2.Text = "Agregar"
-        '
-        'ConsultarToolStripMenuItem2
-        '
-        Me.ConsultarToolStripMenuItem2.Name = "ConsultarToolStripMenuItem2"
-        Me.ConsultarToolStripMenuItem2.Size = New System.Drawing.Size(125, 22)
-        Me.ConsultarToolStripMenuItem2.Text = "Consultar"
-        '
-        'CancelarToolStripMenuItem
-        '
-        Me.CancelarToolStripMenuItem.Name = "CancelarToolStripMenuItem"
-        Me.CancelarToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
-        Me.CancelarToolStripMenuItem.Text = "Cancelar"
-        '
-        'ModificarToolStripMenuItem2
-        '
-        Me.ModificarToolStripMenuItem2.Name = "ModificarToolStripMenuItem2"
-        Me.ModificarToolStripMenuItem2.Size = New System.Drawing.Size(125, 22)
-        Me.ModificarToolStripMenuItem2.Text = "Modificar"
-        '
-        'BarButtonItem4
-        '
-        Me.BarButtonItem4.Caption = "BarButtonItem4"
-        Me.BarButtonItem4.Id = 4
-        Me.BarButtonItem4.Name = "BarButtonItem4"
+        Me.BarButtonItem10.Caption = "Eliminar"
+        Me.BarButtonItem10.Id = 10
+        Me.BarButtonItem10.ImageOptions.Image = CType(resources.GetObject("BarButtonItem10.ImageOptions.Image"), System.Drawing.Image)
+        Me.BarButtonItem10.Name = "BarButtonItem10"
         '
         'mdiPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(442, 449)
+        Me.ClientSize = New System.Drawing.Size(775, 493)
         Me.Controls.Add(Me.RibbonStatusBar)
-        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.RibbonControl)
         Me.IsMdiContainer = True
-        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "mdiPrincipal"
         Me.Ribbon = Me.RibbonControl
         Me.StatusBar = Me.RibbonStatusBar
@@ -217,8 +185,6 @@ Partial Class mdiPrincipal
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.XtraTabbedMdiManager1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -230,21 +196,16 @@ Partial Class mdiPrincipal
     Friend WithEvents BarButtonItem1 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BarButtonItem2 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BarButtonItem3 As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents AgregarToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ConsultarToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ModificarToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ClienteToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AgregarToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents ConsultarToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents EliminarToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents ModificarToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents ReservacionesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AgregarToolStripMenuItem2 As ToolStripMenuItem
-    Friend WithEvents ConsultarToolStripMenuItem2 As ToolStripMenuItem
-    Friend WithEvents CancelarToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ModificarToolStripMenuItem2 As ToolStripMenuItem
-    Friend WithEvents BarButtonItem4 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents btnNuevo As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BarButtonItem5 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents RibbonPage1 As DevExpress.XtraBars.Ribbon.RibbonPage
+    Friend WithEvents RibbonPageGroup1 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
+    Friend WithEvents BarButtonItem6 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BarButtonItem7 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BarButtonItem8 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents RibbonPageGroup2 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
+    Friend WithEvents BarButtonItem9 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BarButtonItem10 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents RibbonPage2 As DevExpress.XtraBars.Ribbon.RibbonPage
+    Friend WithEvents RibbonPageGroup3 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
 End Class

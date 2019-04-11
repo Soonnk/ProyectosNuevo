@@ -1,8 +1,26 @@
 ﻿Public Class pAgregarHabitaciones
+    Public modo As tipo
+    Private _mdiPrincipal As mdiPrincipal
+
+    Enum tipo
+        Nuevo
+        Editar
+    End Enum
     Private Sub pAgregarHabitaciones_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Cargar()
+        'Me.mdiPrincipal1.activo = "habitaciones"
     End Sub
+    Public Sub consultarHabitacion(ByRef row As DataRow)
+        Try
+            txtId.EditValue = row("id")
+            txtDescripcion.EditValue = row("descipcion")
+            txtCapacidad.EditValue = row("capacidad")
+            txtPrecioPorNoche.EditValue = row("precioPorNoche")
 
+        Catch ex As Exception
+
+        End Try
+    End Sub
     Private Sub GroupControl1_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
@@ -30,7 +48,7 @@
         Agregar
         Modificar
     End Enum
-    Public Forma As New pAgregarHabitaciones
+    'Public Forma As New pAgregarHabitaciones
 
     Public _Id2 As Integer
 
@@ -42,7 +60,7 @@
                 Case enuTipoForma.Agregar
                     If hNegocio.Insertar(llenarEntidad) = True Then
                         MessageBox.Show("Datos guardados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        Forma.Cargar()
+                        'Forma.Cargar()
                         Me.Close()
                     Else
                         MessageBox.Show("No se pudo guardar los datos", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -73,7 +91,7 @@
                     Me.Text = ".: Agregar Habitación :."
                 Case enuTipoForma.Modificar
                     Me.Text = ".: Modificar Habitación :."
-                    CargarHabitacion()
+                    cargarHabitacion()
             End Select
         Catch ex As Exception
             MessageBox.Show(ex.Message)
