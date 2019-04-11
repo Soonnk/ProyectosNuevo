@@ -15,15 +15,16 @@
     End Function
 
     Public Function CargarHabitaciones(ByVal _id) As Entidades.Habitaciones
-        Dim query As String = "SELECT * FROM Habitaciones WHERE Id = " & _id
+        Dim query As String = "SELECT * FROM Habitaciones WHERE id = " & _id
         Try
             ds = obj.CargarDatos(query)
 
             Dim hEntidad As New Entidades.Habitaciones
             With ds.Tables("Datos").Rows(0)
-                hEntidad.Descripcion = .Item("Descripcion")
-                hEntidad.Capacidad = .Item("Capacidad")
-                hEntidad.PrecioPorNoche = .Item("Precio por noche")
+                hEntidad.Id = .Item("id")
+                hEntidad.Descripcion = .Item("descripcion")
+                hEntidad.Capacidad = .Item("capacidad")
+                hEntidad.PrecioPorNoche = .Item("precioPorNoche")
             End With
             Return hEntidad
         Finally
@@ -33,8 +34,9 @@
 
     Public Function InsertarHabitacion(ByVal entHabitaciones As Entidades.Habitaciones) As Boolean
         Dim Query As String
+        Dim id As Integer = obj.Incrementar("Habitaciones")
         Try
-            Query = "INSERT INTO Habitaciones (Descripcion, Capacidad, Precio por noche) VALUES ('" & entHabitaciones.Descripcion & "','" & entHabitaciones.Capacidad & "','" & entHabitaciones.PrecioPorNoche & "')"
+            Query = "INSERT INTO Habitaciones (id, descripcion, capacidad, precioPorNoche) VALUES ('" & entHabitaciones.Id & entHabitaciones.Descripcion & "','" & entHabitaciones.Capacidad & "','" & entHabitaciones.PrecioPorNoche & "')"
             Return obj.commandSQL(Query)
         Catch ex As Exception
             Return False
@@ -51,10 +53,10 @@
     End Sub
 
 
-    Public Function BorrarHabitacion(ByVal _Id As Integer) As Boolean
+    Public Function BorrarHabitacion(ByVal _id As Integer) As Boolean
         Dim Query As String
         Try
-            Query = "DELETE FROM Habitaciones WHERE Id = " & _Id
+            Query = "DELETE FROM Habitaciones WHERE id = " & _id
             Return obj.commandSQL(Query)
 
         Catch ex As Exception
