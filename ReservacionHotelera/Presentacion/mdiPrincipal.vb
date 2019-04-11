@@ -13,7 +13,6 @@
     Private Sub BarButtonItem6_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem6.ItemClick
         Try
             Dim frmCliente As New pConsultarClientes
-
             frmCliente.MdiParent = Me
             frmCliente.Show()
         Catch ex As Exception
@@ -23,8 +22,7 @@
 
     Private Sub BarButtonItem8_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem8.ItemClick
         Try
-            Dim frmReservacion As New pConsultarClientes
-
+            Dim frmReservacion As New pConsultarReservaciones
             frmReservacion.MdiParent = Me
             frmReservacion.Show()
         Catch ex As Exception
@@ -44,6 +42,11 @@
                     'frmEditar.consultarHabitacion
                     frmNuevo.modo = pAgregarHabitaciones.tipo.Nuevo
                     frmNuevo.ShowDialog()
+                Case "Editar Habitacion"
+                    Dim frmEditar As New pConsultarHabitaciones
+                    frmEditar.modo = pConsultarHabitaciones.tipo.Editar
+                    frmEditar = frmActivo
+                    frmEditar.consultarHabitacion()
             End Select
         Catch ex As Exception
 
