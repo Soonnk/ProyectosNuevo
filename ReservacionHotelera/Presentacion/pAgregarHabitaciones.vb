@@ -32,14 +32,14 @@
     End Enum
 
 
-    Public Forma As New pAgregarHabitaciones
+    Public Forma As New pConsultarHabitaciones
 
     Public _Id2 As Integer
 
     Private Sub Guardar()
         Try
             Dim hNegocio As New Negocios.Habitaciones
-
+            llenarEntidad()
             Select Case TipoForma
                 Case enuTipoForma.Agregar
                     If hNegocio.Insertar(llenarEntidad) = True Then
@@ -51,7 +51,7 @@
                     End If
             End Select
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show(ex.StackTrace)
         End Try
     End Sub
 
@@ -60,9 +60,9 @@
     Private Function llenarEntidad() As Entidades.Habitaciones
         Dim hEntidad As New Entidades.Habitaciones
 
-        hEntidad.Descripcion = Me.txtDescripcion.Text
-        hEntidad.Capacidad = Me.txtCapacidad.Text
-        hEntidad.PrecioPorNoche = Me.txtPrecioPorNoche.Text
+        hEntidad.Descripcion = Me.txtDescripcion.EditValue
+        hEntidad.Capacidad = Me.txtCapacidad.EditValue
+        hEntidad.PrecioPorNoche = Me.txtPrecioPorNoche.EditValue
 
         Return hEntidad
 
@@ -72,10 +72,10 @@
         Try
             Select Case TipoForma
                 Case enuTipoForma.Agregar
-                    Me.Text = ".: Agregar Habitación :."
+                    Me.Text = "Agregar Habitación"
                 Case enuTipoForma.Modificar
-                    Me.Text = ".: Modificar Habitación :."
-                    CargarHabitacion()
+                    Me.Text = "Modificar Habitación"
+                    cargarHabitacion()
             End Select
         Catch ex As Exception
             MessageBox.Show(ex.Message)

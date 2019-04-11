@@ -37,7 +37,7 @@
             Query = "INSERT INTO Habitaciones (Descripcion, Capacidad, Precio por noche) VALUES ('" & entHabitaciones.Descripcion & "','" & entHabitaciones.Capacidad & "','" & entHabitaciones.PrecioPorNoche & "')"
             Return obj.commandSQL(Query)
         Catch ex As Exception
-            Return Nothing
+            Return False
         End Try
 
 
@@ -55,11 +55,11 @@
         Dim Query As String
         Try
             Query = "DELETE FROM Habitaciones WHERE Id = " & _Id
-            obj.commandSQL(Query)
+            Return obj.commandSQL(Query)
 
         Catch ex As Exception
-
+            Return False
         End Try
-        Return ""
+
     End Function
 End Class
