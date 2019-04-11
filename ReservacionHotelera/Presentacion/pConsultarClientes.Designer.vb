@@ -77,8 +77,6 @@ Partial Class pConsultarClientes
         'IdCliente
         '
         Me.IdCliente.Caption = "idCliente"
-        Me.IdCliente.FieldName = "idCliente"
-        Me.IdCliente.FieldNameSortGroup = "idCliente"
         Me.IdCliente.Name = "IdCliente"
         Me.IdCliente.Visible = True
         Me.IdCliente.VisibleIndex = 0
