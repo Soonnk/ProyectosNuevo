@@ -19,13 +19,13 @@ Partial Class mdiPrincipal
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Me.RibbonControl = New DevExpress.XtraBars.Ribbon.RibbonControl()
         Me.BarButtonItem1 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem2 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem3 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem4 = New DevExpress.XtraBars.BarButtonItem()
         Me.RibbonStatusBar = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
-        Me.XtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(Me.components)
+        Me.XtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.AgregarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -42,7 +42,6 @@ Partial Class mdiPrincipal
         Me.ConsultarToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.CancelarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ModificarToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BarButtonItem4 = New DevExpress.XtraBars.BarButtonItem()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XtraTabbedMdiManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
@@ -57,7 +56,7 @@ Partial Class mdiPrincipal
         Me.RibbonControl.Name = "RibbonControl"
         Me.RibbonControl.QuickToolbarItemLinks.Add(Me.BarButtonItem4)
         Me.RibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013
-        Me.RibbonControl.Size = New System.Drawing.Size(442, 49)
+        Me.RibbonControl.Size = New System.Drawing.Size(461, 49)
         Me.RibbonControl.StatusBar = Me.RibbonStatusBar
         '
         'BarButtonItem1
@@ -79,13 +78,19 @@ Partial Class mdiPrincipal
         Me.BarButtonItem3.Id = 3
         Me.BarButtonItem3.Name = "BarButtonItem3"
         '
+        'BarButtonItem4
+        '
+        Me.BarButtonItem4.Caption = "BarButtonItem4"
+        Me.BarButtonItem4.Id = 4
+        Me.BarButtonItem4.Name = "BarButtonItem4"
+        '
         'RibbonStatusBar
         '
         Me.RibbonStatusBar.ItemLinks.Add(Me.BarButtonItem3)
-        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 418)
+        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 437)
         Me.RibbonStatusBar.Name = "RibbonStatusBar"
         Me.RibbonStatusBar.Ribbon = Me.RibbonControl
-        Me.RibbonStatusBar.Size = New System.Drawing.Size(442, 31)
+        Me.RibbonStatusBar.Size = New System.Drawing.Size(461, 31)
         '
         'XtraTabbedMdiManager1
         '
@@ -97,7 +102,7 @@ Partial Class mdiPrincipal
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.ClienteToolStripMenuItem, Me.ReservacionesToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 49)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(442, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(461, 24)
         Me.MenuStrip1.TabIndex = 3
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -194,17 +199,11 @@ Partial Class mdiPrincipal
         Me.ModificarToolStripMenuItem2.Size = New System.Drawing.Size(125, 22)
         Me.ModificarToolStripMenuItem2.Text = "Modificar"
         '
-        'BarButtonItem4
-        '
-        Me.BarButtonItem4.Caption = "BarButtonItem4"
-        Me.BarButtonItem4.Id = 4
-        Me.BarButtonItem4.Name = "BarButtonItem4"
-        '
         'mdiPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(442, 449)
+        Me.ClientSize = New System.Drawing.Size(461, 468)
         Me.Controls.Add(Me.RibbonStatusBar)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.RibbonControl)
