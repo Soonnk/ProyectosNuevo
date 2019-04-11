@@ -5,6 +5,7 @@ Public Class pAgregarReservaciones
 
     Private Sub pAgregarReservaciones_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         PrepararDetalle()
+
     End Sub
 
     Private Sub ComboBoxEdit1_Clicked(sender As Object, e As EventArgs) Handles cmbHabitacion.ButtonClick
@@ -63,6 +64,16 @@ Public Class pAgregarReservaciones
         End Try
     End Sub
 
+    Public Sub BuscarCliente(ByVal id As Integer)
+        Dim nClientes As Negocios.Clientes = New Negocios.Clientes
+        Dim cliente As Entidades.Clientes = nClientes.CargarCliente(id)
+        If cliente Is Nothing Then
+            lblCliente.Text = "Cliente no encontrado"
+        Else
+            lblCliente.Text = cliente.Nombre & cliente.Apellido
+        End If
+    End Sub
+
     Private Sub PrepararDetalle()
         detalle = New DataTable
 
@@ -107,8 +118,12 @@ Public Class pAgregarReservaciones
         Dim nReservacion = New Negocios.Reservaciones
 
         If (Not nReservacion.GuardarReservacion(CrearReservacion)) Then
-            MsgBox("No ha sido posible insertar")
+            MsgBox("No ha sido posible guardar")
         End If
 
+    End Sub
+
+    Private Sub btnBuscarCliente_Click(sender As Object, e As EventArgs) Handles btnBuscarCliente.Click
+        BuscarCliente(txtCliente.EditValue)
     End Sub
 End Class
