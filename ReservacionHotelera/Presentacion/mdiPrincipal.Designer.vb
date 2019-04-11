@@ -42,6 +42,7 @@ Partial Class mdiPrincipal
         Me.ConsultarToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.CancelarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ModificarToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BarButtonItem4 = New DevExpress.XtraBars.BarButtonItem()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XtraTabbedMdiManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
@@ -50,10 +51,11 @@ Partial Class mdiPrincipal
         'RibbonControl
         '
         Me.RibbonControl.ExpandCollapseItem.Id = 0
-        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.BarButtonItem1, Me.BarButtonItem2, Me.BarButtonItem3})
+        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.BarButtonItem1, Me.BarButtonItem2, Me.BarButtonItem3, Me.BarButtonItem4})
         Me.RibbonControl.Location = New System.Drawing.Point(0, 0)
-        Me.RibbonControl.MaxItemId = 4
+        Me.RibbonControl.MaxItemId = 5
         Me.RibbonControl.Name = "RibbonControl"
+        Me.RibbonControl.QuickToolbarItemLinks.Add(Me.BarButtonItem4)
         Me.RibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013
         Me.RibbonControl.Size = New System.Drawing.Size(442, 49)
         Me.RibbonControl.StatusBar = Me.RibbonStatusBar
@@ -109,25 +111,25 @@ Partial Class mdiPrincipal
         'AgregarToolStripMenuItem
         '
         Me.AgregarToolStripMenuItem.Name = "AgregarToolStripMenuItem"
-        Me.AgregarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AgregarToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
         Me.AgregarToolStripMenuItem.Text = "Agregar"
         '
         'ConsultarToolStripMenuItem
         '
         Me.ConsultarToolStripMenuItem.Name = "ConsultarToolStripMenuItem"
-        Me.ConsultarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ConsultarToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
         Me.ConsultarToolStripMenuItem.Text = "Consultar"
         '
         'EliminarToolStripMenuItem
         '
         Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
-        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
         Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
         'ModificarToolStripMenuItem
         '
         Me.ModificarToolStripMenuItem.Name = "ModificarToolStripMenuItem"
-        Me.ModificarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ModificarToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
         Me.ModificarToolStripMenuItem.Text = "Modificar"
         '
         'ClienteToolStripMenuItem
@@ -140,25 +142,25 @@ Partial Class mdiPrincipal
         'AgregarToolStripMenuItem1
         '
         Me.AgregarToolStripMenuItem1.Name = "AgregarToolStripMenuItem1"
-        Me.AgregarToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.AgregarToolStripMenuItem1.Size = New System.Drawing.Size(125, 22)
         Me.AgregarToolStripMenuItem1.Text = "Agregar"
         '
         'ConsultarToolStripMenuItem1
         '
         Me.ConsultarToolStripMenuItem1.Name = "ConsultarToolStripMenuItem1"
-        Me.ConsultarToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.ConsultarToolStripMenuItem1.Size = New System.Drawing.Size(125, 22)
         Me.ConsultarToolStripMenuItem1.Text = "Consultar"
         '
         'EliminarToolStripMenuItem1
         '
         Me.EliminarToolStripMenuItem1.Name = "EliminarToolStripMenuItem1"
-        Me.EliminarToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.EliminarToolStripMenuItem1.Size = New System.Drawing.Size(125, 22)
         Me.EliminarToolStripMenuItem1.Text = "Eliminar"
         '
         'ModificarToolStripMenuItem1
         '
         Me.ModificarToolStripMenuItem1.Name = "ModificarToolStripMenuItem1"
-        Me.ModificarToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.ModificarToolStripMenuItem1.Size = New System.Drawing.Size(125, 22)
         Me.ModificarToolStripMenuItem1.Text = "Modificar"
         '
         'ReservacionesToolStripMenuItem
@@ -171,26 +173,32 @@ Partial Class mdiPrincipal
         'AgregarToolStripMenuItem2
         '
         Me.AgregarToolStripMenuItem2.Name = "AgregarToolStripMenuItem2"
-        Me.AgregarToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
+        Me.AgregarToolStripMenuItem2.Size = New System.Drawing.Size(125, 22)
         Me.AgregarToolStripMenuItem2.Text = "Agregar"
         '
         'ConsultarToolStripMenuItem2
         '
         Me.ConsultarToolStripMenuItem2.Name = "ConsultarToolStripMenuItem2"
-        Me.ConsultarToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
+        Me.ConsultarToolStripMenuItem2.Size = New System.Drawing.Size(125, 22)
         Me.ConsultarToolStripMenuItem2.Text = "Consultar"
         '
         'CancelarToolStripMenuItem
         '
         Me.CancelarToolStripMenuItem.Name = "CancelarToolStripMenuItem"
-        Me.CancelarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CancelarToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
         Me.CancelarToolStripMenuItem.Text = "Cancelar"
         '
         'ModificarToolStripMenuItem2
         '
         Me.ModificarToolStripMenuItem2.Name = "ModificarToolStripMenuItem2"
-        Me.ModificarToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
+        Me.ModificarToolStripMenuItem2.Size = New System.Drawing.Size(125, 22)
         Me.ModificarToolStripMenuItem2.Text = "Modificar"
+        '
+        'BarButtonItem4
+        '
+        Me.BarButtonItem4.Caption = "BarButtonItem4"
+        Me.BarButtonItem4.Id = 4
+        Me.BarButtonItem4.Name = "BarButtonItem4"
         '
         'mdiPrincipal
         '
@@ -206,6 +214,7 @@ Partial Class mdiPrincipal
         Me.Ribbon = Me.RibbonControl
         Me.StatusBar = Me.RibbonStatusBar
         Me.Text = "Main"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.XtraTabbedMdiManager1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
@@ -237,4 +246,5 @@ Partial Class mdiPrincipal
     Friend WithEvents ConsultarToolStripMenuItem2 As ToolStripMenuItem
     Friend WithEvents CancelarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ModificarToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents BarButtonItem4 As DevExpress.XtraBars.BarButtonItem
 End Class
