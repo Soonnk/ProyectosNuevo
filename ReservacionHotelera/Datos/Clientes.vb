@@ -6,7 +6,7 @@
         Dim dt As New DataTable
         Dim Query As String
         Try
-            Query = "SELECT * FROM Clientes"
+            Query = "SELECT * FROM clientes"
             dt = obj.RegresarDatos(Query)
             Return dt
         Finally
@@ -15,7 +15,7 @@
     End Function
 
     Public Function CargarCliente(ByVal _id) As Entidades.Clientes
-        Dim query As String = "SELECT * FROM Clientes WHERE IdCliente = " & _id
+        Dim query As String = "SELECT * FROM clientes WHERE idCliente = " & _id
         Try
             ds = obj.CargarDatos(query)
 
@@ -39,8 +39,9 @@
 
     Public Function InsertarCliente(ByVal entCliente As Entidades.Clientes) As Boolean
         Dim Query As String
+        Dim id As Integer = obj.Incrementar("clientes")
         Try
-            Query = "INSERT INTO Cliente(nombre,apellido,direccion,municipio,estado,pais,telefono,correo) VALUES ('" & entCliente.Nombre & "','" & entCliente.Apellido & "','" & entCliente.Direccion & "','" & entCliente.Municipio & "', '" & entCliente.Estado & "','" & entCliente.Pais & "','" & entCliente.Telefono & "', '" & entCliente.Correo & "')"
+            Query = "INSERT INTO clientes(id,nombre,apellido,direccion,municipio,estado,pais,telefono,correo) VALUES (" & id & ",'" & entCliente.Nombre & "','" & entCliente.Apellido & "','" & entCliente.Direccion & "','" & entCliente.Municipio & "', '" & entCliente.Estado & "','" & entCliente.Pais & "','" & entCliente.Telefono & "', '" & entCliente.Correo & "')"
             Return obj.commandSQL(Query)
         Catch ex As Exception
             MsgBox(ex)
@@ -60,7 +61,7 @@
     Public Function BorrarCliente(ByVal _id As Integer) As Boolean
         Dim Query As String
         Try
-            Query = "DELETE FROM Clientes WHERE IdCliente = " & _id
+            Query = "DELETE FROM clientes WHERE idCliente = " & _id
             Return obj.commandSQL(Query)
 
         Catch ex As Exception
