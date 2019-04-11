@@ -37,7 +37,7 @@
             Query = "INSERT INTO Habitaciones (Descripcion, Capacidad, Precio por noche) VALUES ('" & entHabitaciones.Descripcion & "','" & entHabitaciones.Capacidad & "','" & entHabitaciones.PrecioPorNoche & "')"
             Return obj.commandSQL(Query)
         Catch ex As Exception
-
+            Return Nothing
         End Try
 
 
@@ -60,6 +60,6 @@
         Catch ex As Exception
 
         End Try
-
+        Return ""
     End Function
 End Class

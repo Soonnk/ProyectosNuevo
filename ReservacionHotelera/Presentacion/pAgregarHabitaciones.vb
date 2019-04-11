@@ -30,6 +30,8 @@
         Agregar
         Modificar
     End Enum
+
+
     Public Forma As New pAgregarHabitaciones
 
     Public _Id2 As Integer
@@ -82,8 +84,8 @@
 
 
     Public Sub cargarHabitacion()
-        Dim hNegocio As Negocios.Habitaciones
-        Dim hEntidad As Entidades.Habitaciones
+        Dim hNegocio As New Negocios.Habitaciones
+        Dim hEntidad As New Entidades.Habitaciones
         Try
             hEntidad = hNegocio.cargarHabitaciones(_Id2)
             Me.txtDescripcion.Text = hEntidad.Descripcion
