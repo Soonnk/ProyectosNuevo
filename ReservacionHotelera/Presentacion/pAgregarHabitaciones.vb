@@ -10,7 +10,7 @@
         Cargar()
         'Me.mdiPrincipal1.activo = "habitaciones"
     End Sub
-    Public Sub consultarHabitacion(ByRef row As DataRow)
+    Public Sub consultarHabitacion(ByVal row As DataRow)
         Try
             txtId.EditValue = row("id")
             txtDescripcion.EditValue = row("descipcion")
