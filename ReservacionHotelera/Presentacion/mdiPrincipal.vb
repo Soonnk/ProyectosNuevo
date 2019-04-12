@@ -1,5 +1,13 @@
 ﻿Public Class mdiPrincipal
     Public activo As String
+    Private ReadOnly Property CurFormCliente() As pConsultarClientes
+        Get
+            If Me.ActiveMdiChild Is Nothing Then
+                Return Nothing
+            End If
+            Return TryCast(Me.ActiveMdiChild, pConsultarClientes)
+        End Get
+    End Property
     Private Sub BarButtonItem5_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem5.ItemClick
         Try
             Dim frmHabitacion As New pConsultarHabitaciones
@@ -47,6 +55,7 @@
                     frmEditar.modo = pConsultarHabitaciones.tipo.Editar
                     frmEditar = frmActivo
                     frmEditar.consultarHabitacion()
+
             End Select
         Catch ex As Exception
 
