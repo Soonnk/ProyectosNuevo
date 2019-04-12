@@ -26,19 +26,19 @@ Partial Class mdiPrincipal
         Me.BarButtonItem2 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem3 = New DevExpress.XtraBars.BarButtonItem()
         Me.btnNuevo = New DevExpress.XtraBars.BarButtonItem()
-        Me.RibbonStatusBar = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
-        Me.XtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(Me.components)
-        Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
-        Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.BarButtonItem5 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem6 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem7 = New DevExpress.XtraBars.BarButtonItem()
-        Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.BarButtonItem8 = New DevExpress.XtraBars.BarButtonItem()
-        Me.RibbonPage2 = New DevExpress.XtraBars.Ribbon.RibbonPage()
-        Me.RibbonPageGroup3 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.BarButtonItem9 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem10 = New DevExpress.XtraBars.BarButtonItem()
+        Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
+        Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.RibbonPage2 = New DevExpress.XtraBars.Ribbon.RibbonPage()
+        Me.RibbonPageGroup3 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.RibbonStatusBar = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
+        Me.XtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(Me.components)
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XtraTabbedMdiManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -81,34 +81,8 @@ Partial Class mdiPrincipal
         '
         Me.btnNuevo.Caption = "Nuevo"
         Me.btnNuevo.Id = 4
-        Me.btnNuevo.ImageOptions.Image = CType(resources.GetObject("BarButtonItem4.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnNuevo.ImageOptions.Image = CType(resources.GetObject("btnNuevo.ImageOptions.Image"), System.Drawing.Image)
         Me.btnNuevo.Name = "btnNuevo"
-        '
-        'RibbonStatusBar
-        '
-        Me.RibbonStatusBar.ItemLinks.Add(Me.BarButtonItem3)
-        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 462)
-        Me.RibbonStatusBar.Name = "RibbonStatusBar"
-        Me.RibbonStatusBar.Ribbon = Me.RibbonControl
-        Me.RibbonStatusBar.Size = New System.Drawing.Size(775, 31)
-        '
-        'XtraTabbedMdiManager1
-        '
-        Me.XtraTabbedMdiManager1.MdiParent = Me
-        '
-        'RibbonPage1
-        '
-        Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1, Me.RibbonPageGroup2})
-        Me.RibbonPage1.Name = "RibbonPage1"
-        Me.RibbonPage1.Text = "RibbonPage1"
-        '
-        'RibbonPageGroup1
-        '
-        Me.RibbonPageGroup1.ItemLinks.Add(Me.BarButtonItem5)
-        Me.RibbonPageGroup1.ItemLinks.Add(Me.BarButtonItem6)
-        Me.RibbonPageGroup1.ItemLinks.Add(Me.BarButtonItem7)
-        Me.RibbonPageGroup1.Name = "RibbonPageGroup1"
-        Me.RibbonPageGroup1.Text = "Catalogo"
         '
         'BarButtonItem5
         '
@@ -131,12 +105,6 @@ Partial Class mdiPrincipal
         Me.BarButtonItem7.Id = 7
         Me.BarButtonItem7.Name = "BarButtonItem7"
         '
-        'RibbonPageGroup2
-        '
-        Me.RibbonPageGroup2.ItemLinks.Add(Me.BarButtonItem8)
-        Me.RibbonPageGroup2.Name = "RibbonPageGroup2"
-        Me.RibbonPageGroup2.Text = "Procesos"
-        '
         'BarButtonItem8
         '
         Me.BarButtonItem8.Caption = "Reservaciones"
@@ -144,17 +112,6 @@ Partial Class mdiPrincipal
         Me.BarButtonItem8.ImageOptions.Image = CType(resources.GetObject("BarButtonItem8.ImageOptions.Image"), System.Drawing.Image)
         Me.BarButtonItem8.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem8.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.BarButtonItem8.Name = "BarButtonItem8"
-        '
-        'RibbonPage2
-        '
-        Me.RibbonPage2.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup3})
-        Me.RibbonPage2.Name = "RibbonPage2"
-        Me.RibbonPage2.Text = "RibbonPage2"
-        '
-        'RibbonPageGroup3
-        '
-        Me.RibbonPageGroup3.Name = "RibbonPageGroup3"
-        Me.RibbonPageGroup3.Text = "RibbonPageGroup3"
         '
         'BarButtonItem9
         '
@@ -169,6 +126,49 @@ Partial Class mdiPrincipal
         Me.BarButtonItem10.Id = 10
         Me.BarButtonItem10.ImageOptions.Image = CType(resources.GetObject("BarButtonItem10.ImageOptions.Image"), System.Drawing.Image)
         Me.BarButtonItem10.Name = "BarButtonItem10"
+        '
+        'RibbonPage1
+        '
+        Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1, Me.RibbonPageGroup2})
+        Me.RibbonPage1.Name = "RibbonPage1"
+        Me.RibbonPage1.Text = "RibbonPage1"
+        '
+        'RibbonPageGroup1
+        '
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.BarButtonItem5)
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.BarButtonItem6)
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.BarButtonItem7)
+        Me.RibbonPageGroup1.Name = "RibbonPageGroup1"
+        Me.RibbonPageGroup1.Text = "Catalogo"
+        '
+        'RibbonPageGroup2
+        '
+        Me.RibbonPageGroup2.ItemLinks.Add(Me.BarButtonItem8)
+        Me.RibbonPageGroup2.Name = "RibbonPageGroup2"
+        Me.RibbonPageGroup2.Text = "Procesos"
+        '
+        'RibbonPage2
+        '
+        Me.RibbonPage2.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup3})
+        Me.RibbonPage2.Name = "RibbonPage2"
+        Me.RibbonPage2.Text = "RibbonPage2"
+        '
+        'RibbonPageGroup3
+        '
+        Me.RibbonPageGroup3.Name = "RibbonPageGroup3"
+        Me.RibbonPageGroup3.Text = "RibbonPageGroup3"
+        '
+        'RibbonStatusBar
+        '
+        Me.RibbonStatusBar.ItemLinks.Add(Me.BarButtonItem3)
+        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 462)
+        Me.RibbonStatusBar.Name = "RibbonStatusBar"
+        Me.RibbonStatusBar.Ribbon = Me.RibbonControl
+        Me.RibbonStatusBar.Size = New System.Drawing.Size(775, 31)
+        '
+        'XtraTabbedMdiManager1
+        '
+        Me.XtraTabbedMdiManager1.MdiParent = Me
         '
         'mdiPrincipal
         '

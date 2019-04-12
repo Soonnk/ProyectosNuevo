@@ -8,7 +8,7 @@
     End Enum
     Private Sub pAgregarHabitaciones_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Cargar()
-        'Me.mdiPrincipal1.activo = "habitaciones"
+        'Me.mdiPrincipal1.activo = " nuevahabitaciones"
     End Sub
     Public Sub consultarHabitacion(ByVal row As DataRow)
         Try
@@ -100,8 +100,8 @@
 
 
     Public Sub cargarHabitacion()
-        Dim hNegocio As Negocios.Habitaciones
-        Dim hEntidad As Entidades.Habitaciones
+        Dim hNegocio As New Negocios.Habitaciones
+        Dim hEntidad As New Entidades.Habitaciones
         Try
             hEntidad = hNegocio.cargarHabitaciones(_Id2)
             Me.txtDescripcion.Text = hEntidad.Descripcion
