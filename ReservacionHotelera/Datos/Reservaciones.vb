@@ -9,9 +9,9 @@ Public Class Reservaciones
     Public Function Cargar(ByVal filtro As String) As DataTable
         Dim query As String
         If (filtro Is Nothing Or filtro.Equals("")) Then
-            query = "SELECT * FROM v_reservaciones"
+            query = "SELECT * FROM vReservaciones"
         Else
-            query = "SELECT * FROM v_reservaciones WHERE "
+            query = "SELECT * FROM vReservaciones WHERE "
         End If
         Try
             Return obj.RegresarDatos(query)
@@ -23,7 +23,7 @@ Public Class Reservaciones
     End Function
 
     Public Function CargarReservacion(ByVal _idReservacion As Integer) As Entidades.Reservaciones
-        Dim query As String = "SELECT * FROM v_reservaciones WHERE id = " & _idReservacion
+        Dim query As String = "SELECT * FROM vReservaciones WHERE id = " & _idReservacion
 
         Try
             Dim r As New Entidades.Reservaciones

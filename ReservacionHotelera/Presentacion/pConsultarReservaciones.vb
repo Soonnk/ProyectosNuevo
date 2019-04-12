@@ -1,9 +1,9 @@
 ﻿Public Class pConsultarReservaciones
     Private Sub pConsultarReservaciones_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Cargar()
     End Sub
 
-    Public Sub CargarTabla()
+    Public Sub Cargar()
         Try
             Dim nReservacion = New Negocios.Reservaciones
             Dim tabla = nReservacion.Consultar()
