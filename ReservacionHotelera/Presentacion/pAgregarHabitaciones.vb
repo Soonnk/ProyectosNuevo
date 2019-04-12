@@ -8,9 +8,9 @@
     End Enum
     Private Sub pAgregarHabitaciones_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Cargar()
-        'Me.mdiPrincipal1.activo = "habitaciones"
+        'Me.mdiPrincipal1.activo = " nuevahabitaciones"
     End Sub
-    Public Sub consultarHabitacion(ByRef row As DataRow)
+    Public Sub consultarHabitacion(ByVal row As DataRow)
         Try
             txtId.EditValue = row("id")
             txtDescripcion.EditValue = row("descipcion")

@@ -1,12 +1,39 @@
 ﻿Public Class pAgregarClientes
+    Public modo As tipo
+    Private _mdiPrincipal As mdiPrincipal
 
+    Enum tipo
+        Nuevo
+        Editar
+    End Enum
+    Private Sub pAgregarClientes_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Cargar()
+    End Sub
+    Public Sub consultarCliente(ByVal row As DataRow)
+        Try
+            txtId.EditValue = row("id")
+            txtNombre.EditValue = row("nombre")
+            txtApellido.EditValue = row("apellido")
+            txtDireccion.EditValue = row("direccion")
+            txtMunicipio.EditValue = row("municipo")
+            txtEstado.EditValue = row("estado")
+            txtPais.EditValue = row("pais")
+            txtTelefono.EditValue = row("telefono")
+            txtCorreo.EditValue = row("correo")
+        Catch ex As Exception
+
+        End Try
+    End Sub
+    '---------------------------------------------------------------
     Public TipoForma As enuTipoForma
+
     Public Enum enuTipoForma
         Nuevo
         Editar
     End Enum
     Public Forma As New pConsultarClientes
     Public _IdCliente2 As Integer
+
 
     Public Function llenarEntidades() As Entidades.Clientes
         Dim eCliente As New Entidades.Clientes
@@ -77,7 +104,5 @@
         Me.Close()
     End Sub
 
-    Private Sub pAgregarClientes_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Cargar()
-    End Sub
+
 End Class
