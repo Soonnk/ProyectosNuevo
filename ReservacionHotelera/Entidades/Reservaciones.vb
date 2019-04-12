@@ -29,9 +29,7 @@
             Return Me._id
         End Get
         Set(ByVal value As Integer)
-            If value <> "" Then
-                _id = value
-            End If
+            _id = value
         End Set
     End Property
     Public Property FormaPago() As String
@@ -49,9 +47,7 @@
             Return Me._fechaLlegada
         End Get
         Set(ByVal value As Date)
-            If value <> "" Then
-                _fechaLlegada = value
-            End If
+            _fechaLlegada = value
         End Set
     End Property
     Public Property HoraLlegada() As DateTime
@@ -59,9 +55,7 @@
             Return Me._horaLlegada
         End Get
         Set(ByVal value As DateTime)
-            If value <> "" Then
-                _horaLlegada = value
-            End If
+            _horaLlegada = value
         End Set
     End Property
     Public Property FechaSalida() As Date
@@ -69,9 +63,7 @@
             Return Me._fechaSalida
         End Get
         Set(ByVal value As Date)
-            If value <> "" Then
-                _fechaSalida = value
-            End If
+            _fechaSalida = value
         End Set
     End Property
     Public Property HoraSalida() As DateTime
@@ -79,9 +71,7 @@
             Return Me._horaSalida
         End Get
         Set(ByVal value As DateTime)
-            If value <> "" Then
-                _horaSalida = value
-            End If
+            _horaSalida = value
         End Set
     End Property
     Public Property PrecioTotal() As Decimal
@@ -89,9 +79,7 @@
             Return Me._precioTotal
         End Get
         Set(ByVal value As Decimal)
-            If value <> "" Then
-                _precioTotal = value
-            End If
+            _precioTotal = value
         End Set
     End Property
     Public Property Atendio() As String
@@ -99,9 +87,7 @@
             Return Me._atendio
         End Get
         Set(ByVal value As String)
-            If value <> "" Then
-                _atendio = value
-            End If
+            _atendio = value
         End Set
     End Property
     Public Property Estatus() As Char
@@ -109,9 +95,7 @@
             Return Me._estatus
         End Get
         Set(ByVal value As Char)
-            If value <> "" Then
-                _estatus = value
-            End If
+            _estatus = value
         End Set
     End Property
     Public Property Habitacion() As List(Of Habitaciones)
