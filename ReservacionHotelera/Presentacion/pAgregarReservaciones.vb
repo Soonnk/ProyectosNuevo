@@ -2,12 +2,31 @@
 
 Public Class pAgregarReservaciones
     Dim detalle As DataTable
+    Public modo As tipo
+    Private _mdiPrincipal As mdiPrincipal
+
+    Enum tipo
+        Nuevo
+        Editar
+    End Enum
 
     Private Sub pAgregarReservaciones_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Cargar()
         PrepararDetalle()
-
     End Sub
+    Public Sub consultarReservacion(ByVal row As DataRow)
+        Try
+            txtId.EditValue = row("id")
+            cmbFormaPago.EditValue = row("formaDePago")
+            dtpLlegada.EditValue = row("fechaLlegada")
+            tpkLlegada.EditValue = row("horaLlegada")
+            dtpSalida.EditValue = row("fechaSalida")
+            tpkSalida.EditValue = row("horaLlegada")
+            txtCliente.EditValue = row("idCliente")
+        Catch ex As Exception
 
+        End Try
+    End Sub
     Private Sub ComboBoxEdit1_Clicked(sender As Object, e As EventArgs) Handles cmbHabitacion.ButtonClick
         If dtpLlegada.DateTime = Nothing Or dtpSalida.DateTime = Nothing Then
             MsgBox("Selecciona Fechas de llegada y salida por favor")
@@ -39,7 +58,7 @@ Public Class pAgregarReservaciones
         Return oReservacion
     End Function
 
-    Public Sub CargarHabitaciones()
+    Public Sub Cargar()
         Dim coleccion As ComboBoxItemCollection = cmbHabitacion.Properties.Items
 
         Dim tabla As New DataTable

@@ -53,6 +53,15 @@
                     frmEditar.modo = pConsultarClientes.tipo.Editar
                     frmEditar = frmActivo
                     frmEditar.consultarCliente()
+                Case "reservaciones"
+                    Dim frmNuevo As New pAgregarReservaciones
+                    frmNuevo.modo = pAgregarReservaciones.tipo.Nuevo
+                    frmNuevo.ShowDialog()
+                Case "Editar Reservacion"
+                    Dim frmEditar As New pConsultarReservaciones
+                    frmEditar.modo = pConsultarReservaciones.tipo.Editar
+                    frmEditar = frmActivo
+                    frmEditar.consultarReservacion()
             End Select
         Catch ex As Exception
 

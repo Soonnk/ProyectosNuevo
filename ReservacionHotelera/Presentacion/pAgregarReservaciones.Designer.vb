@@ -27,11 +27,13 @@ Partial Class pAgregarReservaciones
         Me.LayoutControl2 = New DevExpress.XtraLayout.LayoutControl()
         Me.GroupControl2 = New DevExpress.XtraEditors.GroupControl()
         Me.LayoutControl3 = New DevExpress.XtraLayout.LayoutControl()
+        Me.btnBuscarCliente = New DevExpress.XtraEditors.SimpleButton()
         Me.lblCliente = New System.Windows.Forms.Label()
         Me.txtCliente = New DevExpress.XtraEditors.TextEdit()
         Me.LayoutControlGroup3 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem14 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem15 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem16 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.gridDetalle = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.GridColumn2 = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -64,8 +66,6 @@ Partial Class pAgregarReservaciones
         Me.LayoutControlItem3 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.btnBuscarCliente = New DevExpress.XtraEditors.SimpleButton()
-        Me.LayoutControlItem16 = New DevExpress.XtraLayout.LayoutControlItem()
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl1.SuspendLayout()
         CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -80,6 +80,7 @@ Partial Class pAgregarReservaciones
         CType(Me.LayoutControlGroup3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem14, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem15, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem16, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gridDetalle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cmbFormaPago.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -107,7 +108,6 @@ Partial Class pAgregarReservaciones
         CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem16, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LayoutControl1
@@ -176,6 +176,15 @@ Partial Class pAgregarReservaciones
         Me.LayoutControl3.TabIndex = 0
         Me.LayoutControl3.Text = "LayoutControl3"
         '
+        'btnBuscarCliente
+        '
+        Me.btnBuscarCliente.Location = New System.Drawing.Point(486, 12)
+        Me.btnBuscarCliente.Name = "btnBuscarCliente"
+        Me.btnBuscarCliente.Size = New System.Drawing.Size(113, 22)
+        Me.btnBuscarCliente.StyleController = Me.LayoutControl3
+        Me.btnBuscarCliente.TabIndex = 6
+        Me.btnBuscarCliente.Text = "Buscar"
+        '
         'lblCliente
         '
         Me.lblCliente.Location = New System.Drawing.Point(12, 38)
@@ -218,6 +227,15 @@ Partial Class pAgregarReservaciones
         Me.LayoutControlItem15.Size = New System.Drawing.Size(591, 31)
         Me.LayoutControlItem15.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem15.TextVisible = False
+        '
+        'LayoutControlItem16
+        '
+        Me.LayoutControlItem16.Control = Me.btnBuscarCliente
+        Me.LayoutControlItem16.Location = New System.Drawing.Point(474, 0)
+        Me.LayoutControlItem16.Name = "LayoutControlItem16"
+        Me.LayoutControlItem16.Size = New System.Drawing.Size(117, 26)
+        Me.LayoutControlItem16.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem16.TextVisible = False
         '
         'gridDetalle
         '
@@ -512,24 +530,6 @@ Partial Class pAgregarReservaciones
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem1.TextVisible = False
         '
-        'btnBuscarCliente
-        '
-        Me.btnBuscarCliente.Location = New System.Drawing.Point(486, 12)
-        Me.btnBuscarCliente.Name = "btnBuscarCliente"
-        Me.btnBuscarCliente.Size = New System.Drawing.Size(113, 22)
-        Me.btnBuscarCliente.StyleController = Me.LayoutControl3
-        Me.btnBuscarCliente.TabIndex = 6
-        Me.btnBuscarCliente.Text = "Buscar"
-        '
-        'LayoutControlItem16
-        '
-        Me.LayoutControlItem16.Control = Me.btnBuscarCliente
-        Me.LayoutControlItem16.Location = New System.Drawing.Point(474, 0)
-        Me.LayoutControlItem16.Name = "LayoutControlItem16"
-        Me.LayoutControlItem16.Size = New System.Drawing.Size(117, 26)
-        Me.LayoutControlItem16.TextSize = New System.Drawing.Size(0, 0)
-        Me.LayoutControlItem16.TextVisible = False
-        '
         'pAgregarReservaciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -552,6 +552,7 @@ Partial Class pAgregarReservaciones
         CType(Me.LayoutControlGroup3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem14, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem15, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem16, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.gridDetalle, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cmbFormaPago.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -579,7 +580,6 @@ Partial Class pAgregarReservaciones
         CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem16, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
