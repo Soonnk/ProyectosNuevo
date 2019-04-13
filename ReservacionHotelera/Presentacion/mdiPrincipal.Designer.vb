@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class mdiPrincipal
     Inherits DevExpress.XtraBars.Ribbon.RibbonForm
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         If disposing AndAlso components IsNot Nothing Then
             components.Dispose()
@@ -17,28 +17,25 @@ Partial Class mdiPrincipal
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(mdiPrincipal))
         Me.RibbonControl = New DevExpress.XtraBars.Ribbon.RibbonControl()
         Me.BarButtonItem1 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem2 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem3 = New DevExpress.XtraBars.BarButtonItem()
         Me.btnNuevo = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem5 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem6 = New DevExpress.XtraBars.BarButtonItem()
+        Me.btnHabitacion = New DevExpress.XtraBars.BarButtonItem()
+        Me.btnClientes = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem7 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem8 = New DevExpress.XtraBars.BarButtonItem()
+        Me.btnReservacion = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem9 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem10 = New DevExpress.XtraBars.BarButtonItem()
         Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
-        Me.RibbonPage2 = New DevExpress.XtraBars.Ribbon.RibbonPage()
-        Me.RibbonPageGroup3 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonStatusBar = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
-        Me.XtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(Me.components)
+        Me.XtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XtraTabbedMdiManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -46,11 +43,11 @@ Partial Class mdiPrincipal
         'RibbonControl
         '
         Me.RibbonControl.ExpandCollapseItem.Id = 0
-        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.BarButtonItem1, Me.BarButtonItem2, Me.BarButtonItem3, Me.btnNuevo, Me.BarButtonItem5, Me.BarButtonItem6, Me.BarButtonItem7, Me.BarButtonItem8, Me.BarButtonItem9, Me.BarButtonItem10})
+        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.BarButtonItem1, Me.BarButtonItem2, Me.BarButtonItem3, Me.btnNuevo, Me.btnHabitacion, Me.btnClientes, Me.BarButtonItem7, Me.btnReservacion, Me.BarButtonItem9, Me.BarButtonItem10})
         Me.RibbonControl.Location = New System.Drawing.Point(0, 0)
         Me.RibbonControl.MaxItemId = 12
         Me.RibbonControl.Name = "RibbonControl"
-        Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1, Me.RibbonPage2})
+        Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
         Me.RibbonControl.QuickToolbarItemLinks.Add(Me.btnNuevo)
         Me.RibbonControl.QuickToolbarItemLinks.Add(Me.BarButtonItem9)
         Me.RibbonControl.QuickToolbarItemLinks.Add(Me.BarButtonItem10)
@@ -84,34 +81,34 @@ Partial Class mdiPrincipal
         Me.btnNuevo.ImageOptions.Image = CType(resources.GetObject("btnNuevo.ImageOptions.Image"), System.Drawing.Image)
         Me.btnNuevo.Name = "btnNuevo"
         '
-        'BarButtonItem5
+        'btnHabitacion
         '
-        Me.BarButtonItem5.Caption = "Habitaciones"
-        Me.BarButtonItem5.Id = 5
-        Me.BarButtonItem5.ImageOptions.Image = CType(resources.GetObject("BarButtonItem5.ImageOptions.Image"), System.Drawing.Image)
-        Me.BarButtonItem5.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem5.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.BarButtonItem5.Name = "BarButtonItem5"
+        Me.btnHabitacion.Caption = "Habitaciones"
+        Me.btnHabitacion.Id = 5
+        Me.btnHabitacion.ImageOptions.Image = CType(resources.GetObject("BarButtonItem5.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnHabitacion.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem5.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.btnHabitacion.Name = "btnHabitacion"
         '
-        'BarButtonItem6
+        'btnClientes
         '
-        Me.BarButtonItem6.Caption = "Clientes"
-        Me.BarButtonItem6.Id = 6
-        Me.BarButtonItem6.ImageOptions.Image = CType(resources.GetObject("BarButtonItem6.ImageOptions.Image"), System.Drawing.Image)
-        Me.BarButtonItem6.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem6.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.BarButtonItem6.Name = "BarButtonItem6"
+        Me.btnClientes.Caption = "Clientes"
+        Me.btnClientes.Id = 6
+        Me.btnClientes.ImageOptions.Image = CType(resources.GetObject("BarButtonItem6.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnClientes.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem6.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.btnClientes.Name = "btnClientes"
         '
         'BarButtonItem7
         '
         Me.BarButtonItem7.Id = 7
         Me.BarButtonItem7.Name = "BarButtonItem7"
         '
-        'BarButtonItem8
+        'btnReservacion
         '
-        Me.BarButtonItem8.Caption = "Reservaciones"
-        Me.BarButtonItem8.Id = 8
-        Me.BarButtonItem8.ImageOptions.Image = CType(resources.GetObject("BarButtonItem8.ImageOptions.Image"), System.Drawing.Image)
-        Me.BarButtonItem8.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem8.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.BarButtonItem8.Name = "BarButtonItem8"
+        Me.btnReservacion.Caption = "Reservaciones"
+        Me.btnReservacion.Id = 8
+        Me.btnReservacion.ImageOptions.Image = CType(resources.GetObject("BarButtonItem8.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnReservacion.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem8.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.btnReservacion.Name = "btnReservacion"
         '
         'BarButtonItem9
         '
@@ -131,32 +128,21 @@ Partial Class mdiPrincipal
         '
         Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1, Me.RibbonPageGroup2})
         Me.RibbonPage1.Name = "RibbonPage1"
-        Me.RibbonPage1.Text = "RibbonPage1"
+        Me.RibbonPage1.Text = "Reservaciones"
         '
         'RibbonPageGroup1
         '
-        Me.RibbonPageGroup1.ItemLinks.Add(Me.BarButtonItem5)
-        Me.RibbonPageGroup1.ItemLinks.Add(Me.BarButtonItem6)
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.btnHabitacion)
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.btnClientes)
         Me.RibbonPageGroup1.ItemLinks.Add(Me.BarButtonItem7)
         Me.RibbonPageGroup1.Name = "RibbonPageGroup1"
         Me.RibbonPageGroup1.Text = "Catalogo"
         '
         'RibbonPageGroup2
         '
-        Me.RibbonPageGroup2.ItemLinks.Add(Me.BarButtonItem8)
+        Me.RibbonPageGroup2.ItemLinks.Add(Me.btnReservacion)
         Me.RibbonPageGroup2.Name = "RibbonPageGroup2"
         Me.RibbonPageGroup2.Text = "Procesos"
-        '
-        'RibbonPage2
-        '
-        Me.RibbonPage2.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup3})
-        Me.RibbonPage2.Name = "RibbonPage2"
-        Me.RibbonPage2.Text = "RibbonPage2"
-        '
-        'RibbonPageGroup3
-        '
-        Me.RibbonPageGroup3.Name = "RibbonPageGroup3"
-        Me.RibbonPageGroup3.Text = "RibbonPageGroup3"
         '
         'RibbonStatusBar
         '
@@ -197,15 +183,13 @@ Partial Class mdiPrincipal
     Friend WithEvents BarButtonItem2 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BarButtonItem3 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents btnNuevo As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents BarButtonItem5 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents btnHabitacion As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents RibbonPage1 As DevExpress.XtraBars.Ribbon.RibbonPage
     Friend WithEvents RibbonPageGroup1 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
-    Friend WithEvents BarButtonItem6 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents btnClientes As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BarButtonItem7 As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents BarButtonItem8 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents btnReservacion As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents RibbonPageGroup2 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents BarButtonItem9 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BarButtonItem10 As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents RibbonPage2 As DevExpress.XtraBars.Ribbon.RibbonPage
-    Friend WithEvents RibbonPageGroup3 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
 End Class
