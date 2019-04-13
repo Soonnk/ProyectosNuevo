@@ -64,6 +64,5 @@
     Private Sub pConsultarClientes_Load(sender As Object, e As EventArgs) Handles Me.Load
         Me.mdiPrincipal1.activo = "clientes"
         Cargar()
-
     End Sub
 End Class
