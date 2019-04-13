@@ -1,4 +1,18 @@
 ﻿Public Class pConsultarClientes
+    Public modo As tipo
+    Private ReadOnly Property mdiPrincipal1() As mdiPrincipal
+        Get
+            If Me.ParentForm Is Nothing Then
+                Return Nothing
+            End If
+
+            Return TryCast(Me.ParentForm, mdiPrincipal)
+        End Get
+    End Property
+    Enum tipo
+        Nuevo
+        Editar
+    End Enum
     Private Sub GridControl1_DoubleClick(sender As Object, e As EventArgs) Handles GridControl1.DoubleClick
         Nuevo()
     End Sub
@@ -48,6 +62,7 @@
     End Sub
 
     Private Sub pConsultarClientes_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Me.mdiPrincipal1.activo = "clientes"
         Cargar()
 
     End Sub

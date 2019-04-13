@@ -1,6 +1,14 @@
 ﻿Public Class mdiPrincipal
     Public activo As String
-    Private Sub BarButtonItem5_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem5.ItemClick
+    Private ReadOnly Property CurFormCliente() As pConsultarClientes
+        Get
+            If Me.ActiveMdiChild Is Nothing Then
+                Return Nothing
+            End If
+            Return TryCast(Me.ActiveMdiChild, pConsultarClientes)
+        End Get
+    End Property
+    Private Sub BarButtonItem5_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnHabitacion.ItemClick
         Try
             Dim frmHabitacion As New pConsultarHabitaciones
             frmHabitacion.MdiParent = Me
@@ -10,7 +18,7 @@
         End Try
     End Sub
 
-    Private Sub BarButtonItem6_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem6.ItemClick
+    Private Sub BarButtonItem6_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnClientes.ItemClick
         Try
             Dim frmCliente As New pConsultarClientes
             frmCliente.MdiParent = Me
@@ -20,7 +28,7 @@
         End Try
     End Sub
 
-    Private Sub BarButtonItem8_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem8.ItemClick
+    Private Sub BarButtonItem8_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnReservacion.ItemClick
         Try
             Dim frmReservacion As New pConsultarReservaciones
             frmReservacion.MdiParent = Me
@@ -47,12 +55,13 @@
                 Case "clientes"
                     Dim frmNuevo As New pAgregarClientes
                     frmNuevo.modo = pAgregarClientes.tipo.Nuevo
+                    frmNuevo.Owner = CurFormCliente
                     frmNuevo.ShowDialog()
                 Case "Editar Cliente"
                     Dim frmEditar As New pConsultarClientes
                     frmEditar.modo = pConsultarClientes.tipo.Editar
                     frmEditar = frmActivo
-                    frmEditar.consultarCliente()
+                    'frmEditar.consultarCliente()
             End Select
         Catch ex As Exception
 
