@@ -88,9 +88,9 @@
         Try
             Select Case TipoForma
                 Case enuTipoForma.Agregar
-                    Me.Text = ".: Agregar Habitación :."
+                    Me.Text = "Agregar Habitación"
                 Case enuTipoForma.Modificar
-                    Me.Text = ".: Modificar Habitación :."
+                    Me.Text = "Modificar Habitación"
                     cargarHabitacion()
             End Select
         Catch ex As Exception

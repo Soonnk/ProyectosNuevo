@@ -7,6 +7,7 @@
         Editar
     End Enum
     Private Sub pAgregarClientes_Load(sender As Object, e As EventArgs) Handles Me.Load
+
         Cargar()
     End Sub
     Public Sub consultarCliente(ByVal row As DataRow)
@@ -55,7 +56,7 @@
                 Case enuTipoForma.Nuevo
                     If oNegocio.InsertarCliente(llenarEntidades) = True Then
                         MessageBox.Show("Los datos han sido guardados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        Forma.Cargar()
+                        CType(Owner, pConsultarClientes).Cargar()
                         Me.Close()
                     Else
                         MessageBox.Show("No se han podido guardar los datos solicitados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
