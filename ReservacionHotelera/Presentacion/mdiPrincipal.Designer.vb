@@ -115,14 +115,14 @@ Partial Class mdiPrincipal
         '
         Me.btnModificar.Caption = "Editar"
         Me.btnModificar.Id = 9
-        Me.btnModificar.ImageOptions.Image = CType(resources.GetObject("BarButtonItem9.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnModificar.ImageOptions.Image = CType(resources.GetObject("btnModificar.ImageOptions.Image"), System.Drawing.Image)
         Me.btnModificar.Name = "btnModificar"
         '
         'btnEliminar
         '
         Me.btnEliminar.Caption = "Eliminar"
         Me.btnEliminar.Id = 10
-        Me.btnEliminar.ImageOptions.Image = CType(resources.GetObject("BarButtonItem10.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnEliminar.ImageOptions.Image = CType(resources.GetObject("btnEliminar.ImageOptions.Image"), System.Drawing.Image)
         Me.btnEliminar.Name = "btnEliminar"
         '
         'RibbonPage1
