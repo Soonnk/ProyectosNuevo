@@ -138,7 +138,6 @@ Partial Class pAgregarHabitaciones
         '
         'txtId
         '
-        Me.txtId.Enabled = False
         Me.txtId.Location = New System.Drawing.Point(85, 2)
         Me.txtId.Name = "txtId"
         Me.txtId.Size = New System.Drawing.Size(83, 20)

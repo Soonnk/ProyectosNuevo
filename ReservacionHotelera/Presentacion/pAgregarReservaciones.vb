@@ -59,27 +59,16 @@ Public Class pAgregarReservaciones
     End Function
 
     Public Sub Cargar()
-        Dim coleccion As ComboBoxItemCollection = cmbHabitacion.Properties.Items
 
         Dim tabla As New DataTable
-        Dim nReservacion As Negocios.Reservaciones = New Negocios.Reservaciones
-        tabla = nReservacion.Consultar()
+        Dim nHabitaciones As Negocios.Habitaciones = New Negocios.Habitaciones
+        tabla = nHabitaciones.Cargar()
 
-        coleccion.BeginUpdate()
         Try
-            For i As Integer = 0 To tabla.Rows.Count - 1
-                Dim habitacion = New Entidades.Habitaciones
-
-                habitacion.Descripcion = tabla.Rows(i).Item("descripcion")
-                habitacion.PrecioPorNoche = tabla.Rows(i).Item("precioPorNoche")
-                habitacion.Id = tabla.Rows(i).Item("Id")
-
-                coleccion.Add(habitacion)
-            Next
+            cmbHabitacion.Properties.DataSource = tabla
         Catch ex As Exception
             MsgBox(ex.ToString())
         Finally
-            coleccion.EndUpdate()
         End Try
     End Sub
 
@@ -130,13 +119,17 @@ Public Class pAgregarReservaciones
     End Sub
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
-        agregarHabitacionDetalle(cmbHabitacion.SelectedItem)
+        Dim nHabitacion = New Negocios.Habitaciones
+
+        agregarHabitacionDetalle(nHabitacion.cargarHabitaciones(cmbHabitacion.EditValue))
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Dim nReservacion = New Negocios.Reservaciones
 
-        If (Not nReservacion.GuardarReservacion(CrearReservacion)) Then
+        If (nReservacion.GuardarReservacion(CrearReservacion)) Then
+            MsgBox("Guardado con exito")
+        Else
             MsgBox("No ha sido posible guardar")
         End If
 
@@ -144,5 +137,9 @@ Public Class pAgregarReservaciones
 
     Private Sub btnBuscarCliente_Click(sender As Object, e As EventArgs) Handles btnBuscarCliente.Click
         BuscarCliente(txtCliente.EditValue)
+    End Sub
+
+    Private Sub ComboBoxEdit1_Clicked(sender As Object, e As ButtonPressedEventArgs) Handles cmbHabitacion.ButtonClick
+
     End Sub
 End Class

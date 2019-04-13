@@ -49,7 +49,7 @@ Partial Class pAgregarReservaciones
         Me.dtpSalida = New DevExpress.XtraEditors.DateEdit()
         Me.dtpLlegada = New DevExpress.XtraEditors.DateEdit()
         Me.txtId = New DevExpress.XtraEditors.TextEdit()
-        Me.cmbHabitacion = New DevExpress.XtraEditors.ComboBoxEdit()
+        Me.cmbHabitacion = New DevExpress.XtraEditors.LookUpEdit()
         Me.LayoutControlGroup2 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem2 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem4 = New DevExpress.XtraLayout.LayoutControlItem()
@@ -381,6 +381,12 @@ Partial Class pAgregarReservaciones
         Me.cmbHabitacion.Location = New System.Drawing.Point(114, 192)
         Me.cmbHabitacion.Name = "cmbHabitacion"
         Me.cmbHabitacion.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.cmbHabitacion.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("nombre", "Habitacion"), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("capacidad", "Capacidad"), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("precioPorNoche", "Precio")})
+        Me.cmbHabitacion.Properties.DisplayMember = "nombre"
+        Me.cmbHabitacion.Properties.NullText = ""
+        Me.cmbHabitacion.Properties.PopupSizeable = False
+        Me.cmbHabitacion.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard
+        Me.cmbHabitacion.Properties.ValueMember = "id"
         Me.cmbHabitacion.Size = New System.Drawing.Size(434, 20)
         Me.cmbHabitacion.StyleController = Me.LayoutControl2
         Me.cmbHabitacion.TabIndex = 7
@@ -617,7 +623,6 @@ Partial Class pAgregarReservaciones
     Friend WithEvents GridColumn4 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn5 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents LayoutControlItem13 As DevExpress.XtraLayout.LayoutControlItem
-    Friend WithEvents cmbHabitacion As DevExpress.XtraEditors.ComboBoxEdit
     Friend WithEvents GroupControl2 As DevExpress.XtraEditors.GroupControl
     Friend WithEvents LayoutControl3 As DevExpress.XtraLayout.LayoutControl
     Friend WithEvents lblCliente As Label
@@ -628,4 +633,5 @@ Partial Class pAgregarReservaciones
     Friend WithEvents LayoutControlItem3 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents btnBuscarCliente As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents LayoutControlItem16 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents cmbHabitacion As DevExpress.XtraEditors.LookUpEdit
 End Class
