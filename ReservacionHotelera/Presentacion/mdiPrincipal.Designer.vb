@@ -19,6 +19,7 @@ Partial Class mdiPrincipal
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(mdiPrincipal))
         Me.RibbonControl = New DevExpress.XtraBars.Ribbon.RibbonControl()
         Me.BarButtonItem1 = New DevExpress.XtraBars.BarButtonItem()
@@ -29,13 +30,13 @@ Partial Class mdiPrincipal
         Me.btnClientes = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem7 = New DevExpress.XtraBars.BarButtonItem()
         Me.btnReservacion = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem9 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem10 = New DevExpress.XtraBars.BarButtonItem()
+        Me.btnModificar = New DevExpress.XtraBars.BarButtonItem()
+        Me.btnEliminar = New DevExpress.XtraBars.BarButtonItem()
         Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonStatusBar = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
-        Me.XtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager()
+        Me.XtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(Me.components)
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XtraTabbedMdiManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -43,14 +44,14 @@ Partial Class mdiPrincipal
         'RibbonControl
         '
         Me.RibbonControl.ExpandCollapseItem.Id = 0
-        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.BarButtonItem1, Me.BarButtonItem2, Me.BarButtonItem3, Me.btnNuevo, Me.btnHabitacion, Me.btnClientes, Me.BarButtonItem7, Me.btnReservacion, Me.BarButtonItem9, Me.BarButtonItem10})
+        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.BarButtonItem1, Me.BarButtonItem2, Me.BarButtonItem3, Me.btnNuevo, Me.btnHabitacion, Me.btnClientes, Me.BarButtonItem7, Me.btnReservacion, Me.btnModificar, Me.btnEliminar})
         Me.RibbonControl.Location = New System.Drawing.Point(0, 0)
         Me.RibbonControl.MaxItemId = 12
         Me.RibbonControl.Name = "RibbonControl"
         Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
         Me.RibbonControl.QuickToolbarItemLinks.Add(Me.btnNuevo)
-        Me.RibbonControl.QuickToolbarItemLinks.Add(Me.BarButtonItem9)
-        Me.RibbonControl.QuickToolbarItemLinks.Add(Me.BarButtonItem10)
+        Me.RibbonControl.QuickToolbarItemLinks.Add(Me.btnModificar)
+        Me.RibbonControl.QuickToolbarItemLinks.Add(Me.btnEliminar)
         Me.RibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013
         Me.RibbonControl.Size = New System.Drawing.Size(775, 143)
         Me.RibbonControl.StatusBar = Me.RibbonStatusBar
@@ -85,16 +86,16 @@ Partial Class mdiPrincipal
         '
         Me.btnHabitacion.Caption = "Habitaciones"
         Me.btnHabitacion.Id = 5
-        Me.btnHabitacion.ImageOptions.Image = CType(resources.GetObject("BarButtonItem5.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnHabitacion.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem5.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.btnHabitacion.ImageOptions.Image = CType(resources.GetObject("btnHabitacion.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnHabitacion.ImageOptions.LargeImage = CType(resources.GetObject("btnHabitacion.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.btnHabitacion.Name = "btnHabitacion"
         '
         'btnClientes
         '
         Me.btnClientes.Caption = "Clientes"
         Me.btnClientes.Id = 6
-        Me.btnClientes.ImageOptions.Image = CType(resources.GetObject("BarButtonItem6.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnClientes.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem6.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.btnClientes.ImageOptions.Image = CType(resources.GetObject("btnClientes.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnClientes.ImageOptions.LargeImage = CType(resources.GetObject("btnClientes.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.btnClientes.Name = "btnClientes"
         '
         'BarButtonItem7
@@ -106,23 +107,23 @@ Partial Class mdiPrincipal
         '
         Me.btnReservacion.Caption = "Reservaciones"
         Me.btnReservacion.Id = 8
-        Me.btnReservacion.ImageOptions.Image = CType(resources.GetObject("BarButtonItem8.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnReservacion.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem8.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.btnReservacion.ImageOptions.Image = CType(resources.GetObject("btnReservacion.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnReservacion.ImageOptions.LargeImage = CType(resources.GetObject("btnReservacion.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.btnReservacion.Name = "btnReservacion"
         '
-        'BarButtonItem9
+        'btnModificar
         '
-        Me.BarButtonItem9.Caption = "Editar"
-        Me.BarButtonItem9.Id = 9
-        Me.BarButtonItem9.ImageOptions.Image = CType(resources.GetObject("BarButtonItem9.ImageOptions.Image"), System.Drawing.Image)
-        Me.BarButtonItem9.Name = "BarButtonItem9"
+        Me.btnModificar.Caption = "Editar"
+        Me.btnModificar.Id = 9
+        Me.btnModificar.ImageOptions.Image = CType(resources.GetObject("BarButtonItem9.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnModificar.Name = "btnModificar"
         '
-        'BarButtonItem10
+        'btnEliminar
         '
-        Me.BarButtonItem10.Caption = "Eliminar"
-        Me.BarButtonItem10.Id = 10
-        Me.BarButtonItem10.ImageOptions.Image = CType(resources.GetObject("BarButtonItem10.ImageOptions.Image"), System.Drawing.Image)
-        Me.BarButtonItem10.Name = "BarButtonItem10"
+        Me.btnEliminar.Caption = "Eliminar"
+        Me.btnEliminar.Id = 10
+        Me.btnEliminar.ImageOptions.Image = CType(resources.GetObject("BarButtonItem10.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnEliminar.Name = "btnEliminar"
         '
         'RibbonPage1
         '
@@ -190,6 +191,6 @@ Partial Class mdiPrincipal
     Friend WithEvents BarButtonItem7 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents btnReservacion As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents RibbonPageGroup2 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
-    Friend WithEvents BarButtonItem9 As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents BarButtonItem10 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents btnModificar As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents btnEliminar As DevExpress.XtraBars.BarButtonItem
 End Class

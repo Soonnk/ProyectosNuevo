@@ -13,6 +13,35 @@
         Nuevo
         Editar
     End Enum
+    Public Sub consultarCliente()
+        Try
+            Dim row As DataRow = GridView1.GetDataRow(GridView1.FocusedRowHandle)
+            Dim frmEditar As New pAgregarClientes
+            If Not row Is Nothing Then
+                frmEditar.modo = pAgregarClientes.tipo.Editar
+                frmEditar.Text = "Editar Cliente"
+                frmEditar.consultarCliente(GridView1.GetFocusedDataRow)
+                frmEditar.ShowDialog()
+            End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
+    Public Sub EliminarCliente()
+        Dim sacarIdCliente As New Negocios.Clientes
+        Try
+            Dim row As DataRow = GridView1.GetDataRow(GridView1.FocusedRowHandle)
+            Dim _idCliente As Integer = row("id")
+            GridView1.DeleteRow(GridView1.FocusedRowHandle)
+            If sacarIdCliente.BorrarCliente(_idCliente) Then
+                MessageBox.Show("El cliente ha sido eliminado", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Else
+                MessageBox.Show("Error al eliminar el cliente", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
     Private Sub GridControl1_DoubleClick(sender As Object, e As EventArgs) Handles GridControl1.DoubleClick
         Nuevo()
     End Sub
@@ -62,8 +91,11 @@
     End Sub
 
     Private Sub pConsultarClientes_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Me.mdiPrincipal1.activo = "clientes"
-        Cargar()
+        Try
+            Me.mdiPrincipal1.activo = "clientes"
+            Cargar()
+        Catch ex As Exception
 
+        End Try
     End Sub
 End Class
