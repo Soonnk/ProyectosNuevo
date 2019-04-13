@@ -49,6 +49,5 @@
 
     Private Sub pConsultarClientes_Load(sender As Object, e As EventArgs) Handles Me.Load
         Cargar()
-
     End Sub
 End Class
