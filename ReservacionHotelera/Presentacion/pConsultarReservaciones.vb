@@ -53,4 +53,8 @@
     Private Sub Cargar()
         Throw New NotImplementedException()
     End Sub
+
+    Private Sub GridControl1_DoubleClick(sender As Object, e As EventArgs) Handles GridControl1.DoubleClick
+        GridControl1.ge
+    End Sub
 End Class

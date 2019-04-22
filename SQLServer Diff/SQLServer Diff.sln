@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SQLServer Diff", "SQLServer Diff\SQLServer Diff.vbproj", "{9F95CF5E-860C-43B0-9E74-F0888DA9B9FC}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Datos", "Datos\Datos.vbproj", "{59295B08-49DF-45F4-B8AE-D8B68B354EB3}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Negocios", "Negocios\Negocios.vbproj", "{DA7333EE-761A-4D7C-879B-955A8E5B4A81}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F95CF5E-860C-43B0-9E74-F0888DA9B9FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F95CF5E-860C-43B0-9E74-F0888DA9B9FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F95CF5E-860C-43B0-9E74-F0888DA9B9FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F95CF5E-860C-43B0-9E74-F0888DA9B9FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59295B08-49DF-45F4-B8AE-D8B68B354EB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59295B08-49DF-45F4-B8AE-D8B68B354EB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59295B08-49DF-45F4-B8AE-D8B68B354EB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59295B08-49DF-45F4-B8AE-D8B68B354EB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA7333EE-761A-4D7C-879B-955A8E5B4A81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA7333EE-761A-4D7C-879B-955A8E5B4A81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA7333EE-761A-4D7C-879B-955A8E5B4A81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA7333EE-761A-4D7C-879B-955A8E5B4A81}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F9020247-937A-49F7-9A07-3ED09C4B54C7}
+	EndGlobalSection
+EndGlobal
