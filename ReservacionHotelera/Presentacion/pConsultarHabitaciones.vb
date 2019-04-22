@@ -35,8 +35,20 @@
                 frmEditar.consultarHabitacion(GridView1.GetFocusedDataRow)
                 frmEditar.ShowDialog()
             End If
-
-
+        Catch ex As Exception
+        End Try
+    End Sub
+    Public Sub EliminarHabitacion()
+        Dim sacarIdHabitacion As New Negocios.Habitaciones
+        Try
+            Dim row As DataRow = GridView1.GetDataRow(GridView1.FocusedRowHandle)
+            Dim _idHabitacion As Integer = row("id")
+            GridView1.DeleteRow(GridView1.FocusedRowHandle)
+            If sacarIdHabitacion.Borrar(_idHabitacion) Then
+                MessageBox.Show("La habitacion ha sido eliminado", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Else
+                MessageBox.Show("Error al eliminar la habitacion", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
         Catch ex As Exception
 
         End Try

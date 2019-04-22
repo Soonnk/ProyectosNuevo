@@ -30,8 +30,8 @@ Partial Class mdiPrincipal
         Me.btnClientes = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem7 = New DevExpress.XtraBars.BarButtonItem()
         Me.btnReservacion = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem9 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem10 = New DevExpress.XtraBars.BarButtonItem()
+        Me.btnModificar = New DevExpress.XtraBars.BarButtonItem()
+        Me.btnEliminar = New DevExpress.XtraBars.BarButtonItem()
         Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
@@ -44,14 +44,14 @@ Partial Class mdiPrincipal
         'RibbonControl
         '
         Me.RibbonControl.ExpandCollapseItem.Id = 0
-        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.BarButtonItem1, Me.BarButtonItem2, Me.BarButtonItem3, Me.btnNuevo, Me.btnHabitacion, Me.btnClientes, Me.BarButtonItem7, Me.btnReservacion, Me.BarButtonItem9, Me.BarButtonItem10})
+        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.BarButtonItem1, Me.BarButtonItem2, Me.BarButtonItem3, Me.btnNuevo, Me.btnHabitacion, Me.btnClientes, Me.BarButtonItem7, Me.btnReservacion, Me.btnModificar, Me.btnEliminar})
         Me.RibbonControl.Location = New System.Drawing.Point(0, 0)
         Me.RibbonControl.MaxItemId = 12
         Me.RibbonControl.Name = "RibbonControl"
         Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
         Me.RibbonControl.QuickToolbarItemLinks.Add(Me.btnNuevo)
-        Me.RibbonControl.QuickToolbarItemLinks.Add(Me.BarButtonItem9)
-        Me.RibbonControl.QuickToolbarItemLinks.Add(Me.BarButtonItem10)
+        Me.RibbonControl.QuickToolbarItemLinks.Add(Me.btnModificar)
+        Me.RibbonControl.QuickToolbarItemLinks.Add(Me.btnEliminar)
         Me.RibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013
         Me.RibbonControl.Size = New System.Drawing.Size(775, 143)
         Me.RibbonControl.StatusBar = Me.RibbonStatusBar
@@ -111,19 +111,19 @@ Partial Class mdiPrincipal
         Me.btnReservacion.ImageOptions.LargeImage = CType(resources.GetObject("btnReservacion.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.btnReservacion.Name = "btnReservacion"
         '
-        'BarButtonItem9
+        'btnModificar
         '
-        Me.BarButtonItem9.Caption = "Editar"
-        Me.BarButtonItem9.Id = 9
-        Me.BarButtonItem9.ImageOptions.Image = CType(resources.GetObject("BarButtonItem9.ImageOptions.Image"), System.Drawing.Image)
-        Me.BarButtonItem9.Name = "BarButtonItem9"
+        Me.btnModificar.Caption = "Editar"
+        Me.btnModificar.Id = 9
+        Me.btnModificar.ImageOptions.Image = CType(resources.GetObject("btnModificar.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnModificar.Name = "btnModificar"
         '
-        'BarButtonItem10
+        'btnEliminar
         '
-        Me.BarButtonItem10.Caption = "Eliminar"
-        Me.BarButtonItem10.Id = 10
-        Me.BarButtonItem10.ImageOptions.Image = CType(resources.GetObject("BarButtonItem10.ImageOptions.Image"), System.Drawing.Image)
-        Me.BarButtonItem10.Name = "BarButtonItem10"
+        Me.btnEliminar.Caption = "Eliminar"
+        Me.btnEliminar.Id = 10
+        Me.btnEliminar.ImageOptions.Image = CType(resources.GetObject("btnEliminar.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnEliminar.Name = "btnEliminar"
         '
         'RibbonPage1
         '
@@ -191,6 +191,6 @@ Partial Class mdiPrincipal
     Friend WithEvents BarButtonItem7 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents btnReservacion As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents RibbonPageGroup2 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
-    Friend WithEvents BarButtonItem9 As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents BarButtonItem10 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents btnModificar As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents btnEliminar As DevExpress.XtraBars.BarButtonItem
 End Class

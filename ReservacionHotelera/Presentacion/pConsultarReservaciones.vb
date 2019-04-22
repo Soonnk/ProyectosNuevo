@@ -24,6 +24,21 @@
 
         End Try
     End Sub
+    Public Sub EliminarReservacion()
+        'Dim sacarIdReservaciuon As New Negocios.Reservaciones
+        'Try
+        '    Dim row As DataRow = GridView1.GetDataRow(GridView1.FocusedRowHandle)
+        '    Dim _idReservacion As Integer = row("id")
+        '    GridView1.DeleteRow(GridView1.FocusedRowHandle)
+        '    If sacarIdReservaciuon.Then Then
+        '        MessageBox.Show("La habitacion ha sido eliminado", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
+        '    Else
+        '        MessageBox.Show("Error al eliminar la habitacion", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    End If
+        'Catch ex As Exception
+
+        'End Try
+    End Sub
     Public modo As tipo
     Private _mdiPrincipal As mdiPrincipal
     Enum tipo
