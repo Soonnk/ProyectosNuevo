@@ -82,10 +82,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="AgregarEmpresa.Designer.vb">
+      <DependentUpon>AgregarEmpresa.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="AgregarEmpresa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarEmpresa.Designer.vb">
+      <DependentUpon>ConsultarEmpresa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarEmpresa.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="mdiPrincipal.vb">
@@ -112,8 +118,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="AgregarEmpresa.resx">
+      <DependentUpon>AgregarEmpresa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarEmpresa.resx">
+      <DependentUpon>ConsultarEmpresa.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mdiPrincipal.resx">
       <DependentUpon>mdiPrincipal.vb</DependentUpon>
