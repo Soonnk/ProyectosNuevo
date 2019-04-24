@@ -26,9 +26,9 @@ Partial Class pAgregarClientes
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.LayoutControl3 = New DevExpress.XtraLayout.LayoutControl()
+        Me.btnCancelar = New DevExpress.XtraEditors.SimpleButton()
         Me.grconClientes = New DevExpress.XtraEditors.GroupControl()
         Me.LayoutControl4 = New DevExpress.XtraLayout.LayoutControl()
-        Me.btnGuardar = New DevExpress.XtraEditors.SimpleButton()
         Me.txtTelefono = New DevExpress.XtraEditors.TextEdit()
         Me.txtCorreo = New DevExpress.XtraEditors.TextEdit()
         Me.txtPais = New DevExpress.XtraEditors.TextEdit()
@@ -51,10 +51,10 @@ Partial Class pAgregarClientes
         Me.LayoutControlItem15 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem16 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.EmptySpaceItem4 = New DevExpress.XtraLayout.EmptySpaceItem()
+        Me.EmptySpaceItem7 = New DevExpress.XtraLayout.EmptySpaceItem()
+        Me.btnGuardar = New DevExpress.XtraEditors.SimpleButton()
         Me.LayoutControlGroup3 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem7 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.btnCancelar = New DevExpress.XtraEditors.SimpleButton()
-        Me.EmptySpaceItem7 = New DevExpress.XtraLayout.EmptySpaceItem()
         Me.LayoutControlItem17 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem18 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.EmptySpaceItem8 = New DevExpress.XtraLayout.EmptySpaceItem()
@@ -86,9 +86,9 @@ Partial Class pAgregarClientes
         CType(Me.LayoutControlItem15, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem16, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmptySpaceItem4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmptySpaceItem7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EmptySpaceItem7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem17, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem18, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmptySpaceItem8, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -107,6 +107,16 @@ Partial Class pAgregarClientes
         Me.LayoutControl3.TabIndex = 0
         Me.LayoutControl3.Text = "LayoutControl3"
         '
+        'btnCancelar
+        '
+        Me.btnCancelar.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight
+        Me.btnCancelar.Location = New System.Drawing.Point(446, 274)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(102, 22)
+        Me.btnCancelar.StyleController = Me.LayoutControl3
+        Me.btnCancelar.TabIndex = 14
+        Me.btnCancelar.Text = "Cancelar"
+        '
         'grconClientes
         '
         Me.grconClientes.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -116,7 +126,7 @@ Partial Class pAgregarClientes
         Me.grconClientes.Controls.Add(Me.LayoutControl4)
         Me.grconClientes.Location = New System.Drawing.Point(2, 2)
         Me.grconClientes.Name = "grconClientes"
-        Me.grconClientes.Size = New System.Drawing.Size(546, 252)
+        Me.grconClientes.Size = New System.Drawing.Size(546, 268)
         Me.grconClientes.TabIndex = 4
         Me.grconClientes.Text = "Formulario Clientes"
         '
@@ -136,24 +146,13 @@ Partial Class pAgregarClientes
         Me.LayoutControl4.Name = "LayoutControl4"
         Me.LayoutControl4.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = New System.Drawing.Rectangle(615, 201, 450, 400)
         Me.LayoutControl4.Root = Me.LayoutControlGroup4
-        Me.LayoutControl4.Size = New System.Drawing.Size(542, 230)
+        Me.LayoutControl4.Size = New System.Drawing.Size(542, 246)
         Me.LayoutControl4.TabIndex = 0
         Me.LayoutControl4.Text = "LayoutControl4"
         '
-        'btnGuardar
-        '
-        Me.btnGuardar.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight
-        Me.btnGuardar.ImageUri.Uri = "Apply"
-        Me.btnGuardar.Location = New System.Drawing.Point(336, 258)
-        Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(106, 38)
-        Me.btnGuardar.StyleController = Me.LayoutControl3
-        Me.btnGuardar.TabIndex = 13
-        Me.btnGuardar.Text = "Guardar"
-        '
         'txtTelefono
         '
-        Me.txtTelefono.Location = New System.Drawing.Point(366, 115)
+        Me.txtTelefono.Location = New System.Drawing.Point(366, 126)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(174, 20)
         Me.txtTelefono.StyleController = Me.LayoutControl4
@@ -161,7 +160,7 @@ Partial Class pAgregarClientes
         '
         'txtCorreo
         '
-        Me.txtCorreo.Location = New System.Drawing.Point(366, 91)
+        Me.txtCorreo.Location = New System.Drawing.Point(366, 102)
         Me.txtCorreo.Name = "txtCorreo"
         Me.txtCorreo.Size = New System.Drawing.Size(174, 20)
         Me.txtCorreo.StyleController = Me.LayoutControl4
@@ -169,7 +168,7 @@ Partial Class pAgregarClientes
         '
         'txtPais
         '
-        Me.txtPais.Location = New System.Drawing.Point(66, 139)
+        Me.txtPais.Location = New System.Drawing.Point(66, 150)
         Me.txtPais.Name = "txtPais"
         Me.txtPais.Size = New System.Drawing.Size(232, 20)
         Me.txtPais.StyleController = Me.LayoutControl4
@@ -177,7 +176,7 @@ Partial Class pAgregarClientes
         '
         'txtEstado
         '
-        Me.txtEstado.Location = New System.Drawing.Point(66, 115)
+        Me.txtEstado.Location = New System.Drawing.Point(66, 126)
         Me.txtEstado.Name = "txtEstado"
         Me.txtEstado.Size = New System.Drawing.Size(232, 20)
         Me.txtEstado.StyleController = Me.LayoutControl4
@@ -185,7 +184,7 @@ Partial Class pAgregarClientes
         '
         'txtMunicipio
         '
-        Me.txtMunicipio.Location = New System.Drawing.Point(66, 91)
+        Me.txtMunicipio.Location = New System.Drawing.Point(66, 102)
         Me.txtMunicipio.Name = "txtMunicipio"
         Me.txtMunicipio.Size = New System.Drawing.Size(232, 20)
         Me.txtMunicipio.StyleController = Me.LayoutControl4
@@ -193,7 +192,7 @@ Partial Class pAgregarClientes
         '
         'txtDireccion
         '
-        Me.txtDireccion.Location = New System.Drawing.Point(66, 67)
+        Me.txtDireccion.Location = New System.Drawing.Point(66, 78)
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Size = New System.Drawing.Size(232, 20)
         Me.txtDireccion.StyleController = Me.LayoutControl4
@@ -231,7 +230,7 @@ Partial Class pAgregarClientes
         Me.LayoutControlGroup4.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup4.Name = "Root"
         Me.LayoutControlGroup4.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup4.Size = New System.Drawing.Size(542, 230)
+        Me.LayoutControlGroup4.Size = New System.Drawing.Size(542, 246)
         Me.LayoutControlGroup4.TextVisible = False
         '
         'LayoutControlItem8
@@ -255,7 +254,7 @@ Partial Class pAgregarClientes
         'LayoutControlItem11
         '
         Me.LayoutControlItem11.Control = Me.txtDireccion
-        Me.LayoutControlItem11.Location = New System.Drawing.Point(0, 65)
+        Me.LayoutControlItem11.Location = New System.Drawing.Point(0, 76)
         Me.LayoutControlItem11.Name = "LayoutControlItem11"
         Me.LayoutControlItem11.Size = New System.Drawing.Size(300, 24)
         Me.LayoutControlItem11.Text = "Dirección"
@@ -281,7 +280,7 @@ Partial Class pAgregarClientes
         'LayoutControlItem12
         '
         Me.LayoutControlItem12.Control = Me.txtMunicipio
-        Me.LayoutControlItem12.Location = New System.Drawing.Point(0, 89)
+        Me.LayoutControlItem12.Location = New System.Drawing.Point(0, 100)
         Me.LayoutControlItem12.Name = "LayoutControlItem12"
         Me.LayoutControlItem12.Size = New System.Drawing.Size(300, 24)
         Me.LayoutControlItem12.Text = "Municipio"
@@ -290,7 +289,7 @@ Partial Class pAgregarClientes
         'LayoutControlItem13
         '
         Me.LayoutControlItem13.Control = Me.txtEstado
-        Me.LayoutControlItem13.Location = New System.Drawing.Point(0, 113)
+        Me.LayoutControlItem13.Location = New System.Drawing.Point(0, 124)
         Me.LayoutControlItem13.Name = "LayoutControlItem13"
         Me.LayoutControlItem13.Size = New System.Drawing.Size(300, 24)
         Me.LayoutControlItem13.Text = "Estado"
@@ -299,7 +298,7 @@ Partial Class pAgregarClientes
         'LayoutControlItem14
         '
         Me.LayoutControlItem14.Control = Me.txtPais
-        Me.LayoutControlItem14.Location = New System.Drawing.Point(0, 137)
+        Me.LayoutControlItem14.Location = New System.Drawing.Point(0, 148)
         Me.LayoutControlItem14.Name = "LayoutControlItem14"
         Me.LayoutControlItem14.Size = New System.Drawing.Size(300, 24)
         Me.LayoutControlItem14.Text = "País"
@@ -308,7 +307,7 @@ Partial Class pAgregarClientes
         'EmptySpaceItem6
         '
         Me.EmptySpaceItem6.AllowHotTrack = False
-        Me.EmptySpaceItem6.Location = New System.Drawing.Point(300, 65)
+        Me.EmptySpaceItem6.Location = New System.Drawing.Point(300, 76)
         Me.EmptySpaceItem6.Name = "EmptySpaceItem6"
         Me.EmptySpaceItem6.Size = New System.Drawing.Size(242, 24)
         Me.EmptySpaceItem6.TextSize = New System.Drawing.Size(0, 0)
@@ -316,7 +315,7 @@ Partial Class pAgregarClientes
         'LayoutControlItem15
         '
         Me.LayoutControlItem15.Control = Me.txtCorreo
-        Me.LayoutControlItem15.Location = New System.Drawing.Point(300, 89)
+        Me.LayoutControlItem15.Location = New System.Drawing.Point(300, 100)
         Me.LayoutControlItem15.Name = "LayoutControlItem15"
         Me.LayoutControlItem15.Size = New System.Drawing.Size(242, 24)
         Me.LayoutControlItem15.Text = "Correo"
@@ -325,7 +324,7 @@ Partial Class pAgregarClientes
         'LayoutControlItem16
         '
         Me.LayoutControlItem16.Control = Me.txtTelefono
-        Me.LayoutControlItem16.Location = New System.Drawing.Point(300, 113)
+        Me.LayoutControlItem16.Location = New System.Drawing.Point(300, 124)
         Me.LayoutControlItem16.Name = "LayoutControlItem16"
         Me.LayoutControlItem16.Size = New System.Drawing.Size(242, 48)
         Me.LayoutControlItem16.Text = "Teléfono"
@@ -336,8 +335,26 @@ Partial Class pAgregarClientes
         Me.EmptySpaceItem4.AllowHotTrack = False
         Me.EmptySpaceItem4.Location = New System.Drawing.Point(0, 48)
         Me.EmptySpaceItem4.Name = "EmptySpaceItem4"
-        Me.EmptySpaceItem4.Size = New System.Drawing.Size(542, 17)
+        Me.EmptySpaceItem4.Size = New System.Drawing.Size(542, 28)
         Me.EmptySpaceItem4.TextSize = New System.Drawing.Size(0, 0)
+        '
+        'EmptySpaceItem7
+        '
+        Me.EmptySpaceItem7.AllowHotTrack = False
+        Me.EmptySpaceItem7.Location = New System.Drawing.Point(0, 172)
+        Me.EmptySpaceItem7.Name = "EmptySpaceItem7"
+        Me.EmptySpaceItem7.Size = New System.Drawing.Size(542, 74)
+        Me.EmptySpaceItem7.TextSize = New System.Drawing.Size(0, 0)
+        '
+        'btnGuardar
+        '
+        Me.btnGuardar.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight
+        Me.btnGuardar.Location = New System.Drawing.Point(336, 274)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(106, 22)
+        Me.btnGuardar.StyleController = Me.LayoutControl3
+        Me.btnGuardar.TabIndex = 13
+        Me.btnGuardar.Text = "Guardar"
         '
         'LayoutControlGroup3
         '
@@ -356,54 +373,35 @@ Partial Class pAgregarClientes
         Me.LayoutControlItem7.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem7.Name = "LayoutControlItem7"
         Me.LayoutControlItem7.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlItem7.Size = New System.Drawing.Size(550, 256)
+        Me.LayoutControlItem7.Size = New System.Drawing.Size(550, 272)
         Me.LayoutControlItem7.Spacing = New DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2)
         Me.LayoutControlItem7.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem7.TextVisible = False
         '
-        'btnCancelar
-        '
-        Me.btnCancelar.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight
-        Me.btnCancelar.ImageUri.Uri = "Cancel"
-        Me.btnCancelar.Location = New System.Drawing.Point(446, 258)
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(102, 38)
-        Me.btnCancelar.StyleController = Me.LayoutControl3
-        Me.btnCancelar.TabIndex = 14
-        Me.btnCancelar.Text = "Cancelar"
-        '
-        'EmptySpaceItem7
-        '
-        Me.EmptySpaceItem7.AllowHotTrack = False
-        Me.EmptySpaceItem7.Location = New System.Drawing.Point(0, 161)
-        Me.EmptySpaceItem7.Name = "EmptySpaceItem7"
-        Me.EmptySpaceItem7.Size = New System.Drawing.Size(542, 69)
-        Me.EmptySpaceItem7.TextSize = New System.Drawing.Size(0, 0)
-        '
         'LayoutControlItem17
         '
         Me.LayoutControlItem17.Control = Me.btnGuardar
-        Me.LayoutControlItem17.Location = New System.Drawing.Point(334, 256)
+        Me.LayoutControlItem17.Location = New System.Drawing.Point(334, 272)
         Me.LayoutControlItem17.Name = "LayoutControlItem17"
-        Me.LayoutControlItem17.Size = New System.Drawing.Size(110, 42)
+        Me.LayoutControlItem17.Size = New System.Drawing.Size(110, 26)
         Me.LayoutControlItem17.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem17.TextVisible = False
         '
         'LayoutControlItem18
         '
         Me.LayoutControlItem18.Control = Me.btnCancelar
-        Me.LayoutControlItem18.Location = New System.Drawing.Point(444, 256)
+        Me.LayoutControlItem18.Location = New System.Drawing.Point(444, 272)
         Me.LayoutControlItem18.Name = "LayoutControlItem18"
-        Me.LayoutControlItem18.Size = New System.Drawing.Size(106, 42)
+        Me.LayoutControlItem18.Size = New System.Drawing.Size(106, 26)
         Me.LayoutControlItem18.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem18.TextVisible = False
         '
         'EmptySpaceItem8
         '
         Me.EmptySpaceItem8.AllowHotTrack = False
-        Me.EmptySpaceItem8.Location = New System.Drawing.Point(0, 256)
+        Me.EmptySpaceItem8.Location = New System.Drawing.Point(0, 272)
         Me.EmptySpaceItem8.Name = "EmptySpaceItem8"
-        Me.EmptySpaceItem8.Size = New System.Drawing.Size(334, 42)
+        Me.EmptySpaceItem8.Size = New System.Drawing.Size(334, 26)
         Me.EmptySpaceItem8.TextSize = New System.Drawing.Size(0, 0)
         '
         'pAgregarClientes
@@ -442,9 +440,9 @@ Partial Class pAgregarClientes
         CType(Me.LayoutControlItem15, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem16, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmptySpaceItem4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmptySpaceItem7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EmptySpaceItem7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem17, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem18, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmptySpaceItem8, System.ComponentModel.ISupportInitialize).EndInit()
