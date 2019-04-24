@@ -102,6 +102,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Configuracion\Configuracion.vbproj">
+      <Project>{df92d440-7be8-4c13-ac3c-4895f2db4971}</Project>
+      <Name>Configuracion</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Entidades\Entidades.vbproj">
       <Project>{bb049094-b7ec-4ef1-9549-684a6ca8f67b}</Project>
       <Name>Entidades</Name>

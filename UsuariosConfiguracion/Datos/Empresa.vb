@@ -63,4 +63,11 @@
         End Try
     End Function
 
+    Public Sub ModificarEmpresa()
+        Try
+            obj.Update()
+        Finally
+        End Try
+    End Sub
+
 End Class
