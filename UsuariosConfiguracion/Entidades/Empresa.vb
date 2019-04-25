@@ -11,7 +11,7 @@
     Private _Telefono As String
     Private _OptimisticLockField As Integer
     Private _GCRecord As Integer
-    'Private _Logotipo As Byte
+    Private _Logotipo As Byte
     Private _Estatus As Boolean
     Public Sub New()
         Me._OID = 0
@@ -26,11 +26,11 @@
         Me.Telefono = ""
         Me._OptimisticLockField = 0
         Me._GCRecord = 0
-        'Me._Logotipo = ?
+        Me._Logotipo = 0
         Me._Estatus = True
     End Sub
 
-    Private _Logotipo As Byte
+    'Private _Logotipo() As Byte
     Public Property Logotipo() As Byte
         Get
             Return Me._Logotipo
@@ -158,6 +158,3 @@
     End Property
 
 End Class
-
-'Logotipo varbinary Not null,
-'estatus bit Not null

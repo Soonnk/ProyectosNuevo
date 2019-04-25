@@ -8,7 +8,7 @@ Public Class clsSQL
     Public Function StringConn() As String
         Dim cadena As String
         Try
-            cadena = "Data Source= 192.168.0.108;Initial Catalog=Hotel;User id=usuario1; Password=1234 ;pooling=no;Timeout=0;"
+            cadena = "Data Source= 192.168.0.112;Initial Catalog=usuariosConfiguracion;User id=magnus3; Password=1234;pooling=no;Timeout=0;"
 
             Return cadena
         Finally

@@ -31,7 +31,7 @@
                 oEmpresa.Telefono = .Item("Telefono")
                 oEmpresa.OptimisticLockField = .Item("OptimisticLockField")
                 oEmpresa.GCRecord = .Item("GCRecord")
-                'oEmpresa.Logotipo = .Item("Logotipo")
+                oEmpresa.Logotipo = .Item("Logotipo")
                 oEmpresa.Estatus = .Item("Estatus")
             End With
             Return oEmpresa
