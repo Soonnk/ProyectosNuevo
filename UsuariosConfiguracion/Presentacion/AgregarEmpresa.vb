@@ -43,36 +43,8 @@
                 camposVacios &= "Nombre" & Chr(10)
                 resultado = False
             End If
-            If Not txtDireccion.EditValue <> "" Then
-                camposVacios &= "Direccion" & Chr(10)
-                resultado = False
-            End If
-            If Not txtColonia.EditValue <> "" Then
-                camposVacios &= "Colonia" & Chr(10)
-                resultado = False
-            End If
-            If Not txtPoblacion.EditValue <> "" Then
-                camposVacios &= "Poblacion" & Chr(10)
-                resultado = False
-            End If
-            If Not txtPais.EditValue <> "" Then
-                camposVacios &= "Pais" & Chr(10)
-                resultado = False
-            End If
-            If Not txtCodigo.EditValue <> "" Then
-                camposVacios &= "CP" & Chr(10)
-                resultado = False
-            End If
             If Not txtRfc.EditValue <> "" Then
                 camposVacios &= "RFC" & Chr(10)
-                resultado = False
-            End If
-            If Not txtGiro.EditValue <> "" Then
-                camposVacios &= "Giro" & Chr(10)
-                resultado = False
-            End If
-            If Not txtTelefono.EditValue <> "" Then
-                camposVacios &= "Telefono" & Chr(10)
                 resultado = False
             End If
             If resultado = False Then
