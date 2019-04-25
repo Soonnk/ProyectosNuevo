@@ -180,7 +180,7 @@ Partial Class ConsultarEmpresa
         '
         Me.GridColumn11.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GridColumn11.AppearanceHeader.Options.UseFont = True
-        Me.GridColumn11.Caption = "Estatus"
+        Me.GridColumn11.Caption = "Activo"
         Me.GridColumn11.FieldName = "estatus"
         Me.GridColumn11.Name = "GridColumn11"
         Me.GridColumn11.Visible = True

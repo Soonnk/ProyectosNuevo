@@ -171,7 +171,7 @@ Partial Class AgregarEmpresa
         '
         Me.ceActiva.Location = New System.Drawing.Point(12, 204)
         Me.ceActiva.Name = "ceActiva"
-        Me.ceActiva.Properties.Caption = "Activa"
+        Me.ceActiva.Properties.Caption = "Activo"
         Me.ceActiva.Size = New System.Drawing.Size(454, 19)
         Me.ceActiva.StyleController = Me.LayoutControl2
         Me.ceActiva.TabIndex = 14
@@ -180,9 +180,9 @@ Partial Class AgregarEmpresa
         '
         Me.txtTelefono.Location = New System.Drawing.Point(80, 180)
         Me.txtTelefono.Name = "txtTelefono"
+        Me.txtTelefono.Properties.Mask.EditMask = "n0"
+        Me.txtTelefono.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
         Me.txtTelefono.Properties.MaxLength = 50
-        Me.txtTelefono.Properties.NullValuePrompt = "Campo Obligatorio"
-        Me.txtTelefono.Properties.NullValuePromptShowForEmptyValue = True
         Me.txtTelefono.Size = New System.Drawing.Size(168, 20)
         Me.txtTelefono.StyleController = Me.LayoutControl2
         Me.txtTelefono.TabIndex = 13
@@ -192,8 +192,6 @@ Partial Class AgregarEmpresa
         Me.txtGiro.Location = New System.Drawing.Point(80, 156)
         Me.txtGiro.Name = "txtGiro"
         Me.txtGiro.Properties.MaxLength = 50
-        Me.txtGiro.Properties.NullValuePrompt = "Campo Obligatorio"
-        Me.txtGiro.Properties.NullValuePromptShowForEmptyValue = True
         Me.txtGiro.Size = New System.Drawing.Size(168, 20)
         Me.txtGiro.StyleController = Me.LayoutControl2
         Me.txtGiro.TabIndex = 12
@@ -214,8 +212,6 @@ Partial Class AgregarEmpresa
         Me.txtCodigo.Location = New System.Drawing.Point(320, 108)
         Me.txtCodigo.Name = "txtCodigo"
         Me.txtCodigo.Properties.MaxLength = 10
-        Me.txtCodigo.Properties.NullValuePrompt = "Campo Obligatorio"
-        Me.txtCodigo.Properties.NullValuePromptShowForEmptyValue = True
         Me.txtCodigo.Size = New System.Drawing.Size(146, 20)
         Me.txtCodigo.StyleController = Me.LayoutControl2
         Me.txtCodigo.TabIndex = 10
@@ -225,8 +221,6 @@ Partial Class AgregarEmpresa
         Me.txtPais.Location = New System.Drawing.Point(80, 108)
         Me.txtPais.Name = "txtPais"
         Me.txtPais.Properties.MaxLength = 50
-        Me.txtPais.Properties.NullValuePrompt = "Campo Obligatorio"
-        Me.txtPais.Properties.NullValuePromptShowForEmptyValue = True
         Me.txtPais.Size = New System.Drawing.Size(168, 20)
         Me.txtPais.StyleController = Me.LayoutControl2
         Me.txtPais.TabIndex = 9
@@ -236,8 +230,6 @@ Partial Class AgregarEmpresa
         Me.txtPoblacion.Location = New System.Drawing.Point(80, 84)
         Me.txtPoblacion.Name = "txtPoblacion"
         Me.txtPoblacion.Properties.MaxLength = 50
-        Me.txtPoblacion.Properties.NullValuePrompt = "Campo Obligatorio"
-        Me.txtPoblacion.Properties.NullValuePromptShowForEmptyValue = True
         Me.txtPoblacion.Size = New System.Drawing.Size(168, 20)
         Me.txtPoblacion.StyleController = Me.LayoutControl2
         Me.txtPoblacion.TabIndex = 8
@@ -247,8 +239,6 @@ Partial Class AgregarEmpresa
         Me.txtColonia.Location = New System.Drawing.Point(80, 60)
         Me.txtColonia.Name = "txtColonia"
         Me.txtColonia.Properties.MaxLength = 50
-        Me.txtColonia.Properties.NullValuePrompt = "Campo Obligatorio"
-        Me.txtColonia.Properties.NullValuePromptShowForEmptyValue = True
         Me.txtColonia.Size = New System.Drawing.Size(386, 20)
         Me.txtColonia.StyleController = Me.LayoutControl2
         Me.txtColonia.TabIndex = 7
@@ -258,8 +248,6 @@ Partial Class AgregarEmpresa
         Me.txtDireccion.Location = New System.Drawing.Point(80, 36)
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Properties.MaxLength = 50
-        Me.txtDireccion.Properties.NullValuePrompt = "Campo Obligatorio"
-        Me.txtDireccion.Properties.NullValuePromptShowForEmptyValue = True
         Me.txtDireccion.Size = New System.Drawing.Size(386, 20)
         Me.txtDireccion.StyleController = Me.LayoutControl2
         Me.txtDireccion.TabIndex = 6
