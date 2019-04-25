@@ -29,10 +29,8 @@
                 oEmpresa.RFC = .Item("RFC")
                 oEmpresa.Giro = .Item("Giro")
                 oEmpresa.Telefono = .Item("Telefono")
-                oEmpresa.OptimisticLockField = .Item("OptimisticLockField")
-                oEmpresa.GCRecord = .Item("GCRecord")
                 oEmpresa.Logotipo = .Item("Logotipo")
-                oEmpresa.Estatus = .Item("Estatus")
+                oEmpresa.Estatus = .Item("estatus")
             End With
             Return oEmpresa
         Catch ex As Exception
@@ -47,14 +45,12 @@
             Query = "INSERT INTO Empresas(OID,Nombre,Direccion,
                                             Colonia,Poblacion,Pais,
                                             CP,RFC,Giro,Telefono,
-                                            OptimisticLockField,GCRecord
-                                            Logotipo,Estatus) VALUES 
+                                            Logotipo,estatus) VALUES 
                                             (" & id & ",'" & empresa.Nombre & "',
                                             '" & empresa.Direccion & "','" & empresa.Colonia & "',
                                             '" & empresa.Poblacion & "', '" & empresa.Pais & "',
                                             '" & empresa.CP & "', '" & empresa.RFC & "',
                                             '" & empresa.Giro & "', '" & empresa.Telefono & "',
-                                            '" & empresa.OptimisticLockField & "', '" & empresa.GCRecord & "',
                                             '" & empresa.Logotipo & "', '" & empresa.Estatus & "')"
             Return obj.commandSQL(Query)
         Catch ex As Exception
@@ -63,7 +59,7 @@
         End Try
     End Function
 
-    Public Sub ModificarEmpresa()
+    Public Sub EditarEmpresa()
         Try
             obj.Update()
         Finally

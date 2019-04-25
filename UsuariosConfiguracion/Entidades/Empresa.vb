@@ -9,8 +9,6 @@
     Private _RFC As String
     Private _Giro As String
     Private _Telefono As String
-    Private _OptimisticLockField As Integer
-    Private _GCRecord As Integer
     Private _Logotipo As Byte
     Private _Estatus As Boolean
     Public Sub New()
@@ -24,8 +22,6 @@
         Me._RFC = ""
         Me._Giro = ""
         Me.Telefono = ""
-        Me._OptimisticLockField = 0
-        Me._GCRecord = 0
         Me._Logotipo = 0
         Me._Estatus = True
     End Sub
@@ -126,25 +122,6 @@
         End Get
         Set(ByVal value As String)
             _Telefono = value
-        End Set
-    End Property
-
-    Public Property OptimisticLockField() As Integer
-        Get
-            Return Me._OptimisticLockField
-        End Get
-        Set(ByVal value As Integer)
-            _OptimisticLockField = value
-        End Set
-
-    End Property
-
-    Public Property GCRecord() As Integer
-        Get
-            Return Me._GCRecord
-        End Get
-        Set(ByVal value As Integer)
-            _GCRecord = value
         End Set
     End Property
 
