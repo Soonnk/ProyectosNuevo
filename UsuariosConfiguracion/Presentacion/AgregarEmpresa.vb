@@ -17,9 +17,10 @@
     Private Sub GuardarEmpresa()
         Try
             Dim oNegocio As New Negocios.Empresa
-
+            Dim camposVacios As String = ""
             Select Case TipoForma
                 Case enuTipoForma.Nuevo
+                    If Not ValidarCampos(camposVacios) Then Exit Sub
                     If oNegocio.InsertarEmpresa(llenarEntidades) = True Then
                         MessageBox.Show("Los datos han sido guardados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
                         CType(Owner, ConsultarEmpresa).Cargar()
@@ -33,6 +34,59 @@
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+
+    Public Function ValidarCampos(ByVal camposVacios As String) As Boolean
+        Try
+            camposVacios = "Los siguientes campos esta vacios:" & Chr(10) & Chr(10)
+            Dim resultado As Boolean = True
+            If Not txtNombre.EditValue <> "" Then
+                camposVacios &= "Nombre" & Chr(10)
+                resultado = False
+            End If
+            If Not txtDireccion.EditValue <> "" Then
+                camposVacios &= "Direccion" & Chr(10)
+                resultado = False
+            End If
+            If Not txtColonia.EditValue <> "" Then
+                camposVacios &= "Colonia" & Chr(10)
+                resultado = False
+            End If
+            If Not txtPoblacion.EditValue <> "" Then
+                camposVacios &= "Poblacion" & Chr(10)
+                resultado = False
+            End If
+            If Not txtPais.EditValue <> "" Then
+                camposVacios &= "Pais" & Chr(10)
+                resultado = False
+            End If
+            If Not txtCodigo.EditValue <> "" Then
+                camposVacios &= "CP" & Chr(10)
+                resultado = False
+            End If
+            If Not txtRfc.EditValue <> "" Then
+                camposVacios &= "RFC" & Chr(10)
+                resultado = False
+            End If
+            If Not txtGiro.EditValue <> "" Then
+                camposVacios &= "Giro" & Chr(10)
+                resultado = False
+            End If
+            If Not txtTelefono.EditValue <> "" Then
+                camposVacios &= "Telefono" & Chr(10)
+                resultado = False
+            End If
+            If resultado = False Then
+                MessageBox.Show(camposVacios, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                Return False
+            Else
+                Return True
+            End If
+        Catch ex As Exception
+
+        End Try
+
+    End Function
+
     Public Sub LimpiarCampos()
         txtNombre.EditValue = ""
         txtDireccion.EditValue = ""
