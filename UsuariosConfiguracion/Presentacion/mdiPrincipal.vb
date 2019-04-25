@@ -1,6 +1,14 @@
 ﻿Public Class mdiPrincipal
     Public activo As String
 
+    Private ReadOnly Property Empresa() As ConsultarEmpresa
+        Get
+            If Me.ActiveMdiChild Is Nothing Then
+                Return Nothing
+            End If
+            Return TryCast(Me.ActiveMdiChild, ConsultarEmpresa)
+        End Get
+    End Property
 
     Private Sub mdiPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -51,6 +59,7 @@
                 Case "empresas"
                     Dim frmNuevo As New AgregarEmpresa
                     frmNuevo.modo = AgregarEmpresa.tipo.Nuevo
+                    frmNuevo.Owner = Empresa
                     frmNuevo.ShowDialog()
 
                 Case "sistemas"

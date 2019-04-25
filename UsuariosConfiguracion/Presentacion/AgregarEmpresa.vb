@@ -2,6 +2,7 @@
     Public modo As tipo
     Private _mdiPrincipal As mdiPrincipal
     Public _IdEmpresa As Integer
+    Dim ruta As String
     Enum tipo
         Nuevo
         Editar
@@ -22,7 +23,7 @@
                     If oNegocio.InsertarEmpresa(llenarEntidades) = True Then
                         MessageBox.Show("Los datos han sido guardados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
                         CType(Owner, ConsultarEmpresa).Cargar()
-                        Me.Close()
+                        LimpiarCampos()
                     Else
                         MessageBox.Show("No se han podido guardar los datos solicitados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End If
@@ -32,7 +33,18 @@
             MessageBox.Show(ex.Message)
         End Try
     End Sub
-
+    Public Sub LimpiarCampos()
+        txtNombre.EditValue = ""
+        txtDireccion.EditValue = ""
+        txtColonia.EditValue = ""
+        txtPoblacion.EditValue = ""
+        txtPais.EditValue = ""
+        txtCodigo.EditValue = ""
+        txtRfc.EditValue = ""
+        txtGiro.EditValue = ""
+        txtTelefono.EditValue = ""
+        ceActiva.Checked = False
+    End Sub
     Public Sub Cargar()
         Try
             Select Case TipoForma
@@ -52,6 +64,7 @@
         Dim oEntidad As New Entidades.Empresa
         Try
             oEntidad = oNegocio.CargarEmpresa(_IdEmpresa)
+
             Me.txtNombre.Text = oEntidad.Nombre
             Me.txtDireccion.Text = oEntidad.Direccion
             Me.txtColonia.Text = oEntidad.Colonia
@@ -92,17 +105,6 @@
         Me.Close()
     End Sub
 
-    Private Sub PictureEdit1_EditValueChanged(sender As Object, e As EventArgs) Handles PictureEdit1.EditValueChanged
-        Try
-            Dim imagen As New OpenFileDialog()
-            imagen.Filter = "Imagen JPG (*.jpg)|*.jpg|Imagen BMP (*.bmp)|*.bmp|Imagen PNG (*.png)|*.png|Imagen GIF (*.gif)|*.gif"
-            If imagen.ShowDialog() = DialogResult Then
-
-            End If
-        Catch ex As Exception
-
-        End Try
-    End Sub
 
     Public Sub consultarEmpresa(ByVal row As DataRow)
         Try
@@ -122,5 +124,21 @@
 
     Private Sub TextEdit1_EditValueChanged(sender As Object, e As EventArgs) Handles txtNombre.EditValueChanged
 
+    End Sub
+
+    Private Sub peLogotipo_DoubleClick(sender As Object, e As EventArgs) Handles peLogotipo.DoubleClick
+        Try
+
+            Dim imagen As New OpenFileDialog()
+            imagen.Filter = "Imagen JPG (*.jpg)|*.jpg|Imagen BMP (*.bmp)|*.bmp|Imagen PNG (*.png)|*.png|Imagen GIF (*.gif)|*.gif"
+            If imagen.ShowDialog() = DialogResult.OK Then
+                peLogotipo.Properties.SizeMode = PictureBoxSizeMode.AutoSize
+                ruta = imagen.FileName.ToString
+                peLogotipo.Image = System.Drawing.Image.FromFile(ruta)
+
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Error al cargar la imagen", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
     End Sub
 End Class

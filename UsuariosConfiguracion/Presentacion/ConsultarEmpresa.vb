@@ -38,6 +38,7 @@
 
     Private Sub ConsultarEmpresa_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.mdiPrincipal1.activo = "empresas"
+        Cargar()
     End Sub
 
     Public Sub Cargar()

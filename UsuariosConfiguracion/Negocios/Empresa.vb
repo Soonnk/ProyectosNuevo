@@ -25,7 +25,7 @@
 
     Public Sub Update()
         Try
-            oEmpresa.ModificarEmpresa()
+            oEmpresa.EditarEmpresa()
         Finally
         End Try
     End Sub

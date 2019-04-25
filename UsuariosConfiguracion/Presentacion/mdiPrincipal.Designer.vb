@@ -198,6 +198,7 @@ Partial Class mdiPrincipal
         Me.IsMdiContainer = True
         Me.Name = "mdiPrincipal"
         Me.Text = "Usuarios y Configuración"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.XtraTabbedMdiManager1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

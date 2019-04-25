@@ -37,7 +37,7 @@ Partial Class AgregarEmpresa
         Me.txtPoblacion = New DevExpress.XtraEditors.TextEdit()
         Me.txtColonia = New DevExpress.XtraEditors.TextEdit()
         Me.txtDireccion = New DevExpress.XtraEditors.TextEdit()
-        Me.PictureEdit1 = New DevExpress.XtraEditors.PictureEdit()
+        Me.peLogotipo = New DevExpress.XtraEditors.PictureEdit()
         Me.txtNombre = New DevExpress.XtraEditors.TextEdit()
         Me.LayoutControlGroup2 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem2 = New DevExpress.XtraLayout.LayoutControlItem()
@@ -75,7 +75,7 @@ Partial Class AgregarEmpresa
         CType(Me.txtPoblacion.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtColonia.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtDireccion.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.peLogotipo.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtNombre.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -115,18 +115,22 @@ Partial Class AgregarEmpresa
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(472, 273)
+        Me.btnCancelar.Location = New System.Drawing.Point(551, 283)
+        Me.btnCancelar.MaximumSize = New System.Drawing.Size(80, 22)
+        Me.btnCancelar.MinimumSize = New System.Drawing.Size(80, 22)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(149, 22)
+        Me.btnCancelar.Size = New System.Drawing.Size(80, 22)
         Me.btnCancelar.StyleController = Me.LayoutControl1
         Me.btnCancelar.TabIndex = 6
         Me.btnCancelar.Text = "Cancelar"
         '
         'btnGuardar
         '
-        Me.btnGuardar.Location = New System.Drawing.Point(318, 273)
+        Me.btnGuardar.Location = New System.Drawing.Point(467, 283)
+        Me.btnGuardar.MaximumSize = New System.Drawing.Size(80, 22)
+        Me.btnGuardar.MinimumSize = New System.Drawing.Size(80, 22)
         Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(150, 22)
+        Me.btnGuardar.Size = New System.Drawing.Size(80, 22)
         Me.btnGuardar.StyleController = Me.LayoutControl1
         Me.btnGuardar.TabIndex = 5
         Me.btnGuardar.Text = "Guardar"
@@ -136,11 +140,11 @@ Partial Class AgregarEmpresa
         Me.GroupControl1.AppearanceCaption.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupControl1.AppearanceCaption.Options.UseFont = True
         Me.GroupControl1.Controls.Add(Me.LayoutControl2)
-        Me.GroupControl1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupControl1.Location = New System.Drawing.Point(2, 2)
         Me.GroupControl1.Name = "GroupControl1"
-        Me.GroupControl1.Size = New System.Drawing.Size(609, 257)
+        Me.GroupControl1.Size = New System.Drawing.Size(629, 277)
         Me.GroupControl1.TabIndex = 4
-        Me.GroupControl1.Text = "Nueva Empresa"
+        Me.GroupControl1.Text = "Datos"
         '
         'LayoutControl2
         '
@@ -153,13 +157,13 @@ Partial Class AgregarEmpresa
         Me.LayoutControl2.Controls.Add(Me.txtPoblacion)
         Me.LayoutControl2.Controls.Add(Me.txtColonia)
         Me.LayoutControl2.Controls.Add(Me.txtDireccion)
-        Me.LayoutControl2.Controls.Add(Me.PictureEdit1)
+        Me.LayoutControl2.Controls.Add(Me.peLogotipo)
         Me.LayoutControl2.Controls.Add(Me.txtNombre)
         Me.LayoutControl2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.LayoutControl2.Location = New System.Drawing.Point(2, 20)
         Me.LayoutControl2.Name = "LayoutControl2"
         Me.LayoutControl2.Root = Me.LayoutControlGroup2
-        Me.LayoutControl2.Size = New System.Drawing.Size(605, 235)
+        Me.LayoutControl2.Size = New System.Drawing.Size(625, 255)
         Me.LayoutControl2.TabIndex = 0
         Me.LayoutControl2.Text = "LayoutControl2"
         '
@@ -168,7 +172,7 @@ Partial Class AgregarEmpresa
         Me.ceActiva.Location = New System.Drawing.Point(12, 204)
         Me.ceActiva.Name = "ceActiva"
         Me.ceActiva.Properties.Caption = "Activa"
-        Me.ceActiva.Size = New System.Drawing.Size(439, 19)
+        Me.ceActiva.Size = New System.Drawing.Size(454, 19)
         Me.ceActiva.StyleController = Me.LayoutControl2
         Me.ceActiva.TabIndex = 14
         '
@@ -176,7 +180,10 @@ Partial Class AgregarEmpresa
         '
         Me.txtTelefono.Location = New System.Drawing.Point(80, 180)
         Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(160, 20)
+        Me.txtTelefono.Properties.MaxLength = 50
+        Me.txtTelefono.Properties.NullValuePrompt = "Campo Obligatorio"
+        Me.txtTelefono.Properties.NullValuePromptShowForEmptyValue = True
+        Me.txtTelefono.Size = New System.Drawing.Size(168, 20)
         Me.txtTelefono.StyleController = Me.LayoutControl2
         Me.txtTelefono.TabIndex = 13
         '
@@ -184,7 +191,10 @@ Partial Class AgregarEmpresa
         '
         Me.txtGiro.Location = New System.Drawing.Point(80, 156)
         Me.txtGiro.Name = "txtGiro"
-        Me.txtGiro.Size = New System.Drawing.Size(160, 20)
+        Me.txtGiro.Properties.MaxLength = 50
+        Me.txtGiro.Properties.NullValuePrompt = "Campo Obligatorio"
+        Me.txtGiro.Properties.NullValuePromptShowForEmptyValue = True
+        Me.txtGiro.Size = New System.Drawing.Size(168, 20)
         Me.txtGiro.StyleController = Me.LayoutControl2
         Me.txtGiro.TabIndex = 12
         '
@@ -192,15 +202,21 @@ Partial Class AgregarEmpresa
         '
         Me.txtRfc.Location = New System.Drawing.Point(80, 132)
         Me.txtRfc.Name = "txtRfc"
-        Me.txtRfc.Size = New System.Drawing.Size(160, 20)
+        Me.txtRfc.Properties.MaxLength = 13
+        Me.txtRfc.Properties.NullValuePrompt = "Campo Obligatorio"
+        Me.txtRfc.Properties.NullValuePromptShowForEmptyValue = True
+        Me.txtRfc.Size = New System.Drawing.Size(168, 20)
         Me.txtRfc.StyleController = Me.LayoutControl2
         Me.txtRfc.TabIndex = 11
         '
         'txtCodigo
         '
-        Me.txtCodigo.Location = New System.Drawing.Point(312, 108)
+        Me.txtCodigo.Location = New System.Drawing.Point(320, 108)
         Me.txtCodigo.Name = "txtCodigo"
-        Me.txtCodigo.Size = New System.Drawing.Size(139, 20)
+        Me.txtCodigo.Properties.MaxLength = 10
+        Me.txtCodigo.Properties.NullValuePrompt = "Campo Obligatorio"
+        Me.txtCodigo.Properties.NullValuePromptShowForEmptyValue = True
+        Me.txtCodigo.Size = New System.Drawing.Size(146, 20)
         Me.txtCodigo.StyleController = Me.LayoutControl2
         Me.txtCodigo.TabIndex = 10
         '
@@ -208,7 +224,10 @@ Partial Class AgregarEmpresa
         '
         Me.txtPais.Location = New System.Drawing.Point(80, 108)
         Me.txtPais.Name = "txtPais"
-        Me.txtPais.Size = New System.Drawing.Size(160, 20)
+        Me.txtPais.Properties.MaxLength = 50
+        Me.txtPais.Properties.NullValuePrompt = "Campo Obligatorio"
+        Me.txtPais.Properties.NullValuePromptShowForEmptyValue = True
+        Me.txtPais.Size = New System.Drawing.Size(168, 20)
         Me.txtPais.StyleController = Me.LayoutControl2
         Me.txtPais.TabIndex = 9
         '
@@ -216,7 +235,10 @@ Partial Class AgregarEmpresa
         '
         Me.txtPoblacion.Location = New System.Drawing.Point(80, 84)
         Me.txtPoblacion.Name = "txtPoblacion"
-        Me.txtPoblacion.Size = New System.Drawing.Size(160, 20)
+        Me.txtPoblacion.Properties.MaxLength = 50
+        Me.txtPoblacion.Properties.NullValuePrompt = "Campo Obligatorio"
+        Me.txtPoblacion.Properties.NullValuePromptShowForEmptyValue = True
+        Me.txtPoblacion.Size = New System.Drawing.Size(168, 20)
         Me.txtPoblacion.StyleController = Me.LayoutControl2
         Me.txtPoblacion.TabIndex = 8
         '
@@ -224,7 +246,10 @@ Partial Class AgregarEmpresa
         '
         Me.txtColonia.Location = New System.Drawing.Point(80, 60)
         Me.txtColonia.Name = "txtColonia"
-        Me.txtColonia.Size = New System.Drawing.Size(371, 20)
+        Me.txtColonia.Properties.MaxLength = 50
+        Me.txtColonia.Properties.NullValuePrompt = "Campo Obligatorio"
+        Me.txtColonia.Properties.NullValuePromptShowForEmptyValue = True
+        Me.txtColonia.Size = New System.Drawing.Size(386, 20)
         Me.txtColonia.StyleController = Me.LayoutControl2
         Me.txtColonia.TabIndex = 7
         '
@@ -232,26 +257,32 @@ Partial Class AgregarEmpresa
         '
         Me.txtDireccion.Location = New System.Drawing.Point(80, 36)
         Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.Size = New System.Drawing.Size(371, 20)
+        Me.txtDireccion.Properties.MaxLength = 50
+        Me.txtDireccion.Properties.NullValuePrompt = "Campo Obligatorio"
+        Me.txtDireccion.Properties.NullValuePromptShowForEmptyValue = True
+        Me.txtDireccion.Size = New System.Drawing.Size(386, 20)
         Me.txtDireccion.StyleController = Me.LayoutControl2
         Me.txtDireccion.TabIndex = 6
         '
-        'PictureEdit1
+        'peLogotipo
         '
-        Me.PictureEdit1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.PictureEdit1.Location = New System.Drawing.Point(455, 12)
-        Me.PictureEdit1.Name = "PictureEdit1"
-        Me.PictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.[Auto]
-        Me.PictureEdit1.Properties.ZoomAccelerationFactor = 1.0R
-        Me.PictureEdit1.Size = New System.Drawing.Size(138, 211)
-        Me.PictureEdit1.StyleController = Me.LayoutControl2
-        Me.PictureEdit1.TabIndex = 5
+        Me.peLogotipo.Cursor = System.Windows.Forms.Cursors.Default
+        Me.peLogotipo.Location = New System.Drawing.Point(470, 12)
+        Me.peLogotipo.Name = "peLogotipo"
+        Me.peLogotipo.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.[Auto]
+        Me.peLogotipo.Properties.ZoomAccelerationFactor = 1.0R
+        Me.peLogotipo.Size = New System.Drawing.Size(143, 231)
+        Me.peLogotipo.StyleController = Me.LayoutControl2
+        Me.peLogotipo.TabIndex = 5
         '
         'txtNombre
         '
         Me.txtNombre.Location = New System.Drawing.Point(80, 12)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(371, 20)
+        Me.txtNombre.Properties.MaxLength = 80
+        Me.txtNombre.Properties.NullValuePrompt = "Campo Obligatorio"
+        Me.txtNombre.Properties.NullValuePromptShowForEmptyValue = True
+        Me.txtNombre.Size = New System.Drawing.Size(386, 20)
         Me.txtNombre.StyleController = Me.LayoutControl2
         Me.txtNombre.TabIndex = 4
         '
@@ -262,7 +293,7 @@ Partial Class AgregarEmpresa
         Me.LayoutControlGroup2.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem2, Me.LayoutControlItem3, Me.LayoutControlItem6, Me.LayoutControlItem7, Me.LayoutControlItem8, Me.LayoutControlItem9, Me.LayoutControlItem11, Me.LayoutControlItem12, Me.LayoutControlItem13, Me.LayoutControlItem14, Me.LayoutControlItem10, Me.EmptySpaceItem1, Me.EmptySpaceItem3, Me.EmptySpaceItem4, Me.EmptySpaceItem5})
         Me.LayoutControlGroup2.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup2.Name = "LayoutControlGroup2"
-        Me.LayoutControlGroup2.Size = New System.Drawing.Size(605, 235)
+        Me.LayoutControlGroup2.Size = New System.Drawing.Size(625, 255)
         Me.LayoutControlGroup2.TextVisible = False
         '
         'LayoutControlItem2
@@ -271,16 +302,16 @@ Partial Class AgregarEmpresa
         Me.LayoutControlItem2.HighlightFocusedItem = DevExpress.Utils.DefaultBoolean.[True]
         Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem2.Name = "LayoutControlItem2"
-        Me.LayoutControlItem2.Size = New System.Drawing.Size(443, 24)
+        Me.LayoutControlItem2.Size = New System.Drawing.Size(458, 24)
         Me.LayoutControlItem2.Text = "Nombre"
         Me.LayoutControlItem2.TextSize = New System.Drawing.Size(65, 13)
         '
         'LayoutControlItem3
         '
-        Me.LayoutControlItem3.Control = Me.PictureEdit1
-        Me.LayoutControlItem3.Location = New System.Drawing.Point(443, 0)
+        Me.LayoutControlItem3.Control = Me.peLogotipo
+        Me.LayoutControlItem3.Location = New System.Drawing.Point(458, 0)
         Me.LayoutControlItem3.Name = "LayoutControlItem3"
-        Me.LayoutControlItem3.Size = New System.Drawing.Size(142, 215)
+        Me.LayoutControlItem3.Size = New System.Drawing.Size(147, 235)
         Me.LayoutControlItem3.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem3.TextVisible = False
         '
@@ -289,7 +320,7 @@ Partial Class AgregarEmpresa
         Me.LayoutControlItem6.Control = Me.txtDireccion
         Me.LayoutControlItem6.Location = New System.Drawing.Point(0, 24)
         Me.LayoutControlItem6.Name = "LayoutControlItem6"
-        Me.LayoutControlItem6.Size = New System.Drawing.Size(443, 24)
+        Me.LayoutControlItem6.Size = New System.Drawing.Size(458, 24)
         Me.LayoutControlItem6.Text = "Dirección"
         Me.LayoutControlItem6.TextSize = New System.Drawing.Size(65, 13)
         '
@@ -298,7 +329,7 @@ Partial Class AgregarEmpresa
         Me.LayoutControlItem7.Control = Me.txtColonia
         Me.LayoutControlItem7.Location = New System.Drawing.Point(0, 48)
         Me.LayoutControlItem7.Name = "LayoutControlItem7"
-        Me.LayoutControlItem7.Size = New System.Drawing.Size(443, 24)
+        Me.LayoutControlItem7.Size = New System.Drawing.Size(458, 24)
         Me.LayoutControlItem7.Text = "Colonia"
         Me.LayoutControlItem7.TextSize = New System.Drawing.Size(65, 13)
         '
@@ -307,7 +338,7 @@ Partial Class AgregarEmpresa
         Me.LayoutControlItem8.Control = Me.txtPoblacion
         Me.LayoutControlItem8.Location = New System.Drawing.Point(0, 72)
         Me.LayoutControlItem8.Name = "LayoutControlItem8"
-        Me.LayoutControlItem8.Size = New System.Drawing.Size(232, 24)
+        Me.LayoutControlItem8.Size = New System.Drawing.Size(240, 24)
         Me.LayoutControlItem8.Text = "Población"
         Me.LayoutControlItem8.TextSize = New System.Drawing.Size(65, 13)
         '
@@ -316,7 +347,7 @@ Partial Class AgregarEmpresa
         Me.LayoutControlItem9.Control = Me.txtPais
         Me.LayoutControlItem9.Location = New System.Drawing.Point(0, 96)
         Me.LayoutControlItem9.Name = "LayoutControlItem9"
-        Me.LayoutControlItem9.Size = New System.Drawing.Size(232, 24)
+        Me.LayoutControlItem9.Size = New System.Drawing.Size(240, 24)
         Me.LayoutControlItem9.Text = "País"
         Me.LayoutControlItem9.TextSize = New System.Drawing.Size(65, 13)
         '
@@ -325,7 +356,7 @@ Partial Class AgregarEmpresa
         Me.LayoutControlItem11.Control = Me.txtRfc
         Me.LayoutControlItem11.Location = New System.Drawing.Point(0, 120)
         Me.LayoutControlItem11.Name = "LayoutControlItem11"
-        Me.LayoutControlItem11.Size = New System.Drawing.Size(232, 24)
+        Me.LayoutControlItem11.Size = New System.Drawing.Size(240, 24)
         Me.LayoutControlItem11.Text = "RFC"
         Me.LayoutControlItem11.TextSize = New System.Drawing.Size(65, 13)
         '
@@ -334,7 +365,7 @@ Partial Class AgregarEmpresa
         Me.LayoutControlItem12.Control = Me.txtGiro
         Me.LayoutControlItem12.Location = New System.Drawing.Point(0, 144)
         Me.LayoutControlItem12.Name = "LayoutControlItem12"
-        Me.LayoutControlItem12.Size = New System.Drawing.Size(232, 24)
+        Me.LayoutControlItem12.Size = New System.Drawing.Size(240, 24)
         Me.LayoutControlItem12.Text = "Giro"
         Me.LayoutControlItem12.TextSize = New System.Drawing.Size(65, 13)
         '
@@ -343,7 +374,7 @@ Partial Class AgregarEmpresa
         Me.LayoutControlItem13.Control = Me.txtTelefono
         Me.LayoutControlItem13.Location = New System.Drawing.Point(0, 168)
         Me.LayoutControlItem13.Name = "LayoutControlItem13"
-        Me.LayoutControlItem13.Size = New System.Drawing.Size(232, 24)
+        Me.LayoutControlItem13.Size = New System.Drawing.Size(240, 24)
         Me.LayoutControlItem13.Text = "Teléfono"
         Me.LayoutControlItem13.TextSize = New System.Drawing.Size(65, 13)
         '
@@ -352,49 +383,49 @@ Partial Class AgregarEmpresa
         Me.LayoutControlItem14.Control = Me.ceActiva
         Me.LayoutControlItem14.Location = New System.Drawing.Point(0, 192)
         Me.LayoutControlItem14.Name = "LayoutControlItem14"
-        Me.LayoutControlItem14.Size = New System.Drawing.Size(443, 23)
+        Me.LayoutControlItem14.Size = New System.Drawing.Size(458, 43)
         Me.LayoutControlItem14.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem14.TextVisible = False
         '
         'LayoutControlItem10
         '
         Me.LayoutControlItem10.Control = Me.txtCodigo
-        Me.LayoutControlItem10.Location = New System.Drawing.Point(232, 96)
+        Me.LayoutControlItem10.Location = New System.Drawing.Point(240, 96)
         Me.LayoutControlItem10.Name = "LayoutControlItem10"
-        Me.LayoutControlItem10.Size = New System.Drawing.Size(211, 24)
+        Me.LayoutControlItem10.Size = New System.Drawing.Size(218, 24)
         Me.LayoutControlItem10.Text = "Código Postal"
         Me.LayoutControlItem10.TextSize = New System.Drawing.Size(65, 13)
         '
         'EmptySpaceItem1
         '
         Me.EmptySpaceItem1.AllowHotTrack = False
-        Me.EmptySpaceItem1.Location = New System.Drawing.Point(232, 144)
+        Me.EmptySpaceItem1.Location = New System.Drawing.Point(240, 144)
         Me.EmptySpaceItem1.Name = "EmptySpaceItem1"
-        Me.EmptySpaceItem1.Size = New System.Drawing.Size(211, 24)
+        Me.EmptySpaceItem1.Size = New System.Drawing.Size(218, 24)
         Me.EmptySpaceItem1.TextSize = New System.Drawing.Size(0, 0)
         '
         'EmptySpaceItem3
         '
         Me.EmptySpaceItem3.AllowHotTrack = False
-        Me.EmptySpaceItem3.Location = New System.Drawing.Point(232, 168)
+        Me.EmptySpaceItem3.Location = New System.Drawing.Point(240, 168)
         Me.EmptySpaceItem3.Name = "EmptySpaceItem3"
-        Me.EmptySpaceItem3.Size = New System.Drawing.Size(211, 24)
+        Me.EmptySpaceItem3.Size = New System.Drawing.Size(218, 24)
         Me.EmptySpaceItem3.TextSize = New System.Drawing.Size(0, 0)
         '
         'EmptySpaceItem4
         '
         Me.EmptySpaceItem4.AllowHotTrack = False
-        Me.EmptySpaceItem4.Location = New System.Drawing.Point(232, 72)
+        Me.EmptySpaceItem4.Location = New System.Drawing.Point(240, 72)
         Me.EmptySpaceItem4.Name = "EmptySpaceItem4"
-        Me.EmptySpaceItem4.Size = New System.Drawing.Size(211, 24)
+        Me.EmptySpaceItem4.Size = New System.Drawing.Size(218, 24)
         Me.EmptySpaceItem4.TextSize = New System.Drawing.Size(0, 0)
         '
         'EmptySpaceItem5
         '
         Me.EmptySpaceItem5.AllowHotTrack = False
-        Me.EmptySpaceItem5.Location = New System.Drawing.Point(232, 120)
+        Me.EmptySpaceItem5.Location = New System.Drawing.Point(240, 120)
         Me.EmptySpaceItem5.Name = "EmptySpaceItem5"
-        Me.EmptySpaceItem5.Size = New System.Drawing.Size(211, 24)
+        Me.EmptySpaceItem5.Size = New System.Drawing.Size(218, 24)
         Me.EmptySpaceItem5.TextSize = New System.Drawing.Size(0, 0)
         '
         'LayoutControlGroup1
@@ -404,6 +435,7 @@ Partial Class AgregarEmpresa
         Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.EmptySpaceItem2, Me.LayoutControlItem4, Me.LayoutControlItem5})
         Me.LayoutControlGroup1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup1.Name = "LayoutControlGroup1"
+        Me.LayoutControlGroup1.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
         Me.LayoutControlGroup1.Size = New System.Drawing.Size(633, 307)
         Me.LayoutControlGroup1.TextVisible = False
         '
@@ -412,33 +444,35 @@ Partial Class AgregarEmpresa
         Me.LayoutControlItem1.Control = Me.GroupControl1
         Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem1.Name = "LayoutControlItem1"
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(613, 261)
+        Me.LayoutControlItem1.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(633, 281)
+        Me.LayoutControlItem1.Spacing = New DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2)
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem1.TextVisible = False
         '
         'EmptySpaceItem2
         '
         Me.EmptySpaceItem2.AllowHotTrack = False
-        Me.EmptySpaceItem2.Location = New System.Drawing.Point(0, 261)
+        Me.EmptySpaceItem2.Location = New System.Drawing.Point(0, 281)
         Me.EmptySpaceItem2.Name = "EmptySpaceItem2"
-        Me.EmptySpaceItem2.Size = New System.Drawing.Size(306, 26)
+        Me.EmptySpaceItem2.Size = New System.Drawing.Size(465, 26)
         Me.EmptySpaceItem2.TextSize = New System.Drawing.Size(0, 0)
         '
         'LayoutControlItem4
         '
         Me.LayoutControlItem4.Control = Me.btnGuardar
-        Me.LayoutControlItem4.Location = New System.Drawing.Point(306, 261)
+        Me.LayoutControlItem4.Location = New System.Drawing.Point(465, 281)
         Me.LayoutControlItem4.Name = "LayoutControlItem4"
-        Me.LayoutControlItem4.Size = New System.Drawing.Size(154, 26)
+        Me.LayoutControlItem4.Size = New System.Drawing.Size(84, 26)
         Me.LayoutControlItem4.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem4.TextVisible = False
         '
         'LayoutControlItem5
         '
         Me.LayoutControlItem5.Control = Me.btnCancelar
-        Me.LayoutControlItem5.Location = New System.Drawing.Point(460, 261)
+        Me.LayoutControlItem5.Location = New System.Drawing.Point(549, 281)
         Me.LayoutControlItem5.Name = "LayoutControlItem5"
-        Me.LayoutControlItem5.Size = New System.Drawing.Size(153, 26)
+        Me.LayoutControlItem5.Size = New System.Drawing.Size(84, 26)
         Me.LayoutControlItem5.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem5.TextVisible = False
         '
@@ -449,8 +483,13 @@ Partial Class AgregarEmpresa
         Me.ClientSize = New System.Drawing.Size(633, 307)
         Me.Controls.Add(Me.LayoutControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(649, 346)
+        Me.MinimizeBox = False
+        Me.MinimumSize = New System.Drawing.Size(649, 346)
         Me.Name = "AgregarEmpresa"
-        Me.Text = "Empresa"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.Text = "Nueva Empresa"
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LayoutControl1.ResumeLayout(False)
         CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -466,7 +505,7 @@ Partial Class AgregarEmpresa
         CType(Me.txtPoblacion.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtColonia.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtDireccion.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.peLogotipo.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtNombre.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -528,6 +567,6 @@ Partial Class AgregarEmpresa
     Friend WithEvents EmptySpaceItem3 As DevExpress.XtraLayout.EmptySpaceItem
     Friend WithEvents EmptySpaceItem4 As DevExpress.XtraLayout.EmptySpaceItem
     Friend WithEvents EmptySpaceItem5 As DevExpress.XtraLayout.EmptySpaceItem
-    Friend WithEvents PictureEdit1 As DevExpress.XtraEditors.PictureEdit
+    Friend WithEvents peLogotipo As DevExpress.XtraEditors.PictureEdit
     Friend WithEvents LayoutControlItem3 As DevExpress.XtraLayout.LayoutControlItem
 End Class

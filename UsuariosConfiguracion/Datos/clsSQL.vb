@@ -85,7 +85,7 @@ Public Class clsSQL
     Public Function Incrementar(ByVal tabla As String) As Integer
         Try
             Dim dt As New DataTable
-            adaptador = New SqlDataAdapter("SELECT MAX(id) FROM " & tabla, StringConn)
+            adaptador = New SqlDataAdapter("SELECT MAX(OID) FROM " & tabla, StringConn)
             adaptador.Fill(dt)
 
             Return CInt(dt.Rows(0).Item(0)) + 1
