@@ -167,6 +167,12 @@
     <Compile Include="pConsultarReservaciones.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="usuarioConfiguracion.Designer.vb">
+      <DependentUpon>usuarioConfiguracion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="usuarioConfiguracion.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="mdiPrincipal.resx">
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pConsultarReservaciones.resx">
       <DependentUpon>pConsultarReservaciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usuarioConfiguracion.resx">
+      <DependentUpon>usuarioConfiguracion.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
