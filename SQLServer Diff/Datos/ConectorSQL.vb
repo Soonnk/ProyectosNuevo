@@ -20,26 +20,15 @@ Public Class ConectorSQL
                   ByVal server As String,
                   ByVal user As String,
                   ByVal pass As String)
-        Me._server = server
-        Me._user = user
-        Me._pass = pass
-    End Sub
-
-    ''' <summary>
-    ''' Prepara un objeto ConectorSQL con el usuario y contraseña especificados, el servidor sera establecido como 'localhost'
-    ''' </summary>
-    ''' <param name="user">Usuario a loguear en el servidor</param>
-    ''' <param name="pass">Contraseña a utilizar para logueo</param>
-    Public Sub New(ByVal user As String, ByVal pass As String)
-        Me._server = "localhost"
-        Me._user = user
-        Me._pass = pass
+        _server = server
+        _user = user
+        _pass = pass
     End Sub
 
     Private Function StringConn() As String
         Dim cadena As String
         If (_db Is Nothing) Then
-            cadena = "Data Source= " & _server & ";User id=" & _user & "; Password=" & _pass & " ;pooling=no;Timeout=0;"
+            cadena = "Data Source= " & _server & ";User id=" & _user & "; Password=" & _pass & " ;pooling=no;Timeout=200;"
         Else
             cadena = "Data Source= " & _server & ";Initial Catalog=" & _db & ";User id=" & _user & "; Password=" & _pass & " ;pooling=no;Timeout=0;"
         End If

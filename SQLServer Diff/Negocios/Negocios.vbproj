@@ -64,6 +64,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comparador.vb" />
     <Compile Include="Conector.vb" />
     <Compile Include="GeneradorScript.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
