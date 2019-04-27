@@ -24,7 +24,7 @@
         Dim statement As String
         statement = "CREATE TABLE " & name & "("
         For i = 0 To columns.Count - 1
-            statement += Environment.NewLine & columns(i) & " " & columnTypes(i)
+            statement += Environment.NewLine & vbTab & columns(i) & " " & columnTypes(i)
             If (i < (columns.Count - 2)) Then
                 statement += ","
             End If
