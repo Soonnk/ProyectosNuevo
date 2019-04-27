@@ -30,7 +30,7 @@
                 oEmpresa.Giro = .Item("Giro")
                 oEmpresa.Telefono = .Item("Telefono")
                 oEmpresa.Logotipo = .Item("Logotipo")
-                oEmpresa.Estatus = .Item("estatus")
+                oEmpresa.Estatus = .Item("activo")
             End With
             Return oEmpresa
         Catch ex As Exception
@@ -45,7 +45,7 @@
             Query = "INSERT INTO Empresas(OID,Nombre,Direccion,
                                             Colonia,Poblacion,Pais,
                                             CP,RFC,Giro,Telefono,
-                                            Logotipo,estatus) VALUES 
+                                            Logotipo,activo) VALUES 
                                             (" & id & ",'" & empresa.Nombre & "',
                                             '" & empresa.Direccion & "','" & empresa.Colonia & "',
                                             '" & empresa.Poblacion & "', '" & empresa.Pais & "',

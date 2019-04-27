@@ -180,8 +180,8 @@ Partial Class AgregarEmpresa
         '
         Me.txtTelefono.Location = New System.Drawing.Point(80, 180)
         Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Properties.Mask.EditMask = "n0"
-        Me.txtTelefono.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
+        Me.txtTelefono.Properties.Mask.EditMask = "(999) 000-0000"
+        Me.txtTelefono.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple
         Me.txtTelefono.Properties.MaxLength = 50
         Me.txtTelefono.Size = New System.Drawing.Size(168, 20)
         Me.txtTelefono.StyleController = Me.LayoutControl2
@@ -211,6 +211,8 @@ Partial Class AgregarEmpresa
         '
         Me.txtCodigo.Location = New System.Drawing.Point(320, 108)
         Me.txtCodigo.Name = "txtCodigo"
+        Me.txtCodigo.Properties.Mask.EditMask = "99999"
+        Me.txtCodigo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple
         Me.txtCodigo.Properties.MaxLength = 10
         Me.txtCodigo.Size = New System.Drawing.Size(146, 20)
         Me.txtCodigo.StyleController = Me.LayoutControl2
