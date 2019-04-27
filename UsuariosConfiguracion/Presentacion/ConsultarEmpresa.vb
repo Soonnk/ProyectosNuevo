@@ -19,8 +19,20 @@
     End Enum
 
     Private Sub GridControl1_Click(sender As Object, e As EventArgs) Handles GridControl1.Click
-
+        Editar()
     End Sub
+
+
+    Private Sub Editar()
+        Try
+            Dim formulario As New AgregarEmpresa
+            formulario.TipoForma = AgregarEmpresa.enuTipoForma.Editar
+            formulario.ShowDialog()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
 
     Public Sub consultarEmpresa()
         Try
@@ -52,5 +64,12 @@
         End Try
     End Sub
 
-
+    Private Sub UpdateBD()
+        Try
+            onegocio.Update()
+            MessageBox.Show("Los datos han sido modificados")
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
 End Class
