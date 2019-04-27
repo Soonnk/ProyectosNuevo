@@ -24,7 +24,7 @@
         Dim statement As String
         statement = "CREATE TABLE " & name & "("
         For i = 0 To columns.Count - 1
-            statement += Environment.NewLine & columns(i) & " " & columnTypes(i)
+            statement += Environment.NewLine & vbTab & columns(i) & " " & columnTypes(i)
             If (i < (columns.Count - 2)) Then
                 statement += ","
             End If
@@ -119,6 +119,11 @@
         Return statement
     End Function
 
+    ''' <summary>
+    ''' Genera el tipo de dato de una columna dada con los parametros que a esta le correspondan
+    ''' </summary>
+    ''' <param name="dr">DataRow con los datos de la columna. Debe tener los Items "type", "longitud", "precision" y "scale"</param>
+    ''' <returns></returns>
     Public Shared Function DefineType(ByRef dr As DataRow) As String
         Dim type As String
         Dim longitud As String
@@ -138,7 +143,7 @@
             scale = .Item("scale")
         End With
 
-        If type.Equals("varchar") Or type.Equals("nvarchar") Then
+        If type.Equals("varchar") Or type.Equals("nvarchar") Or type.Equals("varbinary") Then
             finalType = type & "(" & longitud & ")"
         ElseIf type.Equals("decimal") Or type.Equals("numeric") Then
             finalType = type & "(" & precision & "," & scale & ")"
