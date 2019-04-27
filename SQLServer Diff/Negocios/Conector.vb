@@ -6,13 +6,27 @@ Public Class Conector
     Private pass As String
     Private db As String
 
-
+    ''' <summary>
+    ''' Construye un nuevo Conector que solo permitira consultar en el DefaultSchema del usuario dado hasta que se
+    ''' asigne una nueva DB
+    ''' </summary>
+    ''' <param name="server">DataSource de la conexion</param>
+    ''' <param name="user">Usuario para Login</param>
+    ''' <param name="pass">Password para Login</param>
     Public Sub New(ByVal server As String, ByVal user As String, ByVal pass As String)
         Me.server = server
         Me.user = user
         Me.pass = pass
     End Sub
 
+    ''' <summary>
+    ''' Construye un nuevo Conector con un Schema de inicio dado. Este permitira consultar por las tabla de 
+    ''' el Schema y sus campos 
+    ''' </summary>
+    ''' <param name="server">DataSource de la conexion</param>
+    ''' <param name="user">Usuario para Login</param>
+    ''' <param name="pass">Password para Login</param>
+    ''' <param name="db">Base de datos a conectar</param>
     Public Sub New(ByVal server As String, ByVal user As String, ByVal pass As String, ByVal db As String)
         Me.server = server
         Me.user = user
@@ -20,6 +34,10 @@ Public Class Conector
         Me.db = db
     End Sub
 
+    ''' <summary>
+    ''' Consulta las tablas existentes en la Base de datos correspondiente a esta conexion
+    ''' </summary>
+    ''' <returns>DataTable con las bases de datos</returns>
     Public Function ConsultarTablas() As DataTable
         Dim conn As New ConectorSQL(Me.server, Me.user, Me.pass)
         conn.Database = Me.db
@@ -28,6 +46,12 @@ Public Class Conector
 
         Return dt
     End Function
+
+    ''' <summary>
+    ''' Consulta los campos de una tabla con sus correspondientes Tipos
+    ''' </summary>
+    ''' <param name="nombreTabla">Nombre de la Tabla que será consultada</param>
+    ''' <returns>DataTable con los campos de la Tabla en formato "name","type","longitud","precision","scale"</returns>
     Public Function ConsultarCampos(ByVal nombreTabla As String) As DataTable
         Dim conn As New ConectorSQL(server, user, pass)
         conn.Database = db
@@ -52,6 +76,10 @@ Public Class Conector
         Return dt
     End Function
 
+    ''' <summary>
+    ''' Consulta las Bases de datos existentes en la instancia de SQLServer Seleccionada
+    ''' </summary>
+    ''' <returns>Arreglo con los nombres de las Bases de Datos</returns>
     Public Function CargarBasesDeDatos() As String()
         Dim conn As New ConectorSQL(Me.server, Me.user, Me.pass)
 
@@ -64,6 +92,11 @@ Public Class Conector
         Return databases
     End Function
     '---------------------------------Procedimientos Estáticos--------------------------------------
+
+    ''' <summary>
+    ''' Devuelve las Instancias locales Instaladas de SQLServer
+    ''' </summary>
+    ''' <returns>Arreglo con los nombres de todas las instancias instaladas</returns>
     Public Shared Function CargarInstanciasLocales() As String()
         Return ConectorSQL.GetSQLServerInstances()
     End Function
