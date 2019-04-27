@@ -76,7 +76,7 @@
         Try
             Dim frmActivo As Form = Me.ActiveMdiChild
             Select Case activo
-                Case "habitaciones"
+                Case "empresas"
                     Dim frmEditar As New ConsultarEmpresa
                     frmEditar.modo = ConsultarEmpresa.tipo.Editar
                     frmEditar = frmActivo
