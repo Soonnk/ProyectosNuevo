@@ -125,7 +125,7 @@ Partial Class Form1
         Me.GroupControl2.Name = "GroupControl2"
         Me.GroupControl2.Size = New System.Drawing.Size(376, 223)
         Me.GroupControl2.TabIndex = 5
-        Me.GroupControl2.Text = "Base de Datos 2"
+        Me.GroupControl2.Text = "Base de Datos a Analizar"
         '
         'LayoutControl3
         '
@@ -155,6 +155,7 @@ Partial Class Form1
         '
         Me.txtPass2.Location = New System.Drawing.Point(92, 84)
         Me.txtPass2.Name = "txtPass2"
+        Me.txtPass2.Properties.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
         Me.txtPass2.Size = New System.Drawing.Size(268, 20)
         Me.txtPass2.StyleController = Me.LayoutControl3
         Me.txtPass2.TabIndex = 7
@@ -192,7 +193,7 @@ Partial Class Form1
         Me.LayoutControlGroup3.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem4, Me.EmptySpaceItem2, Me.LayoutControlItem6, Me.LayoutControlItem8, Me.LayoutControlItem10, Me.LayoutControlItem12})
         Me.LayoutControlGroup3.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup3.Name = "LayoutControlGroup3"
-        Me.LayoutControlGroup3.Size = New System.Drawing.Size(372, 378)
+        Me.LayoutControlGroup3.Size = New System.Drawing.Size(372, 201)
         Me.LayoutControlGroup3.TextVisible = False
         '
         'LayoutControlItem4
@@ -209,7 +210,7 @@ Partial Class Form1
         Me.EmptySpaceItem2.AllowHotTrack = False
         Me.EmptySpaceItem2.Location = New System.Drawing.Point(0, 120)
         Me.EmptySpaceItem2.Name = "EmptySpaceItem2"
-        Me.EmptySpaceItem2.Size = New System.Drawing.Size(352, 238)
+        Me.EmptySpaceItem2.Size = New System.Drawing.Size(352, 61)
         Me.EmptySpaceItem2.TextSize = New System.Drawing.Size(0, 0)
         '
         'LayoutControlItem6
@@ -255,7 +256,7 @@ Partial Class Form1
         Me.GroupControl1.Name = "GroupControl1"
         Me.GroupControl1.Size = New System.Drawing.Size(396, 223)
         Me.GroupControl1.TabIndex = 4
-        Me.GroupControl1.Text = "Base de Datos 1"
+        Me.GroupControl1.Text = "Base de Datos Modelo"
         '
         'LayoutControl2
         '
@@ -285,6 +286,7 @@ Partial Class Form1
         '
         Me.txtPass1.Location = New System.Drawing.Point(92, 84)
         Me.txtPass1.Name = "txtPass1"
+        Me.txtPass1.Properties.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
         Me.txtPass1.Size = New System.Drawing.Size(288, 20)
         Me.txtPass1.StyleController = Me.LayoutControl2
         Me.txtPass1.TabIndex = 7
@@ -322,7 +324,7 @@ Partial Class Form1
         Me.LayoutControlGroup2.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.EmptySpaceItem1, Me.LayoutControlItem3, Me.LayoutControlItem5, Me.LayoutControlItem7, Me.LayoutControlItem9, Me.LayoutControlItem11})
         Me.LayoutControlGroup2.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup2.Name = "LayoutControlGroup2"
-        Me.LayoutControlGroup2.Size = New System.Drawing.Size(392, 378)
+        Me.LayoutControlGroup2.Size = New System.Drawing.Size(392, 201)
         Me.LayoutControlGroup2.TextVisible = False
         '
         'EmptySpaceItem1
@@ -330,7 +332,7 @@ Partial Class Form1
         Me.EmptySpaceItem1.AllowHotTrack = False
         Me.EmptySpaceItem1.Location = New System.Drawing.Point(0, 120)
         Me.EmptySpaceItem1.Name = "EmptySpaceItem1"
-        Me.EmptySpaceItem1.Size = New System.Drawing.Size(372, 238)
+        Me.EmptySpaceItem1.Size = New System.Drawing.Size(372, 61)
         Me.EmptySpaceItem1.TextSize = New System.Drawing.Size(0, 0)
         '
         'LayoutControlItem3
@@ -422,7 +424,7 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(800, 273)
         Me.Controls.Add(Me.LayoutControl1)
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "Seleccion de DB"
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LayoutControl1.ResumeLayout(False)
         CType(Me.GroupControl2, System.ComponentModel.ISupportInitialize).EndInit()

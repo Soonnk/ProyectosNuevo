@@ -362,7 +362,7 @@ Partial Class DiffPrincipal
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.LayoutControl1)
         Me.Name = "DiffPrincipal"
-        Me.Text = "DiffPrincipal"
+        Me.Text = "Diferencias de Estructura"
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LayoutControl1.ResumeLayout(False)
         CType(Me.gcTablasFaltantes, System.ComponentModel.ISupportInitialize).EndInit()

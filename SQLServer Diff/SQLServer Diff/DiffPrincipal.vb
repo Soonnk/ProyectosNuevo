@@ -57,6 +57,8 @@ Public Class DiffPrincipal
         Me.camposDiferentes = New DataTable
         Me.camposFaltantes = New DataTable
 
+        Me.Text = "Diferencias - " & conn1.db & " -> " & conn2.db & "."
+
         CargarTablasFaltantes()
     End Sub
 
