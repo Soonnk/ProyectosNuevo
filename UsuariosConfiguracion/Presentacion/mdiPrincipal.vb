@@ -10,10 +10,6 @@
         End Get
     End Property
 
-    Private Sub mdiPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
     Private Sub btnEmpresas_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnEmpresas.ItemClick
         Try
             Dim frmEmpresas As New ConsultarEmpresa
@@ -80,7 +76,7 @@
                     Dim frmEditar As New ConsultarEmpresa
                     frmEditar.modo = ConsultarEmpresa.tipo.Editar
                     frmEditar = frmActivo
-                    frmEditar.ConsultarEmpresa()
+                    frmEditar.consultarEmpresa()
 
             End Select
         Catch ex As Exception

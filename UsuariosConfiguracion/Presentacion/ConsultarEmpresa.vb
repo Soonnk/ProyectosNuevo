@@ -1,6 +1,5 @@
 ﻿Public Class ConsultarEmpresa
     Public modo As tipo
-
     Dim onegocio As New Negocios.Empresa
 
     Private ReadOnly Property mdiPrincipal1() As mdiPrincipal
@@ -18,9 +17,6 @@
         Editar
     End Enum
 
-    Private Sub GridControl1_Click(sender As Object, e As EventArgs) Handles GridControl1.Click
-
-    End Sub
 
     Public Sub consultarEmpresa()
         Try
@@ -31,6 +27,7 @@
                 frmEditar.Text = "Editar Empresa"
                 frmEditar.consultarEmpresa(GridView1.GetFocusedDataRow)
                 frmEditar.ShowDialog()
+                Cargar()
             End If
         Catch ex As Exception
         End Try
@@ -45,7 +42,6 @@
         Dim dt As New DataTable
         Try
             dt = onegocio.Cargar()
-
             Me.GridControl1.DataSource = dt
         Catch ex As Exception
             MessageBox.Show(ex.Message)
