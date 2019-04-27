@@ -127,6 +127,9 @@
     <EmbeddedResource Include="AgregarEmpresa.resx">
       <DependentUpon>AgregarEmpresa.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AgregarSistema.resx">
+      <DependentUpon>AgregarSistema.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultarEmpresa.resx">
       <DependentUpon>ConsultarEmpresa.vb</DependentUpon>
     </EmbeddedResource>
