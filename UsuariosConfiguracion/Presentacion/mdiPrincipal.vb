@@ -21,7 +21,13 @@
     End Sub
 
     Private Sub btnSistemas_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnSistemas.ItemClick
-
+        Try
+            Dim frmEmpresas As New ConsultarEmpresa
+            frmEmpresas.MdiParent = Me
+            frmEmpresas.Show()
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
     End Sub
 
     Private Sub btnMagnusERP_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnMagnusERP.ItemClick
