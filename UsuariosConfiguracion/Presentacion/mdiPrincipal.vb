@@ -21,7 +21,13 @@
     End Sub
 
     Private Sub btnSistemas_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnSistemas.ItemClick
-
+        Try
+            Dim frmSistemas As New ConsultarSistemas
+            frmSistemas.MdiParent = Me
+            frmSistemas.Show()
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
     End Sub
 
     Private Sub btnMagnusERP_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnMagnusERP.ItemClick
@@ -77,7 +83,11 @@
                     frmEditar.modo = ConsultarEmpresa.tipo.Editar
                     frmEditar = frmActivo
                     frmEditar.consultarEmpresa()
-
+                Case "empresas"
+                    Dim frmEditar As New ConsultarSistemas
+                    frmEditar.modo = ConsultarSistemas.tipo.Editar
+                    frmEditar = frmActivo
+                    frmEditar.consultarSistema()
             End Select
         Catch ex As Exception
 
