@@ -83,7 +83,7 @@
                     frmEditar.modo = ConsultarEmpresa.tipo.Editar
                     frmEditar = frmActivo
                     frmEditar.consultarEmpresa()
-                Case "empresas"
+                Case "sistemas"
                     Dim frmEditar As New ConsultarSistemas
                     frmEditar.modo = ConsultarSistemas.tipo.Editar
                     frmEditar = frmActivo
