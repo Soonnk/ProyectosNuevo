@@ -5,7 +5,7 @@
     Private _Serie As String
     Private _Activacion As String
     Private _DB As String
-    Private _Empresa As Empresa
+    Private _Empresa As Integer
     Private _ListaEmpresa As List(Of Empresa)
     Public Sub New()
         Me._OID = 0
@@ -14,6 +14,7 @@
         Me._Serie = ""
         Me._Activacion = ""
         Me._DB = ""
+        Me._Empresa = Nothing
         Me._ListaEmpresa = Nothing
     End Sub
 
@@ -34,6 +35,7 @@
             _Nombre = value
         End Set
     End Property
+
 
     Public Property Codigo() As String
         Get
@@ -71,11 +73,12 @@
         End Set
     End Property
 
-    Public Property Empresa() As Empresa
+
+    Public Property Empresa() As Integer
         Get
-            Return Me._Empresa
+            Return _Empresa
         End Get
-        Set(ByVal value As Empresa)
+        Set(ByVal value As Integer)
             _Empresa = value
         End Set
     End Property

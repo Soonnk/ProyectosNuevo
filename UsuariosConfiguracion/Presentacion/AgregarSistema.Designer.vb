@@ -35,7 +35,7 @@ Partial Class AgregarSistema
         Me.glEmpresa = New DevExpress.XtraEditors.GridLookUpEdit()
         Me.GridLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.cveEmpresa = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.Empresa = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.gcEmpresas = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.LayoutControlGroup2 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem2 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem3 = New DevExpress.XtraLayout.LayoutControlItem()
@@ -167,8 +167,11 @@ Partial Class AgregarSistema
         '
         Me.glEmpresa.Location = New System.Drawing.Point(64, 12)
         Me.glEmpresa.Name = "glEmpresa"
+        Me.glEmpresa.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup
         Me.glEmpresa.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.glEmpresa.Properties.DisplayMember = "Nombre"
         Me.glEmpresa.Properties.NullText = ""
+        Me.glEmpresa.Properties.ValueMember = "OID"
         Me.glEmpresa.Properties.View = Me.GridLookUpEdit1View
         Me.glEmpresa.Size = New System.Drawing.Size(253, 20)
         Me.glEmpresa.StyleController = Me.LayoutControl2
@@ -176,29 +179,31 @@ Partial Class AgregarSistema
         '
         'GridLookUpEdit1View
         '
-        Me.GridLookUpEdit1View.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.cveEmpresa, Me.Empresa})
+        Me.GridLookUpEdit1View.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.cveEmpresa, Me.gcEmpresas})
         Me.GridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
         Me.GridLookUpEdit1View.Name = "GridLookUpEdit1View"
         Me.GridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = False
-        Me.GridLookUpEdit1View.OptionsView.ColumnAutoWidth = False
+        Me.GridLookUpEdit1View.OptionsView.ShowAutoFilterRow = True
         Me.GridLookUpEdit1View.OptionsView.ShowGroupPanel = False
+        Me.GridLookUpEdit1View.OptionsView.ShowIndicator = False
         '
         'cveEmpresa
         '
-        Me.cveEmpresa.Caption = "cveEmpresa"
-        Me.cveEmpresa.FieldName = "cveEmpresa"
+        Me.cveEmpresa.Caption = "Clave"
+        Me.cveEmpresa.FieldName = "OID"
         Me.cveEmpresa.Name = "cveEmpresa"
         Me.cveEmpresa.Visible = True
         Me.cveEmpresa.VisibleIndex = 0
+        Me.cveEmpresa.Width = 77
         '
-        'Empresa
+        'gcEmpresas
         '
-        Me.Empresa.Caption = "Empresa"
-        Me.Empresa.FieldName = "Empresa"
-        Me.Empresa.Name = "Empresa"
-        Me.Empresa.Visible = True
-        Me.Empresa.VisibleIndex = 1
-        Me.Empresa.Width = 120
+        Me.gcEmpresas.Caption = "Empresa"
+        Me.gcEmpresas.FieldName = "Nombre"
+        Me.gcEmpresas.Name = "gcEmpresas"
+        Me.gcEmpresas.Visible = True
+        Me.gcEmpresas.VisibleIndex = 1
+        Me.gcEmpresas.Width = 635
         '
         'LayoutControlGroup2
         '
@@ -361,5 +366,5 @@ Partial Class AgregarSistema
     Friend WithEvents LayoutControlItem5 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem6 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents cveEmpresa As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents Empresa As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents gcEmpresas As DevExpress.XtraGrid.Columns.GridColumn
 End Class

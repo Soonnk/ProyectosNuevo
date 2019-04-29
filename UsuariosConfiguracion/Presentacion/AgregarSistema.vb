@@ -7,12 +7,21 @@
         Editar
     End Enum
 
+    Public Forma As New ConsultarSistemas
+
     Private Sub AgregarSistema_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CargarEmpresas()
 
     End Sub
+    Private Sub CargarEmpresas()
+        Dim dt As New DataTable
+        Dim nEmpresa As New Negocios.Empresa
+        Try
+            dt = nEmpresa.Cargar
+            glEmpresa.Properties.DataSource = dt
+        Catch ex As Exception
 
-    Private Sub TextEdit1_EditValueChanged(sender As Object, e As EventArgs)
-
+        End Try
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
@@ -92,11 +101,15 @@
 
     Public Function llenarEntidades() As Entidades.Sistema
         Dim eSistema As New Entidades.Sistema
-        'eSistema.Empresa = Me.glEmpresa.Text
+        eSistema.Empresa = Me.glEmpresa.EditValue
         'eSistema.Sistema = Me.cmbSistema.Text
-        eSistema.Codigo = txtCodigo.Text
-        eSistema.Serie = txtSerie.Text
-        eSistema.Activacion = txtActivacion.Text
+        ' eSistema.Nombre = Me.cmbSistema.Text
+
+
+        eSistema.Codigo = Me.txtCodigo.Text
+        eSistema.Serie = Me.txtSerie.Text
+        eSistema.Activacion = Me.txtActivacion.Text
+        eSistema.DB = ""
 
         Return eSistema
     End Function
@@ -104,11 +117,12 @@
     Public Function llenarEntidades2() As Entidades.Sistema
         Dim eSistema As New Entidades.Sistema
         eSistema.OID = _IdSistema
+        eSistema.Nombre = Me.cmbSistema.Text
         'eSistema.Empresa = Me.glEmpresa.ValueMember
         'eSistema.Sistema = Me.cmbSistema.Text
-        eSistema.Codigo = txtCodigo.Text
-        eSistema.Serie = txtSerie.Text
-        eSistema.Activacion = txtActivacion.Text
+        eSistema.Codigo = Me.txtCodigo.Text
+        eSistema.Serie = Me.txtSerie.Text
+        eSistema.Activacion = Me.txtActivacion.Text
 
         Return eSistema
     End Function

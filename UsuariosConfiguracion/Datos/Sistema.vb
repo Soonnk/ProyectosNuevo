@@ -25,39 +25,32 @@
                 sistema.Serie = .Item("Serie")
                 sistema.Activacion = .Item("Activacion")
                 sistema.DB = .Item("DB")
-                sistema.Empresa = New Entidades.Empresa
-                sistema.Empresa.OID = .Item("cveEmpresa")
-                sistema.Empresa.Nombre = .Item("Empresa")
+
+                sistema.Empresa = .Item("cveEmpresa")
 
             End With
-            If (dt.Rows.Count > 0) Then
-                For i As Integer = 0 To dt.Rows.Count - 1
-                    With dt.Rows(i)
-                        Dim empresa As New Entidades.Empresa
-                        empresa.OID = .Item("cveEmpresa")
-                        empresa.Nombre = .Item("Empresa")
-                        sistema.AgregarEmpresa(empresa)
-                    End With
-                Next
-            End If
             Return sistema
         Catch ex As Exception
             Return Nothing
         End Try
     End Function
 
+    Public Function CargarEmpresas()
+
+    End Function
+
     Public Function InsertarSistema(ByRef eSistema As Entidades.Sistema) As Boolean
         Dim Query As String
-        Dim OID = obj.Incrementar("Sistemas")
+        Dim id = obj.Incrementar("Sistemas")
 
         Try
             Query = "INSERT INTO Sistemas(
                                     OID,Nombre,Codigo,Serie,Activacion,DB,Empresa
-                                ) VALUES (" & OID & ",'" & eSistema.Nombre & "','" &
+                                ) VALUES (" & id & ",'" & eSistema.Nombre & "','" &
                                     eSistema.Codigo & "','" & eSistema.Serie & "','" &
                                     eSistema.Activacion & "','" & eSistema.DB & "'," &
-                                    eSistema.Empresa.OID & ")"
-            eSistema.OID = OID
+                                    eSistema.Empresa & ")"
+
             Return obj.commandSQL(Query)
         Catch ex As Exception
             MsgBox(ex)
@@ -65,16 +58,13 @@
         End Try
     End Function
 
-
-
-
     Public Function EditarSistema(ByRef eSistema As Entidades.Sistema) As Boolean
         Dim Query As String
         With eSistema
             Query = "UPDATE Empresas SET
                                          Nombre = '" & .Nombre & "', Codigo = '" & .Codigo & "',
                                          Serie = '" & .Serie & "', Activacion = '" & .Activacion & "',
-                                         DB = '" & .DB & "', Empresa= '" & .Empresa.OID & "'
+                                         DB = '" & .DB & "', Empresa= '" & .Empresa & "'
                                          WHERE OID = " & .OID
         End With
         Return obj.commandSQL(Query)
