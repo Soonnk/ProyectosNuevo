@@ -16,7 +16,7 @@
         Return oSistema.InsertarSistema(entSistema)
     End Function
 
-    Public Function EditarEmpresa(ByVal entSistema As Entidades.Sistema) As Boolean
+    Public Function EditarSistema(ByVal entSistema As Entidades.Sistema) As Boolean
         Return oSistema.EditarSistema(entSistema)
     End Function
 End Class

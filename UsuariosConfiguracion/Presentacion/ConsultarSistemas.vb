@@ -1,5 +1,11 @@
 ﻿Public Class ConsultarSistemas
     Dim onegocio As New Negocios.Sistema
+    Public modo As tipo
+    Enum tipo
+        Nuevo
+        Editar
+    End Enum
+
     Private ReadOnly Property mdiPrincipal1() As mdiPrincipal
         Get
             If Me.ParentForm Is Nothing Then
@@ -9,8 +15,25 @@
             Return TryCast(Me.ParentForm, mdiPrincipal)
         End Get
     End Property
+
+    Public Sub consultarSistema()
+        Try
+            Dim row As DataRow = GridView1.GetDataRow(GridView1.FocusedRowHandle)
+            Dim frmEditar As New AgregarSistema
+            If Not row Is Nothing Then
+                frmEditar.modo = AgregarSistema.tipo.Editar
+                frmEditar.Text = "Editar Sistema"
+                frmEditar.consultarSistema(GridView1.GetFocusedDataRow)
+                frmEditar.ShowDialog()
+                Cargar()
+            End If
+        Catch ex As Exception
+        End Try
+    End Sub
+
+
     Private Sub ConsultarSistemas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.mdiPrincipal1.activo = "empresas"
+        Me.mdiPrincipal1.activo = "sistemas"
         Cargar()
     End Sub
     Public Sub Cargar()

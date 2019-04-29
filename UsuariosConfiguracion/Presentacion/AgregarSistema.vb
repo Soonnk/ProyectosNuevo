@@ -104,7 +104,7 @@
     Public Function llenarEntidades2() As Entidades.Sistema
         Dim eSistema As New Entidades.Sistema
         eSistema.OID = _IdSistema
-        'eSistema.Empresa = Me.glEmpresa.Text
+        'eSistema.Empresa = Me.glEmpresa.ValueMember
         'eSistema.Sistema = Me.cmbSistema.Text
         eSistema.Codigo = txtCodigo.Text
         eSistema.Serie = txtSerie.Text
@@ -112,4 +112,17 @@
 
         Return eSistema
     End Function
+
+    Public Sub consultarSistema(ByVal row As DataRow)
+        Try
+            _IdSistema = row("OID")
+            cmbSistema.EditValue = row("Nombre")
+            txtCodigo.EditValue = row("Codigo")
+            txtSerie.EditValue = row("Serie")
+            txtActivacion.EditValue = row("Activacion")
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
 End Class
