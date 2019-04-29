@@ -101,4 +101,5 @@
     Private Sub btnCancelarSuperior_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnCancelarSuperior.ItemClick
 
     End Sub
+
 End Class
