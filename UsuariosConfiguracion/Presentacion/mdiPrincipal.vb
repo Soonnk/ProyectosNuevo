@@ -22,9 +22,9 @@
 
     Private Sub btnSistemas_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnSistemas.ItemClick
         Try
-            Dim frmEmpresas As New ConsultarEmpresa
-            frmEmpresas.MdiParent = Me
-            frmEmpresas.Show()
+            Dim frmSistemas As New ConsultarSistemas
+            frmSistemas.MdiParent = Me
+            frmSistemas.Show()
         Catch ex As Exception
             MsgBox(ex.ToString)
         End Try
@@ -83,7 +83,11 @@
                     frmEditar.modo = ConsultarEmpresa.tipo.Editar
                     frmEditar = frmActivo
                     frmEditar.consultarEmpresa()
-
+                Case "empresas"
+                    Dim frmEditar As New ConsultarSistemas
+                    frmEditar.modo = ConsultarSistemas.tipo.Editar
+                    frmEditar = frmActivo
+                    frmEditar.consultarSistema()
             End Select
         Catch ex As Exception
 
