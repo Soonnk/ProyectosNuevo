@@ -102,7 +102,7 @@
     Public Function llenarEntidades() As Entidades.Sistema
         Dim eSistema As New Entidades.Sistema
         eSistema.Empresa = Me.glEmpresa.EditValue
-        'eSistema.Sistema = Me.cmbSistema.Text
+        eSistema.Nombre = Me.cmbSistema.Text
         ' eSistema.Nombre = Me.cmbSistema.Text
 
 
@@ -118,8 +118,6 @@
         Dim eSistema As New Entidades.Sistema
         eSistema.OID = _IdSistema
         eSistema.Nombre = Me.cmbSistema.Text
-        'eSistema.Empresa = Me.glEmpresa.ValueMember
-        'eSistema.Sistema = Me.cmbSistema.Text
         eSistema.Codigo = Me.txtCodigo.Text
         eSistema.Serie = Me.txtSerie.Text
         eSistema.Activacion = Me.txtActivacion.Text
