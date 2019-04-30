@@ -100,6 +100,12 @@
     <Compile Include="ConsultarEmpresa.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ConsultarSistemas.Designer.vb">
+      <DependentUpon>ConsultarSistemas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarSistemas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="mdiPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -127,8 +133,14 @@
     <EmbeddedResource Include="AgregarEmpresa.resx">
       <DependentUpon>AgregarEmpresa.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AgregarSistema.resx">
+      <DependentUpon>AgregarSistema.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultarEmpresa.resx">
       <DependentUpon>ConsultarEmpresa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarSistemas.resx">
+      <DependentUpon>ConsultarSistemas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mdiPrincipal.resx">
       <DependentUpon>mdiPrincipal.vb</DependentUpon>

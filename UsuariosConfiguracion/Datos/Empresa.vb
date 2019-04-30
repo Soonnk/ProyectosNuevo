@@ -59,11 +59,21 @@
         End Try
     End Function
 
-    Public Sub EditarEmpresa()
-        Try
-            obj.Update()
-        Finally
-        End Try
-    End Sub
+
+    Public Function EditarEmpresa(ByRef empresa As Entidades.Empresa) As Boolean
+        Dim Query As String
+        With empresa
+            Query = "UPDATE Empresas SET
+                                         Nombre = '" & .Nombre & "', Direccion = '" & .Direccion & "',
+                                         Colonia = '" & .Colonia & "', Poblacion = '" & .Poblacion & "',
+                                         Pais = '" & .Pais & "', CP= '" & .CP & "', RFC = '" & .RFC & "',
+                                         Giro= '" & .Giro & "', Telefono= '" & .Telefono & "',
+                                         Logotipo = '" & .Logotipo & "',activo= '" & .Estatus & "'
+                                         WHERE OID = " & .OID
+        End With
+        Return obj.commandSQL(Query)
+    End Function
 
 End Class
+
+

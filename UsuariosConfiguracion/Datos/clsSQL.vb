@@ -93,4 +93,23 @@ Public Class clsSQL
             Return Nothing
         End Try
     End Function
+
+    Public Function InsertarImagen(ByVal query As String, ByRef ms1 As System.IO.MemoryStream) As Boolean
+
+        Dim cnn As New SqlConnection(StringConn)
+        Dim cmd As SqlCommand
+        Try
+            cnn.Open()
+            cmd = New SqlCommand(query, cnn)
+            cmd.Parameters.Add(New SqlParameter("@Colosseum", ms1.GetBuffer()))
+            cmd.ExecuteNonQuery()
+            cnn.Close()
+            cnn.Dispose()
+            Return True
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        End Try
+    End Function
+
 End Class

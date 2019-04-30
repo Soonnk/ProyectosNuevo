@@ -9,26 +9,35 @@
     End Function
 
     Public Function CargarEmpresa(ByVal _OID As Integer) As Entidades.Empresa
-        Try
-            Return oEmpresa.CargarEmpresas(_OID)
-        Finally
-        End Try
+        Return oEmpresa.CargarEmpresas(_OID)
     End Function
 
     Public Function InsertarEmpresa(ByVal entEmpresa As Entidades.Empresa) As Boolean
-        Try
-            Return oEmpresa.InsertarEmpresa(entEmpresa)
-        Finally
-        End Try
+        Return oEmpresa.InsertarEmpresa(entEmpresa)
     End Function
 
+    Public Function EditarEmpresa(ByVal entEmpresa As Entidades.Empresa) As Boolean
+        Return oEmpresa.EditarEmpresa(entEmpresa)
+    End Function
 
-    Public Sub Update()
+    Dim dImagenes As New Datos.Imagen
+    Public Function InsertarImagen(ByRef ms1 As System.IO.MemoryStream) As Boolean
         Try
-            oEmpresa.EditarEmpresa()
-        Finally
-        End Try
-    End Sub
 
+            Return dImagenes.InsertarImagen(ms1)
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
+    Public Function CargarImagen() As DataTable
+        Try
+
+            Return dImagenes.CargarImagen
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
 End Class
+
+
 

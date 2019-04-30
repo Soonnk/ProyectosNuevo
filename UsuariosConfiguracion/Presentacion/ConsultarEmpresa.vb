@@ -1,6 +1,5 @@
 ﻿Public Class ConsultarEmpresa
     Public modo As tipo
-
     Dim onegocio As New Negocios.Empresa
 
     Private ReadOnly Property mdiPrincipal1() As mdiPrincipal
@@ -17,24 +16,12 @@
         Nuevo
         Editar
     End Enum
-
-    Private Sub GridControl1_Click(sender As Object, e As EventArgs) Handles GridControl1.Click
-        Editar()
+    Private Sub GridControl1_DoubleClick(sender As Object, e As EventArgs) Handles GridControl1.DoubleClick
+        ConsultarEmpresa()
+        Cargar()
     End Sub
 
-
-    Private Sub Editar()
-        Try
-            Dim formulario As New AgregarEmpresa
-            formulario.TipoForma = AgregarEmpresa.enuTipoForma.Editar
-            formulario.ShowDialog()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
-    End Sub
-
-
-    Public Sub consultarEmpresa()
+    Public Sub ConsultarEmpresa()
         Try
             Dim row As DataRow = GridView1.GetDataRow(GridView1.FocusedRowHandle)
             Dim frmEditar As New AgregarEmpresa
@@ -57,19 +44,12 @@
         Dim dt As New DataTable
         Try
             dt = onegocio.Cargar()
-
             Me.GridControl1.DataSource = dt
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
     End Sub
 
-    Private Sub UpdateBD()
-        Try
-            onegocio.Update()
-            MessageBox.Show("Los datos han sido modificados")
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
-    End Sub
+
+
 End Class

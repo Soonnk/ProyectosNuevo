@@ -26,16 +26,16 @@ Partial Class pConsultarClientes
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.IdCliente = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
-        Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.Nombre = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.Apellido = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.Municipio = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.Direccion = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.Municipio = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.Estado = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.Pais = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.Telefono = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.Correo = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl1.SuspendLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -81,27 +81,6 @@ Partial Class pConsultarClientes
         Me.IdCliente.Visible = True
         Me.IdCliente.VisibleIndex = 0
         '
-        'LayoutControlGroup1
-        '
-        Me.LayoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
-        Me.LayoutControlGroup1.GroupBordersVisible = False
-        Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1})
-        Me.LayoutControlGroup1.Location = New System.Drawing.Point(0, 0)
-        Me.LayoutControlGroup1.Name = "LayoutControlGroup1"
-        Me.LayoutControlGroup1.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup1.Size = New System.Drawing.Size(800, 450)
-        Me.LayoutControlGroup1.TextVisible = False
-        '
-        'LayoutControlItem1
-        '
-        Me.LayoutControlItem1.Control = Me.GridControl1
-        Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 0)
-        Me.LayoutControlItem1.Name = "LayoutControlItem1"
-        Me.LayoutControlItem1.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(800, 450)
-        Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
-        Me.LayoutControlItem1.TextVisible = False
-        '
         'Nombre
         '
         Me.Nombre.Caption = "nombre"
@@ -120,15 +99,6 @@ Partial Class pConsultarClientes
         Me.Apellido.Visible = True
         Me.Apellido.VisibleIndex = 2
         '
-        'Municipio
-        '
-        Me.Municipio.Caption = "municipio"
-        Me.Municipio.FieldName = "municipio"
-        Me.Municipio.FieldNameSortGroup = "municipio"
-        Me.Municipio.Name = "Municipio"
-        Me.Municipio.Visible = True
-        Me.Municipio.VisibleIndex = 4
-        '
         'Direccion
         '
         Me.Direccion.Caption = "direccion"
@@ -137,6 +107,15 @@ Partial Class pConsultarClientes
         Me.Direccion.Name = "Direccion"
         Me.Direccion.Visible = True
         Me.Direccion.VisibleIndex = 3
+        '
+        'Municipio
+        '
+        Me.Municipio.Caption = "municipio"
+        Me.Municipio.FieldName = "municipio"
+        Me.Municipio.FieldNameSortGroup = "municipio"
+        Me.Municipio.Name = "Municipio"
+        Me.Municipio.Visible = True
+        Me.Municipio.VisibleIndex = 4
         '
         'Estado
         '
@@ -173,6 +152,27 @@ Partial Class pConsultarClientes
         Me.Correo.Name = "Correo"
         Me.Correo.Visible = True
         Me.Correo.VisibleIndex = 8
+        '
+        'LayoutControlGroup1
+        '
+        Me.LayoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
+        Me.LayoutControlGroup1.GroupBordersVisible = False
+        Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1})
+        Me.LayoutControlGroup1.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlGroup1.Name = "LayoutControlGroup1"
+        Me.LayoutControlGroup1.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
+        Me.LayoutControlGroup1.Size = New System.Drawing.Size(800, 450)
+        Me.LayoutControlGroup1.TextVisible = False
+        '
+        'LayoutControlItem1
+        '
+        Me.LayoutControlItem1.Control = Me.GridControl1
+        Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem1.Name = "LayoutControlItem1"
+        Me.LayoutControlItem1.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(800, 450)
+        Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem1.TextVisible = False
         '
         'pConsultarClientes
         '
