@@ -67,6 +67,7 @@ Partial Class mdiPrincipal
         Me.btnEmpresas.Id = 1
         Me.btnEmpresas.ImageOptions.LargeImage = CType(resources.GetObject("btnEmpresas.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.btnEmpresas.Name = "btnEmpresas"
+        Me.btnEmpresas.Tag = CType(1110, Short)
         '
         'btnSistemas
         '
@@ -74,6 +75,7 @@ Partial Class mdiPrincipal
         Me.btnSistemas.Id = 2
         Me.btnSistemas.ImageOptions.LargeImage = CType(resources.GetObject("btnSistemas.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.btnSistemas.Name = "btnSistemas"
+        Me.btnSistemas.Tag = CType(1120, Short)
         '
         'btnMagnusERP
         '
@@ -81,6 +83,7 @@ Partial Class mdiPrincipal
         Me.btnMagnusERP.Id = 3
         Me.btnMagnusERP.ImageOptions.LargeImage = CType(resources.GetObject("btnMagnusERP.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.btnMagnusERP.Name = "btnMagnusERP"
+        Me.btnMagnusERP.Tag = CType(1210, Short)
         '
         'btnMagnusCONTA
         '
@@ -88,6 +91,7 @@ Partial Class mdiPrincipal
         Me.btnMagnusCONTA.Id = 4
         Me.btnMagnusCONTA.ImageOptions.LargeImage = CType(resources.GetObject("btnMagnusCONTA.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.btnMagnusCONTA.Name = "btnMagnusCONTA"
+        Me.btnMagnusCONTA.Tag = CType(1220, Short)
         '
         'btnSIMAC
         '
@@ -95,6 +99,7 @@ Partial Class mdiPrincipal
         Me.btnSIMAC.Id = 5
         Me.btnSIMAC.ImageOptions.LargeImage = CType(resources.GetObject("btnSIMAC.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.btnSIMAC.Name = "btnSIMAC"
+        Me.btnSIMAC.Tag = CType(1230, Short)
         '
         'btnMagnusGo
         '
@@ -102,6 +107,7 @@ Partial Class mdiPrincipal
         Me.btnMagnusGo.Id = 6
         Me.btnMagnusGo.ImageOptions.LargeImage = CType(resources.GetObject("btnMagnusGo.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.btnMagnusGo.Name = "btnMagnusGo"
+        Me.btnMagnusGo.Tag = CType(1240, Short)
         '
         'btnUsuarios
         '
@@ -154,6 +160,7 @@ Partial Class mdiPrincipal
         '
         Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1, Me.RibbonPageGroup2})
         Me.RibbonPage1.Name = "RibbonPage1"
+        Me.RibbonPage1.Tag = CType(1000, Short)
         Me.RibbonPage1.Text = "Configuración"
         '
         'RibbonPageGroup1
@@ -161,6 +168,7 @@ Partial Class mdiPrincipal
         Me.RibbonPageGroup1.ItemLinks.Add(Me.btnEmpresas)
         Me.RibbonPageGroup1.ItemLinks.Add(Me.btnSistemas)
         Me.RibbonPageGroup1.Name = "RibbonPageGroup1"
+        Me.RibbonPageGroup1.Tag = CType(1100, Short)
         Me.RibbonPageGroup1.Text = "Empresas"
         '
         'RibbonPageGroup2
@@ -170,12 +178,14 @@ Partial Class mdiPrincipal
         Me.RibbonPageGroup2.ItemLinks.Add(Me.btnSIMAC)
         Me.RibbonPageGroup2.ItemLinks.Add(Me.btnMagnusGo)
         Me.RibbonPageGroup2.Name = "RibbonPageGroup2"
+        Me.RibbonPageGroup2.Tag = CType(1200, Short)
         Me.RibbonPageGroup2.Text = "Sistemas"
         '
         'RibbonPage2
         '
         Me.RibbonPage2.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup3})
         Me.RibbonPage2.Name = "RibbonPage2"
+        Me.RibbonPage2.Tag = CType(2000, Short)
         Me.RibbonPage2.Text = "Usuarios"
         '
         'RibbonPageGroup3
