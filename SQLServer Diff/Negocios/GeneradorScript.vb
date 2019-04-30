@@ -119,6 +119,107 @@
         Return statement
     End Function
 
+    Public Shared Function CreateIndex(ByVal columnName As String, ByVal indexName As String) As String
+        Dim tabla As String
+        Dim columna As String
+
+        Dim p = columnName.Split(".")
+
+        tabla = p(0)
+        columna = p(1)
+
+        Dim statement = "CREATE INDEX " & indexName & " ON " & tabla & " (" & columna & ");"
+
+        Return statement
+    End Function
+
+    Public Shared Function DropIndex(ByVal name As String) As String
+        Dim tabla As String
+        Dim index As String
+
+        Dim p = name.Split(".")
+
+        tabla = p(0)
+        index = p(1)
+
+        Dim statement = "DROP INDEX " & tabla & "." & index & ";"
+
+        Return statement
+    End Function
+
+    Public Shared Function CreateForeignKey(ByVal name As String, ByVal foreignKey As String, ByVal primaryKey As String) As String
+        Dim tablaPadre As String
+        Dim tablaHijo As String
+        Dim columnaPadre As String
+        Dim columnaHijo As String
+
+        Dim p = primaryKey.Split(".")
+        Dim h = foreignKey.Split(".")
+
+        tablaPadre = p(0)
+        tablaHijo = h(0)
+
+        columnaPadre = p(1)
+        columnaHijo = h(1)
+
+        name = name.Split(".")(1)
+
+        Dim statement = "ALTER TABLE " & tablaHijo & Environment.NewLine &
+                        vbTab & "WITH NOCHECK" & Environment.NewLine &
+                        vbTab & "ADD CONSTRAINT " & name & Environment.NewLine &
+                        vbTab & "FOREIGN KEY (" & columnaHijo & ") REFERENCES " & tablaPadre & " (" & columnaPadre & ");" & Environment.NewLine &
+                        "ALTER TABLE " & tablaHijo & Environment.NewLine &
+                        vbTab & "CHECK CONSTRAINT " & name & ";"
+
+        Return statement
+    End Function
+
+    Public Shared Function DropForeignKey(ByVal name As String) As String
+        Dim tabla As String
+        Dim constraint As String
+
+        Dim p = name.Split(".")
+
+        tabla = p(0)
+        constraint = p(1)
+
+        Dim statement = "ALTER TABLE " & tabla & " DROP CONSTRAINT " & constraint & ";"
+
+        Return statement
+    End Function
+
+    Public Shared Function CreatePrimaryKey(ByVal name As String, ByVal column As String) As String
+        Dim tabla As String
+        Dim columna As String
+
+        Dim p = name.Split(".")
+
+        tabla = p(0)
+        name = p(1)
+
+        columna = column
+
+        Dim statement = "ALTER TABLE " & tabla & Environment.NewLine &
+                        vbTab & "ADD CONSTRAINT " & name & Environment.NewLine &
+                        vbTab & "PRIMARY KEY (" & columna & ");" & Environment.NewLine
+
+        Return statement
+    End Function
+
+    Public Shared Function DropPrimaryKey(ByVal Name As String) As String
+        Dim tabla As String
+        Dim constraint As String
+
+        Dim p = Name.Split(".")
+
+        tabla = p(0)
+        constraint = p(1)
+
+        Dim statement = "ALTER TABLE " & tabla & " DROP CONSTRAINT " & constraint & ";"
+
+        Return statement
+    End Function
+
     ''' <summary>
     ''' Genera el tipo de dato de una columna dada con los parametros que a esta le correspondan
     ''' </summary>
@@ -129,6 +230,9 @@
         Dim longitud As String
         Dim precision As Int16
         Dim scale As Int16
+        Dim isNullable As Boolean
+        Dim isIdentity As Boolean
+
 
         Dim finalType As String
 
@@ -141,6 +245,8 @@
             End If
             precision = .Item("precision")
             scale = .Item("scale")
+            isNullable = .Item("is_nullable")
+            isIdentity = .Item("is_identity")
         End With
 
         If type.Equals("varchar") Or type.Equals("nvarchar") Or type.Equals("varbinary") Then
@@ -151,7 +257,29 @@
             finalType = type
         End If
 
-        Return finalType
+        If isIdentity Then
+            finalType += " IDENTITY(1,1)"
+        End If
+
+        If isNullable Then
+            finalType += " NULL"
+        Else
+            If isIdentity Then
+                finalType += " NOT NULL"
+            Else
+                If type.Equals("varchar") Or type.Equals("nvarchar") Or type.Equals("varbinary") Then
+                    finalType += " NOT NULL DEFAULT ''"
+                ElseIf type.Equals("decimal") Or type.Equals("numeric") Or type.Equals("int") Or type.Equals("smallint") Or type.Equals("tinyint") Or type.Equals("float") Or type.Equals("bigint") Then
+                    finalType += " NOT NULL DEFAULT 0"
+                ElseIf type.Equals("varchar") Or type.Equals("nvarchar") Or type.Equals("varbinary") Then
+                    finalType += " NOT NULL DEFAULT getdate()"
+                Else
+                    finalType += " NOT NULL"
+                End If
+            End If
+        End If
+
+            Return finalType
     End Function
 
 End Class

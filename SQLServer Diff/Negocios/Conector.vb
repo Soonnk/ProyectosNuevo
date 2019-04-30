@@ -67,11 +67,68 @@ Public Class Conector
 		            ELSE c.max_length
 	            END as longitud,
 	            c.precision,
-	            c.scale
+	            c.scale,
+				c.is_nullable,
+                is_identity
             FROM sys.all_columns c
             INNER JOIN sys.types t on c.system_type_id = t.user_type_id
             WHERE object_id = (Select id From sysobjects where name = '" & nombreTabla & "')
             ORDER BY name")
+
+        Return dt
+    End Function
+
+    Public Function CargarIndexes() As DataTable
+        Dim conn As New ConectorSQL(server, user, pass)
+        conn.Database = db
+        Dim dt = New DataTable
+        dt.Columns.Add(New DataColumn("name"))
+        dt.Columns.Add(New DataColumn("column"))
+        For Each r As DataRow In ConsultarTablas().Rows
+            For Each sr As DataRow In conn.Consultar("EXEC sp_helpindex '" & r.Item("name") & "'").Rows()
+                dt.Rows.Add(r.Item("name") & "." & sr.Item("index_name"), sr.Item("index_keys"))
+            Next
+        Next
+
+        Return dt
+    End Function
+
+    Public Function CargarForeignKeys() As DataTable
+        Dim conn As New ConectorSQL(server, user, pass)
+        conn.Database = db
+        Dim dt = New DataTable
+        dt.Columns.Add(New DataColumn("name"))
+        dt.Columns.Add(New DataColumn("primarykey"))
+        dt.Columns.Add(New DataColumn("foreignkey"))
+        For Each r As DataRow In ConsultarTablas().Rows
+            For Each sr As DataRow In conn.Consultar("EXEC sp_fkeys '" & r.Item("name") & "'").Rows()
+                dt.Rows.Add(sr.Item("FKTABLE_NAME") & "." & sr.Item("FK_NAME"), sr.Item("PKTABLE_NAME") & "." & sr.Item("PKCOLUMN_NAME"), sr.Item("FKTABLE_NAME") & "." & sr.Item("FKCOLUMN_NAME"))
+            Next
+        Next
+
+        Return dt
+    End Function
+
+    Public Function CargarPrimaryKeys() As DataTable
+        Dim conn As New ConectorSQL(server, user, pass)
+        conn.Database = db
+        Dim dt = New DataTable
+        dt.Columns.Add(New DataColumn("name"))
+        dt.Columns.Add(New DataColumn("primarykey"))
+        For Each r As DataRow In ConsultarTablas().Rows
+            For Each sr As DataRow In conn.Consultar("EXEC sp_pkeys '" & r.Item("name") & "'").Rows()
+                dt.Rows.Add(sr.Item("TABLE_NAME") & "." & sr.Item("PK_NAME"), sr.Item("TABLE_NAME") & "." & sr.Item("COLUMN_NAME"))
+            Next
+        Next
+
+        Return dt
+    End Function
+
+    Public Function CargarPrimaryKeys(ByVal nombreTabla As String) As DataTable
+        Dim conn As New ConectorSQL(server, user, pass)
+        conn.Database = db
+
+        Dim dt As DataTable = conn.Consultar("EXEC sp_pkeys '" & nombreTabla & "'")
 
         Return dt
     End Function
