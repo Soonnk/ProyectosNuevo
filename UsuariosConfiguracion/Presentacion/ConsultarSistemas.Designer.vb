@@ -25,14 +25,14 @@ Partial Class ConsultarSistemas
         Me.LayoutControl1 = New DevExpress.XtraLayout.LayoutControl()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn2 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn3 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn()
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl1.SuspendLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,10 +54,11 @@ Partial Class ConsultarSistemas
         '
         'GridControl1
         '
-        Me.GridControl1.Location = New System.Drawing.Point(12, 12)
+        Me.GridControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridControl1.Location = New System.Drawing.Point(0, 0)
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(776, 426)
+        Me.GridControl1.Size = New System.Drawing.Size(800, 450)
         Me.GridControl1.TabIndex = 4
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
@@ -70,14 +71,6 @@ Partial Class ConsultarSistemas
         Me.GridView1.OptionsView.ShowAutoFilterRow = True
         Me.GridView1.OptionsView.ShowGroupPanel = False
         Me.GridView1.OptionsView.ShowIndicator = False
-        '
-        'GridColumn1
-        '
-        Me.GridColumn1.Caption = "Empresa"
-        Me.GridColumn1.FieldName = "Empresa"
-        Me.GridColumn1.Name = "GridColumn1"
-        Me.GridColumn1.Visible = True
-        Me.GridColumn1.VisibleIndex = 0
         '
         'GridColumn2
         '
@@ -111,6 +104,22 @@ Partial Class ConsultarSistemas
         Me.GridColumn5.Visible = True
         Me.GridColumn5.VisibleIndex = 4
         '
+        'GridColumn6
+        '
+        Me.GridColumn6.Caption = "DB"
+        Me.GridColumn6.FieldName = "DB"
+        Me.GridColumn6.Name = "GridColumn6"
+        Me.GridColumn6.Visible = True
+        Me.GridColumn6.VisibleIndex = 5
+        '
+        'GridColumn1
+        '
+        Me.GridColumn1.Caption = "Empresa"
+        Me.GridColumn1.FieldName = "Empresa"
+        Me.GridColumn1.Name = "GridColumn1"
+        Me.GridColumn1.Visible = True
+        Me.GridColumn1.VisibleIndex = 0
+        '
         'LayoutControlGroup1
         '
         Me.LayoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
@@ -118,6 +127,7 @@ Partial Class ConsultarSistemas
         Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1})
         Me.LayoutControlGroup1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup1.Name = "LayoutControlGroup1"
+        Me.LayoutControlGroup1.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
         Me.LayoutControlGroup1.Size = New System.Drawing.Size(800, 450)
         Me.LayoutControlGroup1.TextVisible = False
         '
@@ -126,17 +136,10 @@ Partial Class ConsultarSistemas
         Me.LayoutControlItem1.Control = Me.GridControl1
         Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem1.Name = "LayoutControlItem1"
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(780, 430)
+        Me.LayoutControlItem1.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(800, 450)
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem1.TextVisible = False
-        '
-        'GridColumn6
-        '
-        Me.GridColumn6.Caption = "DB"
-        Me.GridColumn6.FieldName = "DB"
-        Me.GridColumn6.Name = "GridColumn6"
-        Me.GridColumn6.Visible = True
-        Me.GridColumn6.VisibleIndex = 5
         '
         'ConsultarSistemas
         '
