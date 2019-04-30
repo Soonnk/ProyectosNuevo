@@ -99,7 +99,22 @@
     End Sub
 
     Private Sub btnCancelarSuperior_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnCancelarSuperior.ItemClick
+        'Try
 
+        '    Dim frmActivo As Form = Me.ActiveMdiChild
+        '    Select Case activo
+        '        Case "empresas"
+        '            Dim frmEliminar As New ConsultarEmpresa
+        '            frmEliminar = frmActivo
+        '            frmEliminar.EliminarEmpresa()
+        '        Case "sistemas"
+        '            Dim frmEliminar As New ConsultarSistemas
+        '            frmEliminar = frmActivo
+        '            frmEliminar.EliminarSistema()
+        '    End Select
+        'Catch ex As Exception
+
+        'End Try
     End Sub
 
 End Class
