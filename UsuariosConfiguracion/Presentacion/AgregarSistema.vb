@@ -118,6 +118,7 @@
         eSistema.Codigo = Me.txtCodigo.Text
         eSistema.Serie = Me.txtSerie.Text
         eSistema.Activacion = Me.txtActivacion.Text
+        eSistema.DB = ""
 
         Return eSistema
     End Function
@@ -129,6 +130,7 @@
             txtCodigo.EditValue = row("Codigo")
             txtSerie.EditValue = row("Serie")
             txtActivacion.EditValue = row("Activacion")
+            glEmpresa.EditValue = row("Empresa")
         Catch ex As Exception
 
         End Try

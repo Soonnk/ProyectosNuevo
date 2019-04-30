@@ -170,6 +170,7 @@
         End Try
     End Sub
 
+
     Private Sub peLogotipo_DoubleClick(sender As Object, e As EventArgs) Handles peLogotipo.DoubleClick
         Try
             Dim imagen As New OpenFileDialog()
@@ -183,4 +184,7 @@
             MessageBox.Show("Error al cargar la imagen", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
         End Try
     End Sub
+
+
+
 End Class
