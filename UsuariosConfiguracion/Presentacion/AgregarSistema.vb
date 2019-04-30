@@ -63,8 +63,8 @@
     End Sub
 
     Public Sub LimpiarCampos()
-        'glempresa = ""
-        'cmbSistema. = ""
+        glEmpresa.EditValue = ""
+        cmbSistema.EditValue = ""
         txtCodigo.EditValue = ""
         txtSerie.EditValue = ""
         txtActivacion.EditValue = ""

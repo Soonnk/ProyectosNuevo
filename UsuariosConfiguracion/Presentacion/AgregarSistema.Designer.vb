@@ -155,10 +155,12 @@ Partial Class AgregarSistema
         '
         'cmbSistema
         '
+        Me.cmbSistema.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.cmbSistema.Location = New System.Drawing.Point(64, 36)
         Me.cmbSistema.Name = "cmbSistema"
         Me.cmbSistema.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cmbSistema.Properties.Items.AddRange(New Object() {"Magnus ERP", "Magnus CONTA", "SIMAC", "Magnus Go!"})
+        Me.cmbSistema.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
         Me.cmbSistema.Size = New System.Drawing.Size(253, 20)
         Me.cmbSistema.StyleController = Me.LayoutControl2
         Me.cmbSistema.TabIndex = 5

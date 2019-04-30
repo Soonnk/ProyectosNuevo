@@ -10,6 +10,16 @@
         End Get
     End Property
 
+    Private ReadOnly Property Sistema() As ConsultarSistemas
+        Get
+            If Me.ActiveMdiChild Is Nothing Then
+                Return Nothing
+            End If
+            Return TryCast(Me.ActiveMdiChild, ConsultarSistemas)
+        End Get
+    End Property
+
+
     Private Sub btnEmpresas_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnEmpresas.ItemClick
         Try
             Dim frmEmpresas As New ConsultarEmpresa
@@ -30,30 +40,6 @@
         End Try
     End Sub
 
-    Private Sub btnMagnusERP_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnMagnusERP.ItemClick
-
-    End Sub
-
-    Private Sub btnSIMAC_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnSIMAC.ItemClick
-
-    End Sub
-
-    Private Sub BarButtonItem4_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnMagnusCONTA.ItemClick
-
-    End Sub
-
-    Private Sub btnMagnusGo_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnMagnusGo.ItemClick
-
-    End Sub
-
-    Private Sub btnUsuarios_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnUsuarios.ItemClick
-
-    End Sub
-
-    Private Sub btnActividades_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnActividades.ItemClick
-
-    End Sub
-
     Private Sub btnNuevoSuperior_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnNuevoSuperior.ItemClick
         Try
             Dim frmActivo As Form = Me.ActiveMdiChild
@@ -67,6 +53,7 @@
                 Case "sistemas"
                     Dim frmNuevo As New AgregarSistema
                     frmNuevo.modo = AgregarSistema.tipo.Nuevo
+                    frmNuevo.Owner = Sistema
                     frmNuevo.ShowDialog()
 
             End Select
@@ -82,11 +69,13 @@
                     Dim frmEditar As New ConsultarEmpresa
                     frmEditar.modo = ConsultarEmpresa.tipo.Editar
                     frmEditar = frmActivo
+                    frmEditar.Owner = Empresa
                     frmEditar.consultarEmpresa()
                 Case "sistemas"
                     Dim frmEditar As New ConsultarSistemas
                     frmEditar.modo = ConsultarSistemas.tipo.Editar
                     frmEditar = frmActivo
+                    frmEditar.Owner = Sistema
                     frmEditar.consultarSistema()
             End Select
         Catch ex As Exception
