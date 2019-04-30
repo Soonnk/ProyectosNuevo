@@ -6,7 +6,7 @@
         Dim dt As New DataTable
         Dim Query As String
         Try
-            Query = "SELECT * FROM vista_sistemas"
+            Query = "SELECT * FROM Sistemas"
             dt = obj.RegresarDatos(Query)
             Return dt
         Finally
@@ -33,10 +33,6 @@
         Catch ex As Exception
             Return Nothing
         End Try
-    End Function
-
-    Public Function CargarEmpresas()
-
     End Function
 
     Public Function InsertarSistema(ByRef eSistema As Entidades.Sistema) As Boolean

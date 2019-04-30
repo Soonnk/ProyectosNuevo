@@ -7,7 +7,11 @@
         Nuevo
         Editar
     End Enum
-
+    Public TipoForma As enuTipoForma
+    Public Enum enuTipoForma
+        Nuevo
+        Editar
+    End Enum
     Public Forma As New ConsultarEmpresa
 
     Private Sub GuardarEmpresa()
