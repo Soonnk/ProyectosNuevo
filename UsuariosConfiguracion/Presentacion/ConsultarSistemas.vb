@@ -16,7 +16,24 @@
         End Get
     End Property
 
-    Public Sub consultarSistema()
+    Private Sub ConsultarSistemas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.mdiPrincipal1.activo = "sistemas"
+        Cargar()
+    End Sub
+    Public Sub Cargar()
+        Dim dt As New DataTable
+        Try
+            dt = onegocio.Cargar()
+            Me.GridControl1.DataSource = dt
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+    Private Sub GridControl1_DoubleClick(sender As Object, e As EventArgs) Handles GridControl1.DoubleClick
+        ConsultarSistema()
+    End Sub
+
+    Public Sub ConsultarSistema()
         Try
             Dim row As DataRow = GridView1.GetDataRow(GridView1.FocusedRowHandle)
             Dim frmEditar As New AgregarSistema
@@ -31,18 +48,4 @@
         End Try
     End Sub
 
-
-    Private Sub ConsultarSistemas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.mdiPrincipal1.activo = "sistemas"
-        Cargar()
-    End Sub
-    Public Sub Cargar()
-        Dim dt As New DataTable
-        Try
-            dt = onegocio.Cargar()
-            Me.GridControl1.DataSource = dt
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
-    End Sub
 End Class

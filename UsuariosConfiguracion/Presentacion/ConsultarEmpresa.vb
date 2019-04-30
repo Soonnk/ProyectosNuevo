@@ -16,9 +16,11 @@
         Nuevo
         Editar
     End Enum
+    Private Sub GridControl1_DoubleClick(sender As Object, e As EventArgs) Handles GridControl1.DoubleClick
+        ConsultarEmpresa()
+    End Sub
 
-
-    Public Sub consultarEmpresa()
+    Public Sub ConsultarEmpresa()
         Try
             Dim row As DataRow = GridView1.GetDataRow(GridView1.FocusedRowHandle)
             Dim frmEditar As New AgregarEmpresa
@@ -48,7 +50,6 @@
         End Try
     End Sub
 
-    Private Sub GridControl1_Click(sender As Object, e As EventArgs) Handles GridControl1.Click
 
-    End Sub
+
 End Class
