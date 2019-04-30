@@ -31,6 +31,7 @@
     End Sub
     Private Sub GridControl1_DoubleClick(sender As Object, e As EventArgs) Handles GridControl1.DoubleClick
         ConsultarSistema()
+        Cargar()
     End Sub
 
     Public Sub ConsultarSistema()
@@ -42,7 +43,7 @@
                 frmEditar.Text = "Editar Sistema"
                 frmEditar.consultarSistema(GridView1.GetFocusedDataRow)
                 frmEditar.ShowDialog()
-                Cargar()
+
             End If
         Catch ex As Exception
         End Try

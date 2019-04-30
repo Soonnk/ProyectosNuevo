@@ -35,10 +35,8 @@
     Private Sub GuardarSistema()
         Try
             Dim oNegocio As New Negocios.Sistema
-            'Dim camposVacios As String = ""
             Select Case modo
                 Case tipo.Nuevo
-                    'If Not ValidarCampos(camposVacios) Then Exit Sub
                     If oNegocio.InsertarSistema(llenarEntidades) = True Then
                         MessageBox.Show("Los datos han sido guardados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
                         CType(Owner, ConsultarSistemas).Cargar()
@@ -47,11 +45,10 @@
                         MessageBox.Show("No se han podido guardar los datos solicitados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End If
                 Case tipo.Editar
-                    'If Not ValidarCampos(camposVacios) Then Exit Sub
                     If oNegocio.EditarSistema(llenarEntidades2) = True Then
                         MessageBox.Show("Los datos han sido modificados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        CType(Owner, ConsultarSistemas).Cargar()
-                        LimpiarCampos()
+                        Me.Close()
+
                     Else
                         MessageBox.Show("No se han podido modificar los datos solicitados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End If
@@ -126,6 +123,8 @@
 
     Public Sub consultarSistema(ByVal row As DataRow)
         Try
+            glEmpresa.ReadOnly = True
+            cmbSistema.ReadOnly = True
             _IdSistema = row("OID")
             cmbSistema.EditValue = row("Nombre")
             txtCodigo.EditValue = row("Codigo")

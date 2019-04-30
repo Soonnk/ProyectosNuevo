@@ -18,6 +18,7 @@
     End Enum
     Private Sub GridControl1_DoubleClick(sender As Object, e As EventArgs) Handles GridControl1.DoubleClick
         ConsultarEmpresa()
+        Cargar()
     End Sub
 
     Public Sub ConsultarEmpresa()
@@ -29,7 +30,6 @@
                 frmEditar.Text = "Editar Empresa"
                 frmEditar.consultarEmpresa(GridView1.GetFocusedDataRow)
                 frmEditar.ShowDialog()
-                Cargar()
             End If
         Catch ex As Exception
         End Try

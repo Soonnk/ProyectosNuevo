@@ -39,7 +39,6 @@
             MsgBox(ex.ToString)
         End Try
     End Sub
-
     Private Sub btnNuevoSuperior_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnNuevoSuperior.ItemClick
         Try
             Dim frmActivo As Form = Me.ActiveMdiChild
@@ -60,7 +59,6 @@
         Catch ex As Exception
         End Try
     End Sub
-
     Private Sub btnEditarSuperior_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnEditarSuperior.ItemClick
         Try
             Dim frmActivo As Form = Me.ActiveMdiChild
@@ -69,41 +67,15 @@
                     Dim frmEditar As New ConsultarEmpresa
                     frmEditar.modo = ConsultarEmpresa.tipo.Editar
                     frmEditar = frmActivo
-                    frmEditar.Owner = Empresa
-                    frmEditar.consultarEmpresa()
+                    frmEditar.ConsultarEmpresa()
                 Case "sistemas"
                     Dim frmEditar As New ConsultarSistemas
                     frmEditar.modo = ConsultarSistemas.tipo.Editar
                     frmEditar = frmActivo
-                    frmEditar.Owner = Sistema
-                    frmEditar.consultarSistema()
+                    frmEditar.ConsultarSistema()
             End Select
         Catch ex As Exception
-
+            MsgBox(ex)
         End Try
     End Sub
-
-    Private Sub btnGuardarSuperior_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnGuardarSuperior.ItemClick
-
-    End Sub
-
-    Private Sub btnCancelarSuperior_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnCancelarSuperior.ItemClick
-        'Try
-
-        '    Dim frmActivo As Form = Me.ActiveMdiChild
-        '    Select Case activo
-        '        Case "empresas"
-        '            Dim frmEliminar As New ConsultarEmpresa
-        '            frmEliminar = frmActivo
-        '            frmEliminar.EliminarEmpresa()
-        '        Case "sistemas"
-        '            Dim frmEliminar As New ConsultarSistemas
-        '            frmEliminar = frmActivo
-        '            frmEliminar.EliminarSistema()
-        '    End Select
-        'Catch ex As Exception
-
-        'End Try
-    End Sub
-
 End Class

@@ -74,6 +74,10 @@ Partial Class ConsultarSistemas
         '
         'GridColumn2
         '
+        Me.GridColumn2.AppearanceCell.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridColumn2.AppearanceCell.Options.UseFont = True
+        Me.GridColumn2.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridColumn2.AppearanceHeader.Options.UseFont = True
         Me.GridColumn2.Caption = "Sistema"
         Me.GridColumn2.FieldName = "Nombre"
         Me.GridColumn2.Name = "GridColumn2"
@@ -82,6 +86,10 @@ Partial Class ConsultarSistemas
         '
         'GridColumn3
         '
+        Me.GridColumn3.AppearanceCell.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridColumn3.AppearanceCell.Options.UseFont = True
+        Me.GridColumn3.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridColumn3.AppearanceHeader.Options.UseFont = True
         Me.GridColumn3.Caption = "Código"
         Me.GridColumn3.FieldName = "Codigo"
         Me.GridColumn3.Name = "GridColumn3"
@@ -90,6 +98,10 @@ Partial Class ConsultarSistemas
         '
         'GridColumn4
         '
+        Me.GridColumn4.AppearanceCell.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridColumn4.AppearanceCell.Options.UseFont = True
+        Me.GridColumn4.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridColumn4.AppearanceHeader.Options.UseFont = True
         Me.GridColumn4.Caption = "Serie"
         Me.GridColumn4.FieldName = "Serie"
         Me.GridColumn4.Name = "GridColumn4"
@@ -98,6 +110,10 @@ Partial Class ConsultarSistemas
         '
         'GridColumn5
         '
+        Me.GridColumn5.AppearanceCell.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridColumn5.AppearanceCell.Options.UseFont = True
+        Me.GridColumn5.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridColumn5.AppearanceHeader.Options.UseFont = True
         Me.GridColumn5.Caption = "Activación"
         Me.GridColumn5.FieldName = "Activacion"
         Me.GridColumn5.Name = "GridColumn5"
@@ -106,6 +122,10 @@ Partial Class ConsultarSistemas
         '
         'GridColumn6
         '
+        Me.GridColumn6.AppearanceCell.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridColumn6.AppearanceCell.Options.UseFont = True
+        Me.GridColumn6.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridColumn6.AppearanceHeader.Options.UseFont = True
         Me.GridColumn6.Caption = "DB"
         Me.GridColumn6.FieldName = "DB"
         Me.GridColumn6.Name = "GridColumn6"
@@ -114,6 +134,10 @@ Partial Class ConsultarSistemas
         '
         'GridColumn1
         '
+        Me.GridColumn1.AppearanceCell.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridColumn1.AppearanceCell.Options.UseFont = True
+        Me.GridColumn1.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridColumn1.AppearanceHeader.Options.UseFont = True
         Me.GridColumn1.Caption = "Empresa"
         Me.GridColumn1.FieldName = "Empresa"
         Me.GridColumn1.Name = "GridColumn1"
@@ -148,7 +172,7 @@ Partial Class ConsultarSistemas
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.LayoutControl1)
         Me.Name = "ConsultarSistemas"
-        Me.Text = "ConsultarSistemas"
+        Me.Text = "Sistemas"
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LayoutControl1.ResumeLayout(False)
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()

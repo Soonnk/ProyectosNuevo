@@ -32,8 +32,7 @@
                     If Not ValidarCampos(camposVacios) Then Exit Sub
                     If oNegocio.EditarEmpresa(llenarEntidades2) = True Then
                         MessageBox.Show("Los datos han sido modificados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        CType(Owner, ConsultarEmpresa).Cargar()
-                        LimpiarCampos()
+                        Me.Close()
                     Else
                         MessageBox.Show("No se han podido modificar los datos solicitados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End If
