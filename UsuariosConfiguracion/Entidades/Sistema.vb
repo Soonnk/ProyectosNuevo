@@ -6,7 +6,6 @@
     Private _Activacion As String
     Private _DB As String
     Private _Empresa As Integer
-    Private _ListaEmpresa As List(Of Empresa)
     Public Sub New()
         Me._OID = 0
         Me._Nombre = ""
@@ -14,8 +13,7 @@
         Me._Serie = ""
         Me._Activacion = ""
         Me._DB = ""
-        Me._Empresa = Nothing
-        Me._ListaEmpresa = Nothing
+        Me._Empresa = 0
     End Sub
 
     Public Property OID() As Integer
@@ -82,22 +80,5 @@
             _Empresa = value
         End Set
     End Property
-
-    Public Property ListaEmpresa() As List(Of Empresa)
-        Get
-            Return Me._ListaEmpresa
-        End Get
-        Set(ByVal value As List(Of Empresa))
-            _ListaEmpresa = value
-        End Set
-    End Property
-
-    Public Sub AgregarEmpresa(ByRef empresa As Empresa)
-        Me._ListaEmpresa.Add(empresa)
-    End Sub
-
-    Public Sub QuitarEmpresa(ByRef empresa As Empresa)
-        Me._ListaEmpresa.Remove(empresa)
-    End Sub
 
 End Class

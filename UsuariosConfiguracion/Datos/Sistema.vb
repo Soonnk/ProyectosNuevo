@@ -57,7 +57,7 @@
     Public Function EditarSistema(ByRef eSistema As Entidades.Sistema) As Boolean
         Dim Query As String
         With eSistema
-            Query = "UPDATE Empresas SET
+            Query = "UPDATE Sistemas SET
                                          Nombre = '" & .Nombre & "', Codigo = '" & .Codigo & "',
                                          Serie = '" & .Serie & "', Activacion = '" & .Activacion & "',
                                          DB = '" & .DB & "', Empresa= '" & .Empresa & "'
