@@ -314,7 +314,12 @@ Partial Class AgregarSistema
         Me.ClientSize = New System.Drawing.Size(333, 192)
         Me.Controls.Add(Me.LayoutControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(349, 231)
+        Me.MinimizeBox = False
+        Me.MinimumSize = New System.Drawing.Size(349, 231)
         Me.Name = "AgregarSistema"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Nuevo Sistema"
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LayoutControl1.ResumeLayout(False)
