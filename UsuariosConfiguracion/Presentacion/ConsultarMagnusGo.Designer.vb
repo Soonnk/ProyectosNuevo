@@ -25,12 +25,12 @@ Partial Class ConsultarMagnusGo
         Me.LayoutControl1 = New DevExpress.XtraLayout.LayoutControl()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
-        Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.Clave = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.Descripcion = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.Empresa = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.Nombre = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl1.SuspendLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -67,27 +67,6 @@ Partial Class ConsultarMagnusGo
         Me.GridView1.OptionsView.ShowAutoFilterRow = True
         Me.GridView1.OptionsView.ShowGroupPanel = False
         Me.GridView1.OptionsView.ShowIndicator = False
-        '
-        'LayoutControlGroup1
-        '
-        Me.LayoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
-        Me.LayoutControlGroup1.GroupBordersVisible = False
-        Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1})
-        Me.LayoutControlGroup1.Location = New System.Drawing.Point(0, 0)
-        Me.LayoutControlGroup1.Name = "LayoutControlGroup1"
-        Me.LayoutControlGroup1.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup1.Size = New System.Drawing.Size(800, 450)
-        Me.LayoutControlGroup1.TextVisible = False
-        '
-        'LayoutControlItem1
-        '
-        Me.LayoutControlItem1.Control = Me.GridControl1
-        Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 0)
-        Me.LayoutControlItem1.Name = "LayoutControlItem1"
-        Me.LayoutControlItem1.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(800, 450)
-        Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
-        Me.LayoutControlItem1.TextVisible = False
         '
         'Clave
         '
@@ -129,6 +108,27 @@ Partial Class ConsultarMagnusGo
         Me.Nombre.Visible = True
         Me.Nombre.VisibleIndex = 3
         '
+        'LayoutControlGroup1
+        '
+        Me.LayoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
+        Me.LayoutControlGroup1.GroupBordersVisible = False
+        Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1})
+        Me.LayoutControlGroup1.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlGroup1.Name = "LayoutControlGroup1"
+        Me.LayoutControlGroup1.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
+        Me.LayoutControlGroup1.Size = New System.Drawing.Size(800, 450)
+        Me.LayoutControlGroup1.TextVisible = False
+        '
+        'LayoutControlItem1
+        '
+        Me.LayoutControlItem1.Control = Me.GridControl1
+        Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem1.Name = "LayoutControlItem1"
+        Me.LayoutControlItem1.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(800, 450)
+        Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem1.TextVisible = False
+        '
         'ConsultarMagnusGo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -136,7 +136,7 @@ Partial Class ConsultarMagnusGo
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.LayoutControl1)
         Me.Name = "ConsultarMagnusGo"
-        Me.Text = "Magnus Go"
+        Me.Text = "Magnus Go!"
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LayoutControl1.ResumeLayout(False)
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
