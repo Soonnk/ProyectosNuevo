@@ -19,6 +19,15 @@ Public Class DiffPrincipal
     Private camposDiferentes As DataTable
     Private camposFaltantes As DataTable
 
+    Private clavesForaneasOrigen As DataTable
+    Private clavesForaneasDestino As DataTable
+
+    Private clavesPrimarias As DataTable
+    Private clavesPrimariasDestino As DataTable
+
+    Private indicesOrigen As DataTable
+    Private indicesDestino As DataTable
+
     Public Structure ConnSettings
         Public server As String
         Public user As String
@@ -56,6 +65,8 @@ Public Class DiffPrincipal
         Me.tablasIguales = New DataTable
         Me.camposDiferentes = New DataTable
         Me.camposFaltantes = New DataTable
+        Me.clavesForaneasOrigen = New DataTable
+        Me.clavesForaneasDestino = New DataTable
 
         Me.Text = "Diferencias - " & conn1.db & " -> " & conn2.db & "."
 
@@ -63,8 +74,20 @@ Public Class DiffPrincipal
     End Sub
 
     Private Sub CargarTablasFaltantes()
+        Dim tablas1 = conector1.ConsultarTablas
+        Dim tablas2 = conector2.ConsultarTablas
+
         Dim comparador = New Comparador(conector1.ConsultarTablas, conector2.ConsultarTablas)
         comparador.CompararTablas()
+
+        clavesForaneasOrigen = conector1.CargarForeignKeys
+        clavesForaneasDestino = conector2.CargarForeignKeys
+
+        clavesPrimarias = conector1.CargarPrimaryKeys
+        clavesPrimariasDestino = conector2.CargarPrimaryKeys
+
+        indicesOrigen = conector1.CargarIndexes
+        indicesDestino = conector2.CargarIndexes
 
         tablasIguales = comparador.Iguales
 
@@ -166,25 +189,93 @@ Public Class DiffPrincipal
         Dim script As String
 
         script = "--Se recomienda hacer una revision de este script previo a correrlo en su base de datos" & Environment.NewLine & Environment.NewLine
+        script += "BEGIN TRAN" & Environment.NewLine &
+                    "GO" & Environment.NewLine
+
+        If (clavesForaneasDestino.Rows.Count > 0) Then
+            script += "--BORRANDO CLAVES FORANEAS DE TABLAS" & Environment.NewLine
+            For Each r As DataRow In clavesForaneasDestino.Rows
+                script += GeneradorScript.DropForeignKey(r.Item("name").ToString) & Environment.NewLine & Environment.NewLine
+                script += "IF @@ERROR<>0 OR @@TRANCOUNT=0 BEGIN IF @@TRANCOUNT>0 ROLLBACK SET NOEXEC ON END" & Environment.NewLine &
+                          "GO" & Environment.NewLine & Environment.NewLine
+            Next
+        End If
+        If (clavesPrimariasDestino.Rows.Count > 0) Then
+            script += "--BORRANDO CLAVES FORANEAS DE TABLAS" & Environment.NewLine
+            For Each r As DataRow In clavesPrimariasDestino.Rows
+                script += GeneradorScript.DropPrimaryKey(r.Item("name").ToString) & Environment.NewLine & Environment.NewLine
+                script += "IF @@ERROR<>0 OR @@TRANCOUNT=0 BEGIN IF @@TRANCOUNT>0 ROLLBACK SET NOEXEC ON END" & Environment.NewLine &
+                          "GO" & Environment.NewLine & Environment.NewLine
+            Next
+        End If
+        If (indicesDestino.Rows.Count > 0) Then
+            script += "--BORRANDO CLAVES FORANEAS DE TABLAS" & Environment.NewLine
+            For Each r As DataRow In indicesDestino.Rows
+                script += GeneradorScript.DropIndex(r.Item("name").ToString) & Environment.NewLine & Environment.NewLine
+                script += "IF @@ERROR<>0 OR @@TRANCOUNT=0 BEGIN IF @@TRANCOUNT>0 ROLLBACK SET NOEXEC ON END" & Environment.NewLine &
+                          "GO" & Environment.NewLine & Environment.NewLine
+            Next
+        End If
 
         If (tablasDiferentes.Rows.Count > 0) Then
             script += "--CORRECCION DE TABLAS FALTANTES Y SOBREANTES" & Environment.NewLine
             For Each r As DataRow In tablasDiferentes.Rows
                 script += r.Item("CorrectionScript").ToString & Environment.NewLine & Environment.NewLine
+                script += "IF @@ERROR<>0 OR @@TRANCOUNT=0 BEGIN IF @@TRANCOUNT>0 ROLLBACK SET NOEXEC ON END" & Environment.NewLine &
+                          "GO" & Environment.NewLine & Environment.NewLine
             Next
         End If
         If (camposDiferentes.Rows.Count > 0) Then
             script += "--CORRECCION DE TIPOS DE DATOS DE LOS CAMPOS" & Environment.NewLine
             For Each r As DataRow In camposDiferentes.Rows
                 script += r.Item("CorrectionScript").ToString & Environment.NewLine & Environment.NewLine
+                script += "IF @@ERROR<>0 OR @@TRANCOUNT=0 BEGIN IF @@TRANCOUNT>0 ROLLBACK SET NOEXEC ON END" & Environment.NewLine &
+                          "GO" & Environment.NewLine & Environment.NewLine
             Next
         End If
         If (camposFaltantes.Rows.Count > 0) Then
             script += "--CORRECCION DE CAMPOS EN LAS TABLAS EXISTENTES" & Environment.NewLine
             For Each r As DataRow In camposFaltantes.Rows
                 script += r.Item("CorrectionScript").ToString & Environment.NewLine & Environment.NewLine
+                script += "IF @@ERROR<>0 OR @@TRANCOUNT=0 BEGIN IF @@TRANCOUNT>0 ROLLBACK SET NOEXEC ON END" & Environment.NewLine &
+                          "GO" & Environment.NewLine & Environment.NewLine
             Next
         End If
+
+        If (clavesPrimarias.Rows.Count > 0) Then
+            script += "--AGREGANDO CLAVES PRIMARIAS A LAS TABLAS" & Environment.NewLine
+            For Each r As DataRow In clavesPrimarias.Rows
+                script += GeneradorScript.CreatePrimaryKey(r.Item("name").ToString, r.Item("primarykey").ToString) & Environment.NewLine & Environment.NewLine
+                script += "IF @@ERROR<>0 OR @@TRANCOUNT=0 BEGIN IF @@TRANCOUNT>0 ROLLBACK SET NOEXEC ON END" & Environment.NewLine &
+                          "GO" & Environment.NewLine & Environment.NewLine
+            Next
+        End If
+
+        If (clavesForaneasOrigen.Rows.Count > 0) Then
+            script += "--AGREGANDO CLAVES FORANEAS A LAS TABLAS" & Environment.NewLine
+            For Each r As DataRow In clavesForaneasOrigen.Rows
+                script += GeneradorScript.CreateForeignKey(r.Item("name").ToString, r.Item("foreignkey").ToString, r.Item("primarykey").ToString) & Environment.NewLine & Environment.NewLine
+                script += "IF @@ERROR<>0 OR @@TRANCOUNT=0 BEGIN IF @@TRANCOUNT>0 ROLLBACK SET NOEXEC ON END" & Environment.NewLine &
+                          "GO" & Environment.NewLine & Environment.NewLine
+            Next
+        End If
+
+        If (indicesOrigen.Rows.Count > 0) Then
+            script += "--AGREGANDO CLAVES FORANEAS A LAS TABLAS" & Environment.NewLine
+            For Each r As DataRow In indicesOrigen.Rows
+                script += GeneradorScript.CreateIndex(r.Item("name").ToString, r.Item("column").ToString) & Environment.NewLine & Environment.NewLine
+                script += "IF @@ERROR<>0 OR @@TRANCOUNT=0 BEGIN IF @@TRANCOUNT>0 ROLLBACK SET NOEXEC ON END" & Environment.NewLine &
+                          "GO" & Environment.NewLine & Environment.NewLine
+            Next
+        End If
+
+        script += "IF @@ERROR<>0 OR @@TRANCOUNT=0 BEGIN IF @@TRANCOUNT>0 ROLLBACK SET NOEXEC ON END" & Environment.NewLine &
+        "GO" & Environment.NewLine &
+        "IF @@TRANCOUNT>0" & Environment.NewLine &
+        "COMMIT" & Environment.NewLine &
+        "SET NOEXEC OFF" & Environment.NewLine &
+        "GO" & Environment.NewLine
+
         Dim view = New ScriptView(script)
         view.Show()
     End Sub

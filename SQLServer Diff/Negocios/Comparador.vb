@@ -171,11 +171,15 @@ Public Class Comparador
     Private Function CompararTipo(ByRef dr1 As DataRow, ByRef dr2 As DataRow) As Boolean
         If Not dr1.Item("type").Equals(dr2.Item("type")) Then
             Return False
+        ElseIf Not dr1.Item("is_identity") = dr2.Item("is_identity") Then
+            Return False
         ElseIf Not dr1.Item("longitud").Equals(dr2.Item("longitud")) Then
             Return False
         ElseIf Not dr1.Item("precision").Equals(dr2.Item("precision")) Then
             Return False
         ElseIf Not dr1.Item("scale").Equals(dr2.Item("scale")) Then
+            Return False
+        ElseIf Not dr1.Item("is_nullable") = dr2.Item("is_nullable") Then
             Return False
         End If
         Return True
