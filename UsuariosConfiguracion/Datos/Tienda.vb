@@ -93,4 +93,21 @@
         Return obj.commandSQL(Query)
     End Function
 
+    Public Function CargarPrueba() As DataTable
+        Dim dt As New DataTable
+        Dim Query As String
+        Try
+            Query = "Select Tiendas.OID, Descripcion, idAlmacen, idFolio, Factura, BasePuntoVenta, BaseMagnus, ServidorLocal, 
+ServidorRemoto, UsuarioLocal, UsuarioRemoto, PasswordLocal, PasswordRemoto, DynDns, PrecioMinimoVenta, FacturarPrecioMinimo,
+Empresa, MuestraExistencia, Empresas.Nombre
+  from Tiendas inner join Empresas on (Tiendas.Empresa = Empresas.OID)"
+            dt = obj.RegresarDatos(Query)
+            Return dt
+        Finally
+
+        End Try
+    End Function
+
 End Class
+
+
