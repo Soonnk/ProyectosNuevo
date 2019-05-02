@@ -94,6 +94,12 @@
     <Compile Include="AgregarSistema.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AgregarTienda.Designer.vb">
+      <DependentUpon>AgregarTienda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarTienda.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ConsultarEmpresa.Designer.vb">
       <DependentUpon>ConsultarEmpresa.vb</DependentUpon>
     </Compile>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarSistema.resx">
       <DependentUpon>AgregarSistema.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarTienda.resx">
+      <DependentUpon>AgregarTienda.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarEmpresa.resx">
       <DependentUpon>ConsultarEmpresa.vb</DependentUpon>
