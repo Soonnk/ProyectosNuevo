@@ -78,57 +78,62 @@ Partial Class ConsultarEmpresa
         '
         'GridColumn1
         '
-        Me.GridColumn1.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridColumn1.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Me.GridColumn1.AppearanceHeader.Options.UseFont = True
-        Me.GridColumn1.Caption = "OID"
+        Me.GridColumn1.Caption = "Clave"
         Me.GridColumn1.FieldName = "OID"
         Me.GridColumn1.Name = "GridColumn1"
         Me.GridColumn1.Visible = True
         Me.GridColumn1.VisibleIndex = 0
+        Me.GridColumn1.Width = 39
         '
         'GridColumn2
         '
-        Me.GridColumn2.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridColumn2.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Me.GridColumn2.AppearanceHeader.Options.UseFont = True
         Me.GridColumn2.Caption = "Nombre"
         Me.GridColumn2.FieldName = "Nombre"
         Me.GridColumn2.Name = "GridColumn2"
         Me.GridColumn2.Visible = True
         Me.GridColumn2.VisibleIndex = 1
+        Me.GridColumn2.Width = 61
         '
         'GridColumn3
         '
-        Me.GridColumn3.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridColumn3.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Me.GridColumn3.AppearanceHeader.Options.UseFont = True
         Me.GridColumn3.Caption = "Dirección"
         Me.GridColumn3.FieldName = "Direccion"
         Me.GridColumn3.Name = "GridColumn3"
         Me.GridColumn3.Visible = True
         Me.GridColumn3.VisibleIndex = 2
+        Me.GridColumn3.Width = 61
         '
         'GridColumn4
         '
-        Me.GridColumn4.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridColumn4.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Me.GridColumn4.AppearanceHeader.Options.UseFont = True
         Me.GridColumn4.Caption = "Colonia"
         Me.GridColumn4.FieldName = "Colonia"
         Me.GridColumn4.Name = "GridColumn4"
         Me.GridColumn4.Visible = True
         Me.GridColumn4.VisibleIndex = 3
+        Me.GridColumn4.Width = 61
         '
         'GridColumn5
         '
-        Me.GridColumn5.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridColumn5.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Me.GridColumn5.AppearanceHeader.Options.UseFont = True
         Me.GridColumn5.Caption = "Población"
         Me.GridColumn5.FieldName = "Poblacion"
         Me.GridColumn5.Name = "GridColumn5"
         Me.GridColumn5.Visible = True
         Me.GridColumn5.VisibleIndex = 4
+        Me.GridColumn5.Width = 66
         '
         'GridColumn6
         '
-        Me.GridColumn6.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridColumn6.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Me.GridColumn6.AppearanceHeader.Options.UseFont = True
         Me.GridColumn6.Caption = "País"
         Me.GridColumn6.FieldName = "Pais"
@@ -138,53 +143,58 @@ Partial Class ConsultarEmpresa
         '
         'GridColumn7
         '
-        Me.GridColumn7.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridColumn7.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Me.GridColumn7.AppearanceHeader.Options.UseFont = True
         Me.GridColumn7.Caption = "Código Postal"
         Me.GridColumn7.FieldName = "CP"
         Me.GridColumn7.Name = "GridColumn7"
         Me.GridColumn7.Visible = True
         Me.GridColumn7.VisibleIndex = 6
+        Me.GridColumn7.Width = 81
         '
         'GridColumn8
         '
-        Me.GridColumn8.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridColumn8.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Me.GridColumn8.AppearanceHeader.Options.UseFont = True
         Me.GridColumn8.Caption = "RFC"
         Me.GridColumn8.FieldName = "RFC"
         Me.GridColumn8.Name = "GridColumn8"
         Me.GridColumn8.Visible = True
         Me.GridColumn8.VisibleIndex = 7
+        Me.GridColumn8.Width = 79
         '
         'GridColumn9
         '
-        Me.GridColumn9.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridColumn9.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Me.GridColumn9.AppearanceHeader.Options.UseFont = True
         Me.GridColumn9.Caption = "Giro"
         Me.GridColumn9.FieldName = "Giro"
         Me.GridColumn9.Name = "GridColumn9"
         Me.GridColumn9.Visible = True
         Me.GridColumn9.VisibleIndex = 8
+        Me.GridColumn9.Width = 72
         '
         'GridColumn10
         '
-        Me.GridColumn10.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridColumn10.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Me.GridColumn10.AppearanceHeader.Options.UseFont = True
         Me.GridColumn10.Caption = "Teléfono"
         Me.GridColumn10.FieldName = "Telefono"
         Me.GridColumn10.Name = "GridColumn10"
         Me.GridColumn10.Visible = True
         Me.GridColumn10.VisibleIndex = 9
+        Me.GridColumn10.Width = 50
         '
         'GridColumn11
         '
-        Me.GridColumn11.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridColumn11.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Me.GridColumn11.AppearanceHeader.Options.UseFont = True
         Me.GridColumn11.Caption = "Activo"
         Me.GridColumn11.FieldName = "activo"
         Me.GridColumn11.Name = "GridColumn11"
         Me.GridColumn11.Visible = True
         Me.GridColumn11.VisibleIndex = 10
+        Me.GridColumn11.Width = 67
         '
         'LayoutControlGroup1
         '

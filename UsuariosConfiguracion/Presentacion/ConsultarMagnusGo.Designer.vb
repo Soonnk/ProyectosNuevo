@@ -64,6 +64,7 @@ Partial Class ConsultarMagnusGo
         Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.Clave, Me.Descripcion, Me.Empresa, Me.Nombre})
         Me.GridView1.GridControl = Me.GridControl1
         Me.GridView1.Name = "GridView1"
+        Me.GridView1.OptionsBehavior.Editable = False
         Me.GridView1.OptionsView.ShowAutoFilterRow = True
         Me.GridView1.OptionsView.ShowGroupPanel = False
         Me.GridView1.OptionsView.ShowIndicator = False
@@ -76,17 +77,19 @@ Partial Class ConsultarMagnusGo
         Me.Clave.FieldName = "OID"
         Me.Clave.Name = "Clave"
         Me.Clave.Visible = True
-        Me.Clave.VisibleIndex = 0
+        Me.Clave.VisibleIndex = 2
+        Me.Clave.Width = 50
         '
         'Descripcion
         '
         Me.Descripcion.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Descripcion.AppearanceHeader.Options.UseFont = True
-        Me.Descripcion.Caption = "Descripción"
+        Me.Descripcion.Caption = "Tienda"
         Me.Descripcion.FieldName = "Descripcion"
         Me.Descripcion.Name = "Descripcion"
         Me.Descripcion.Visible = True
-        Me.Descripcion.VisibleIndex = 1
+        Me.Descripcion.VisibleIndex = 3
+        Me.Descripcion.Width = 319
         '
         'Empresa
         '
@@ -96,7 +99,8 @@ Partial Class ConsultarMagnusGo
         Me.Empresa.FieldName = "Empresa"
         Me.Empresa.Name = "Empresa"
         Me.Empresa.Visible = True
-        Me.Empresa.VisibleIndex = 2
+        Me.Empresa.VisibleIndex = 0
+        Me.Empresa.Width = 89
         '
         'Nombre
         '
@@ -106,7 +110,8 @@ Partial Class ConsultarMagnusGo
         Me.Nombre.FieldName = "Nombre"
         Me.Nombre.Name = "Nombre"
         Me.Nombre.Visible = True
-        Me.Nombre.VisibleIndex = 3
+        Me.Nombre.VisibleIndex = 1
+        Me.Nombre.Width = 340
         '
         'LayoutControlGroup1
         '
