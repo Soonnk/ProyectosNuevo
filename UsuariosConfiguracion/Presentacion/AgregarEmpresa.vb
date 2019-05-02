@@ -3,6 +3,8 @@
     Private _mdiPrincipal As mdiPrincipal
     Public _IdEmpresa As Integer
     Dim ruta As String
+
+    Dim nImagenes As New Negocios.Imagen
     Enum tipo
         Nuevo
         Editar
@@ -149,6 +151,13 @@
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         GuardarEmpresa()
+        Try
+            Dim ms1 As New System.IO.MemoryStream
+            peLogotipo.BackgroundImage.Save(ms1, System.Drawing.Imaging.ImageFormat.Jpeg)
+            nImagenes.InsertarImagen(ms1)
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
@@ -176,18 +185,45 @@
 
     Private Sub peLogotipo_DoubleClick(sender As Object, e As EventArgs) Handles peLogotipo.DoubleClick
         Try
-            Dim imagen As New OpenFileDialog()
-            imagen.Filter = "Imagen JPG (*.jpg)|*.jpg|Imagen BMP (*.bmp)|*.bmp|Imagen PNG (*.png)|*.png|Imagen GIF (*.gif)|*.gif"
-            If imagen.ShowDialog() = DialogResult.OK Then
-                peLogotipo.Properties.SizeMode = PictureBoxSizeMode.AutoSize
-                ruta = imagen.FileName.ToString
-                peLogotipo.Image = System.Drawing.Image.FromFile(ruta)
+            Dim openFileDialog1 As New OpenFileDialog()
+            Dim dialogo As New DialogResult
+            openFileDialog1.Filter = "Imagen (JPG,BMP,PNG)|*.JPG;*.BMP;*.PNG|All files (*.*)|*.*"
+
+            openFileDialog1.FilterIndex = 1
+            openFileDialog1.RestoreDirectory = True
+            dialogo = openFileDialog1.ShowDialog()
+
+            If (dialogo = DialogResult.OK) Then
+                Dim bmp As New Bitmap(Image.FromFile(openFileDialog1.FileName))
+                bmp = bmp.GetThumbnailImage(480, 480, Nothing, IntPtr.Zero)
+                'Redimencionamos pixeles de imagen (Opcional).
+                peLogotipo.BackgroundImage = Nothing
+                peLogotipo.BackgroundImageLayout = ImageLayout.Stretch 'Ajustamos la imagen a todo el picturebox.
+                peLogotipo.BackgroundImage = bmp 'Cargamos la imagen al PictureBox.
+                peLogotipo.Image = bmp
+                'sExtencion = System.IO.Path.GetExtension(openFileDialog1.FileName) 'Obtenemos la Extencion de la imagen cargada.
             End If
+
         Catch ex As Exception
-            MessageBox.Show("Error al cargar la imagen", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show(ex.Message)
         End Try
     End Sub
 
+    Private Sub peLogotipo_EditValueChanged(sender As Object, e As EventArgs) Handles peLogotipo.EditValueChanged
 
+    End Sub
 
+    Private Sub AgregarEmpresa_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim dt As New DataTable
+        dt = nImagenes.CargarImagen
+        If dt.Rows.Count > 0 Then
+            Dim ms As New System.IO.MemoryStream()
+            Dim imageBuffer() As Byte = CType(dt.Rows(0).Item("Imagen"), Byte())
+            ms = New System.IO.MemoryStream(imageBuffer)
+            peLogotipo.BackgroundImage = Nothing
+            peLogotipo.Image = Image.FromStream(ms)
+            peLogotipo.BackgroundImageLayout = ImageLayout.Stretch
+        End If
+
+    End Sub
 End Class

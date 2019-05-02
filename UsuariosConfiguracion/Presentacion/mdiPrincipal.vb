@@ -89,7 +89,13 @@
 
     Private Sub btnMagnusGo_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnMagnusGo.ItemClick
         Try
-            'Dim f As ConsultarMagnusGo = BuscarFormulario(Me.RibbonControl1.Pages.Item(0).Tag, Me.RibbonControl1.Pages.Item(0).Groups(1).Tag, Me.RibbonControl1.Pages.Item(0).Groups(1).ItemLinks(3).Item.Tag)
+            Dim f As ConsultarMagnusGo = BuscarFormulario(Me.RibbonControl1.Pages.Item(0).Tag, Me.RibbonControl1.Pages.Item(0).Groups(1).Tag, Me.RibbonControl1.Pages.Item(0).Groups(1).ItemLinks(3).Item.Tag)
+            If Object.Equals(f, Nothing) Then
+                Dim frmMagnusGo As New ConsultarMagnusGo
+                frmMagnusGo.MdiParent = Me
+                frmMagnusGo.Show()
+            Else : f.Activate()
+            End If
         Catch ex As Exception
 
         End Try
@@ -174,7 +180,15 @@
                                     Next
                             End Select
                         Case 1200
-
+                            Select Case boton
+                                Case 1240
+                                    For Each f In Me.MdiChildren
+                                        If Object.Equals(f.GetType(), GetType(ConsultarMagnusGo)) Then
+                                            exist = True
+                                            Exit For
+                                        End If
+                                    Next
+                            End Select
                     End Select
                 Case 2000
             End Select
