@@ -27,6 +27,10 @@ Partial Class ConsultarMagnusGo
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.Clave = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.Descripcion = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.Empresa = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.Nombre = New DevExpress.XtraGrid.Columns.GridColumn()
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl1.SuspendLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -48,18 +52,21 @@ Partial Class ConsultarMagnusGo
         '
         'GridControl1
         '
-        Me.GridControl1.Location = New System.Drawing.Point(12, 12)
+        Me.GridControl1.Location = New System.Drawing.Point(0, 0)
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(776, 426)
+        Me.GridControl1.Size = New System.Drawing.Size(800, 450)
         Me.GridControl1.TabIndex = 4
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
         'GridView1
         '
+        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.Clave, Me.Descripcion, Me.Empresa, Me.Nombre})
         Me.GridView1.GridControl = Me.GridControl1
         Me.GridView1.Name = "GridView1"
+        Me.GridView1.OptionsView.ShowAutoFilterRow = True
         Me.GridView1.OptionsView.ShowGroupPanel = False
+        Me.GridView1.OptionsView.ShowIndicator = False
         '
         'LayoutControlGroup1
         '
@@ -68,6 +75,7 @@ Partial Class ConsultarMagnusGo
         Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1})
         Me.LayoutControlGroup1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup1.Name = "LayoutControlGroup1"
+        Me.LayoutControlGroup1.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
         Me.LayoutControlGroup1.Size = New System.Drawing.Size(800, 450)
         Me.LayoutControlGroup1.TextVisible = False
         '
@@ -76,9 +84,50 @@ Partial Class ConsultarMagnusGo
         Me.LayoutControlItem1.Control = Me.GridControl1
         Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem1.Name = "LayoutControlItem1"
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(780, 430)
+        Me.LayoutControlItem1.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(800, 450)
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem1.TextVisible = False
+        '
+        'Clave
+        '
+        Me.Clave.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Clave.AppearanceHeader.Options.UseFont = True
+        Me.Clave.Caption = "Clave"
+        Me.Clave.FieldName = "OID"
+        Me.Clave.Name = "Clave"
+        Me.Clave.Visible = True
+        Me.Clave.VisibleIndex = 0
+        '
+        'Descripcion
+        '
+        Me.Descripcion.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Descripcion.AppearanceHeader.Options.UseFont = True
+        Me.Descripcion.Caption = "Descripción"
+        Me.Descripcion.FieldName = "Descripcion"
+        Me.Descripcion.Name = "Descripcion"
+        Me.Descripcion.Visible = True
+        Me.Descripcion.VisibleIndex = 1
+        '
+        'Empresa
+        '
+        Me.Empresa.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Empresa.AppearanceHeader.Options.UseFont = True
+        Me.Empresa.Caption = "Clave Empresa"
+        Me.Empresa.FieldName = "Empresa"
+        Me.Empresa.Name = "Empresa"
+        Me.Empresa.Visible = True
+        Me.Empresa.VisibleIndex = 2
+        '
+        'Nombre
+        '
+        Me.Nombre.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Nombre.AppearanceHeader.Options.UseFont = True
+        Me.Nombre.Caption = "Empresa"
+        Me.Nombre.FieldName = "Nombre"
+        Me.Nombre.Name = "Nombre"
+        Me.Nombre.Visible = True
+        Me.Nombre.VisibleIndex = 3
         '
         'ConsultarMagnusGo
         '
@@ -103,4 +152,8 @@ Partial Class ConsultarMagnusGo
     Friend WithEvents GridControl1 As DevExpress.XtraGrid.GridControl
     Friend WithEvents GridView1 As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents LayoutControlItem1 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents Clave As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents Descripcion As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents Empresa As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents Nombre As DevExpress.XtraGrid.Columns.GridColumn
 End Class
