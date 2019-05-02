@@ -3,7 +3,7 @@
 
     Public Function Cargar() As DataTable
         Try
-            Return oTienda.CargarPrueba()
+            Return oTienda.Cargar()
         Finally
         End Try
     End Function
