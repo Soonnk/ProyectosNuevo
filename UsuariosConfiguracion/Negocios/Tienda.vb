@@ -1,3 +1,22 @@
 ﻿Public Class Tienda
+    Dim oTienda As New Datos.Tienda
 
+    Public Function Cargar() As DataTable
+        Try
+            Return oTienda.Cargar()
+        Finally
+        End Try
+    End Function
+
+    Public Function CargarTienda(ByVal _OID As Integer) As Entidades.Tienda
+        Return oTienda.CargarTiendas(_OID)
+    End Function
+
+    Public Function InsertarTienda(ByVal entTienda As Entidades.Tienda) As Boolean
+        Return oTienda.InsertarTienda(entTienda)
+    End Function
+
+    Public Function EditarTienda(ByVal entTienda As Entidades.Tienda) As Boolean
+        Return oTienda.EditarTienda(entTienda)
+    End Function
 End Class
