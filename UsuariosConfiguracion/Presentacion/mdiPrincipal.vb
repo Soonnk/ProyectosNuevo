@@ -119,6 +119,11 @@
                             frmNuevo.modo = AgregarSistema.tipo.Nuevo
                             frmNuevo.Owner = Sistema
                             frmNuevo.ShowDialog()
+                        Case "ConsultarMagnusGo"
+                            Dim frmNuevo As New AgregarTienda
+                            frmNuevo.modo = AgregarTienda.tipo.Nuevo
+                            frmNuevo.Owner = Sistema
+                            frmNuevo.ShowDialog()
                     End Select
                 Case "Usuarios"
                     Select Case frmActivo.Name
@@ -145,6 +150,11 @@
                             frmEditar.modo = ConsultarSistemas.tipo.Editar
                             frmEditar = frmActivo
                             frmEditar.ConsultarSistema()
+                        Case "ConsultarMagnusGo"
+                            Dim frmEditar As New ConsultarMagnusGo
+                            frmEditar.modo = ConsultarMagnusGo.tipo.Editar
+                            frmEditar = frmActivo
+                            frmEditar.ConsultarMagnusGo()
                     End Select
                 Case "Usuarios"
                     Select Case frmActivo.Name
