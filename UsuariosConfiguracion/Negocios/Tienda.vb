@@ -19,4 +19,14 @@
     Public Function EditarTienda(ByVal entTienda As Entidades.Tienda) As Boolean
         Return oTienda.EditarTienda(entTienda)
     End Function
+
+    Public Function GetDB() As DataTable
+        Try
+            Return oTienda.GetDB
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        End Try
+    End Function
+
 End Class
