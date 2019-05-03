@@ -36,7 +36,7 @@
             Dim row As DataRow = GridView1.GetDataRow(GridView1.FocusedRowHandle)
             Dim frmEditar As New AgregarTienda
             If Not row Is Nothing Then
-                frmEditar.modo = AgregarTienda.tipo.Editar
+                'frmEditar.modo = AgregarTienda.tipo.Editar
                 frmEditar.Text = "Editar Empresa"
                 'frmEditar.consultarEmpresa(GridView1.GetFocusedDataRow)
                 frmEditar.ShowDialog()

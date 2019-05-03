@@ -1,4 +1,10 @@
 ﻿Public Class AgregarTienda
+    Public modo As tipo
+    Private _mdiPrincipal As mdiPrincipal
+    Enum tipo
+        Nuevo
+        Editar
+    End Enum
     Public Sub CargarDB()
         Try
             Dim oNegocioEmpresa As New Negocios.Tienda
@@ -9,7 +15,7 @@
     End Sub
 
 
-    Public Sub Tipo()
+    Public Sub TipoReporte()
         Try
             Dim tipos As DataTable = New DataTable
             tipos.Columns.Add("Tipo")
@@ -30,7 +36,6 @@
             tipos.Rows.Add("DevolucionesUtilizadas", "Devoluciones Utilizadas")
             tipos.Rows.Add("FormasPago", "Formas de Pago")
             Me.txtTipoReporte.Properties.DataSource = tipos
-            'Me.RepositoryGridLookUpEdit1.DataSource = tipos
             Me.txtTipoReporte.Properties.DisplayMember = "Descripcion"
             Me.txtTipoReporte.Properties.ValueMember = "Tipo"
         Catch ex As Exception
@@ -38,4 +43,8 @@
         End Try
     End Sub
 
+    Private Sub AgregarTienda_Load(sender As Object, e As EventArgs) Handles Me.Load
+        CargarDB()
+        TipoReporte()
+    End Sub
 End Class
