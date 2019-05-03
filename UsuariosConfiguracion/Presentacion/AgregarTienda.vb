@@ -1,4 +1,6 @@
-﻿Public Class AgregarTienda
+﻿Imports System.ComponentModel
+
+Public Class AgregarTienda
     Public modo As tipo
     Private _mdiPrincipal As mdiPrincipal
     Enum tipo
@@ -13,6 +15,26 @@
             MsgBox(ex.Message)
         End Try
     End Sub
+
+    Public Sub CargarAlmacen()
+        Try
+            Dim oNegocioEmpresa As New Negocios.Tienda
+            Me.txtAlmacen.Properties.DataSource = oNegocioEmpresa.CargarAlmacen
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Public Sub CargarFolioAlmacen()
+        Try
+            Dim oNegocioEmpresa As New Negocios.Tienda
+            'If Not txtFolio.EditValue Is Nothing Then Exit Sub
+            Me.txtFolio.Properties.DataSource = oNegocioEmpresa.CargarFolioAlmacen(txtAlmacen.EditValue)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
 
 
     Public Sub TipoReporte()
@@ -45,6 +67,11 @@
 
     Private Sub AgregarTienda_Load(sender As Object, e As EventArgs) Handles Me.Load
         CargarDB()
+        CargarAlmacen()
         TipoReporte()
+    End Sub
+
+    Private Sub txtFolio_QueryPopUp(sender As Object, e As CancelEventArgs) Handles txtFolio.QueryPopUp
+        CargarFolioAlmacen()
     End Sub
 End Class

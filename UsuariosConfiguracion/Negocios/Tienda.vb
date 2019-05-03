@@ -29,4 +29,17 @@
         End Try
     End Function
 
+    Public Function CargarAlmacen() As DataTable
+        Try
+            Return oTienda.CargarAlmacen()
+        Finally
+        End Try
+    End Function
+
+    Public Function CargarFolioAlmacen(ByVal IdAlmacen As Integer) As DataTable
+        Try
+            Return oTienda.CargarFolioAlmacen(IdAlmacen)
+        Finally
+        End Try
+    End Function
 End Class

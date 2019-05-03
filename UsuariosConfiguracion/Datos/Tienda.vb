@@ -121,6 +121,30 @@ Empresa, MuestraExistencia, Empresas.Nombre
         End Try
     End Function
 
+    Public Function CargarAlmacen() As DataTable
+        Dim dt As New DataTable
+        Dim Query As String
+        Try
+            Query = "SELECT * FROM Almacen"
+            dt = obj.RegresarDatosMagnus(Query)
+            Return dt
+        Finally
+
+        End Try
+    End Function
+
+    Public Function CargarFolioAlmacen(ByVal IdAlmacen As Integer) As DataTable
+        Dim dt As New DataTable
+        Dim Query As String
+        Try
+            Query = "SELECT * FROM FolioAlmacen where Documento = 5 AND IdAlmacen = '" & IdAlmacen & "'"
+            dt = obj.RegresarDatosMagnus(Query)
+            Return dt
+        Finally
+
+        End Try
+    End Function
+
 End Class
 
 

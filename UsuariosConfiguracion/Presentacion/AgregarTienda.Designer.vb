@@ -48,9 +48,9 @@ Partial Class AgregarTienda
         Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
         Me.LayoutControl2 = New DevExpress.XtraLayout.LayoutControl()
         Me.ComboBoxEdit1 = New DevExpress.XtraEditors.ComboBoxEdit()
-        Me.GridLookUpEdit3 = New DevExpress.XtraEditors.GridLookUpEdit()
+        Me.txtFolio = New DevExpress.XtraEditors.GridLookUpEdit()
         Me.GridLookUpEdit3View = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.GridLookUpEdit2 = New DevExpress.XtraEditors.GridLookUpEdit()
+        Me.txtAlmacen = New DevExpress.XtraEditors.GridLookUpEdit()
         Me.GridLookUpEdit2View = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.txtBasePV = New DevExpress.XtraEditors.GridLookUpEdit()
         Me.GridLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
@@ -65,6 +65,9 @@ Partial Class AgregarTienda
         Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem7 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem8 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.IdAlmacen = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.Descripcion = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.Folio = New DevExpress.XtraGrid.Columns.GridColumn()
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl1.SuspendLayout()
         CType(Me.GroupControl3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -93,9 +96,9 @@ Partial Class AgregarTienda
         CType(Me.LayoutControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl2.SuspendLayout()
         CType(Me.ComboBoxEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GridLookUpEdit3.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtFolio.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridLookUpEdit3View, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GridLookUpEdit2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtAlmacen.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridLookUpEdit2View, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtBasePV.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridLookUpEdit1View, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -346,8 +349,8 @@ Partial Class AgregarTienda
         'LayoutControl2
         '
         Me.LayoutControl2.Controls.Add(Me.ComboBoxEdit1)
-        Me.LayoutControl2.Controls.Add(Me.GridLookUpEdit3)
-        Me.LayoutControl2.Controls.Add(Me.GridLookUpEdit2)
+        Me.LayoutControl2.Controls.Add(Me.txtFolio)
+        Me.LayoutControl2.Controls.Add(Me.txtAlmacen)
         Me.LayoutControl2.Controls.Add(Me.txtBasePV)
         Me.LayoutControl2.Controls.Add(Me.TextEdit1)
         Me.LayoutControl2.Dock = System.Windows.Forms.DockStyle.Fill
@@ -369,43 +372,53 @@ Partial Class AgregarTienda
         Me.ComboBoxEdit1.StyleController = Me.LayoutControl2
         Me.ComboBoxEdit1.TabIndex = 8
         '
-        'GridLookUpEdit3
+        'txtFolio
         '
-        Me.GridLookUpEdit3.EditValue = ""
-        Me.GridLookUpEdit3.Location = New System.Drawing.Point(117, 76)
-        Me.GridLookUpEdit3.Name = "GridLookUpEdit3"
-        Me.GridLookUpEdit3.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.GridLookUpEdit3.Properties.NullText = ""
-        Me.GridLookUpEdit3.Properties.View = Me.GridLookUpEdit3View
-        Me.GridLookUpEdit3.Size = New System.Drawing.Size(796, 20)
-        Me.GridLookUpEdit3.StyleController = Me.LayoutControl2
-        Me.GridLookUpEdit3.TabIndex = 7
+        Me.txtFolio.EditValue = ""
+        Me.txtFolio.Location = New System.Drawing.Point(117, 76)
+        Me.txtFolio.Name = "txtFolio"
+        Me.txtFolio.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.txtFolio.Properties.DisplayMember = "IdFolio"
+        Me.txtFolio.Properties.NullText = ""
+        Me.txtFolio.Properties.ValueMember = "IdFolio"
+        Me.txtFolio.Properties.View = Me.GridLookUpEdit3View
+        Me.txtFolio.Size = New System.Drawing.Size(796, 20)
+        Me.txtFolio.StyleController = Me.LayoutControl2
+        Me.txtFolio.TabIndex = 7
         '
         'GridLookUpEdit3View
         '
+        Me.GridLookUpEdit3View.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.Folio})
         Me.GridLookUpEdit3View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
         Me.GridLookUpEdit3View.Name = "GridLookUpEdit3View"
         Me.GridLookUpEdit3View.OptionsSelection.EnableAppearanceFocusedCell = False
+        Me.GridLookUpEdit3View.OptionsView.ShowAutoFilterRow = True
         Me.GridLookUpEdit3View.OptionsView.ShowGroupPanel = False
+        Me.GridLookUpEdit3View.OptionsView.ShowIndicator = False
         '
-        'GridLookUpEdit2
+        'txtAlmacen
         '
-        Me.GridLookUpEdit2.EditValue = ""
-        Me.GridLookUpEdit2.Location = New System.Drawing.Point(117, 52)
-        Me.GridLookUpEdit2.Name = "GridLookUpEdit2"
-        Me.GridLookUpEdit2.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.GridLookUpEdit2.Properties.NullText = ""
-        Me.GridLookUpEdit2.Properties.View = Me.GridLookUpEdit2View
-        Me.GridLookUpEdit2.Size = New System.Drawing.Size(796, 20)
-        Me.GridLookUpEdit2.StyleController = Me.LayoutControl2
-        Me.GridLookUpEdit2.TabIndex = 6
+        Me.txtAlmacen.EditValue = ""
+        Me.txtAlmacen.Location = New System.Drawing.Point(117, 52)
+        Me.txtAlmacen.Name = "txtAlmacen"
+        Me.txtAlmacen.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.txtAlmacen.Properties.DisplayMember = "Descripcion"
+        Me.txtAlmacen.Properties.NullText = ""
+        Me.txtAlmacen.Properties.ValueMember = "IdAlmacen"
+        Me.txtAlmacen.Properties.View = Me.GridLookUpEdit2View
+        Me.txtAlmacen.Size = New System.Drawing.Size(796, 20)
+        Me.txtAlmacen.StyleController = Me.LayoutControl2
+        Me.txtAlmacen.TabIndex = 6
         '
         'GridLookUpEdit2View
         '
+        Me.GridLookUpEdit2View.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.IdAlmacen, Me.Descripcion})
         Me.GridLookUpEdit2View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
         Me.GridLookUpEdit2View.Name = "GridLookUpEdit2View"
         Me.GridLookUpEdit2View.OptionsSelection.EnableAppearanceFocusedCell = False
+        Me.GridLookUpEdit2View.OptionsView.ShowAutoFilterRow = True
         Me.GridLookUpEdit2View.OptionsView.ShowGroupPanel = False
+        Me.GridLookUpEdit2View.OptionsView.ShowIndicator = False
         '
         'txtBasePV
         '
@@ -470,7 +483,7 @@ Partial Class AgregarTienda
         '
         'LayoutControlItem4
         '
-        Me.LayoutControlItem4.Control = Me.GridLookUpEdit2
+        Me.LayoutControlItem4.Control = Me.txtAlmacen
         Me.LayoutControlItem4.Location = New System.Drawing.Point(0, 48)
         Me.LayoutControlItem4.Name = "LayoutControlItem4"
         Me.LayoutControlItem4.Size = New System.Drawing.Size(913, 24)
@@ -479,7 +492,7 @@ Partial Class AgregarTienda
         '
         'LayoutControlItem5
         '
-        Me.LayoutControlItem5.Control = Me.GridLookUpEdit3
+        Me.LayoutControlItem5.Control = Me.txtFolio
         Me.LayoutControlItem5.Location = New System.Drawing.Point(0, 72)
         Me.LayoutControlItem5.Name = "LayoutControlItem5"
         Me.LayoutControlItem5.Size = New System.Drawing.Size(913, 24)
@@ -540,6 +553,30 @@ Partial Class AgregarTienda
         Me.LayoutControlItem8.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem8.TextVisible = False
         '
+        'IdAlmacen
+        '
+        Me.IdAlmacen.Caption = "IdAlmacen"
+        Me.IdAlmacen.FieldName = "IdAlmacen"
+        Me.IdAlmacen.Name = "IdAlmacen"
+        Me.IdAlmacen.Visible = True
+        Me.IdAlmacen.VisibleIndex = 0
+        '
+        'Descripcion
+        '
+        Me.Descripcion.Caption = "Descripción"
+        Me.Descripcion.FieldName = "Descripcion"
+        Me.Descripcion.Name = "Descripcion"
+        Me.Descripcion.Visible = True
+        Me.Descripcion.VisibleIndex = 1
+        '
+        'Folio
+        '
+        Me.Folio.Caption = "Folio"
+        Me.Folio.FieldName = "IdFolio"
+        Me.Folio.Name = "Folio"
+        Me.Folio.Visible = True
+        Me.Folio.VisibleIndex = 0
+        '
         'AgregarTienda
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -576,9 +613,9 @@ Partial Class AgregarTienda
         CType(Me.LayoutControl2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LayoutControl2.ResumeLayout(False)
         CType(Me.ComboBoxEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GridLookUpEdit3.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtFolio.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridLookUpEdit3View, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GridLookUpEdit2.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtAlmacen.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridLookUpEdit2View, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtBasePV.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridLookUpEdit1View, System.ComponentModel.ISupportInitialize).EndInit()
@@ -606,9 +643,9 @@ Partial Class AgregarTienda
     Friend WithEvents GroupControl3 As DevExpress.XtraEditors.GroupControl
     Friend WithEvents GroupControl2 As DevExpress.XtraEditors.GroupControl
     Friend WithEvents ComboBoxEdit1 As DevExpress.XtraEditors.ComboBoxEdit
-    Friend WithEvents GridLookUpEdit3 As DevExpress.XtraEditors.GridLookUpEdit
+    Friend WithEvents txtFolio As DevExpress.XtraEditors.GridLookUpEdit
     Friend WithEvents GridLookUpEdit3View As DevExpress.XtraGrid.Views.Grid.GridView
-    Friend WithEvents GridLookUpEdit2 As DevExpress.XtraEditors.GridLookUpEdit
+    Friend WithEvents txtAlmacen As DevExpress.XtraEditors.GridLookUpEdit
     Friend WithEvents GridLookUpEdit2View As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents txtBasePV As DevExpress.XtraEditors.GridLookUpEdit
     Friend WithEvents GridLookUpEdit1View As DevExpress.XtraGrid.Views.Grid.GridView
@@ -640,4 +677,7 @@ Partial Class AgregarTienda
     Friend WithEvents LayoutControlItem7 As DevExpress.XtraLayout.LayoutControlItem
     Public WithEvents GroupControl1 As DevExpress.XtraEditors.GroupControl
     Public WithEvents LayoutControlItem1 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents IdAlmacen As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents Descripcion As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents Folio As DevExpress.XtraGrid.Columns.GridColumn
 End Class
