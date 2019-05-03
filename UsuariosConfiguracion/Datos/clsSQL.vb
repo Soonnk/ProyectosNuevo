@@ -15,6 +15,17 @@ Public Class clsSQL
 
         End Try
     End Function
+
+    Public Function StringConn2() As String
+        Dim cadena As String
+        Try
+            cadena = "Data Source= 192.168.0.112;Initial Catalog=AMOR_MAGNUS;User id=magnus3; Password=1234;pooling=no;Timeout=0;"
+
+            Return cadena
+        Finally
+
+        End Try
+    End Function
     Public Function commandSQL(ByVal query As String) As Boolean
         Dim cnn As New SqlConnection(StringConn())
         Dim cmd As SqlCommand
@@ -73,6 +84,18 @@ Public Class clsSQL
             Return Nothing
         End Try
     End Function
+
+    Public Function RegresarDatosMagnus(ByVal query As String) As DataTable
+        Try
+            Dim dt As New DataTable
+            adaptador = New SqlDataAdapter(query, StringConn2)
+            adaptador.Fill(dt)
+            Return dt
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
+
     Public Sub Update()
         Try
             Dim oCmdBuilder As New SqlCommandBuilder(adaptador)
