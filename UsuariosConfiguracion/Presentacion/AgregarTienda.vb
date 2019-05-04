@@ -7,6 +7,7 @@ Public Class AgregarTienda
         Nuevo
         Editar
     End Enum
+
     Public Sub CargarDB()
         Try
             Dim oNegocioEmpresa As New Negocios.Tienda
