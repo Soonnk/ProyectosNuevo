@@ -185,7 +185,6 @@ Public Class AgregarTienda
         cmbPrecioMinV.EditValue = ""
         txtNombreReporte.EditValue = ""
         txtTipoReporte.EditValue = ""
-
     End Sub
 
     'Public Sub LimpiarCamposReporte()
