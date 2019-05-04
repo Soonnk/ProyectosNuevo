@@ -121,10 +121,10 @@
                             frmNuevo.Owner = Sistema
                             frmNuevo.ShowDialog()
                         Case "ConsultarMagnusGo"
-                            Dim frmNuevo As New AgregarTienda
-                            frmNuevo.modo = AgregarTienda.tipo.Nuevo
-                            frmNuevo.MdiParent = Me
-                            frmNuevo.Show()
+                            'Dim frmNuevo As New AgregarTienda
+                            oPresentacion.modo = AgregarTienda.tipo.Nuevo
+                            oPresentacion.MdiParent = Me
+                            oPresentacion.Show()
                     End Select
                 Case "Usuarios"
                     Select Case frmActivo.Name

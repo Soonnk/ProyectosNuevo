@@ -25,7 +25,6 @@
                     If Not ValidarCampos(camposVacios) Then Exit Sub
                     If oNegocio.InsertarEmpresa(llenarEntidades) = True Then
                         MessageBox.Show("Los datos han sido guardados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        CType(Owner, ConsultarEmpresa).Cargar()
                         LimpiarCampos()
                     Else
                         MessageBox.Show("No se han podido guardar los datos solicitados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -213,17 +212,5 @@
 
     End Sub
 
-    Private Sub AgregarEmpresa_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim dt As New DataTable
-        dt = nImagenes.CargarImagen
-        If dt.Rows.Count > 0 Then
-            Dim ms As New System.IO.MemoryStream()
-            Dim imageBuffer() As Byte = CType(dt.Rows(0).Item("Imagen"), Byte())
-            ms = New System.IO.MemoryStream(imageBuffer)
-            peLogotipo.BackgroundImage = Nothing
-            peLogotipo.Image = Image.FromStream(ms)
-            peLogotipo.BackgroundImageLayout = ImageLayout.Stretch
-        End If
 
-    End Sub
 End Class

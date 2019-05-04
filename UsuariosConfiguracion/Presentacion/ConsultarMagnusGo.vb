@@ -18,7 +18,7 @@
 
     Private Sub ConsultarEmpresa_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Me.mdiPrincipal1.activo = "magnusgo"
-        Cargar()
+
     End Sub
 
     Public Sub Cargar()
@@ -47,6 +47,10 @@
 
     Private Sub GridControl1_DoubleClick(sender As Object, e As EventArgs) Handles GridControl1.DoubleClick
         ConsultarMagnusGo()
+        Cargar()
+    End Sub
+
+    Private Sub ConsultarMagnusGo_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         Cargar()
     End Sub
 End Class

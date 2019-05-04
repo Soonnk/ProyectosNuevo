@@ -12,34 +12,41 @@ Public Class AgregarTienda
     Private Sub AgregarTienda_Load(sender As Object, e As EventArgs) Handles Me.Load
         CargarDB()
         CargarAlmacen()
+
         TipoReporte()
     End Sub
 
     Public Sub CargarDB()
+        Dim oNegocioEmpresa As New Negocios.Tienda
         Try
-            Dim oNegocioEmpresa As New Negocios.Tienda
             Me.txtBasePV.Properties.DataSource = oNegocioEmpresa.GetDB
         Catch ex As Exception
             MsgBox(ex.Message)
+        Finally
+            oNegocioEmpresa = Nothing
         End Try
     End Sub
 
     Public Sub CargarAlmacen()
+        Dim oNegocioEmpresa As New Negocios.Tienda
         Try
-            Dim oNegocioEmpresa As New Negocios.Tienda
             Me.txtAlmacen.Properties.DataSource = oNegocioEmpresa.CargarAlmacen
         Catch ex As Exception
             MsgBox(ex.Message)
+        Finally
+            oNegocioEmpresa = Nothing
         End Try
     End Sub
 
     Public Sub CargarFolioAlmacen()
+        Dim oNegocioEmpresa As New Negocios.Tienda
         Try
-            Dim oNegocioEmpresa As New Negocios.Tienda
             'If Not txtFolio.EditValue Is Nothing Then Exit Sub
             Me.txtFolio.Properties.DataSource = oNegocioEmpresa.CargarFolioAlmacen(txtAlmacen.EditValue)
         Catch ex As Exception
             MsgBox(ex.Message)
+        Finally
+            oNegocioEmpresa = Nothing
         End Try
     End Sub
 
@@ -73,20 +80,17 @@ Public Class AgregarTienda
         End Try
     End Sub
 
-    Private Sub txtFolio_QueryPopUp(sender As Object, e As CancelEventArgs) Handles txtFolio.QueryPopUp
-        CargarFolioAlmacen()
-    End Sub
 
     Public Sub GuardarTienda()
+        Dim oNegocio As New Negocios.Tienda
         Try
-            Dim oNegocio As New Negocios.Tienda
             Dim camposVacios As String = ""
             Select Case modo
                 Case tipo.Nuevo
                     'If Not ValidarCampos(camposVacios) Then Exit Sub
                     If oNegocio.InsertarTienda(llenarEntidades) = True Then
                         MessageBox.Show("Los datos han sido guardados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        CType(Owner, ConsultarMagnusGo).Cargar()
+                        'CType(Owner, ConsultarMagnusGo).Cargar()
                         LimpiarCampos()
                     Else
                         MessageBox.Show("No se han podido guardar los datos solicitados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -103,6 +107,8 @@ Public Class AgregarTienda
 
         Catch ex As Exception
             MessageBox.Show(ex.Message)
+        Finally
+            oNegocio = Nothing
         End Try
     End Sub
 
@@ -218,6 +224,8 @@ Public Class AgregarTienda
             Me.cmbPrecioMinV.Text = oEntidad.PrecioMinimoVenta
         Catch ex As Exception
             MessageBox.Show(ex.Message)
+        Finally
+            oNegocio = Nothing
         End Try
     End Sub
 
@@ -232,5 +240,9 @@ Public Class AgregarTienda
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub txtFolio_QueryPopUp(sender As Object, e As CancelEventArgs) Handles txtFolio.QueryPopUp
+        CargarFolioAlmacen()
     End Sub
 End Class
