@@ -8,6 +8,12 @@ Public Class AgregarTienda
         Editar
     End Enum
 
+    Private Sub AgregarTienda_Load(sender As Object, e As EventArgs) Handles Me.Load
+        CargarDB()
+        CargarAlmacen()
+        TipoReporte()
+    End Sub
+
     Public Sub CargarDB()
         Try
             Dim oNegocioEmpresa As New Negocios.Tienda
@@ -66,11 +72,7 @@ Public Class AgregarTienda
         End Try
     End Sub
 
-    Private Sub AgregarTienda_Load(sender As Object, e As EventArgs) Handles Me.Load
-        CargarDB()
-        CargarAlmacen()
-        TipoReporte()
-    End Sub
+
 
     Private Sub txtFolio_QueryPopUp(sender As Object, e As CancelEventArgs) Handles txtFolio.QueryPopUp
         CargarFolioAlmacen()
