@@ -50,23 +50,12 @@
         Try
             Query = "INSERT INTO Tiendas(OID,Descripcion,
                                         idAlmacen,idFolio,
-                                        Factura,BasePuntoVenta,
-					                    BaseMagnus,ServidorLocal,
-                                        ServidorRemoto,UsuarioLocal,
-                                        UsuarioRemoto,PasswordLocal,
-					                    PasswordRemoto,DynDns,
-                                        PrecioMinimoVenta,FacturarPrecioMinimo,
-                                        Empresa,MovsEnLinea,
-					                    MuestraExistencia) VALUES
+                                        BasePuntoVenta,
+					                    PrecioMinimoVenta) VALUES
                                         (" & _OID & ",'" & tienda.Descripcion & "',
                                         '" & tienda.IdAlmacen & "','" & tienda.IdFolio & "',
-                                        '" & tienda.Factura & "','" & tienda.BasePuntoVenta & "',
-                                        '" & tienda.BaseMagnus & "', '" & tienda.ServidorLocal & "',
-                                        '" & tienda.ServidorRemoto & "','" & tienda.UsuarioLocal & "',
-                                        '" & tienda.UsuarioRemoto & "','" & tienda.PasswordLocal & "',
-                                        '" & tienda.PasswordRemoto & "', '" & tienda.DynDns & "',
-                                        '" & tienda.PrecioMinimoVenta & "', '" & tienda.FacturarPrecioMinimo & "',
-                                        '" & tienda.Empresa & "', 1 ,'" & tienda.MuestraExistencia & "')"
+                                        '" & tienda.BasePuntoVenta & "',
+                                        '" & tienda.PrecioMinimoVenta & "')"
 
             Return obj.commandSQL(Query)
         Catch ex As Exception

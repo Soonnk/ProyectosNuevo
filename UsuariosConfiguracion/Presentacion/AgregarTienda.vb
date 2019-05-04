@@ -147,14 +147,13 @@ Public Class AgregarTienda
 
     Public Function llenarEntidades() As Entidades.Tienda
         Dim eTienda As New Entidades.Tienda
-        eTienda.BasePuntoVenta = Me.txtBasePV.EditValue
-        eTienda.Descripcion = Me.txtDescripcion.EditValue
+        eTienda.Descripcion = Me.txtDescripcion.Text
         eTienda.IdAlmacen = Me.txtAlmacen.EditValue
-        eTienda.IdFolio = Me.txtFolio.EditValue
-        eTienda.PrecioMinimoVenta = Me.cmbPrecioMinV.EditValue
+        eTienda.IdFolio = Me.txtFolio.Text
+        eTienda.BasePuntoVenta = Me.txtBasePV.Text
+        eTienda.PrecioMinimoVenta = Me.cmbPrecioMinV.Text
         Return eTienda
     End Function
-
 
     Public Function llenarEntidades2() As Entidades.Tienda
         Dim eTienda As New Entidades.Tienda
