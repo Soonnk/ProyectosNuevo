@@ -18,6 +18,28 @@
     Private _Empresa As Integer
     Private _MuestraExistencia As Boolean
 
+    Public Sub New()
+        Me._OID = 0
+        Me._Descripcion = ""
+        Me._IdAlmacen = 0
+        Me._IdFolio = 0
+        Me._Factura = 0
+        Me.BasePuntoVenta = ""
+        Me.BaseMagnus = ""
+        Me._ServidorLocal = ""
+        Me._ServidorRemoto = ""
+        Me._UsuarioLocal = ""
+        Me._UsuarioRemoto = ""
+        Me._PasswordLocal = ""
+        Me._PasswordRemoto = ""
+        Me._DynDns = ""
+        Me._PrecioMinimoVenta = ""
+        Me._FacturarPrecioMinimo = True
+        Me._Empresa = 1
+        Me._MuestraExistencia = True
+
+    End Sub
+
 
     Public Property OID() As Integer
         Get

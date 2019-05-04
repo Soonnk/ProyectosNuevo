@@ -55,7 +55,7 @@ Partial Class AgregarTienda
         Me.Folio = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.txtAlmacen = New DevExpress.XtraEditors.GridLookUpEdit()
         Me.GridLookUpEdit2View = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.IdAlmacen = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.idAlmacen = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.Descripcion = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.txtBasePV = New DevExpress.XtraEditors.GridLookUpEdit()
         Me.GridLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
@@ -442,7 +442,7 @@ Partial Class AgregarTienda
         '
         'GridLookUpEdit2View
         '
-        Me.GridLookUpEdit2View.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.IdAlmacen, Me.Descripcion})
+        Me.GridLookUpEdit2View.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.idAlmacen, Me.Descripcion})
         Me.GridLookUpEdit2View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
         Me.GridLookUpEdit2View.Name = "GridLookUpEdit2View"
         Me.GridLookUpEdit2View.OptionsSelection.EnableAppearanceFocusedCell = False
@@ -450,13 +450,13 @@ Partial Class AgregarTienda
         Me.GridLookUpEdit2View.OptionsView.ShowGroupPanel = False
         Me.GridLookUpEdit2View.OptionsView.ShowIndicator = False
         '
-        'IdAlmacen
+        'idAlmacen
         '
-        Me.IdAlmacen.Caption = "IdAlmacen"
-        Me.IdAlmacen.FieldName = "IdAlmacen"
-        Me.IdAlmacen.Name = "IdAlmacen"
-        Me.IdAlmacen.Visible = True
-        Me.IdAlmacen.VisibleIndex = 0
+        Me.idAlmacen.Caption = "IdAlmacen"
+        Me.idAlmacen.FieldName = "IdAlmacen"
+        Me.idAlmacen.Name = "idAlmacen"
+        Me.idAlmacen.Visible = True
+        Me.idAlmacen.VisibleIndex = 0
         '
         'Descripcion
         '
@@ -700,7 +700,7 @@ Partial Class AgregarTienda
     Friend WithEvents LayoutControlItem7 As DevExpress.XtraLayout.LayoutControlItem
     Public WithEvents GroupControl1 As DevExpress.XtraEditors.GroupControl
     Public WithEvents LayoutControlItem1 As DevExpress.XtraLayout.LayoutControlItem
-    Friend WithEvents IdAlmacen As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents idAlmacen As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents Descripcion As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents Folio As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents btnGuardarReporte As DevExpress.XtraEditors.SimpleButton
