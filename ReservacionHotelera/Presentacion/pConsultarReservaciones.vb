@@ -70,6 +70,6 @@
     End Sub
 
     Private Sub GridControl1_DoubleClick(sender As Object, e As EventArgs) Handles GridControl1.DoubleClick
-        GridControl1.ge
+        'GridControl1.ge
     End Sub
 End Class
