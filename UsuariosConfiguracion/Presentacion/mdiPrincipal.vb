@@ -1,5 +1,6 @@
 ﻿Public Class mdiPrincipal
     Public activo As String
+    Dim oPresentacion As New Presentacion.AgregarTienda
 
     Private ReadOnly Property Empresa() As ConsultarEmpresa
         Get
@@ -122,8 +123,8 @@
                         Case "ConsultarMagnusGo"
                             Dim frmNuevo As New AgregarTienda
                             frmNuevo.modo = AgregarTienda.tipo.Nuevo
-                            frmNuevo.Owner = Sistema
-                            frmNuevo.ShowDialog()
+                            frmNuevo.MdiParent = Me
+                            frmNuevo.Show()
                     End Select
                 Case "Usuarios"
                     Select Case frmActivo.Name
@@ -210,4 +211,8 @@
 
         End Try
     End Function
+
+    Private Sub btnGuardarSuperior_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnGuardarSuperior.ItemClick
+        oPresentacion.GuardarTienda()
+    End Sub
 End Class

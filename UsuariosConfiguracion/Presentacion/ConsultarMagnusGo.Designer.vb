@@ -141,7 +141,7 @@ Partial Class ConsultarMagnusGo
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.LayoutControl1)
         Me.Name = "ConsultarMagnusGo"
-        Me.Text = "Magnus Go!"
+        Me.Text = "Tiendas"
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LayoutControl1.ResumeLayout(False)
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()

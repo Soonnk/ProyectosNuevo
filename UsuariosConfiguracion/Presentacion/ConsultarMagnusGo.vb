@@ -36,12 +36,17 @@
             Dim row As DataRow = GridView1.GetDataRow(GridView1.FocusedRowHandle)
             Dim frmEditar As New AgregarTienda
             If Not row Is Nothing Then
-                'frmEditar.modo = AgregarTienda.tipo.Editar
-                frmEditar.Text = "Editar Empresa"
-                'frmEditar.consultarEmpresa(GridView1.GetFocusedDataRow)
+                frmEditar.modo = AgregarTienda.tipo.Editar
+                frmEditar.Text = "Editar Tienda"
+                frmEditar.consultarTienda(GridView1.GetFocusedDataRow)
                 frmEditar.ShowDialog()
             End If
         Catch ex As Exception
         End Try
+    End Sub
+
+    Private Sub GridControl1_DoubleClick(sender As Object, e As EventArgs) Handles GridControl1.DoubleClick
+        ConsultarMagnusGo()
+        Cargar()
     End Sub
 End Class

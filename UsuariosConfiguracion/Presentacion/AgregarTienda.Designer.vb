@@ -38,13 +38,15 @@ Partial Class AgregarTienda
         Me.LayoutControlItem13 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.GroupControl2 = New DevExpress.XtraEditors.GroupControl()
         Me.LayoutControl3 = New DevExpress.XtraLayout.LayoutControl()
+        Me.btnGuardarReporte = New DevExpress.XtraEditors.SimpleButton()
         Me.txtTipoReporte = New DevExpress.XtraEditors.GridLookUpEdit()
         Me.GridLookUpEdit4View = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.TextEdit2 = New DevExpress.XtraEditors.TextEdit()
+        Me.txtNombreReporte = New DevExpress.XtraEditors.TextEdit()
         Me.LayoutControlGroup3 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem9 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.EmptySpaceItem1 = New DevExpress.XtraLayout.EmptySpaceItem()
         Me.LayoutControlItem10 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem14 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
         Me.LayoutControl2 = New DevExpress.XtraLayout.LayoutControl()
         Me.cmbPrecioMinV = New DevExpress.XtraEditors.ComboBoxEdit()
@@ -86,11 +88,12 @@ Partial Class AgregarTienda
         Me.LayoutControl3.SuspendLayout()
         CType(Me.txtTipoReporte.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridLookUpEdit4View, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TextEdit2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtNombreReporte.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem14, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl1.SuspendLayout()
         CType(Me.LayoutControl2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -260,8 +263,9 @@ Partial Class AgregarTienda
         '
         'LayoutControl3
         '
+        Me.LayoutControl3.Controls.Add(Me.btnGuardarReporte)
         Me.LayoutControl3.Controls.Add(Me.txtTipoReporte)
-        Me.LayoutControl3.Controls.Add(Me.TextEdit2)
+        Me.LayoutControl3.Controls.Add(Me.txtNombreReporte)
         Me.LayoutControl3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.LayoutControl3.Location = New System.Drawing.Point(2, 20)
         Me.LayoutControl3.Name = "LayoutControl3"
@@ -269,6 +273,15 @@ Partial Class AgregarTienda
         Me.LayoutControl3.Size = New System.Drawing.Size(261, 327)
         Me.LayoutControl3.TabIndex = 0
         Me.LayoutControl3.Text = "LayoutControl3"
+        '
+        'btnGuardarReporte
+        '
+        Me.btnGuardarReporte.Location = New System.Drawing.Point(4, 52)
+        Me.btnGuardarReporte.Name = "btnGuardarReporte"
+        Me.btnGuardarReporte.Size = New System.Drawing.Size(253, 22)
+        Me.btnGuardarReporte.StyleController = Me.LayoutControl3
+        Me.btnGuardarReporte.TabIndex = 6
+        Me.btnGuardarReporte.Text = "Guardar Reporte"
         '
         'txtTipoReporte
         '
@@ -290,19 +303,19 @@ Partial Class AgregarTienda
         Me.GridLookUpEdit4View.OptionsView.ShowGroupPanel = False
         Me.GridLookUpEdit4View.OptionsView.ShowIndicator = False
         '
-        'TextEdit2
+        'txtNombreReporte
         '
-        Me.TextEdit2.Location = New System.Drawing.Point(44, 4)
-        Me.TextEdit2.Name = "TextEdit2"
-        Me.TextEdit2.Size = New System.Drawing.Size(213, 20)
-        Me.TextEdit2.StyleController = Me.LayoutControl3
-        Me.TextEdit2.TabIndex = 4
+        Me.txtNombreReporte.Location = New System.Drawing.Point(44, 4)
+        Me.txtNombreReporte.Name = "txtNombreReporte"
+        Me.txtNombreReporte.Size = New System.Drawing.Size(213, 20)
+        Me.txtNombreReporte.StyleController = Me.LayoutControl3
+        Me.txtNombreReporte.TabIndex = 4
         '
         'LayoutControlGroup3
         '
         Me.LayoutControlGroup3.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
         Me.LayoutControlGroup3.GroupBordersVisible = False
-        Me.LayoutControlGroup3.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem9, Me.EmptySpaceItem1, Me.LayoutControlItem10})
+        Me.LayoutControlGroup3.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem9, Me.EmptySpaceItem1, Me.LayoutControlItem10, Me.LayoutControlItem14})
         Me.LayoutControlGroup3.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup3.Name = "LayoutControlGroup3"
         Me.LayoutControlGroup3.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
@@ -312,7 +325,7 @@ Partial Class AgregarTienda
         '
         'LayoutControlItem9
         '
-        Me.LayoutControlItem9.Control = Me.TextEdit2
+        Me.LayoutControlItem9.Control = Me.txtNombreReporte
         Me.LayoutControlItem9.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem9.Name = "LayoutControlItem9"
         Me.LayoutControlItem9.Size = New System.Drawing.Size(257, 24)
@@ -322,9 +335,9 @@ Partial Class AgregarTienda
         'EmptySpaceItem1
         '
         Me.EmptySpaceItem1.AllowHotTrack = False
-        Me.EmptySpaceItem1.Location = New System.Drawing.Point(0, 48)
+        Me.EmptySpaceItem1.Location = New System.Drawing.Point(0, 74)
         Me.EmptySpaceItem1.Name = "EmptySpaceItem1"
-        Me.EmptySpaceItem1.Size = New System.Drawing.Size(257, 275)
+        Me.EmptySpaceItem1.Size = New System.Drawing.Size(257, 249)
         Me.EmptySpaceItem1.TextSize = New System.Drawing.Size(0, 0)
         '
         'LayoutControlItem10
@@ -335,6 +348,15 @@ Partial Class AgregarTienda
         Me.LayoutControlItem10.Size = New System.Drawing.Size(257, 24)
         Me.LayoutControlItem10.Text = "Tipo"
         Me.LayoutControlItem10.TextSize = New System.Drawing.Size(37, 13)
+        '
+        'LayoutControlItem14
+        '
+        Me.LayoutControlItem14.Control = Me.btnGuardarReporte
+        Me.LayoutControlItem14.Location = New System.Drawing.Point(0, 48)
+        Me.LayoutControlItem14.Name = "LayoutControlItem14"
+        Me.LayoutControlItem14.Size = New System.Drawing.Size(257, 26)
+        Me.LayoutControlItem14.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem14.TextVisible = False
         '
         'GroupControl1
         '
@@ -520,7 +542,7 @@ Partial Class AgregarTienda
         Me.LayoutControlItem5.Location = New System.Drawing.Point(0, 72)
         Me.LayoutControlItem5.Name = "LayoutControlItem5"
         Me.LayoutControlItem5.Size = New System.Drawing.Size(913, 24)
-        Me.LayoutControlItem5.Text = "Id Fólio de Facturación"
+        Me.LayoutControlItem5.Text = "Id Folio de Facturación"
         Me.LayoutControlItem5.TextSize = New System.Drawing.Size(110, 13)
         '
         'LayoutControlItem6
@@ -584,7 +606,7 @@ Partial Class AgregarTienda
         Me.ClientSize = New System.Drawing.Size(921, 495)
         Me.Controls.Add(Me.LayoutControl1)
         Me.Name = "AgregarTienda"
-        Me.Text = "Tienda"
+        Me.Text = "Nueva Tienda"
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LayoutControl1.ResumeLayout(False)
         CType(Me.GroupControl3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -603,11 +625,12 @@ Partial Class AgregarTienda
         Me.LayoutControl3.ResumeLayout(False)
         CType(Me.txtTipoReporte.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridLookUpEdit4View, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TextEdit2.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtNombreReporte.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem14, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupControl1.ResumeLayout(False)
         CType(Me.LayoutControl2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -669,7 +692,7 @@ Partial Class AgregarTienda
     Friend WithEvents LayoutControl3 As DevExpress.XtraLayout.LayoutControl
     Friend WithEvents txtTipoReporte As DevExpress.XtraEditors.GridLookUpEdit
     Friend WithEvents GridLookUpEdit4View As DevExpress.XtraGrid.Views.Grid.GridView
-    Friend WithEvents TextEdit2 As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents txtNombreReporte As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LayoutControlGroup3 As DevExpress.XtraLayout.LayoutControlGroup
     Friend WithEvents LayoutControlItem9 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents EmptySpaceItem1 As DevExpress.XtraLayout.EmptySpaceItem
@@ -680,4 +703,6 @@ Partial Class AgregarTienda
     Friend WithEvents IdAlmacen As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents Descripcion As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents Folio As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents btnGuardarReporte As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents LayoutControlItem14 As DevExpress.XtraLayout.LayoutControlItem
 End Class
