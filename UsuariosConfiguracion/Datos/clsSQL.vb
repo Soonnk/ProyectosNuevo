@@ -42,6 +42,23 @@ Public Class clsSQL
         End Try
     End Function
 
+    Public Function commandSQLImagen(ByVal query As String, ByRef ms1 As System.IO.MemoryStream) As Boolean
+        Dim cnn As New SqlConnection(StringConn())
+        Dim cmd As SqlCommand
+        Try
+            cnn.Open()
+            cmd = New SqlCommand(query, cnn)
+            cmd.Parameters.Add(New SqlParameter("@Colosseum", ms1.GetBuffer()))
+            cmd.ExecuteNonQuery()
+            cnn.Close()
+            cnn.Dispose()
+            Return True
+        Catch ex As Exception
+            MsgBox(ex)
+            Return Nothing
+        End Try
+    End Function
+
     Public Function commandSQL(ByVal query() As String) As Boolean
         Dim cnn As New SqlConnection(StringConn)
         Dim cmd As New SqlCommand
