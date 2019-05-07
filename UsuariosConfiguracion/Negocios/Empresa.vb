@@ -20,23 +20,10 @@
         Return oEmpresa.EditarEmpresa(entEmpresa)
     End Function
 
-    Dim dImagenes As New Datos.Imagen
-    'Public Function InsertarImagen(ByRef ms1 As System.IO.MemoryStream) As Boolean
-    '    Try
+    Public Function InsertarEmpresaImagen(ByVal entEmpresa As Entidades.Empresa, ByRef ms1 As System.IO.MemoryStream) As Boolean
+        Return oEmpresa.InsertarEmpresaImagen(entEmpresa, ms1)
+    End Function
 
-    '        Return dImagenes.InsertarImagen(ms1)
-    '    Catch ex As Exception
-    '        Return Nothing
-    '    End Try
-    'End Function
-    'Public Function CargarImagen() As DataTable
-    '    Try
-
-    '        Return dImagenes.CargarImagen
-    '    Catch ex As Exception
-    '        Return Nothing
-    '    End Try
-    'End Function
 End Class
 
 
