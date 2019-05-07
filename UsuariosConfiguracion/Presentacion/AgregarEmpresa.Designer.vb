@@ -260,6 +260,7 @@ Partial Class AgregarEmpresa
         Me.peLogotipo.Location = New System.Drawing.Point(425, 12)
         Me.peLogotipo.Name = "peLogotipo"
         Me.peLogotipo.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.[Auto]
+        Me.peLogotipo.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom
         Me.peLogotipo.Properties.ZoomAccelerationFactor = 1.0R
         Me.peLogotipo.Size = New System.Drawing.Size(218, 248)
         Me.peLogotipo.StyleController = Me.LayoutControl2

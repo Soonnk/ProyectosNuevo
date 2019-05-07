@@ -3,7 +3,7 @@
     Private _mdiPrincipal As mdiPrincipal
     Public _IdEmpresa As Integer
     Dim ruta As String
-
+    Dim ms1 As New System.IO.MemoryStream
     Dim nImagenes As New Negocios.Imagen
     Enum tipo
         Nuevo
@@ -13,7 +13,7 @@
     Public Forma As New ConsultarEmpresa
 
     Private Sub GuardarEmpresa()
-        Dim ms1 As New System.IO.MemoryStream
+
         Try
             Dim oNegocio As New Negocios.Empresa
             Dim camposVacios As String = ""
@@ -22,6 +22,7 @@
                     If Not ValidarCampos(camposVacios) Then Exit Sub
                     If oNegocio.InsertarEmpresaImagen(llenarEntidades, ms1) = True Then
                         MessageBox.Show("Los datos han sido guardados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        CType(Owner, ConsultarEmpresa).Cargar()
                         LimpiarCampos()
                     Else
                         MessageBox.Show("No se han podido guardar los datos solicitados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -123,7 +124,7 @@
         eEmpresa.Giro = Me.txtGiro.Text
         eEmpresa.Telefono = Me.txtTelefono.Text
         eEmpresa.Estatus = Me.ceActiva.Checked
-        Dim ms1 As New System.IO.MemoryStream
+
         peLogotipo.BackgroundImage.Save(ms1, System.Drawing.Imaging.ImageFormat.Jpeg)
         Return eEmpresa
     End Function
@@ -148,7 +149,7 @@
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         GuardarEmpresa()
         Try
-            Dim ms1 As New System.IO.MemoryStream
+
             peLogotipo.BackgroundImage.Save(ms1, System.Drawing.Imaging.ImageFormat.Jpeg)
             nImagenes.InsertarImagen(ms1, _IdEmpresa)
         Catch ex As Exception
