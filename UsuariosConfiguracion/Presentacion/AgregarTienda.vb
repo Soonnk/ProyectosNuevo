@@ -13,7 +13,6 @@ Public Class AgregarTienda
         CargarEmpresas()
         CargarDB()
         CargarAlmacen()
-
         TipoReporte()
     End Sub
 
@@ -24,7 +23,7 @@ Public Class AgregarTienda
             dt = nEmpresa.Cargar
             txtEmpresa.Properties.DataSource = dt
         Catch ex As Exception
-
+            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -44,7 +43,7 @@ Public Class AgregarTienda
         Try
             Me.txtAlmacen.Properties.DataSource = oNegocioEmpresa.CargarAlmacen
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             oNegocioEmpresa = Nothing
         End Try
@@ -56,13 +55,11 @@ Public Class AgregarTienda
             'If Not txtFolio.EditValue Is Nothing Then Exit Sub
             Me.txtFolio.Properties.DataSource = oNegocioEmpresa.CargarFolioAlmacen(txtAlmacen.EditValue)
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             oNegocioEmpresa = Nothing
         End Try
     End Sub
-
-
 
     Public Sub TipoReporte()
         Try
@@ -116,7 +113,6 @@ Public Class AgregarTienda
                         MessageBox.Show("No se han podido modificar los datos solicitados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End If
             End Select
-
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         Finally
@@ -272,7 +268,7 @@ Public Class AgregarTienda
             cmbPrecioMinV.EditValue = row("PrecioMinimoVenta")
             txtEmpresa.EditValue = row("Empresa")
         Catch ex As Exception
-
+            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -288,6 +284,7 @@ Public Class AgregarTienda
                 frmEditar.ShowDialog()
             End If
         Catch ex As Exception
+            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 

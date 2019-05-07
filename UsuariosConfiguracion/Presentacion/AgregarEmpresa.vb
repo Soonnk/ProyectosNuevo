@@ -3,7 +3,7 @@
     Private _mdiPrincipal As mdiPrincipal
     Public _IdEmpresa As Integer
     Dim ruta As String
-
+    Dim ms1 As New System.IO.MemoryStream
     Dim nImagenes As New Negocios.Imagen
     Enum tipo
         Nuevo
@@ -19,8 +19,9 @@
             Select Case modo
                 Case tipo.Nuevo
                     If Not ValidarCampos(camposVacios) Then Exit Sub
-                    If oNegocio.InsertarEmpresa(llenarEntidades) = True Then
+                    If oNegocio.InsertarEmpresaImagen(llenarEntidades, ms1) = True Then
                         MessageBox.Show("Los datos han sido guardados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        CType(Owner, ConsultarEmpresa).Cargar()
                         LimpiarCampos()
                     Else
                         MessageBox.Show("No se han podido guardar los datos solicitados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -59,7 +60,7 @@
                 Return True
             End If
         Catch ex As Exception
-
+            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Function
 
@@ -74,6 +75,7 @@
         txtGiro.EditValue = ""
         txtTelefono.EditValue = ""
         ceActiva.Checked = False
+        peLogotipo.EditValue = Nothing
     End Sub
     Public Sub Cargar()
         Try
@@ -122,7 +124,7 @@
         eEmpresa.Giro = Me.txtGiro.Text
         eEmpresa.Telefono = Me.txtTelefono.Text
         eEmpresa.Estatus = Me.ceActiva.Checked
-        _IdEmpresa = eEmpresa.OID
+        peLogotipo.BackgroundImage.Save(ms1, System.Drawing.Imaging.ImageFormat.Jpeg)
         Return eEmpresa
     End Function
 
@@ -139,7 +141,6 @@
         eEmpresa.Giro = Me.txtGiro.Text
         eEmpresa.Telefono = Me.txtTelefono.Text
         eEmpresa.Estatus = Me.ceActiva.Checked
-
         Return eEmpresa
     End Function
 
@@ -147,11 +148,10 @@
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         GuardarEmpresa()
         Try
-            Dim ms1 As New System.IO.MemoryStream
             peLogotipo.BackgroundImage.Save(ms1, System.Drawing.Imaging.ImageFormat.Jpeg)
             nImagenes.InsertarImagen(ms1, _IdEmpresa)
         Catch ex As Exception
-
+            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -172,8 +172,9 @@
             txtGiro.EditValue = row("Giro")
             txtTelefono.EditValue = row("Telefono")
             ceActiva.Checked = row("activo")
+            peLogotipo.EditValue = row("Logotipo")
         Catch ex As Exception
-
+            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -203,19 +204,5 @@
             MessageBox.Show(ex.Message)
         End Try
     End Sub
-
-    'Private Sub frmImagen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-    '    Dim dt As New DataTable
-    '    dt = nImagenes.CargarImagen
-    '    If dt.Rows.Count > 0 Then
-    '        Dim ms As New System.IO.MemoryStream()
-    '        Dim imageBuffer() As Byte = CType(dt.Rows(0).Item("Imagen"), Byte())
-    '        ms = New System.IO.MemoryStream(imageBuffer)
-    '        peLogotipo.BackgroundImage = Nothing
-    '        peLogotipo.Image = Image.FromStream(ms)
-    '        peLogotipo.BackgroundImageLayout = ImageLayout.Stretch
-    '    End If
-    'End Sub
-
 
 End Class

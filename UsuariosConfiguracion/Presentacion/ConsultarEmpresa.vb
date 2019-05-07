@@ -7,7 +7,6 @@
             If Me.ParentForm Is Nothing Then
                 Return Nothing
             End If
-
             Return TryCast(Me.ParentForm, mdiPrincipal)
         End Get
     End Property
@@ -32,6 +31,7 @@
                 frmEditar.ShowDialog()
             End If
         Catch ex As Exception
+            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
