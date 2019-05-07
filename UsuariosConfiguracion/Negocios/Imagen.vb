@@ -1,9 +1,9 @@
 ﻿Public Class Imagen
     Dim dImagenes As New Datos.Imagen
-    Public Function InsertarImagen(ByRef ms1 As System.IO.MemoryStream) As Boolean
+    Public Function InsertarImagen(ByRef ms1 As System.IO.MemoryStream, ByVal id As Integer) As Boolean
         Try
 
-            Return dImagenes.InsertarImagen(ms1)
+            Return dImagenes.InsertarImagen(ms1, id)
         Catch ex As Exception
             Return Nothing
         End Try
