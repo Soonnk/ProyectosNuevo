@@ -76,6 +76,7 @@
         txtGiro.EditValue = ""
         txtTelefono.EditValue = ""
         ceActiva.Checked = False
+        peLogotipo.EditValue = Nothing
     End Sub
     Public Sub Cargar()
         Try
