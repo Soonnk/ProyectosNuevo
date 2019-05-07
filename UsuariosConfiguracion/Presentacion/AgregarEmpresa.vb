@@ -13,7 +13,6 @@
     Public Forma As New ConsultarEmpresa
 
     Private Sub GuardarEmpresa()
-
         Try
             Dim oNegocio As New Negocios.Empresa
             Dim camposVacios As String = ""
@@ -61,7 +60,7 @@
                 Return True
             End If
         Catch ex As Exception
-
+            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Function
 
@@ -125,7 +124,6 @@
         eEmpresa.Giro = Me.txtGiro.Text
         eEmpresa.Telefono = Me.txtTelefono.Text
         eEmpresa.Estatus = Me.ceActiva.Checked
-
         peLogotipo.BackgroundImage.Save(ms1, System.Drawing.Imaging.ImageFormat.Jpeg)
         Return eEmpresa
     End Function
@@ -150,11 +148,10 @@
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         GuardarEmpresa()
         Try
-
             peLogotipo.BackgroundImage.Save(ms1, System.Drawing.Imaging.ImageFormat.Jpeg)
             nImagenes.InsertarImagen(ms1, _IdEmpresa)
         Catch ex As Exception
-
+            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -177,7 +174,7 @@
             ceActiva.Checked = row("activo")
             peLogotipo.EditValue = row("Logotipo")
         Catch ex As Exception
-
+            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -207,19 +204,5 @@
             MessageBox.Show(ex.Message)
         End Try
     End Sub
-
-    'Private Sub frmImagen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-    '    Dim dt As New DataTable
-    '    dt = nImagenes.CargarImagen
-    '    If dt.Rows.Count > 0 Then
-    '        Dim ms As New System.IO.MemoryStream()
-    '        Dim imageBuffer() As Byte = CType(dt.Rows(0).Item("Imagen"), Byte())
-    '        ms = New System.IO.MemoryStream(imageBuffer)
-    '        peLogotipo.BackgroundImage = Nothing
-    '        peLogotipo.Image = Image.FromStream(ms)
-    '        peLogotipo.BackgroundImageLayout = ImageLayout.Stretch
-    '    End If
-    'End Sub
-
 
 End Class

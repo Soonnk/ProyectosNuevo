@@ -20,7 +20,7 @@
             dt = nEmpresa.Cargar
             glEmpresa.Properties.DataSource = dt
         Catch ex As Exception
-
+            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -104,7 +104,6 @@
         eSistema.Serie = Me.txtSerie.Text
         eSistema.Activacion = Me.txtActivacion.Text
         eSistema.DB = ""
-
         Return eSistema
     End Function
 
@@ -117,7 +116,6 @@
         eSistema.Serie = Me.txtSerie.Text
         eSistema.Activacion = Me.txtActivacion.Text
         eSistema.DB = ""
-
         Return eSistema
     End Function
 
@@ -132,7 +130,7 @@
             txtActivacion.EditValue = row("Activacion")
             glEmpresa.EditValue = row("Empresa")
         Catch ex As Exception
-
+            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 

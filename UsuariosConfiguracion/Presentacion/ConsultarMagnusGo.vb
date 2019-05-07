@@ -42,6 +42,7 @@
                 frmEditar.Show()
             End If
         Catch ex As Exception
+            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
