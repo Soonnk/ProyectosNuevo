@@ -137,6 +137,7 @@
     Private Sub btnEditarSuperior_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnEditarSuperior.ItemClick
         Try
             Dim frmActivo As Form = Me.ActiveMdiChild
+
             If frmActivo Is Nothing Then Return
             Select Case RibbonControl1.SelectedPage.Text
                 Case "Configuración"

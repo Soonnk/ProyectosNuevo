@@ -51,11 +51,11 @@
             Query = "INSERT INTO Tiendas(OID,Descripcion,
                                         idAlmacen,idFolio,
                                         BasePuntoVenta,
-					                    PrecioMinimoVenta) VALUES
+					                    PrecioMinimoVenta,Empresa) VALUES
                                         (" & _OID & ",'" & tienda.Descripcion & "',
                                         '" & tienda.IdAlmacen & "','" & tienda.IdFolio & "',
                                         '" & tienda.BasePuntoVenta & "',
-                                        '" & tienda.PrecioMinimoVenta & "')"
+                                        '" & tienda.PrecioMinimoVenta & "','" & tienda.Empresa & "')"
 
             Return obj.commandSQL(Query)
         Catch ex As Exception

@@ -10,10 +10,22 @@ Public Class AgregarTienda
     End Enum
 
     Private Sub AgregarTienda_Load(sender As Object, e As EventArgs) Handles Me.Load
+        CargarEmpresas()
         CargarDB()
         CargarAlmacen()
 
         TipoReporte()
+    End Sub
+
+    Private Sub CargarEmpresas()
+        Dim dt As New DataTable
+        Dim nEmpresa As New Negocios.Empresa
+        Try
+            dt = nEmpresa.Cargar
+            txtEmpresa.Properties.DataSource = dt
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Public Sub CargarDB()
@@ -158,6 +170,7 @@ Public Class AgregarTienda
         eTienda.IdFolio = Me.txtFolio.Text
         eTienda.BasePuntoVenta = Me.txtBasePV.Text
         eTienda.PrecioMinimoVenta = Me.cmbPrecioMinV.Text
+        eTienda.Empresa = Me.txtEmpresa.EditValue
         Return eTienda
     End Function
 
@@ -169,6 +182,7 @@ Public Class AgregarTienda
         eTienda.IdAlmacen = Me.txtAlmacen.EditValue
         eTienda.IdFolio = Me.txtFolio.EditValue
         eTienda.PrecioMinimoVenta = Me.cmbPrecioMinV.EditValue
+        eTienda.Empresa = Me.txtEmpresa.EditValue
         Return eTienda
     End Function
 
@@ -190,6 +204,7 @@ Public Class AgregarTienda
         cmbPrecioMinV.EditValue = ""
         txtNombreReporte.EditValue = ""
         txtTipoReporte.EditValue = ""
+        txtEmpresa.EditValue = ""
     End Sub
 
     'Public Sub LimpiarCamposReporte()
@@ -222,6 +237,7 @@ Public Class AgregarTienda
             Me.txtAlmacen.Text = oEntidad.IdAlmacen
             Me.txtFolio.Text = oEntidad.IdFolio
             Me.cmbPrecioMinV.Text = oEntidad.PrecioMinimoVenta
+            Me.txtEmpresa.Text = oEntidad.Empresa
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         Finally
@@ -237,6 +253,7 @@ Public Class AgregarTienda
             txtAlmacen.EditValue = row("idAlmacen")
             txtFolio.EditValue = row("idFolio")
             cmbPrecioMinV.EditValue = row("PrecioMinimoVenta")
+            txtEmpresa.EditValue = row("Empresa")
         Catch ex As Exception
 
         End Try
