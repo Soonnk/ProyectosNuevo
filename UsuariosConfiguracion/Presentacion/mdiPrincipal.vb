@@ -157,6 +157,8 @@
                             frmEditar.modo = ConsultarMagnusGo.tipo.Editar
                             frmEditar = frmActivo
                             frmEditar.ConsultarMagnusGo()
+
+
                     End Select
                 Case "Usuarios"
                     Select Case frmActivo.Name

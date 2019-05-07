@@ -39,7 +39,7 @@
                 frmEditar.modo = AgregarTienda.tipo.Editar
                 frmEditar.Text = "Editar Tienda"
                 frmEditar.consultarTienda(GridView1.GetFocusedDataRow)
-                frmEditar.ShowDialog()
+                frmEditar.Show()
             End If
         Catch ex As Exception
         End Try

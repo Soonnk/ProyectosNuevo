@@ -9,11 +9,7 @@
         Nuevo
         Editar
     End Enum
-    Public TipoForma As enuTipoForma
-    Public Enum enuTipoForma
-        Nuevo
-        Editar
-    End Enum
+
     Public Forma As New ConsultarEmpresa
 
     Private Sub GuardarEmpresa()
@@ -126,7 +122,7 @@
         eEmpresa.Giro = Me.txtGiro.Text
         eEmpresa.Telefono = Me.txtTelefono.Text
         eEmpresa.Estatus = Me.ceActiva.Checked
-
+        _IdEmpresa = eEmpresa.OID
         Return eEmpresa
     End Function
 
@@ -153,7 +149,7 @@
         Try
             Dim ms1 As New System.IO.MemoryStream
             peLogotipo.BackgroundImage.Save(ms1, System.Drawing.Imaging.ImageFormat.Jpeg)
-            nImagenes.InsertarImagen(ms1)
+            nImagenes.InsertarImagen(ms1, _IdEmpresa)
         Catch ex As Exception
 
         End Try
@@ -208,9 +204,18 @@
         End Try
     End Sub
 
-    Private Sub peLogotipo_EditValueChanged(sender As Object, e As EventArgs) Handles peLogotipo.EditValueChanged
-
-    End Sub
+    'Private Sub frmImagen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    '    Dim dt As New DataTable
+    '    dt = nImagenes.CargarImagen
+    '    If dt.Rows.Count > 0 Then
+    '        Dim ms As New System.IO.MemoryStream()
+    '        Dim imageBuffer() As Byte = CType(dt.Rows(0).Item("Imagen"), Byte())
+    '        ms = New System.IO.MemoryStream(imageBuffer)
+    '        peLogotipo.BackgroundImage = Nothing
+    '        peLogotipo.Image = Image.FromStream(ms)
+    '        peLogotipo.BackgroundImageLayout = ImageLayout.Stretch
+    '    End If
+    'End Sub
 
 
 End Class

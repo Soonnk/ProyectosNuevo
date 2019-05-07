@@ -259,6 +259,21 @@ Public Class AgregarTienda
         End Try
     End Sub
 
+    Public Sub ConsultarMagnusGo()
+        Dim obj As New ConsultarMagnusGo
+        Try
+            Dim row As DataRow = obj.GridView1.GetDataRow(obj.GridView1.FocusedRowHandle)
+            Dim frmEditar As New AgregarTienda
+            If Not row Is Nothing Then
+                frmEditar.modo = AgregarTienda.tipo.Editar
+                frmEditar.Text = "Editar Tienda"
+                frmEditar.consultarTienda(obj.GridView1.GetFocusedDataRow)
+                frmEditar.ShowDialog()
+            End If
+        Catch ex As Exception
+        End Try
+    End Sub
+
     Private Sub txtFolio_QueryPopUp(sender As Object, e As CancelEventArgs) Handles txtFolio.QueryPopUp
         CargarFolioAlmacen()
     End Sub
