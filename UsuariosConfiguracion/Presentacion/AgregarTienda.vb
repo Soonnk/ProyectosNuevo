@@ -120,6 +120,23 @@ Public Class AgregarTienda
         End Try
     End Sub
 
+    Public Function GeneraObjReporte(ByVal FileBytes() As Byte, ByVal sesion As DevExpress.Xpo.Session) As Entidades.ReportesPuntoVenta
+        Try
+            Dim ReportePV As New Entidades.ReportesPuntoVenta(sesion)
+            If Me.txtTipoReporte.EditValue Is Nothing Then
+                MsgBox("No has capturado un tipo", MsgBoxStyle.Exclamation, "Tiendas")
+            Else
+                ReportePV.Tipo = Me.txtTipoReporte.EditValue
+                ReportePV.Archivo = FileBytes
+                ReportePV.Nombre = Me.txtNombreReporte.EditValue
+                ReportePV.FechaModificacion = Date.Now
+            End If
+            Return ReportePV
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        End Try
+    End Function
     'Pendiente de agregar en capas anteriores
 
     'Private Sub GuardarReporte()
@@ -274,4 +291,20 @@ Public Class AgregarTienda
     Private Sub txtFolio_QueryPopUp(sender As Object, e As CancelEventArgs) Handles txtFolio.QueryPopUp
         CargarFolioAlmacen()
     End Sub
+
+
+    Public Function GetArchivoBytes() As Byte()
+        Try
+            Dim myStream As System.IO.Stream = Nothing
+            If WindowOpen.ShowDialog() = DialogResult.OK Then
+                myStream = WindowOpen.OpenFile()
+            End If
+            Dim FileBytes(CInt(myStream.Length)) As Byte
+            myStream.Read(FileBytes, 0, FileBytes.Length)
+            Return FileBytes
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        End Try
+    End Function
 End Class
