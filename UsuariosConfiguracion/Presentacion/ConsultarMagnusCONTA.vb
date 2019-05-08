@@ -33,7 +33,7 @@
             If Not row Is Nothing Then
                 frmEditar.modo = AgregarMagnusCONTA.tipo.Editar
                 frmEditar.Text = "Editar MagnusCONTA"
-                'frmEditar.consultarTienda(GridView1.GetFocusedDataRow)
+                frmEditar.consultarMagnusCONTA(GridView1.GetFocusedDataRow)
                 frmEditar.Show()
             End If
         Catch ex As Exception
