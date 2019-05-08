@@ -91,4 +91,16 @@ Empresas ON (Configuracion_Conta.Empresa = Empresas.OID) inner join Sistemas ON 
         End Try
     End Function
 
+    Public Function GetDB() As DataTable
+        Try
+            Dim query As String = ""
+            Dim obj As New clsSQL
+            query = "Select name From sys.databases Order By create_date Desc"
+            Return obj.RegresarDatos(query)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        End Try
+    End Function
+
 End Class
