@@ -67,6 +67,10 @@ Partial Class AgregarMagnusCONTA
         Me.LayoutControlItem13 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.CheckEdit6 = New DevExpress.XtraEditors.CheckEdit()
         Me.LayoutControlItem16 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn2 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn3 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn()
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl1.SuspendLayout()
         CType(Me.GroupControl2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -333,7 +337,9 @@ Partial Class AgregarMagnusCONTA
         Me.GridLookUpEdit1.Location = New System.Drawing.Point(73, 50)
         Me.GridLookUpEdit1.Name = "GridLookUpEdit1"
         Me.GridLookUpEdit1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.GridLookUpEdit1.Properties.DisplayMember = "name"
         Me.GridLookUpEdit1.Properties.NullText = ""
+        Me.GridLookUpEdit1.Properties.ValueMember = "name"
         Me.GridLookUpEdit1.Properties.View = Me.GridLookUpEdit1View
         Me.GridLookUpEdit1.Size = New System.Drawing.Size(235, 20)
         Me.GridLookUpEdit1.StyleController = Me.LayoutControl2
@@ -377,7 +383,9 @@ Partial Class AgregarMagnusCONTA
         Me.GridLookUpEdit2.Location = New System.Drawing.Point(73, 2)
         Me.GridLookUpEdit2.Name = "GridLookUpEdit2"
         Me.GridLookUpEdit2.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.GridLookUpEdit2.Properties.DisplayMember = "Nombre"
         Me.GridLookUpEdit2.Properties.NullText = ""
+        Me.GridLookUpEdit2.Properties.ValueMember = "OID"
         Me.GridLookUpEdit2.Properties.View = Me.GridLookUpEdit2View
         Me.GridLookUpEdit2.Size = New System.Drawing.Size(235, 20)
         Me.GridLookUpEdit2.StyleController = Me.LayoutControl2
@@ -394,6 +402,7 @@ Partial Class AgregarMagnusCONTA
         '
         'GridLookUpEdit2View
         '
+        Me.GridLookUpEdit2View.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn2})
         Me.GridLookUpEdit2View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
         Me.GridLookUpEdit2View.Name = "GridLookUpEdit2View"
         Me.GridLookUpEdit2View.OptionsSelection.EnableAppearanceFocusedCell = False
@@ -404,7 +413,9 @@ Partial Class AgregarMagnusCONTA
         Me.GridLookUpEdit3.Location = New System.Drawing.Point(73, 26)
         Me.GridLookUpEdit3.Name = "GridLookUpEdit3"
         Me.GridLookUpEdit3.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.GridLookUpEdit3.Properties.DisplayMember = "Nombre"
         Me.GridLookUpEdit3.Properties.NullText = ""
+        Me.GridLookUpEdit3.Properties.ValueMember = "OID"
         Me.GridLookUpEdit3.Properties.View = Me.GridLookUpEdit3View
         Me.GridLookUpEdit3.Size = New System.Drawing.Size(235, 20)
         Me.GridLookUpEdit3.StyleController = Me.LayoutControl2
@@ -421,6 +432,7 @@ Partial Class AgregarMagnusCONTA
         '
         'GridLookUpEdit3View
         '
+        Me.GridLookUpEdit3View.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn3, Me.GridColumn4})
         Me.GridLookUpEdit3View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
         Me.GridLookUpEdit3View.Name = "GridLookUpEdit3View"
         Me.GridLookUpEdit3View.OptionsSelection.EnableAppearanceFocusedCell = False
@@ -551,6 +563,38 @@ Partial Class AgregarMagnusCONTA
         Me.LayoutControlItem16.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem16.TextVisible = False
         '
+        'GridColumn1
+        '
+        Me.GridColumn1.Caption = "Clave"
+        Me.GridColumn1.FieldName = "OID"
+        Me.GridColumn1.Name = "GridColumn1"
+        Me.GridColumn1.Visible = True
+        Me.GridColumn1.VisibleIndex = 0
+        '
+        'GridColumn2
+        '
+        Me.GridColumn2.Caption = "Empresa"
+        Me.GridColumn2.FieldName = "Nombre"
+        Me.GridColumn2.Name = "GridColumn2"
+        Me.GridColumn2.Visible = True
+        Me.GridColumn2.VisibleIndex = 1
+        '
+        'GridColumn3
+        '
+        Me.GridColumn3.Caption = "Clave"
+        Me.GridColumn3.FieldName = "OID"
+        Me.GridColumn3.Name = "GridColumn3"
+        Me.GridColumn3.Visible = True
+        Me.GridColumn3.VisibleIndex = 0
+        '
+        'GridColumn4
+        '
+        Me.GridColumn4.Caption = "Sistema"
+        Me.GridColumn4.FieldName = "Nombre"
+        Me.GridColumn4.Name = "GridColumn4"
+        Me.GridColumn4.Visible = True
+        Me.GridColumn4.VisibleIndex = 1
+        '
         'AgregarMagnusCONTA
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -658,4 +702,8 @@ Partial Class AgregarMagnusCONTA
     Friend WithEvents GridLookUpEdit2View As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents LayoutControlItem14 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem15 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents GridColumn3 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn4 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn1 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn2 As DevExpress.XtraGrid.Columns.GridColumn
 End Class
