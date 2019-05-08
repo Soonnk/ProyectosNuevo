@@ -175,6 +175,9 @@
     <EmbeddedResource Include="ConsultarEmpresa.resx">
       <DependentUpon>ConsultarEmpresa.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarMagnusCONTA.resx">
+      <DependentUpon>ConsultarMagnusCONTA.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultarMagnusGo.resx">
       <DependentUpon>ConsultarMagnusGo.vb</DependentUpon>
     </EmbeddedResource>
