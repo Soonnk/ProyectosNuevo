@@ -47,14 +47,13 @@
             Query = "INSERT INTO Configuracion_Conta(
                                     OID,DBConta,Empresa,Sistema,Autonumerico,EjercicioUno,ManejarFiscal,
                                     Catalogo2,Reubicaciones,PorSucursal,ConceptoNotaCredito,ContrapartidaCancelacion,
-                                    VistaPrevia) 
-                                    VALUES (" & id & ",'" & eMagnusC.DBConta & "',
+                                    VistaPrevia) VALUES (" & id & ",'" & eMagnusC.DBConta & "',
                                     '" & eMagnusC.Empresa & "','" & eMagnusC.Sistema & "',
                                     '" & eMagnusC.Autonumerico & "','" & eMagnusC.EjercicioUno & "',
                                     '" & eMagnusC.ManejarFiscal & "','" & eMagnusC.Catalogo2 & "',
                                     '" & eMagnusC.Reubicaciones & "','" & eMagnusC.PorSucursal & "',
                                     '" & eMagnusC.ConceptoNotaCredito & "','" & eMagnusC.ContrapartidaCancelacion & "',
-                                    " & eMagnusC.VistaPrevia & ")"
+                                    '" & eMagnusC.VistaPrevia & "')"
 
             Return obj.commandSQL(Query)
         Catch ex As Exception
@@ -82,7 +81,9 @@
         Dim dt As New DataTable
         Dim Query As String
         Try
-            Query = "SELECT Configuracion_Conta.OID, DBConta,Configuracion_Conta.Empresa, Empresas.Nombre as nom, Sistema, Sistemas.Nombre as sis from Configuracion_Conta inner join
+            Query = "SELECT Configuracion_Conta.OID, DBConta,Configuracion_Conta.Empresa,Sistema,Autonumerico, EjercicioUno,
+
+Empresas.Nombre as nom, Sistemas.Nombre as sis from Configuracion_Conta inner join
 Empresas ON (Configuracion_Conta.Empresa = Empresas.OID) inner join Sistemas ON (Configuracion_Conta.Sistema = Sistemas.OID)"
             dt = obj.RegresarDatos(Query)
             Return dt

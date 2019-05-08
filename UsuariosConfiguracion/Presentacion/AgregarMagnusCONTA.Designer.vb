@@ -601,7 +601,12 @@ Partial Class AgregarMagnusCONTA
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(477, 199)
         Me.Controls.Add(Me.LayoutControl1)
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(493, 238)
+        Me.MinimizeBox = False
+        Me.MinimumSize = New System.Drawing.Size(493, 238)
         Me.Name = "AgregarMagnusCONTA"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Nueva"
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LayoutControl1.ResumeLayout(False)
