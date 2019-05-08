@@ -317,7 +317,7 @@ Public Class AgregarTienda
 
     Public Sub AbrirReporte()
         Try
-            Dim CurrentReporte As New Entidades.ReportesPuntoVenta(Me.CurrentTienda.Session)
+            Dim CurrentReporte As New Entidades.ReportesPuntoVenta()
             CurrentReporte = Me.GridViewReportes.GetFocusedRow
             Dim ds As New DsTicket
             Dim stream As New IO.MemoryStream(CurrentReporte.Archivo)
