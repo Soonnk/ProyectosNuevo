@@ -131,12 +131,15 @@
     <Compile Include="ConsultarSistemas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DsTicket.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DsTicket.xsd</DependentUpon>
+    <Compile Include="DsTicket.designer.vb">
+      <DependentUpon>DsTicket.vb</DependentUpon>
     </Compile>
     <Compile Include="DsTicket.vb">
+      <DependentUpon>DsTicket.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsTicket1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
       <DependentUpon>DsTicket.xsd</DependentUpon>
     </Compile>
     <Compile Include="mdiPrincipal.vb">
@@ -203,9 +206,9 @@
       <DependentUpon>DsTicket.xsd</DependentUpon>
     </None>
     <None Include="DsTicket.xsd">
-      <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DsTicket.Designer.vb</LastGenOutput>
+      <LastGenOutput>DsTicket1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
     </None>
     <None Include="DsTicket.xss">
       <DependentUpon>DsTicket.xsd</DependentUpon>

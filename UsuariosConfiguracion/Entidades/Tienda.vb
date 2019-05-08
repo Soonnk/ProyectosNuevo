@@ -18,6 +18,9 @@
     Private _Empresa As Integer
     Private _MuestraExistencia As Boolean
 
+    'Private _NombreReporte As String
+    'Private _TipoReporte As String
+
     Public Sub New()
         Me._OID = 0
         Me._Descripcion = ""
