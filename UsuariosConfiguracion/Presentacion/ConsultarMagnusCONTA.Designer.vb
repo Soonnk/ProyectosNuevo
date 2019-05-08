@@ -28,11 +28,11 @@ Partial Class ConsultarMagnusCONTA
         Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn2 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn3 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn()
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl1.SuspendLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -77,7 +77,7 @@ Partial Class ConsultarMagnusCONTA
         Me.GridColumn1.Name = "GridColumn1"
         Me.GridColumn1.Visible = True
         Me.GridColumn1.VisibleIndex = 0
-        Me.GridColumn1.Width = 42
+        Me.GridColumn1.Width = 60
         '
         'GridColumn2
         '
@@ -86,7 +86,7 @@ Partial Class ConsultarMagnusCONTA
         Me.GridColumn2.Name = "GridColumn2"
         Me.GridColumn2.Visible = True
         Me.GridColumn2.VisibleIndex = 1
-        Me.GridColumn2.Width = 147
+        Me.GridColumn2.Width = 145
         '
         'GridColumn3
         '
@@ -95,16 +95,7 @@ Partial Class ConsultarMagnusCONTA
         Me.GridColumn3.Name = "GridColumn3"
         Me.GridColumn3.Visible = True
         Me.GridColumn3.VisibleIndex = 2
-        Me.GridColumn3.Width = 60
-        '
-        'GridColumn4
-        '
-        Me.GridColumn4.Caption = "Nombre Empresa"
-        Me.GridColumn4.FieldName = "nom"
-        Me.GridColumn4.Name = "GridColumn4"
-        Me.GridColumn4.Visible = True
-        Me.GridColumn4.VisibleIndex = 3
-        Me.GridColumn4.Width = 182
+        Me.GridColumn3.Width = 55
         '
         'GridColumn5
         '
@@ -113,16 +104,7 @@ Partial Class ConsultarMagnusCONTA
         Me.GridColumn5.Name = "GridColumn5"
         Me.GridColumn5.Visible = True
         Me.GridColumn5.VisibleIndex = 4
-        Me.GridColumn5.Width = 48
-        '
-        'GridColumn6
-        '
-        Me.GridColumn6.Caption = "Nombre Sistema"
-        Me.GridColumn6.FieldName = "sis"
-        Me.GridColumn6.Name = "GridColumn6"
-        Me.GridColumn6.Visible = True
-        Me.GridColumn6.VisibleIndex = 5
-        Me.GridColumn6.Width = 233
+        Me.GridColumn5.Width = 53
         '
         'LayoutControlGroup1
         '
@@ -144,6 +126,24 @@ Partial Class ConsultarMagnusCONTA
         Me.LayoutControlItem1.Size = New System.Drawing.Size(800, 450)
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem1.TextVisible = False
+        '
+        'GridColumn4
+        '
+        Me.GridColumn4.Caption = "Nombre Empresa"
+        Me.GridColumn4.FieldName = "nom"
+        Me.GridColumn4.Name = "GridColumn4"
+        Me.GridColumn4.Visible = True
+        Me.GridColumn4.VisibleIndex = 3
+        Me.GridColumn4.Width = 191
+        '
+        'GridColumn6
+        '
+        Me.GridColumn6.Caption = "Nombre Sistema"
+        Me.GridColumn6.FieldName = "sis"
+        Me.GridColumn6.Name = "GridColumn6"
+        Me.GridColumn6.Visible = True
+        Me.GridColumn6.VisibleIndex = 5
+        Me.GridColumn6.Width = 208
         '
         'ConsultarMagnusCONTA
         '
@@ -171,7 +171,7 @@ Partial Class ConsultarMagnusCONTA
     Friend WithEvents GridColumn1 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn2 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn3 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents GridColumn4 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn5 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn4 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn6 As DevExpress.XtraGrid.Columns.GridColumn
 End Class

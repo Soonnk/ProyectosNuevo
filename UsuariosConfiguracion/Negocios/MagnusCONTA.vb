@@ -19,4 +19,13 @@
     Public Function EditarMagnusCONTA(ByVal entMagnusC As Entidades.MagnusCONTA) As Boolean
         Return oMagnusConta.EditarMagnusCONTA(entMagnusC)
     End Function
+
+    Public Function GetDB() As DataTable
+        Try
+            Return oMagnusConta.GetDB
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        End Try
+    End Function
 End Class
