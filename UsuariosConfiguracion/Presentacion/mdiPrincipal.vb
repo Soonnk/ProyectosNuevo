@@ -20,6 +20,15 @@
         End Get
     End Property
 
+    Private ReadOnly Property MagnusCONTA() As ConsultarMagnusCONTA
+        Get
+            If Me.ActiveMdiChild Is Nothing Then
+                Return Nothing
+            End If
+            Return TryCast(Me.ActiveMdiChild, ConsultarMagnusCONTA)
+        End Get
+    End Property
+
 
     Private Sub btnEmpresas_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnEmpresas.ItemClick
         Try
@@ -68,13 +77,13 @@
 
     Private Sub btnMagnusCONTA_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnMagnusCONTA.ItemClick
         Try
-            'Dim f As ConsultarMagnusCONTA = BuscarFormulario(Me.RibbonControl1.Pages.Item(0).Tag, Me.RibbonControl1.Pages.Item(0).Groups(1).Tag, Me.RibbonControl1.Pages.Item(0).Groups(1).ItemLinks(1).Item.Tag)
-            'If Object.Equals(f, Nothing) Then
-            '    Dim frmSistemas As New ConsultarSistemas
-            '    frmSistemas.MdiParent = Me
-            '    frmSistemas.Show()
-            'Else : f.Activate
-            'End If
+            Dim f As ConsultarMagnusCONTA = BuscarFormulario(Me.RibbonControl1.Pages.Item(0).Tag, Me.RibbonControl1.Pages.Item(0).Groups(1).Tag, Me.RibbonControl1.Pages.Item(0).Groups(1).ItemLinks(1).Item.Tag)
+            If Object.Equals(f, Nothing) Then
+                Dim frmMagnusCONTA As New ConsultarMagnusCONTA
+                frmMagnusCONTA.MdiParent = Me
+                frmMagnusCONTA.Show()
+            Else : f.Activate
+            End If
         Catch ex As Exception
             MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
@@ -120,6 +129,11 @@
                             frmNuevo.modo = AgregarSistema.tipo.Nuevo
                             frmNuevo.Owner = Sistema
                             frmNuevo.ShowDialog()
+                        Case "ConsultarMagnusCONTA"
+                            Dim frmNuevo As New AgregarMagnusCONTA
+                            frmNuevo.modo = AgregarMagnusCONTA.tipo.Nuevo
+                            frmNuevo.Owner = MagnusConta
+                            frmNuevo.ShowDialog()
                         Case "ConsultarMagnusGo"
                             'Dim frmNuevo As New AgregarTienda
                             oPresentacion.modo = AgregarTienda.tipo.Nuevo
@@ -153,6 +167,11 @@
                             frmEditar.modo = ConsultarSistemas.tipo.Editar
                             frmEditar = frmActivo
                             frmEditar.ConsultarSistema()
+                        Case "ConsultarMagnusCONTA"
+                            Dim frmEditar As New ConsultarMagnusCONTA
+                            frmEditar.modo = ConsultarMagnusCONTA.tipo.Editar
+                            frmEditar = frmActivo
+                            frmEditar.ConsultarMagnusCONTA()
                         Case "ConsultarMagnusGo"
                             Dim frmEditar As New ConsultarMagnusGo
                             frmEditar.modo = ConsultarMagnusGo.tipo.Editar
@@ -196,6 +215,13 @@
                             End Select
                         Case 1200
                             Select Case boton
+                                Case 1220
+                                    For Each f In Me.MdiChildren
+                                        If Object.Equals(f.GetType(), GetType(ConsultarMagnusCONTA)) Then
+                                            exist = True
+                                            Exit For
+                                        End If
+                                    Next
                                 Case 1240
                                     For Each f In Me.MdiChildren
                                         If Object.Equals(f.GetType(), GetType(ConsultarMagnusGo)) Then
