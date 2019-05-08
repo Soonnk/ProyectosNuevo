@@ -166,6 +166,9 @@
     <EmbeddedResource Include="AgregarEmpresa.resx">
       <DependentUpon>AgregarEmpresa.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AgregarMagnusCONTA.resx">
+      <DependentUpon>AgregarMagnusCONTA.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AgregarSistema.resx">
       <DependentUpon>AgregarSistema.vb</DependentUpon>
     </EmbeddedResource>
