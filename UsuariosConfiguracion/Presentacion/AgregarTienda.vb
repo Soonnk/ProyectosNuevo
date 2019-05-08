@@ -8,6 +8,12 @@ Public Class AgregarTienda
         Nuevo
         Editar
     End Enum
+    Public ModoForma As enuModoForma
+
+    Public Enum enuModoForma
+        Nuevo
+        Editar
+    End Enum
 
     Private Sub AgregarTienda_Load(sender As Object, e As EventArgs) Handles Me.Load
         CargarEmpresas()
@@ -120,23 +126,7 @@ Public Class AgregarTienda
         End Try
     End Sub
 
-    Public Function GeneraObjReporte(ByVal FileBytes() As Byte, ByVal sesion As DevExpress.Xpo.Session) As Entidades.ReportesPuntoVenta
-        Try
-            Dim ReportePV As New Entidades.ReportesPuntoVenta(sesion)
-            If Me.txtTipoReporte.EditValue Is Nothing Then
-                MsgBox("No has capturado un tipo", MsgBoxStyle.Exclamation, "Tiendas")
-            Else
-                ReportePV.Tipo = Me.txtTipoReporte.EditValue
-                ReportePV.Archivo = FileBytes
-                ReportePV.Nombre = Me.txtNombreReporte.EditValue
-                ReportePV.FechaModificacion = Date.Now
-            End If
-            Return ReportePV
-        Catch ex As Exception
-            MsgBox(ex.Message)
-            Return Nothing
-        End Try
-    End Function
+
     'Pendiente de agregar en capas anteriores
 
     'Private Sub GuardarReporte()
@@ -220,10 +210,10 @@ Public Class AgregarTienda
         txtEmpresa.EditValue = ""
     End Sub
 
-    'Public Sub LimpiarCamposReporte()
-    '    txtNombreReporte.EditValue = ""
-    '    txtTipoReporte.EditValue = ""
-    'End Sub
+    Public Sub LimpiarCamposReporte()
+        txtNombreReporte.EditValue = ""
+        txtTipoReporte.EditValue = ""
+    End Sub
 
     Public Sub Cargar()
         Try
@@ -290,6 +280,76 @@ Public Class AgregarTienda
 
     Private Sub txtFolio_QueryPopUp(sender As Object, e As CancelEventArgs) Handles txtFolio.QueryPopUp
         CargarFolioAlmacen()
+    End Sub
+
+    Public Function GuardarArchivo() As Boolean
+        Try
+            Select Case ModoForma
+                Case enuModoForma.Editar
+                    Me.CurrentTienda.Reportes.Add(Me.GeneraObjReporte(Me.GetArchivoBytes, Me.CurrentTienda.Session))
+                Case enuModoForma.Nuevo
+                    Me.tienda.Reportes.Add(Me.GeneraObjReporte(Me.GetArchivoBytes, Me.tienda.Session))
+            End Select
+            Me.txtTipoReporte.EditValue = Nothing
+            Me.txtNombreReporte.EditValue = Nothing
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        End Try
+    End Function
+    Public Function GeneraObjReporte(ByVal FileBytes() As Byte) As Entidades.ReportesPuntoVenta
+        Try
+            Dim ReportePV As New Entidades.ReportesPuntoVenta()
+            If Me.txtTipoReporte.EditValue Is Nothing Then
+                MsgBox("No has capturado un tipo", MsgBoxStyle.Exclamation, "Tiendas")
+            Else
+                ReportePV.Tipo = Me.txtTipoReporte.EditValue
+                'ReportePV.Archivo = FileBytes
+                ReportePV.Nombre = Me.txtNombreReporte.EditValue
+                ReportePV.FechaModificacion = Date.Now
+            End If
+            Return ReportePV
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        End Try
+    End Function
+
+    Public Sub AbrirReporte()
+        Try
+            Dim CurrentReporte As New Entidades.ReportesPuntoVenta(Me.CurrentTienda.Session)
+            CurrentReporte = Me.GridViewReportes.GetFocusedRow
+            Dim ds As New DsTicket
+            Dim stream As New IO.MemoryStream(CurrentReporte.Archivo)
+            Dim report As New DevExpress.XtraReports.UI.XtraReport
+            report = DevExpress.XtraReports.UI.XtraReport.FromStream(stream, True)
+            'If CurrentReporte.Nombre = "Ticket" Then
+            '    report.DataSource = ds
+            '    report.DataMember = "Datos"
+            'End If
+            report.ShowRibbonDesigner()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub btnEditarReporte_Click(sender As Object, e As EventArgs) Handles btnEditarReporte.Click
+        Try
+            Me.AbrirReporte()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub btnCargarArchivo_Click(sender As Object, e As EventArgs) Handles btnCargarArchivo.Click
+        Try
+            Dim CurrentReporte As New Entidades.ReportesPuntoVenta(Me.CurrentTienda.Session)
+            CurrentReporte = Me.GridViewReportes.GetFocusedRow
+            CurrentReporte.Archivo = Me.GetArchivoBytes
+            CurrentReporte.FechaModificacion = Date.Now
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 
 

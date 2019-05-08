@@ -25,8 +25,8 @@ Partial Class AgregarTienda
         Me.LayoutControl1 = New DevExpress.XtraLayout.LayoutControl()
         Me.GroupControl3 = New DevExpress.XtraEditors.GroupControl()
         Me.LayoutControl4 = New DevExpress.XtraLayout.LayoutControl()
-        Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
+        Me.btnCargarArchivo = New DevExpress.XtraEditors.SimpleButton()
+        Me.btnEditarReporte = New DevExpress.XtraEditors.SimpleButton()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -152,8 +152,8 @@ Partial Class AgregarTienda
         '
         'LayoutControl4
         '
-        Me.LayoutControl4.Controls.Add(Me.SimpleButton2)
-        Me.LayoutControl4.Controls.Add(Me.SimpleButton1)
+        Me.LayoutControl4.Controls.Add(Me.btnCargarArchivo)
+        Me.LayoutControl4.Controls.Add(Me.btnEditarReporte)
         Me.LayoutControl4.Controls.Add(Me.GridControl1)
         Me.LayoutControl4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.LayoutControl4.Location = New System.Drawing.Point(2, 20)
@@ -163,23 +163,23 @@ Partial Class AgregarTienda
         Me.LayoutControl4.TabIndex = 0
         Me.LayoutControl4.Text = "LayoutControl4"
         '
-        'SimpleButton2
+        'btnCargarArchivo
         '
-        Me.SimpleButton2.Location = New System.Drawing.Point(588, 30)
-        Me.SimpleButton2.Name = "SimpleButton2"
-        Me.SimpleButton2.Size = New System.Drawing.Size(86, 22)
-        Me.SimpleButton2.StyleController = Me.LayoutControl4
-        Me.SimpleButton2.TabIndex = 6
-        Me.SimpleButton2.Text = "Cargar Archivo"
+        Me.btnCargarArchivo.Location = New System.Drawing.Point(588, 30)
+        Me.btnCargarArchivo.Name = "btnCargarArchivo"
+        Me.btnCargarArchivo.Size = New System.Drawing.Size(86, 22)
+        Me.btnCargarArchivo.StyleController = Me.LayoutControl4
+        Me.btnCargarArchivo.TabIndex = 6
+        Me.btnCargarArchivo.Text = "Cargar Archivo"
         '
-        'SimpleButton1
+        'btnEditarReporte
         '
-        Me.SimpleButton1.Location = New System.Drawing.Point(588, 4)
-        Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(86, 22)
-        Me.SimpleButton1.StyleController = Me.LayoutControl4
-        Me.SimpleButton1.TabIndex = 5
-        Me.SimpleButton1.Text = "Editar"
+        Me.btnEditarReporte.Location = New System.Drawing.Point(588, 4)
+        Me.btnEditarReporte.Name = "btnEditarReporte"
+        Me.btnEditarReporte.Size = New System.Drawing.Size(86, 22)
+        Me.btnEditarReporte.StyleController = Me.LayoutControl4
+        Me.btnEditarReporte.TabIndex = 5
+        Me.btnEditarReporte.Text = "Editar"
         '
         'GridControl1
         '
@@ -246,7 +246,7 @@ Partial Class AgregarTienda
         '
         'LayoutControlItem12
         '
-        Me.LayoutControlItem12.Control = Me.SimpleButton1
+        Me.LayoutControlItem12.Control = Me.btnEditarReporte
         Me.LayoutControlItem12.Location = New System.Drawing.Point(584, 0)
         Me.LayoutControlItem12.Name = "LayoutControlItem12"
         Me.LayoutControlItem12.Size = New System.Drawing.Size(90, 26)
@@ -255,7 +255,7 @@ Partial Class AgregarTienda
         '
         'LayoutControlItem13
         '
-        Me.LayoutControlItem13.Control = Me.SimpleButton2
+        Me.LayoutControlItem13.Control = Me.btnCargarArchivo
         Me.LayoutControlItem13.Location = New System.Drawing.Point(584, 26)
         Me.LayoutControlItem13.Name = "LayoutControlItem13"
         Me.LayoutControlItem13.Size = New System.Drawing.Size(90, 297)
@@ -748,8 +748,8 @@ Partial Class AgregarTienda
     Friend WithEvents LayoutControlItem6 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem8 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControl4 As DevExpress.XtraLayout.LayoutControl
-    Friend WithEvents SimpleButton2 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents btnCargarArchivo As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents btnEditarReporte As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents GridControl1 As DevExpress.XtraGrid.GridControl
     Friend WithEvents GridView1 As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents GridColumn1 As DevExpress.XtraGrid.Columns.GridColumn
