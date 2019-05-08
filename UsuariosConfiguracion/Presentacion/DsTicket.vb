@@ -5,7 +5,7 @@
         End Sub
 
         Private Sub TicketDataTable_ColumnChanging(sender As Object, e As DataColumnChangeEventArgs) Handles Me.ColumnChanging
-            If (e.Column.ColumnName = Me.PoblaciónColumn.ColumnName) Then
+            If (e.Column.ColumnName = Me.PoblacionColumn.ColumnName) Then
                 'Agregar código de usuario aquí
             End If
 

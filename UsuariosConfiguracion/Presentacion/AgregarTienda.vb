@@ -286,9 +286,9 @@ Public Class AgregarTienda
         Try
             Select Case ModoForma
                 Case enuModoForma.Editar
-                    Me.CurrentTienda.Reportes.Add(Me.GeneraObjReporte(Me.GetArchivoBytes, Me.CurrentTienda.Session))
+                   ' Me.CurrentTienda.Reportes.Add(Me.GeneraObjReporte(Me.GetArchivoBytes, Me.CurrentTienda.Session))
                 Case enuModoForma.Nuevo
-                    Me.tienda.Reportes.Add(Me.GeneraObjReporte(Me.GetArchivoBytes, Me.tienda.Session))
+                    'Me.tienda.Reportes.Add(Me.GeneraObjReporte(Me.GetArchivoBytes, Me.tienda.Session))
             End Select
             Me.txtTipoReporte.EditValue = Nothing
             Me.txtNombreReporte.EditValue = Nothing
@@ -317,17 +317,17 @@ Public Class AgregarTienda
 
     Public Sub AbrirReporte()
         Try
-            Dim CurrentReporte As New Entidades.ReportesPuntoVenta(Me.CurrentTienda.Session)
-            CurrentReporte = Me.GridViewReportes.GetFocusedRow
+            ' Dim CurrentReporte As New Entidades.ReportesPuntoVenta(Me.CurrentTienda.Session)
+            'CurrentReporte = Me.GridViewReportes.GetFocusedRow
             Dim ds As New DsTicket
-            Dim stream As New IO.MemoryStream(CurrentReporte.Archivo)
-            Dim report As New DevExpress.XtraReports.UI.XtraReport
-            report = DevExpress.XtraReports.UI.XtraReport.FromStream(stream, True)
+            'Dim stream As New IO.MemoryStream(CurrentReporte.Archivo)
+            'Dim report As New DevExpress.XtraReports.UI.XtraReport
+            'report = DevExpress.XtraReports.UI.XtraReport.FromStream(stream, True)
             'If CurrentReporte.Nombre = "Ticket" Then
             '    report.DataSource = ds
             '    report.DataMember = "Datos"
             'End If
-            report.ShowRibbonDesigner()
+            'report.ShowRibbonDesigner()
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -343,10 +343,10 @@ Public Class AgregarTienda
 
     Private Sub btnCargarArchivo_Click(sender As Object, e As EventArgs) Handles btnCargarArchivo.Click
         Try
-            Dim CurrentReporte As New Entidades.ReportesPuntoVenta(Me.CurrentTienda.Session)
-            CurrentReporte = Me.GridViewReportes.GetFocusedRow
-            CurrentReporte.Archivo = Me.GetArchivoBytes
-            CurrentReporte.FechaModificacion = Date.Now
+            'Dim CurrentReporte As New Entidades.ReportesPuntoVenta(Me.CurrentTienda.Session)
+            'CurrentReporte = Me.GridViewReportes.GetFocusedRow
+            'CurrentReporte.Archivo = Me.GetArchivoBytes
+            'CurrentReporte.FechaModificacion = Date.Now
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -356,9 +356,9 @@ Public Class AgregarTienda
     Public Function GetArchivoBytes() As Byte()
         Try
             Dim myStream As System.IO.Stream = Nothing
-            If WindowOpen.ShowDialog() = DialogResult.OK Then
-                myStream = WindowOpen.OpenFile()
-            End If
+            'If WindowOpen.ShowDialog() = DialogResult.OK Then
+            'myStream = WindowOpen.OpenFile()
+            'End If
             Dim FileBytes(CInt(myStream.Length)) As Byte
             myStream.Read(FileBytes, 0, FileBytes.Length)
             Return FileBytes

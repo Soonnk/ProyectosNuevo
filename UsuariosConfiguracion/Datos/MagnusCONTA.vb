@@ -82,7 +82,7 @@
         Dim dt As New DataTable
         Dim Query As String
         Try
-            Query = "SELECT Configuracion_Conta.OID, DBConta,Configuracion_Conta.Empresa, Empresas.Nombre, Sistema, Sistemas.Nombre as sis from Configuracion_Conta inner join
+            Query = "SELECT Configuracion_Conta.OID, DBConta,Configuracion_Conta.Empresa, Empresas.Nombre as nom, Sistema, Sistemas.Nombre as sis from Configuracion_Conta inner join
 Empresas ON (Configuracion_Conta.Empresa = Empresas.OID) inner join Sistemas ON (Configuracion_Conta.Sistema = Sistemas.OID)"
             dt = obj.RegresarDatos(Query)
             Return dt
