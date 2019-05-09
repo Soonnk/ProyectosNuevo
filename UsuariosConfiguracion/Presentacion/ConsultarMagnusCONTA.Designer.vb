@@ -28,11 +28,11 @@ Partial Class ConsultarMagnusCONTA
         Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn2 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn3 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn()
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl1.SuspendLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -66,6 +66,7 @@ Partial Class ConsultarMagnusCONTA
         Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn2, Me.GridColumn3, Me.GridColumn4, Me.GridColumn5, Me.GridColumn6})
         Me.GridView1.GridControl = Me.GridControl1
         Me.GridView1.Name = "GridView1"
+        Me.GridView1.OptionsBehavior.Editable = False
         Me.GridView1.OptionsView.ShowAutoFilterRow = True
         Me.GridView1.OptionsView.ShowGroupPanel = False
         Me.GridView1.OptionsView.ShowIndicator = False
@@ -97,6 +98,15 @@ Partial Class ConsultarMagnusCONTA
         Me.GridColumn3.VisibleIndex = 2
         Me.GridColumn3.Width = 55
         '
+        'GridColumn4
+        '
+        Me.GridColumn4.Caption = "Nombre Empresa"
+        Me.GridColumn4.FieldName = "nom"
+        Me.GridColumn4.Name = "GridColumn4"
+        Me.GridColumn4.Visible = True
+        Me.GridColumn4.VisibleIndex = 3
+        Me.GridColumn4.Width = 191
+        '
         'GridColumn5
         '
         Me.GridColumn5.Caption = "Sistema"
@@ -105,6 +115,15 @@ Partial Class ConsultarMagnusCONTA
         Me.GridColumn5.Visible = True
         Me.GridColumn5.VisibleIndex = 4
         Me.GridColumn5.Width = 53
+        '
+        'GridColumn6
+        '
+        Me.GridColumn6.Caption = "Nombre Sistema"
+        Me.GridColumn6.FieldName = "sis"
+        Me.GridColumn6.Name = "GridColumn6"
+        Me.GridColumn6.Visible = True
+        Me.GridColumn6.VisibleIndex = 5
+        Me.GridColumn6.Width = 208
         '
         'LayoutControlGroup1
         '
@@ -126,24 +145,6 @@ Partial Class ConsultarMagnusCONTA
         Me.LayoutControlItem1.Size = New System.Drawing.Size(800, 450)
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem1.TextVisible = False
-        '
-        'GridColumn4
-        '
-        Me.GridColumn4.Caption = "Nombre Empresa"
-        Me.GridColumn4.FieldName = "nom"
-        Me.GridColumn4.Name = "GridColumn4"
-        Me.GridColumn4.Visible = True
-        Me.GridColumn4.VisibleIndex = 3
-        Me.GridColumn4.Width = 191
-        '
-        'GridColumn6
-        '
-        Me.GridColumn6.Caption = "Nombre Sistema"
-        Me.GridColumn6.FieldName = "sis"
-        Me.GridColumn6.Name = "GridColumn6"
-        Me.GridColumn6.Visible = True
-        Me.GridColumn6.VisibleIndex = 5
-        Me.GridColumn6.Width = 208
         '
         'ConsultarMagnusCONTA
         '
