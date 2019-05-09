@@ -137,8 +137,8 @@ Empresa, MuestraExistencia, Empresas.Nombre
         Dim dt As New DataTable
         Dim Query As String
         Try
-            Query = "insert ReportesPuntoventa(Nombre, FechaModificacion, Tipo, Archivo, Tienda)values
-            ('" & entReporte.Nombre & "', '" & Format(entReporte.FechaModificacion, "yyyy/MM/dd") & "', '" & entReporte.Tipo & "', '" & entReporte.Archivo & "', " & entReporte.Tienda & ")"
+            'Query = "insert ReportesPuntoventa(Nombre, FechaModificacion, Tipo, Archivo, Tienda)values
+            '('" & entReporte.Nombre & "', '" & Format(entReporte.FechaModificacion, "yyyy/MM/dd") & "', '" & entReporte.Tipo & "', '" & entReporte.Archivo & "', " & entReporte.Tienda & ")"
             Return obj.commandSQL(Query)
 
 
