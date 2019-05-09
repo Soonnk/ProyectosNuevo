@@ -34,7 +34,8 @@
                 frmEditar.modo = AgregarMagnusCONTA.tipo.Editar
                 frmEditar.Text = "Editar MagnusCONTA"
                 frmEditar.consultarMagnusCONTA(GridView1.GetFocusedDataRow)
-                frmEditar.Show()
+                frmEditar.ShowDialog()
+                Cargar()
             End If
         Catch ex As Exception
             MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -44,5 +45,10 @@
     Private Sub ConsultarMagnusCONTA_Load(sender As Object, e As EventArgs) Handles Me.Load
         Cargar()
 
+    End Sub
+
+    Private Sub GridView1_DoubleClick(sender As Object, e As EventArgs) Handles GridView1.DoubleClick
+        ConsultarMagnusCONTA()
+        Cargar()
     End Sub
 End Class

@@ -43,7 +43,7 @@
                 frmEditar.Text = "Editar Sistema"
                 frmEditar.consultarSistema(GridView1.GetFocusedDataRow)
                 frmEditar.ShowDialog()
-
+                Cargar()
             End If
         Catch ex As Exception
             MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)

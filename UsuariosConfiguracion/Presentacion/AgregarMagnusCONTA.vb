@@ -144,8 +144,44 @@
         End Try
     End Sub
 
+    Public Sub Cargar()
+        Try
+            Select Case modo
+                Case tipo.Nuevo
+                    Me.Text = "Agregar MagnusCONTA"
+                Case tipo.Editar
+                    Me.Text = "Editar MagnusConta"
+                    CargarMagnusCONTA()
+            End Select
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Public Sub CargarMagnusCONTA()
+        Dim oNegocio As New Negocios.MagnusCONTA
+        Dim oEntidad As New Entidades.MagnusCONTA
+        Try
+            oEntidad = oNegocio.CargarMagnusCONTA(_IdMagnusC)
+            Me.txtBase.Text = oEntidad.DBConta
+            Me.txtEmpresa.Text = oEntidad.Empresa
+            Me.txtSistema.Text = oEntidad.Sistema
+            Me.txtEjercicioUno.Text = oEntidad.EjercicioUno
+            Me.txtConceptoNotaCredito.Text = oEntidad.ConceptoNotaCredito
+            Me.ceAutonumerico.Checked = oEntidad.Autonumerico
+            Me.ceContrapartidaCancelacion.Checked = oEntidad.ContrapartidaCancelacion
+            Me.ceManejarFiscal.Checked = oEntidad.ManejarFiscal
+            Me.cePorSucursal.Checked = oEntidad.PorSucursal
+            Me.ceReubicaciones.Checked = oEntidad.Reubicaciones
+            Me.ceVistaPrevia.Checked = oEntidad.VistaPrevia
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
     Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
         Guardar()
+
     End Sub
 
     Private Sub SimpleButton2_Click(sender As Object, e As EventArgs) Handles SimpleButton2.Click

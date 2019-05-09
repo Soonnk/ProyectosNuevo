@@ -29,6 +29,7 @@
                 frmEditar.Text = "Editar Empresa"
                 frmEditar.consultarEmpresa(GridView1.GetFocusedDataRow)
                 frmEditar.ShowDialog()
+                Cargar()
             End If
         Catch ex As Exception
             MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
