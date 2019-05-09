@@ -1,5 +1,5 @@
 ﻿Imports System.ComponentModel
-
+'Imports System.
 Public Class AgregarTienda
     Public modo As tipo
     Private _mdiPrincipal As mdiPrincipal
@@ -355,10 +355,13 @@ Public Class AgregarTienda
 
     Public Function GetArchivoBytes() As Byte()
         Try
+            Dim opend As New OpenFileDialog
+            Dim result As New DialogResult
+            result = opend.ShowDialog
             Dim myStream As System.IO.Stream = Nothing
-            'If WindowOpen.ShowDialog() = DialogResult.OK Then
-            '    myStream = WindowOpen.OpenFile()
-            'End If
+            If result = DialogResult.OK Then
+                myStream = opend.OpenFile()
+            End If
             Dim FileBytes(CInt(myStream.Length)) As Byte
             myStream.Read(FileBytes, 0, FileBytes.Length)
             Return FileBytes
@@ -367,4 +370,18 @@ Public Class AgregarTienda
             Return Nothing
         End Try
     End Function
+
+    Private Sub btnGuardarReporte_Click(sender As Object, e As EventArgs) Handles btnGuardarReporte.Click
+        Try
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+
+    Private Sub GuardarArchivo()
+        Dim neg As Negocios.Tienda
+    neg.GeneraObjReporte
+End Sub
 End Class
