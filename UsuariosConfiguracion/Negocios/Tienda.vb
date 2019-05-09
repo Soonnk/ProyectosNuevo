@@ -43,21 +43,11 @@
         End Try
     End Function
 
-    Public Function GeneraObjReporte(ByVal FileBytes() As Byte) As Entidades.ReportesPuntoVenta
-        Try
-            Dim ReportePV As New Entidades.ReportesPuntoVenta()
-            If Me.txtTipoReporte.EditValue Is Nothing Then
-                MsgBox("No has capturado un tipo", MsgBoxStyle.Exclamation, "Tiendas")
-            Else
-                ReportePV.Tipo = Me.txtTipoReporte.EditValue
-                'ReportePV.Archivo = FileBytes
-                ReportePV.Nombre = Me.txtNombreReporte.EditValue
-                ReportePV.FechaModificacion = Date.Now
-            End If
-            Return ReportePV
-        Catch ex As Exception
-            MsgBox(ex.Message)
-            Return Nothing
-        End Try
+    Public Function GuardarReportePuntoVenta(ByVal entReporte As Entidades.ReportesPuntoVenta) As Boolean
+        Return oTienda.GuardarReportePuntoVenta(entReporte)
+    End Function
+
+    Public Function CargarReportePuntoVenta() As DataTable
+        Return oTienda.CargarReportePuntoVenta
     End Function
 End Class

@@ -1,10 +1,20 @@
 ﻿Public Class ReportesPuntoVenta
     Private _OID As Integer
     Private _Tipo As String
-    Private _Archivo As String
+    Private _Archivo As Byte()
     Private _Nombre As String
     Private _FechaModificacion As String
     Private _Tienda As Integer
+
+    Public Sub New()
+        Me._OID = 0
+        Me._Nombre = ""
+        Me._Tipo = ""
+        Me._Archivo = Nothing
+        Me._FechaModificacion = ""
+        Me._Tienda = 0
+    End Sub
+
     Public Property OID() As Integer
         Get
             Return Me._OID
@@ -24,11 +34,11 @@
     End Property
 
 
-    Public Property Archivo() As String
+    Public Property Archivo() As Byte()
         Get
             Return Me._Archivo
         End Get
-        Set(ByVal value As String)
+        Set(ByVal value As Byte())
             _Archivo = value
         End Set
     End Property

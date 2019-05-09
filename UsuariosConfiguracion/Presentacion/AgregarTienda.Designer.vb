@@ -202,6 +202,7 @@ Partial Class AgregarTienda
         'GridColumn1
         '
         Me.GridColumn1.Caption = "Reporte"
+        Me.GridColumn1.FieldName = "Nombre"
         Me.GridColumn1.Name = "GridColumn1"
         Me.GridColumn1.Visible = True
         Me.GridColumn1.VisibleIndex = 0
@@ -210,6 +211,7 @@ Partial Class AgregarTienda
         'GridColumn2
         '
         Me.GridColumn2.Caption = "Fecha de Modificación"
+        Me.GridColumn2.FieldName = "FechaModificacion"
         Me.GridColumn2.Name = "GridColumn2"
         Me.GridColumn2.Visible = True
         Me.GridColumn2.VisibleIndex = 1
@@ -218,6 +220,7 @@ Partial Class AgregarTienda
         'GridColumn3
         '
         Me.GridColumn3.Caption = "Tipo"
+        Me.GridColumn3.FieldName = "Tipo"
         Me.GridColumn3.Name = "GridColumn3"
         Me.GridColumn3.Visible = True
         Me.GridColumn3.VisibleIndex = 2

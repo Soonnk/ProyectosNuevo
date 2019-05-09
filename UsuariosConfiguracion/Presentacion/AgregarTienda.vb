@@ -282,21 +282,22 @@ Public Class AgregarTienda
         CargarFolioAlmacen()
     End Sub
 
-    Public Function GuardarArchivo() As Boolean
-        Try
-            Select Case ModoForma
-                Case enuModoForma.Editar
-                   ' Me.CurrentTienda.Reportes.Add(Me.GeneraObjReporte(Me.GetArchivoBytes, Me.CurrentTienda.Session))
-                Case enuModoForma.Nuevo
-                    ' Me.tienda.Reportes.Add(Me.GeneraObjReporte(Me.GetArchivoBytes, Me.tienda.Session))
-            End Select
-            Me.txtTipoReporte.EditValue = Nothing
-            Me.txtNombreReporte.EditValue = Nothing
-        Catch ex As Exception
-            MsgBox(ex.Message)
-            Return Nothing
-        End Try
-    End Function
+    'Public Function GuardarArchivo() As Boolean
+    '    Try
+    '        Select Case ModoForma
+    '            Case enuModoForma.Editar
+    '                Me.CurrentTienda.Reportes.Add(Me.GeneraObjReporte(Me.GetArchivoBytes, Me.CurrentTienda.Session))
+    '            Case enuModoForma.Nuevo
+    '                Me.tienda.Reportes.Add(Me.GeneraObjReporte(Me.GetArchivoBytes, Me.tienda.Session))
+    '        End Select
+    '        Me.txtTipoReporte.EditValue = Nothing
+    '        Me.txtNombreReporte.EditValue = Nothing
+    '    Catch ex As Exception
+    '        MsgBox(ex.Message)
+    '        Return Nothing
+    '    End Try
+    'End Function
+
     Public Function GeneraObjReporte(ByVal FileBytes() As Byte) As Entidades.ReportesPuntoVenta
         Try
             Dim ReportePV As New Entidades.ReportesPuntoVenta()
@@ -304,7 +305,7 @@ Public Class AgregarTienda
                 MsgBox("No has capturado un tipo", MsgBoxStyle.Exclamation, "Tiendas")
             Else
                 ReportePV.Tipo = Me.txtTipoReporte.EditValue
-                'ReportePV.Archivo = FileBytes
+                ReportePV.Archivo = FileBytes
                 ReportePV.Nombre = Me.txtNombreReporte.EditValue
                 ReportePV.FechaModificacion = Date.Now
             End If
@@ -315,30 +316,30 @@ Public Class AgregarTienda
         End Try
     End Function
 
-    Public Sub AbrirReporte()
-        Try
-            Dim CurrentReporte As New Entidades.ReportesPuntoVenta()
-            'CurrentReporte = Me.GridViewReportes.GetFocusedRow
-            Dim ds As New DsTicket
-            Dim stream As New IO.MemoryStream(CurrentReporte.Archivo)
-            'Dim report As New DevExpress.XtraReports.UI.XtraReport
-            'report = DevExpress.XtraReports.UI.XtraReport.FromStream(stream, True)
-            'If CurrentReporte.Nombre = "Ticket" Then
-            '    report.DataSource = ds
-            '    report.DataMember = "Datos"
-            'End If
-            'report.ShowRibbonDesigner()
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
-    End Sub
+    'Public Sub AbrirReporte()
+    '    Try
+    '        Dim CurrentReporte As New Entidades.ReportesPuntoVenta()
+    '        'CurrentReporte = Me.GridViewReportes.GetFocusedRow
+    '        Dim ds As New DsTicket
+    '        Dim stream As New IO.MemoryStream(CurrentReporte.Archivo)
+    '        'Dim report As New DevExpress.XtraReports.UI.XtraReport
+    '        'report = DevExpress.XtraReports.UI.XtraReport.FromStream(stream, True)
+    '        'If CurrentReporte.Nombre = "Ticket" Then
+    '        '    report.DataSource = ds
+    '        '    report.DataMember = "Datos"
+    '        'End If
+    '        'report.ShowRibbonDesigner()
+    '    Catch ex As Exception
+    '        MsgBox(ex.Message)
+    '    End Try
+    'End Sub
 
     Private Sub btnEditarReporte_Click(sender As Object, e As EventArgs) Handles btnEditarReporte.Click
-        Try
-            Me.AbrirReporte()
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
+        'Try
+        '    Me.AbrirReporte()
+        'Catch ex As Exception
+        '    MsgBox(ex.Message)
+        'End Try
     End Sub
 
     Private Sub btnCargarArchivo_Click(sender As Object, e As EventArgs) Handles btnCargarArchivo.Click
@@ -373,15 +374,43 @@ Public Class AgregarTienda
 
     Private Sub btnGuardarReporte_Click(sender As Object, e As EventArgs) Handles btnGuardarReporte.Click
         Try
-
+            GuardarArchivo()
         Catch ex As Exception
 
         End Try
     End Sub
 
 
-    Private Sub GuardarArchivo()
-        Dim neg As Negocios.Tienda
-    neg.GeneraObjReporte
-End Sub
+    'Private Sub GuardarArchivo()
+    '    Dim neg As New Negocios.Tienda
+    '    If neg.GuardarReportePuntoVenta(GeneraObjReporte()) = True Then
+    '        MessageBox.Show("Reporte guardado")
+    '        CargarReporte()
+    '    End If
+
+    'End Sub
+    Public Function GuardarArchivo() As Boolean
+        Dim nTienda As New Negocios.Tienda
+        Try
+            Select Case ModoForma
+                Case enuModoForma.Editar
+                    'Me.tienda.Reportes.Add(Me.GeneraObjReporte(Me.GetArchivoBytes, Me.tienda.Session))
+                Case enuModoForma.Nuevo
+                    nTienda.GuardarReportePuntoVenta(Me.GeneraObjReporte(GetArchivoBytes()))
+            End Select
+            Me.txtTipoReporte.EditValue = Nothing
+            Me.txtNombreReporte.EditValue = Nothing
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        End Try
+    End Function
+
+    Private Sub CargarReporte()
+        Dim neg As New Negocios.Tienda
+        Dim dt As New DataTable
+
+        dt = neg.CargarReportePuntoVenta
+        GridControl1.DataSource = dt
+    End Sub
 End Class

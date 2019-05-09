@@ -133,7 +133,34 @@ Empresa, MuestraExistencia, Empresas.Nombre
 
         End Try
     End Function
+    Public Function GuardarReportePuntoVenta(ByVal entReporte As Entidades.ReportesPuntoVenta) As Boolean
+        Dim dt As New DataTable
+        Dim Query As String
+        Try
+            Query = "insert ReportesPuntoventa(Nombre, FechaModificacion, Tipo, Archivo, Tienda)values
+            ('" & entReporte.Nombre & "', '" & Format(entReporte.FechaModificacion, "yyyy/MM/dd") & "', '" & entReporte.Tipo & "', '" & entReporte.Archivo & "', " & entReporte.Tienda & ")"
+            Return obj.commandSQL(Query)
 
+
+
+
+
+        Catch ex As Exception
+            MsgBox(ex)
+            Return False
+        End Try
+    End Function
+
+    Public Function CargarReportePuntoVenta() As DataTable
+        Dim Query As String
+        Dim dt As DataTable
+        Try
+            Query = " SELECT * FROM ReportesPuntoVenta"
+            dt = obj.RegresarDatos(Query)
+            Return dt
+
+        Catch ex As Exception
+
+        End Try
+    End Function
 End Class
-
-
