@@ -606,7 +606,7 @@ Partial Class AgregarMagnusCONTA
         Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(493, 238)
         Me.Name = "AgregarMagnusCONTA"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Nueva"
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LayoutControl1.ResumeLayout(False)

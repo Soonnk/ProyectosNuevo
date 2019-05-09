@@ -82,7 +82,7 @@
         Dim Query As String
         Try
             Query = "SELECT Configuracion_Conta.OID, DBConta,Configuracion_Conta.Empresa,Sistema,Autonumerico, EjercicioUno,
-
+ManejarFiscal,Catalogo2,Reubicaciones,PorSucursal,ConceptoNotaCredito,ContrapartidaCancelacion,VistaPrevia,
 Empresas.Nombre as nom, Sistemas.Nombre as sis from Configuracion_Conta inner join
 Empresas ON (Configuracion_Conta.Empresa = Empresas.OID) inner join Sistemas ON (Configuracion_Conta.Sistema = Sistemas.OID)"
             dt = obj.RegresarDatos(Query)
