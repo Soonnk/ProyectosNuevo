@@ -41,7 +41,7 @@
                 frmEditar.consultarTienda(GridView1.GetFocusedDataRow)
                 frmEditar.MdiParent = mdiPrincipal
                 frmEditar.Show()
-                Cargar()
+                
             End If
         Catch ex As Exception
             MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -50,7 +50,7 @@
 
     Private Sub GridControl1_DoubleClick(sender As Object, e As EventArgs) Handles GridControl1.DoubleClick
         ConsultarMagnusGo()
-        Cargar()
+
     End Sub
 
     Private Sub ConsultarMagnusGo_Activated(sender As Object, e As EventArgs) Handles Me.Activated
