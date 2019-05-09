@@ -3,7 +3,7 @@
     Private _Tipo As String
     Private _Archivo As Byte()
     Private _Nombre As String
-    Private _FechaModificacion As String
+    Private _FechaModificacion As Date
     Private _Tienda As Integer
 
     Public Sub New()
@@ -52,11 +52,11 @@
         End Set
     End Property
 
-    Public Property FechaModificacion() As String
+    Public Property FechaModificacion() As Date
         Get
             Return Me._FechaModificacion
         End Get
-        Set(ByVal value As String)
+        Set(ByVal value As Date)
             _FechaModificacion = value
         End Set
     End Property

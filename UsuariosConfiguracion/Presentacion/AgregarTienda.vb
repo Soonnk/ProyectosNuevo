@@ -20,6 +20,14 @@ Public Class AgregarTienda
         CargarDB()
         CargarAlmacen()
         TipoReporte()
+
+        If modo = tipo.Nuevo Then
+            GroupControl2.Enabled = False
+            GroupControl3.Enabled = False
+        Else
+            GroupControl2.Enabled = True
+            GroupControl3.Enabled = True
+        End If
     End Sub
 
     Private Sub CargarEmpresas()
@@ -308,6 +316,7 @@ Public Class AgregarTienda
                 ReportePV.Archivo = FileBytes
                 ReportePV.Nombre = Me.txtNombreReporte.EditValue
                 ReportePV.FechaModificacion = Date.Now
+                ReportePV.Tienda = _IdTienda
             End If
             Return ReportePV
         Catch ex As Exception
