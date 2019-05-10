@@ -6,7 +6,7 @@
     ''' <param name="tabla">Nombre de la tabla a borrar</param>
     ''' <returns>El script de Borado de la columna especificada</returns>
     Public Shared Function DropTable(ByVal tabla As String) As String
-        Return "DROP TABLE IF EXISTS " & tabla & ";"
+        Return "DROP TABLE IF EXISTS [" & tabla & "];"
     End Function
 
     ''' <summary>
@@ -22,9 +22,9 @@
         End If
 
         Dim statement As String
-        statement = "CREATE TABLE " & name & "("
+        statement = "CREATE TABLE [" & name & "]("
         For i = 0 To columns.Count - 1
-            statement += Environment.NewLine & vbTab & columns(i) & " " & columnTypes(i)
+            statement += Environment.NewLine & vbTab & "[" & columns(i) & "] " & columnTypes(i)
             If (i < (columns.Count - 2)) Then
                 statement += ","
             End If
@@ -48,9 +48,9 @@
         End If
 
         Dim statement As String
-        statement = "CREATE TABLE " & name & "("
+        statement = "CREATE TABLE [" & name & "]("
         For i = 0 To columns.Count - 1
-            statement += columns(i) & " " & columnTypes(i) & " " & nullables(i)
+            statement += "[" & columns(i) & "] " & columnTypes(i) & " " & nullables(i)
             If (i < columns.Count - 2) Then
                 statement += ","
             End If
@@ -74,7 +74,7 @@
         tabla = p(0)
         columna = p(1)
 
-        Return "ALTER TABLE " & tabla & " DROP COLUMN " & columna & ";"
+        Return "ALTER TABLE [" & tabla & "] DROP COLUMN [" & columna & "];"
     End Function
 
     ''' <summary>
@@ -91,7 +91,7 @@
         tabla = p(0)
         columna = p(1)
 
-        Return "ALTER TABLE " & tabla & " ADD " & columna & " " & type & ";"
+        Return "ALTER TABLE [" & tabla & "] ADD [" & columna & "] " & type & ";"
     End Function
 
     ''' <summary>
@@ -108,12 +108,12 @@
         tabla = p(0)
         columna = p(1)
 
-        Dim statement = "ALTER TABLE " & tabla & " ADD " & columna & "2 " & type & ";"
+        Dim statement = "ALTER TABLE [" & tabla & "] ADD [" & columna & "tempDiff] " & type & ";"
         statement += Environment.NewLine & "Go"
-        statement += Environment.NewLine & "UPDATE " & tabla & " SET " & columna & "2 = " & columna & ";"
-        statement += Environment.NewLine & "ALTER TABLE " & tabla & " DROP COLUMN " & columna & ";"
+        statement += Environment.NewLine & "UPDATE [" & tabla & "] SET [" & columna & "tempDiff] = [" & columna & "];"
+        statement += Environment.NewLine & "ALTER TABLE [" & tabla & "] DROP COLUMN [" & columna & "];"
         statement += Environment.NewLine & "Go"
-        statement += Environment.NewLine & "EXEC sp_rename '" & name & "2', '" & columna & "', 'COLUMN'"
+        statement += Environment.NewLine & "EXEC sp_rename '" & name & "tempDiff', '" & columna & "', 'COLUMN'"
         statement += Environment.NewLine & "Go"
 
         Return statement
@@ -128,7 +128,7 @@
         tabla = p(0)
         columna = p(1)
 
-        Dim statement = "CREATE INDEX " & indexName & " ON " & tabla & " (" & columna & ");"
+        Dim statement = "CREATE INDEX [" & indexName & "] ON [" & tabla & "] ([" & columna & "]);"
 
         Return statement
     End Function
@@ -142,7 +142,7 @@
         tabla = p(0)
         index = p(1)
 
-        Dim statement = "DROP INDEX " & tabla & "." & index & ";"
+        Dim statement = "DROP INDEX [" & tabla & "].[" & index & "];"
 
         Return statement
     End Function
@@ -164,12 +164,12 @@
 
         name = name.Split(".")(1)
 
-        Dim statement = "ALTER TABLE " & tablaHijo & Environment.NewLine &
+        Dim statement = "ALTER TABLE [" & tablaHijo & "]" & Environment.NewLine &
                         vbTab & "WITH NOCHECK" & Environment.NewLine &
-                        vbTab & "ADD CONSTRAINT " & name & Environment.NewLine &
-                        vbTab & "FOREIGN KEY (" & columnaHijo & ") REFERENCES " & tablaPadre & " (" & columnaPadre & ");" & Environment.NewLine &
-                        "ALTER TABLE " & tablaHijo & Environment.NewLine &
-                        vbTab & "CHECK CONSTRAINT " & name & ";"
+                        vbTab & "ADD CONSTRAINT [" & name & "]" & Environment.NewLine &
+                        vbTab & "FOREIGN KEY ([" & columnaHijo & "]) REFERENCES [" & tablaPadre & "] ([" & columnaPadre & "]);" & Environment.NewLine &
+                        "ALTER TABLE [" & tablaHijo & "]" & Environment.NewLine &
+                        vbTab & "CHECK CONSTRAINT [" & name & "];"
 
         Return statement
     End Function
@@ -183,7 +183,7 @@
         tabla = p(0)
         constraint = p(1)
 
-        Dim statement = "ALTER TABLE " & tabla & " DROP CONSTRAINT " & constraint & ";"
+        Dim statement = "ALTER TABLE [" & tabla & "] DROP CONSTRAINT [" & constraint & "];"
 
         Return statement
     End Function
@@ -197,11 +197,11 @@
         tabla = p(0)
         name = p(1)
 
-        columna = column
+        columna = column.Split(".")(1)
 
-        Dim statement = "ALTER TABLE " & tabla & Environment.NewLine &
-                        vbTab & "ADD CONSTRAINT " & name & Environment.NewLine &
-                        vbTab & "PRIMARY KEY (" & columna & ");" & Environment.NewLine
+        Dim statement = "ALTER TABLE [" & tabla & "]" & Environment.NewLine &
+                        vbTab & "ADD CONSTRAINT [" & name & "]" & Environment.NewLine &
+                        vbTab & "PRIMARY KEY ([" & columna & "]);" & Environment.NewLine
 
         Return statement
     End Function
@@ -215,7 +215,7 @@
         tabla = p(0)
         constraint = p(1)
 
-        Dim statement = "ALTER TABLE " & tabla & " DROP CONSTRAINT " & constraint & ";"
+        Dim statement = "ALTER TABLE [" & tabla & "] DROP CONSTRAINT [" & constraint & "];"
 
         Return statement
     End Function
