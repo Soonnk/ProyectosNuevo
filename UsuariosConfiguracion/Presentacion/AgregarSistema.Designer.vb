@@ -133,6 +133,7 @@ Partial Class AgregarSistema
         '
         Me.txtActivacion.Location = New System.Drawing.Point(64, 108)
         Me.txtActivacion.Name = "txtActivacion"
+        Me.txtActivacion.Properties.MaxLength = 256
         Me.txtActivacion.Size = New System.Drawing.Size(253, 20)
         Me.txtActivacion.StyleController = Me.LayoutControl2
         Me.txtActivacion.TabIndex = 8
@@ -141,6 +142,7 @@ Partial Class AgregarSistema
         '
         Me.txtSerie.Location = New System.Drawing.Point(64, 84)
         Me.txtSerie.Name = "txtSerie"
+        Me.txtSerie.Properties.MaxLength = 256
         Me.txtSerie.Size = New System.Drawing.Size(253, 20)
         Me.txtSerie.StyleController = Me.LayoutControl2
         Me.txtSerie.TabIndex = 7
@@ -149,6 +151,7 @@ Partial Class AgregarSistema
         '
         Me.txtCodigo.Location = New System.Drawing.Point(64, 60)
         Me.txtCodigo.Name = "txtCodigo"
+        Me.txtCodigo.Properties.MaxLength = 256
         Me.txtCodigo.Size = New System.Drawing.Size(253, 20)
         Me.txtCodigo.StyleController = Me.LayoutControl2
         Me.txtCodigo.TabIndex = 6

@@ -6,14 +6,13 @@
         Dim dt As New DataTable
         Dim Query As String
         Try
-            Query = "SELECT * FROM Sistemas"
+            Query = "SELECT * FROM Sistemas "
             dt = obj.RegresarDatos(Query)
             Return dt
         Finally
 
         End Try
     End Function
-
     Public Function CargarSistema(ByRef _OID As Integer) As Entidades.Sistema
         Dim query As String = "SELECT * FROM vista_sistemas WHERE id = " & _OID
         Try
@@ -66,5 +65,16 @@
         Return obj.commandSQL(Query)
     End Function
 
+    Public Function CargarPrueba()
+        Dim dt As New DataTable
+        Dim Query As String
+        Try
+            Query = "SELECT Sistemas.OID, Sistemas.Nombre, Codigo, Serie, Activacion, DB, Empresa, Empresas.Nombre as nom FROM Sistemas inner join Empresas on (Sistemas.Empresa = Empresas.OID)"
+            dt = obj.RegresarDatos(Query)
+            Return dt
+        Finally
+
+        End Try
+    End Function
 
 End Class

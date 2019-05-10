@@ -1,5 +1,5 @@
-﻿Public Class ConsultarSistemas
-    Dim onegocio As New Negocios.Sistema
+﻿Public Class ConsultarMagnusCONTA
+    Dim onegocio As New Negocios.MagnusCONTA
     Public modo As tipo
     Enum tipo
         Nuevo
@@ -16,10 +16,6 @@
         End Get
     End Property
 
-    Private Sub ConsultarSistemas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.mdiPrincipal1.activo = "sistemas"
-        Cargar()
-    End Sub
     Public Sub Cargar()
         Dim dt As New DataTable
         Try
@@ -29,19 +25,15 @@
             MessageBox.Show(ex.Message)
         End Try
     End Sub
-    Private Sub GridControl1_DoubleClick(sender As Object, e As EventArgs) Handles GridControl1.DoubleClick
-        ConsultarSistema()
-        Cargar()
-    End Sub
 
-    Public Sub ConsultarSistema()
+    Public Sub ConsultarMagnusCONTA()
         Try
             Dim row As DataRow = GridView1.GetDataRow(GridView1.FocusedRowHandle)
-            Dim frmEditar As New AgregarSistema
+            Dim frmEditar As New AgregarMagnusCONTA
             If Not row Is Nothing Then
-                frmEditar.modo = AgregarSistema.tipo.Editar
-                frmEditar.Text = "Editar Sistema"
-                frmEditar.consultarSistema(GridView1.GetFocusedDataRow)
+                frmEditar.modo = AgregarMagnusCONTA.tipo.Editar
+                frmEditar.Text = "Editar MagnusCONTA"
+                frmEditar.consultarMagnusCONTA(GridView1.GetFocusedDataRow)
                 frmEditar.ShowDialog()
                 Cargar()
             End If
@@ -50,4 +42,13 @@
         End Try
     End Sub
 
+    Private Sub ConsultarMagnusCONTA_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Cargar()
+
+    End Sub
+
+    Private Sub GridView1_DoubleClick(sender As Object, e As EventArgs) Handles GridView1.DoubleClick
+        ConsultarMagnusCONTA()
+        Cargar()
+    End Sub
 End Class

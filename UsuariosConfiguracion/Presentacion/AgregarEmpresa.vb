@@ -3,15 +3,13 @@
     Private _mdiPrincipal As mdiPrincipal
     Public _IdEmpresa As Integer
     Dim ruta As String
+    Dim ms1 As New System.IO.MemoryStream
+    Dim nImagenes As New Negocios.Imagen
     Enum tipo
         Nuevo
         Editar
     End Enum
-    Public TipoForma As enuTipoForma
-    Public Enum enuTipoForma
-        Nuevo
-        Editar
-    End Enum
+
     Public Forma As New ConsultarEmpresa
 
     Private Sub GuardarEmpresa()
@@ -21,7 +19,7 @@
             Select Case modo
                 Case tipo.Nuevo
                     If Not ValidarCampos(camposVacios) Then Exit Sub
-                    If oNegocio.InsertarEmpresa(llenarEntidades) = True Then
+                    If oNegocio.InsertarEmpresaImagen(llenarEntidades, ms1) = True Then
                         MessageBox.Show("Los datos han sido guardados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
                         CType(Owner, ConsultarEmpresa).Cargar()
                         LimpiarCampos()
@@ -62,7 +60,7 @@
                 Return True
             End If
         Catch ex As Exception
-
+            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Function
 
@@ -77,6 +75,7 @@
         txtGiro.EditValue = ""
         txtTelefono.EditValue = ""
         ceActiva.Checked = False
+        peLogotipo.EditValue = Nothing
     End Sub
     Public Sub Cargar()
         Try
@@ -125,7 +124,7 @@
         eEmpresa.Giro = Me.txtGiro.Text
         eEmpresa.Telefono = Me.txtTelefono.Text
         eEmpresa.Estatus = Me.ceActiva.Checked
-
+        peLogotipo.BackgroundImage.Save(ms1, System.Drawing.Imaging.ImageFormat.Jpeg)
         Return eEmpresa
     End Function
 
@@ -142,13 +141,18 @@
         eEmpresa.Giro = Me.txtGiro.Text
         eEmpresa.Telefono = Me.txtTelefono.Text
         eEmpresa.Estatus = Me.ceActiva.Checked
-
         Return eEmpresa
     End Function
 
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         GuardarEmpresa()
+        Try
+            peLogotipo.BackgroundImage.Save(ms1, System.Drawing.Imaging.ImageFormat.Jpeg)
+            nImagenes.InsertarImagen(ms1, _IdEmpresa)
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
@@ -168,26 +172,37 @@
             txtGiro.EditValue = row("Giro")
             txtTelefono.EditValue = row("Telefono")
             ceActiva.Checked = row("activo")
+            peLogotipo.EditValue = row("Logotipo")
         Catch ex As Exception
-
+            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
 
     Private Sub peLogotipo_DoubleClick(sender As Object, e As EventArgs) Handles peLogotipo.DoubleClick
         Try
-            Dim imagen As New OpenFileDialog()
-            imagen.Filter = "Imagen JPG (*.jpg)|*.jpg|Imagen BMP (*.bmp)|*.bmp|Imagen PNG (*.png)|*.png|Imagen GIF (*.gif)|*.gif"
-            If imagen.ShowDialog() = DialogResult.OK Then
-                peLogotipo.Properties.SizeMode = PictureBoxSizeMode.AutoSize
-                ruta = imagen.FileName.ToString
-                peLogotipo.Image = System.Drawing.Image.FromFile(ruta)
+            Dim openFileDialog1 As New OpenFileDialog()
+            Dim dialogo As New DialogResult
+            openFileDialog1.Filter = "Imagen (JPG,BMP,PNG)|*.JPG;*.BMP;*.PNG|All files (*.*)|*.*"
+
+            openFileDialog1.FilterIndex = 1
+            openFileDialog1.RestoreDirectory = True
+            dialogo = openFileDialog1.ShowDialog()
+
+            If (dialogo = DialogResult.OK) Then
+                Dim bmp As New Bitmap(Image.FromFile(openFileDialog1.FileName))
+                bmp = bmp.GetThumbnailImage(480, 480, Nothing, IntPtr.Zero)
+                'Redimencionamos pixeles de imagen (Opcional).
+                peLogotipo.BackgroundImage = Nothing
+                peLogotipo.BackgroundImageLayout = ImageLayout.Stretch 'Ajustamos la imagen a todo el picturebox.
+                peLogotipo.BackgroundImage = bmp 'Cargamos la imagen al PictureBox.
+                peLogotipo.Image = bmp
+                'sExtencion = System.IO.Path.GetExtension(openFileDialog1.FileName) 'Obtenemos la Extencion de la imagen cargada.
             End If
+
         Catch ex As Exception
-            MessageBox.Show("Error al cargar la imagen", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show(ex.Message)
         End Try
     End Sub
-
-
 
 End Class

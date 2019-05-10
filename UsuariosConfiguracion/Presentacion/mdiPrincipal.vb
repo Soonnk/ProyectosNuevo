@@ -1,5 +1,6 @@
 ﻿Public Class mdiPrincipal
     Public activo As String
+    Dim oPresentacion As New Presentacion.AgregarTienda
 
     Private ReadOnly Property Empresa() As ConsultarEmpresa
         Get
@@ -16,6 +17,15 @@
                 Return Nothing
             End If
             Return TryCast(Me.ActiveMdiChild, ConsultarSistemas)
+        End Get
+    End Property
+
+    Private ReadOnly Property MagnusCONTA() As ConsultarMagnusCONTA
+        Get
+            If Me.ActiveMdiChild Is Nothing Then
+                Return Nothing
+            End If
+            Return TryCast(Me.ActiveMdiChild, ConsultarMagnusCONTA)
         End Get
     End Property
 
@@ -61,21 +71,21 @@
             'Else : f.Activate
             'End If
         Catch ex As Exception
-
+            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
     Private Sub btnMagnusCONTA_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnMagnusCONTA.ItemClick
         Try
-            'Dim f As ConsultarMagnusCONTA = BuscarFormulario(Me.RibbonControl1.Pages.Item(0).Tag, Me.RibbonControl1.Pages.Item(0).Groups(1).Tag, Me.RibbonControl1.Pages.Item(0).Groups(1).ItemLinks(1).Item.Tag)
-            'If Object.Equals(f, Nothing) Then
-            '    Dim frmSistemas As New ConsultarSistemas
-            '    frmSistemas.MdiParent = Me
-            '    frmSistemas.Show()
-            'Else : f.Activate
-            'End If
+            Dim f As ConsultarMagnusCONTA = BuscarFormulario(Me.RibbonControl1.Pages.Item(0).Tag, Me.RibbonControl1.Pages.Item(0).Groups(1).Tag, Me.RibbonControl1.Pages.Item(0).Groups(1).ItemLinks(1).Item.Tag)
+            If Object.Equals(f, Nothing) Then
+                Dim frmMagnusCONTA As New ConsultarMagnusCONTA
+                frmMagnusCONTA.MdiParent = Me
+                frmMagnusCONTA.Show()
+            Else : f.Activate
+            End If
         Catch ex As Exception
-
+            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -83,15 +93,21 @@
         Try
             'Dim f As ConsultarSIMAC = BuscarFormulario(Me.RibbonControl1.Pages.Item(0).Tag, Me.RibbonControl1.Pages.Item(0).Groups(1).Tag, Me.RibbonControl1.Pages.Item(0).Groups(1).ItemLinks(2).Item.Tag)
         Catch ex As Exception
-
+            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
     Private Sub btnMagnusGo_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnMagnusGo.ItemClick
         Try
-            'Dim f As ConsultarMagnusGo = BuscarFormulario(Me.RibbonControl1.Pages.Item(0).Tag, Me.RibbonControl1.Pages.Item(0).Groups(1).Tag, Me.RibbonControl1.Pages.Item(0).Groups(1).ItemLinks(3).Item.Tag)
+            Dim f As ConsultarMagnusGo = BuscarFormulario(Me.RibbonControl1.Pages.Item(0).Tag, Me.RibbonControl1.Pages.Item(0).Groups(1).Tag, Me.RibbonControl1.Pages.Item(0).Groups(1).ItemLinks(3).Item.Tag)
+            If Object.Equals(f, Nothing) Then
+                Dim frmMagnusGo As New ConsultarMagnusGo
+                frmMagnusGo.MdiParent = Me
+                frmMagnusGo.Show()
+            Else : f.Activate()
+            End If
         Catch ex As Exception
-
+            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -113,6 +129,16 @@
                             frmNuevo.modo = AgregarSistema.tipo.Nuevo
                             frmNuevo.Owner = Sistema
                             frmNuevo.ShowDialog()
+                        Case "ConsultarMagnusCONTA"
+                            Dim frmNuevo As New AgregarMagnusCONTA
+                            frmNuevo.modo = AgregarMagnusCONTA.tipo.Nuevo
+                            frmNuevo.Owner = MagnusConta
+                            frmNuevo.ShowDialog()
+                        Case "ConsultarMagnusGo"
+                            'Dim frmNuevo As New AgregarTienda
+                            oPresentacion.modo = AgregarTienda.tipo.Nuevo
+                            oPresentacion.MdiParent = Me
+                            oPresentacion.Show()
                     End Select
                 Case "Usuarios"
                     Select Case frmActivo.Name
@@ -120,11 +146,13 @@
                     End Select
             End Select
         Catch ex As Exception
+            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
     Private Sub btnEditarSuperior_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnEditarSuperior.ItemClick
         Try
             Dim frmActivo As Form = Me.ActiveMdiChild
+
             If frmActivo Is Nothing Then Return
             Select Case RibbonControl1.SelectedPage.Text
                 Case "Configuración"
@@ -139,6 +167,18 @@
                             frmEditar.modo = ConsultarSistemas.tipo.Editar
                             frmEditar = frmActivo
                             frmEditar.ConsultarSistema()
+                        Case "ConsultarMagnusCONTA"
+                            Dim frmEditar As New ConsultarMagnusCONTA
+                            frmEditar.modo = ConsultarMagnusCONTA.tipo.Editar
+                            frmEditar = frmActivo
+                            frmEditar.ConsultarMagnusCONTA()
+                        Case "ConsultarMagnusGo"
+                            Dim frmEditar As New ConsultarMagnusGo
+                            frmEditar.modo = ConsultarMagnusGo.tipo.Editar
+                            frmEditar = frmActivo
+                            frmEditar.ConsultarMagnusGo()
+
+
                     End Select
                 Case "Usuarios"
                     Select Case frmActivo.Name
@@ -174,7 +214,22 @@
                                     Next
                             End Select
                         Case 1200
-
+                            Select Case boton
+                                Case 1220
+                                    For Each f In Me.MdiChildren
+                                        If Object.Equals(f.GetType(), GetType(ConsultarMagnusCONTA)) Then
+                                            exist = True
+                                            Exit For
+                                        End If
+                                    Next
+                                Case 1240
+                                    For Each f In Me.MdiChildren
+                                        If Object.Equals(f.GetType(), GetType(ConsultarMagnusGo)) Then
+                                            exist = True
+                                            Exit For
+                                        End If
+                                    Next
+                            End Select
                     End Select
                 Case 2000
             End Select
@@ -183,7 +238,11 @@
             Else : Return Nothing
             End If
         Catch ex As Exception
-
+            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Function
+
+    Private Sub btnGuardarSuperior_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnGuardarSuperior.ItemClick
+        oPresentacion.GuardarTienda()
+    End Sub
 End Class

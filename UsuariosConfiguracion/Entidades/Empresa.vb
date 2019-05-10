@@ -12,7 +12,7 @@
     Private _Logotipo As Byte
     Private _Estatus As Boolean
     Public Sub New()
-        Me._OID = 0
+        Me._OID = 1
         Me._Nombre = ""
         Me._Direccion = ""
         Me._Colonia = ""

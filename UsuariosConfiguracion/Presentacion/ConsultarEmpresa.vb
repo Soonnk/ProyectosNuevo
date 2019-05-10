@@ -7,7 +7,6 @@
             If Me.ParentForm Is Nothing Then
                 Return Nothing
             End If
-
             Return TryCast(Me.ParentForm, mdiPrincipal)
         End Get
     End Property
@@ -30,8 +29,10 @@
                 frmEditar.Text = "Editar Empresa"
                 frmEditar.consultarEmpresa(GridView1.GetFocusedDataRow)
                 frmEditar.ShowDialog()
+                Cargar()
             End If
         Catch ex As Exception
+            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -49,7 +50,4 @@
             MessageBox.Show(ex.Message)
         End Try
     End Sub
-
-
-
 End Class

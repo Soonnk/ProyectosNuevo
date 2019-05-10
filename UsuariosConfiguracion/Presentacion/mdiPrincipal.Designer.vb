@@ -126,7 +126,7 @@ Partial Class mdiPrincipal
         '
         'btnNuevoSuperior
         '
-        Me.btnNuevoSuperior.Caption = "btnNuevo"
+        Me.btnNuevoSuperior.Caption = "Nuevo"
         Me.btnNuevoSuperior.Id = 9
         Me.btnNuevoSuperior.ImageOptions.Image = CType(resources.GetObject("btnNuevoSuperior.ImageOptions.Image"), System.Drawing.Image)
         Me.btnNuevoSuperior.ImageOptions.LargeImage = CType(resources.GetObject("btnNuevoSuperior.ImageOptions.LargeImage"), System.Drawing.Image)
@@ -134,7 +134,7 @@ Partial Class mdiPrincipal
         '
         'btnEditarSuperior
         '
-        Me.btnEditarSuperior.Caption = "btnEditar"
+        Me.btnEditarSuperior.Caption = "Editar"
         Me.btnEditarSuperior.Id = 10
         Me.btnEditarSuperior.ImageOptions.Image = CType(resources.GetObject("btnEditarSuperior.ImageOptions.Image"), System.Drawing.Image)
         Me.btnEditarSuperior.ImageOptions.LargeImage = CType(resources.GetObject("btnEditarSuperior.ImageOptions.LargeImage"), System.Drawing.Image)
@@ -142,7 +142,7 @@ Partial Class mdiPrincipal
         '
         'btnCancelarSuperior
         '
-        Me.btnCancelarSuperior.Caption = "btnCancelar"
+        Me.btnCancelarSuperior.Caption = "Cancelar"
         Me.btnCancelarSuperior.Id = 11
         Me.btnCancelarSuperior.ImageOptions.Image = CType(resources.GetObject("btnCancelarSuperior.ImageOptions.Image"), System.Drawing.Image)
         Me.btnCancelarSuperior.ImageOptions.LargeImage = CType(resources.GetObject("btnCancelarSuperior.ImageOptions.LargeImage"), System.Drawing.Image)
@@ -150,7 +150,7 @@ Partial Class mdiPrincipal
         '
         'btnGuardarSuperior
         '
-        Me.btnGuardarSuperior.Caption = "btnGuardar"
+        Me.btnGuardarSuperior.Caption = "Guardar"
         Me.btnGuardarSuperior.Id = 12
         Me.btnGuardarSuperior.ImageOptions.Image = CType(resources.GetObject("btnGuardarSuperior.ImageOptions.Image"), System.Drawing.Image)
         Me.btnGuardarSuperior.ImageOptions.LargeImage = CType(resources.GetObject("btnGuardarSuperior.ImageOptions.LargeImage"), System.Drawing.Image)
