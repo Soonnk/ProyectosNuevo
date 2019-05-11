@@ -1,6 +1,6 @@
 ﻿Public Class mdiPrincipal
     Public activo As String
-    Dim oPresentacion As New Presentacion.AgregarTienda
+    Dim oPresentacion As New AgregarTienda
 
     Private ReadOnly Property Empresa() As ConsultarEmpresa
         Get
@@ -172,10 +172,11 @@
                             frmEditar = frmActivo
                             frmEditar.ConsultarMagnusCONTA()
                         Case "ConsultarMagnusGo"
-                            Dim frmEditar As New ConsultarMagnusGo
-                            frmEditar.modo = ConsultarMagnusGo.tipo.Editar
-                            frmEditar = frmActivo
-                            frmEditar.ConsultarMagnusGo()
+
+                            'Dim frmEditar As New ConsultarMagnusGo
+                            oPresentacion.modo = ConsultarMagnusGo.tipo.Editar
+                            oPresentacion = frmActivo
+                            oPresentacion.ConsultarMagnusGo()
                     End Select
                 Case "Usuarios"
                     Select Case frmActivo.Name
@@ -240,6 +241,11 @@
     End Function
 
     Private Sub btnGuardarSuperior_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnGuardarSuperior.ItemClick
-        oPresentacion.GuardarTienda()
+        Try
+            oPresentacion.GuardarTienda()
+        Catch ex As Exception
+
+        End Try
+
     End Sub
 End Class

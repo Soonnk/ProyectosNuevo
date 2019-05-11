@@ -71,15 +71,9 @@ Public Class Tienda
         With tienda
             Query = "UPDATE Tiendas SET
                                          Descripcion = '" & .Descripcion & "', idAlmacen = '" & .IdAlmacen & "',
-                                         idFolio = '" & .IdFolio & "', Factura = '" & .Factura & "',
-                                         BasePuntoVenta = '" & .BasePuntoVenta & "', BaseMagnus '" & .BaseMagnus & "',
-                                         ServidorLocal = '" & .ServidorLocal & "', ServidorRemoto = '" & .ServidorRemoto & "',
-                                         UsuarioLocal= '" & .UsuarioLocal & "', UsuarioRemoto= '" & .UsuarioRemoto & "',
-                                         PasswordLocal = '" & .PasswordLocal & "', PasswordRemoto= '" & .PasswordRemoto & "',
-                                         DynDns = '" & .DynDns & "', PrecioMinimoVenta= '" & .PrecioMinimoVenta & "',
-                                         FacturarPrecioMinimo ='" & .FacturarPrecioMinimo & "', Empresa = '" & .Empresa & "',
-                                         MuestraExistencia= '" & .MuestraExistencia & "'
-                                         WHERE OID = " & .OID
+                                         idFolio = '" & .IdFolio & "',
+                                         BasePuntoVenta = '" & .BasePuntoVenta & "', PrecioMinimoVenta= '" & .PrecioMinimoVenta & "',
+                                         Empresa = '" & .Empresa & "' WHERE OID = " & .OID
         End With
         Return obj.commandSQL(Query)
     End Function

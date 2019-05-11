@@ -109,7 +109,6 @@ Public Class AgregarTienda
     Public Sub GuardarTienda()
         Dim oNegocio As New Negocios.Tienda
         Try
-            Dim camposVacios As String = ""
             Select Case modo
                 Case tipo.Nuevo
                     If oNegocio.InsertarTienda(llenarEntidades) = True Then
