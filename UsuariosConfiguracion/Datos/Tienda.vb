@@ -1,4 +1,6 @@
-﻿Public Class Tienda
+﻿Imports System.Data.SqlClient
+
+Public Class Tienda
     Dim obj As New clsSQL
     Public ds As DataSet
 
@@ -145,27 +147,38 @@
         Dim hola As String
 
         Try
-            If entReporte.Archivo Is Nothing Then
-                hola = ""
-            Else
-                hola = Convert.ToBase64String(entReporte.Archivo)
-                'hola = UnicodeBytesToString(entReporte.Archivo)
-            End If
+            'If entReporte.Archivo Is Nothing Then
+            '    hola = ""
+            'Else
+            '    hola = Convert.ToBase64String(entReporte.Archivo)
+            '    'hola = UnicodeBytesToString(entReporte.Archivo)
+            'End If
 
             Query = "insert ReportesPuntoventa(Nombre, FechaModificacion, Tipo, Archivo, Tienda)values
-                    ('" & entReporte.Nombre & "', '" & Format(entReporte.FechaModificacion, "yyyy/MM/dd") & "', '" & entReporte.Tipo & "', '" & hola & "', " & entReporte.Tienda & ")"
-            Return obj.commandSQL(Query)
+                    ('" & entReporte.Nombre & "', '" & Format(entReporte.FechaModificacion, "yyyy/MM/dd") & "', '" & entReporte.Tipo & "', @Imagen, " & entReporte.Tienda & ")"
+
+            'Return obj.commandSQL(Query)
+            Dim conn = New SqlConnection(clsSQL.StringConn)
+            conn.Open()
+            Dim command = New SqlCommand(Query, conn)
+            command.Parameters.Add("@Imagen", SqlDbType.VarBinary)
+            command.Parameters("@Imagen").Value = entReporte.Archivo
+
+
+
+            command.ExecuteNonQuery()
+            conn.Close()
         Catch ex As Exception
             MsgBox(ex)
             Return False
         End Try
     End Function
 
-    Public Function CargarReportePuntoVenta() As DataTable
+    Public Function CargarReportePuntoVenta(ByVal tienda As Integer) As DataTable
         Dim Query As String
         Dim dt As DataTable
         Try
-            Query = " SELECT * FROM ReportesPuntoVenta"
+            Query = " SELECT * FROM ReportesPuntoVenta WHERE Tienda = " & tienda
             dt = obj.RegresarDatos(Query)
             Return dt
 

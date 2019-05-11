@@ -21,10 +21,12 @@ Public Class AgregarTienda
         CargarAlmacen()
         TipoReporte()
 
+
         If modo = tipo.Nuevo Then
             GroupControl2.Enabled = False
             GroupControl3.Enabled = False
         Else
+            CargarReporte()
             GroupControl2.Enabled = True
             GroupControl3.Enabled = True
         End If
@@ -232,6 +234,7 @@ Public Class AgregarTienda
                 frmEditar.Text = "Editar Tienda"
                 frmEditar.consultarTienda(obj.GridView1.GetFocusedDataRow)
                 frmEditar.ShowDialog()
+
             End If
         Catch ex As Exception
             MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -358,6 +361,7 @@ Public Class AgregarTienda
                     'Me.tienda.Reportes.Add(Me.GeneraObjReporte(Me.GetArchivoBytes, Me.tienda.Session))
                 Case enuModoForma.Nuevo
                     nTienda.GuardarReportePuntoVenta(Me.GeneraObjReporte(GetArchivoBytes()))
+                    CargarReporte()
             End Select
             Me.txtTipoReporte.EditValue = Nothing
             Me.txtNombreReporte.EditValue = Nothing
@@ -371,7 +375,7 @@ Public Class AgregarTienda
         Dim neg As New Negocios.Tienda
         Dim dt As New DataTable
 
-        dt = neg.CargarReportePuntoVenta
+        dt = neg.CargarReportePuntoVenta(_IdTienda)
         GridControl1.DataSource = dt
     End Sub
 End Class
