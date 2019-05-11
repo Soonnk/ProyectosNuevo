@@ -47,8 +47,8 @@
         Return oTienda.GuardarReportePuntoVenta(entReporte)
     End Function
 
-    Public Function CargarReportePuntoVenta() As DataTable
-        Return oTienda.CargarReportePuntoVenta
+    Public Function CargarReportePuntoVenta(ByVal tienda As Integer) As DataTable
+        Return oTienda.CargarReportePuntoVenta(tienda)
     End Function
 
 

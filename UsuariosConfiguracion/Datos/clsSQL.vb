@@ -5,7 +5,7 @@ Public Class clsSQL
     Public ds As New DataSet
     Dim adaptador As SqlDataAdapter
 
-    Public Function StringConn() As String
+    Public Shared Function StringConn() As String
         Dim cadena As String
         Try
             cadena = "Data Source= 192.168.0.112;Initial Catalog=usuariosConfiguracion;User id=magnus3; Password=1234;pooling=no;Timeout=0;"

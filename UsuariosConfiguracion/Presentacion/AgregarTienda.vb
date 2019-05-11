@@ -21,10 +21,12 @@ Public Class AgregarTienda
         CargarAlmacen()
         TipoReporte()
 
+
         If modo = tipo.Nuevo Then
             GroupControl2.Enabled = False
             GroupControl3.Enabled = False
         Else
+            CargarReporte()
             GroupControl2.Enabled = True
             GroupControl3.Enabled = True
         End If
@@ -110,16 +112,13 @@ Public Class AgregarTienda
             Dim camposVacios As String = ""
             Select Case modo
                 Case tipo.Nuevo
-                    'If Not ValidarCampos(camposVacios) Then Exit Sub
                     If oNegocio.InsertarTienda(llenarEntidades) = True Then
                         MessageBox.Show("Los datos han sido guardados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        'CType(Owner, ConsultarMagnusGo).Cargar()
                         LimpiarCampos()
                     Else
                         MessageBox.Show("No se han podido guardar los datos solicitados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End If
                 Case tipo.Editar
-                    'If Not ValidarCampos(camposVacios) Then Exit Sub
                     If oNegocio.EditarTienda(llenarEntidades2) = True Then
                         MessageBox.Show("Los datos han sido modificados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
                         Me.Close()
@@ -156,8 +155,6 @@ Public Class AgregarTienda
         eTienda.Empresa = Me.txtEmpresa.EditValue
         Return eTienda
     End Function
-
-
 
     Public Sub LimpiarCampos()
         txtBasePV.EditValue = ""
@@ -232,6 +229,7 @@ Public Class AgregarTienda
                 frmEditar.Text = "Editar Tienda"
                 frmEditar.consultarTienda(obj.GridView1.GetFocusedDataRow)
                 frmEditar.ShowDialog()
+
             End If
         Catch ex As Exception
             MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -241,22 +239,6 @@ Public Class AgregarTienda
     Private Sub txtFolio_QueryPopUp(sender As Object, e As CancelEventArgs) Handles txtFolio.QueryPopUp
         CargarFolioAlmacen()
     End Sub
-
-    'Public Function GuardarArchivo() As Boolean
-    '    Try
-    '        Select Case ModoForma
-    '            Case enuModoForma.Editar
-    '                Me.CurrentTienda.Reportes.Add(Me.GeneraObjReporte(Me.GetArchivoBytes, Me.CurrentTienda.Session))
-    '            Case enuModoForma.Nuevo
-    '                Me.tienda.Reportes.Add(Me.GeneraObjReporte(Me.GetArchivoBytes, Me.tienda.Session))
-    '        End Select
-    '        Me.txtTipoReporte.EditValue = Nothing
-    '        Me.txtNombreReporte.EditValue = Nothing
-    '    Catch ex As Exception
-    '        MsgBox(ex.Message)
-    '        Return Nothing
-    '    End Try
-    'End Function
 
     Public Function GeneraObjReporte(ByVal FileBytes() As Byte) As Entidades.ReportesPuntoVenta
         Try
@@ -341,15 +323,6 @@ Public Class AgregarTienda
         End Try
     End Sub
 
-
-    'Private Sub GuardarArchivo()
-    '    Dim neg As New Negocios.Tienda
-    '    If neg.GuardarReportePuntoVenta(GeneraObjReporte()) = True Then
-    '        MessageBox.Show("Reporte guardado")
-    '        CargarReporte()
-    '    End If
-
-    'End Sub
     Public Function GuardarArchivo() As Boolean
         Dim nTienda As New Negocios.Tienda
         Try
@@ -358,6 +331,7 @@ Public Class AgregarTienda
                     'Me.tienda.Reportes.Add(Me.GeneraObjReporte(Me.GetArchivoBytes, Me.tienda.Session))
                 Case enuModoForma.Nuevo
                     nTienda.GuardarReportePuntoVenta(Me.GeneraObjReporte(GetArchivoBytes()))
+                    CargarReporte()
             End Select
             Me.txtTipoReporte.EditValue = Nothing
             Me.txtNombreReporte.EditValue = Nothing
@@ -371,7 +345,7 @@ Public Class AgregarTienda
         Dim neg As New Negocios.Tienda
         Dim dt As New DataTable
 
-        dt = neg.CargarReportePuntoVenta
+        dt = neg.CargarReportePuntoVenta(_IdTienda)
         GridControl1.DataSource = dt
     End Sub
 End Class
