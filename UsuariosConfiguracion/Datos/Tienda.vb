@@ -133,15 +133,23 @@ Empresa, MuestraExistencia, Empresas.Nombre
 
         End Try
     End Function
+
+    Public Function UnicodeBytesToString(ByVal bytes() As Byte) As String
+
+        Return System.Text.Encoding.Unicode.GetString(bytes)
+    End Function
+
     Public Function GuardarReportePuntoVenta(ByVal entReporte As Entidades.ReportesPuntoVenta) As Boolean
         Dim dt As New DataTable
         Dim Query As String
         Dim hola As String
+
         Try
             If entReporte.Archivo Is Nothing Then
                 hola = ""
             Else
                 hola = Convert.ToBase64String(entReporte.Archivo)
+                'hola = UnicodeBytesToString(entReporte.Archivo)
             End If
 
             Query = "insert ReportesPuntoventa(Nombre, FechaModificacion, Tipo, Archivo, Tienda)values

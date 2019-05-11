@@ -50,4 +50,6 @@
     Public Function CargarReportePuntoVenta() As DataTable
         Return oTienda.CargarReportePuntoVenta
     End Function
+
+
 End Class
