@@ -86,7 +86,9 @@ Public Class Conector
         dt.Columns.Add(New DataColumn("column"))
         For Each r As DataRow In ConsultarTablas().Rows
             For Each sr As DataRow In conn.Consultar("EXEC sp_helpindex '" & r.Item("name") & "'").Rows()
-                dt.Rows.Add(r.Item("name") & "." & sr.Item("index_name"), sr.Item("index_keys"))
+                If (Not sr.Item("index_description").ToString().Contains("primary key")) Then
+                    dt.Rows.Add(r.Item("name") & "." & sr.Item("index_name"), sr.Item("index_keys"))
+                End If
             Next
         Next
 

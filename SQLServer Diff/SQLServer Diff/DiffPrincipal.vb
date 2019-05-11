@@ -209,7 +209,7 @@ Public Class DiffPrincipal
             Next
         End If
         If (indicesDestino.Rows.Count > 0) Then
-            script += "--BORRANDO CLAVES FORANEAS DE TABLAS" & Environment.NewLine
+            script += "--BORRANDO INDICES DE TABLAS" & Environment.NewLine
             For Each r As DataRow In indicesDestino.Rows
                 script += GeneradorScript.DropIndex(r.Item("name").ToString) & Environment.NewLine & Environment.NewLine
                 script += "IF @@ERROR<>0 OR @@TRANCOUNT=0 BEGIN IF @@TRANCOUNT>0 ROLLBACK SET NOEXEC ON END" & Environment.NewLine &
@@ -261,7 +261,7 @@ Public Class DiffPrincipal
         End If
 
         If (indicesOrigen.Rows.Count > 0) Then
-            script += "--AGREGANDO CLAVES FORANEAS A LAS TABLAS" & Environment.NewLine
+            script += "--AGREGANDO INDICES A LAS TABLAS" & Environment.NewLine
             For Each r As DataRow In indicesOrigen.Rows
                 script += GeneradorScript.CreateIndex(r.Item("name").ToString, r.Item("column").ToString) & Environment.NewLine & Environment.NewLine
                 script += "IF @@ERROR<>0 OR @@TRANCOUNT=0 BEGIN IF @@TRANCOUNT>0 ROLLBACK SET NOEXEC ON END" & Environment.NewLine &
