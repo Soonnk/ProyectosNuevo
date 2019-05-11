@@ -11,7 +11,7 @@
         Me._Nombre = ""
         Me._Tipo = ""
         Me._Archivo = Nothing
-        Me._FechaModificacion = ""
+        Me._FechaModificacion = Now
         Me._Tienda = 0
     End Sub
 

@@ -136,15 +136,17 @@ Empresa, MuestraExistencia, Empresas.Nombre
     Public Function GuardarReportePuntoVenta(ByVal entReporte As Entidades.ReportesPuntoVenta) As Boolean
         Dim dt As New DataTable
         Dim Query As String
+        Dim hola As String
         Try
-            'Query = "insert ReportesPuntoventa(Nombre, FechaModificacion, Tipo, Archivo, Tienda)values
-            '('" & entReporte.Nombre & "', '" & Format(entReporte.FechaModificacion, "yyyy/MM/dd") & "', '" & entReporte.Tipo & "', '" & entReporte.Archivo & "', " & entReporte.Tienda & ")"
+            If entReporte.Archivo Is Nothing Then
+                hola = ""
+            Else
+                hola = Convert.ToBase64String(entReporte.Archivo)
+            End If
+
+            Query = "insert ReportesPuntoventa(Nombre, FechaModificacion, Tipo, Archivo, Tienda)values
+            ('" & entReporte.Nombre & "', '" & Format(entReporte.FechaModificacion, "yyyy/MM/dd") & "', '" & entReporte.Tipo & "', '" & hola & "', " & entReporte.Tienda & ")"
             Return obj.commandSQL(Query)
-
-
-
-
-
         Catch ex As Exception
             MsgBox(ex)
             Return False

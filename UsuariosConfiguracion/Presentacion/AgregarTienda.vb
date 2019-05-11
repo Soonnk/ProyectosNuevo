@@ -134,46 +134,6 @@ Public Class AgregarTienda
         End Try
     End Sub
 
-
-    'Pendiente de agregar en capas anteriores
-
-    'Private Sub GuardarReporte()
-    '    Try
-    '        Dim oNegocio As New Negocios.Tienda
-    '        Dim camposVacios As String = ""
-    '        If Not ValidarCampos(camposVacios) Then Exit Sub
-    '        If oNegocio.InsertarReporte(llenarEntidadesReporte) = True Then
-    '            MessageBox.Show("El reporte ha sido guardado", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
-    '            CType(Owner, GridControl1).Cargar()
-    '            LimpiarCamposReporte()
-    '        Else
-    '            MessageBox.Show("No se han podido guardar lel reporte solicitado", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
-    '        End If
-    '    Catch ex As Exception
-    '        MessageBox.Show(ex.Message)
-    '    End Try
-    'End Sub
-
-
-    'Public Function ValidarCampos(ByVal camposVacios As String) As Boolean
-    '    Try
-    '        camposVacios = "Los siguientes campos esta vacios:" & Chr(10)
-    '        Dim resultado As Boolean = True
-    '        If Not txtTipoReporte.EditValue <> "" Then
-    '            camposVacios &= "Tipo reporte" & Chr(10)
-    '            resultado = False
-    '        End If
-    '        If resultado = False Then
-    '            MessageBox.Show(camposVacios, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-    '            Return False
-    '        Else
-    '            Return True
-    '        End If
-    '    Catch ex As Exception
-
-    '    End Try
-    'End Function
-
     Public Function llenarEntidades() As Entidades.Tienda
         Dim eTienda As New Entidades.Tienda
         eTienda.Descripcion = Me.txtDescripcion.Text
@@ -198,14 +158,6 @@ Public Class AgregarTienda
     End Function
 
 
-    '    Pendiente agregar en capas anteriores
-    'Public Function llenarEntidadesReporte() As Entidades.Tienda
-    '    Dim eTienda As New Entidades.Tienda
-    '    'Pendiente agregar en capas anteriores
-    '    eTienda.NombreReporte = Me.txtNombreReporte.Text
-    '    eTienda.TipoReporte = Me.txtTipoReporte.Text
-    '    Return eTienda
-    'End Function
 
     Public Sub LimpiarCampos()
         txtBasePV.EditValue = ""
