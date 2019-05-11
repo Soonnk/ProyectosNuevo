@@ -193,4 +193,8 @@
     Private Sub DiffPrincipal_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         _padre.Close()
     End Sub
+
+    Private Sub lblDiferencias_Click(sender As Object, e As EventArgs) Handles lblDiferencias.Click
+
+    End Sub
 End Class
