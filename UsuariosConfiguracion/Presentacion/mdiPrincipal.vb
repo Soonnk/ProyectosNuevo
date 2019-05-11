@@ -135,7 +135,6 @@
                             frmNuevo.Owner = MagnusConta
                             frmNuevo.ShowDialog()
                         Case "ConsultarMagnusGo"
-                            'Dim frmNuevo As New AgregarTienda
                             oPresentacion.modo = AgregarTienda.tipo.Nuevo
                             oPresentacion.MdiParent = Me
                             oPresentacion.Show()
@@ -177,8 +176,6 @@
                             frmEditar.modo = ConsultarMagnusGo.tipo.Editar
                             frmEditar = frmActivo
                             frmEditar.ConsultarMagnusGo()
-
-
                     End Select
                 Case "Usuarios"
                     Select Case frmActivo.Name

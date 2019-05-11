@@ -112,16 +112,13 @@ Public Class AgregarTienda
             Dim camposVacios As String = ""
             Select Case modo
                 Case tipo.Nuevo
-                    'If Not ValidarCampos(camposVacios) Then Exit Sub
                     If oNegocio.InsertarTienda(llenarEntidades) = True Then
                         MessageBox.Show("Los datos han sido guardados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        'CType(Owner, ConsultarMagnusGo).Cargar()
                         LimpiarCampos()
                     Else
                         MessageBox.Show("No se han podido guardar los datos solicitados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End If
                 Case tipo.Editar
-                    'If Not ValidarCampos(camposVacios) Then Exit Sub
                     If oNegocio.EditarTienda(llenarEntidades2) = True Then
                         MessageBox.Show("Los datos han sido modificados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
                         Me.Close()
@@ -158,8 +155,6 @@ Public Class AgregarTienda
         eTienda.Empresa = Me.txtEmpresa.EditValue
         Return eTienda
     End Function
-
-
 
     Public Sub LimpiarCampos()
         txtBasePV.EditValue = ""
@@ -245,22 +240,6 @@ Public Class AgregarTienda
         CargarFolioAlmacen()
     End Sub
 
-    'Public Function GuardarArchivo() As Boolean
-    '    Try
-    '        Select Case ModoForma
-    '            Case enuModoForma.Editar
-    '                Me.CurrentTienda.Reportes.Add(Me.GeneraObjReporte(Me.GetArchivoBytes, Me.CurrentTienda.Session))
-    '            Case enuModoForma.Nuevo
-    '                Me.tienda.Reportes.Add(Me.GeneraObjReporte(Me.GetArchivoBytes, Me.tienda.Session))
-    '        End Select
-    '        Me.txtTipoReporte.EditValue = Nothing
-    '        Me.txtNombreReporte.EditValue = Nothing
-    '    Catch ex As Exception
-    '        MsgBox(ex.Message)
-    '        Return Nothing
-    '    End Try
-    'End Function
-
     Public Function GeneraObjReporte(ByVal FileBytes() As Byte) As Entidades.ReportesPuntoVenta
         Try
             Dim ReportePV As New Entidades.ReportesPuntoVenta()
@@ -344,15 +323,6 @@ Public Class AgregarTienda
         End Try
     End Sub
 
-
-    'Private Sub GuardarArchivo()
-    '    Dim neg As New Negocios.Tienda
-    '    If neg.GuardarReportePuntoVenta(GeneraObjReporte()) = True Then
-    '        MessageBox.Show("Reporte guardado")
-    '        CargarReporte()
-    '    End If
-
-    'End Sub
     Public Function GuardarArchivo() As Boolean
         Dim nTienda As New Negocios.Tienda
         Try
