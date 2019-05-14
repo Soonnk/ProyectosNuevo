@@ -47,6 +47,10 @@
         Return oTienda.GuardarReportePuntoVenta(entReporte)
     End Function
 
+    Public Function EditarReportePuntoVenta(ByVal entReporte As Entidades.ReportesPuntoVenta) As Boolean
+        Return oTienda.EditarReporte(entReporte)
+    End Function
+
     Public Function CargarReportePuntoVenta(ByVal tienda As Integer) As DataTable
         Return oTienda.CargarReportePuntoVenta(tienda)
     End Function
