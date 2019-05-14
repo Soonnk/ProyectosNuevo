@@ -138,34 +138,48 @@ Public Class Tienda
     Public Function GuardarReportePuntoVenta(ByVal entReporte As Entidades.ReportesPuntoVenta) As Boolean
         Dim dt As New DataTable
         Dim Query As String
-        Dim hola As String
+
 
         Try
-            'If entReporte.Archivo Is Nothing Then
-            '    hola = ""
-            'Else
-            '    hola = Convert.ToBase64String(entReporte.Archivo)
-            '    'hola = UnicodeBytesToString(entReporte.Archivo)
-            'End If
 
             Query = "insert ReportesPuntoventa(Nombre, FechaModificacion, Tipo, Archivo, Tienda)values
                     ('" & entReporte.Nombre & "', '" & Format(entReporte.FechaModificacion, "yyyyMMdd") & "', '" & entReporte.Tipo & "', @Imagen, " & entReporte.Tienda & ")"
 
-            'Return obj.commandSQL(Query)
             Dim conn = New SqlConnection(clsSQL.StringConn)
             conn.Open()
             Dim command = New SqlCommand(Query, conn)
             command.Parameters.Add("@Imagen", SqlDbType.VarBinary)
             command.Parameters("@Imagen").Value = entReporte.Archivo
-
-
-
             command.ExecuteNonQuery()
             conn.Close()
         Catch ex As Exception
             MsgBox(ex)
             Return False
         End Try
+    End Function
+
+    Public Function EditarReporte(ByRef entReporte As Entidades.ReportesPuntoVenta) As Boolean
+        Dim dt As New DataTable
+        Dim Query As String
+        Try
+            With entReporte
+                Query = "UPDATE ReportesPuntoVenta SET
+                                         Nombre = '" & .Nombre & "',
+                                         FechaModificacion = '" & Format(entReporte.FechaModificacion, "yyyy/MM/dd") & "',
+                                         Tipo = '" & .Tipo & "',
+                                         Archivo = @Imagen WHERE Clave = " & .OID
+                Dim conn = New SqlConnection(clsSQL.StringConn)
+                conn.Open()
+                Dim command = New SqlCommand(Query, conn)
+                command.Parameters.Add("@Imagen", SqlDbType.VarBinary)
+                command.Parameters("@Imagen").Value = entReporte.Archivo
+                command.ExecuteNonQuery()
+                conn.Close()
+            End With
+        Catch ex As Exception
+            MsgBox(ex)
+            Return False
+            End Try
     End Function
 
     Public Function CargarReportePuntoVenta(ByVal tienda As Integer) As DataTable
