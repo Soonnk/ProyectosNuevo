@@ -1,6 +1,6 @@
 ﻿Public Class mdiPrincipal
     Public activo As String
-    Dim oPresentacion As New AgregarTienda
+    Dim oPresentacion As New Presentacion.AgregarTienda
 
     Private ReadOnly Property Empresa() As ConsultarEmpresa
         Get
@@ -173,10 +173,10 @@
                             frmEditar.ConsultarMagnusCONTA()
                         Case "ConsultarMagnusGo"
 
-                            'Dim frmEditar As New ConsultarMagnusGo
-                            oPresentacion.modo = ConsultarMagnusGo.tipo.Editar
-                            oPresentacion = frmActivo
-                            oPresentacion.ConsultarMagnusGo()
+                            Dim frmEditar As New ConsultarMagnusGo
+                            frmEditar.modo = ConsultarMagnusGo.tipo.Editar
+                            frmEditar = frmActivo
+                            frmEditar.ConsultarMagnusGo()
                     End Select
                 Case "Usuarios"
                     Select Case frmActivo.Name
