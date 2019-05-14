@@ -378,6 +378,7 @@ Public Class AgregarTienda
             Select Case ModoForma
                 Case enuModoForma.Editar
                     nTienda.EditarReportePuntoVenta(Me.GeneraObjReporte(GetArchivoBytes))
+                    CargarReporte()
                     'Me.tienda.Reportes.Add(Me.GeneraObjReporte(Me.GetArchivoBytes, Me.tienda.Session))
                 Case enuModoForma.Nuevo
                     nTienda.GuardarReportePuntoVenta(Me.GeneraObjReporte(GetArchivoBytes()))
@@ -386,7 +387,7 @@ Public Class AgregarTienda
             Me.txtTipoReporte.EditValue = Nothing
             Me.txtNombreReporte.EditValue = Nothing
         Catch ex As Exception
-            MsgBox(ex.Message)
+            'MsgBox(ex.Message)
             Return Nothing
         End Try
     End Function
