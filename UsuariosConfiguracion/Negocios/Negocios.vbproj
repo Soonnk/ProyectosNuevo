@@ -68,6 +68,7 @@
     <Compile Include="Empresa.vb" />
     <Compile Include="Imagen.vb" />
     <Compile Include="MagnusCONTA.vb" />
+    <Compile Include="MagnusERP.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -83,6 +84,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="SIMAC.vb" />
     <Compile Include="Sistema.vb" />
     <Compile Include="Tienda.vb" />
     <Compile Include="Usuario.vb" />

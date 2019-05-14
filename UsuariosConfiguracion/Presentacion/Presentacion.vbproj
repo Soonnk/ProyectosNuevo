@@ -97,6 +97,18 @@
     <Compile Include="AgregarMagnusCONTA.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AgregarMagnusERP.Designer.vb">
+      <DependentUpon>AgregarMagnusERP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarMagnusERP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarSIMAC.Designer.vb">
+      <DependentUpon>AgregarSIMAC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarSIMAC.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AgregarSistema.Designer.vb">
       <DependentUpon>AgregarSistema.vb</DependentUpon>
     </Compile>
@@ -121,10 +133,22 @@
     <Compile Include="ConsultarMagnusCONTA.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ConsultarMagnusERP.Designer.vb">
+      <DependentUpon>ConsultarMagnusERP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarMagnusERP.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ConsultarMagnusGo.Designer.vb">
       <DependentUpon>ConsultarMagnusGo.vb</DependentUpon>
     </Compile>
     <Compile Include="ConsultarMagnusGo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarSIMAC.Designer.vb">
+      <DependentUpon>ConsultarSIMAC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarSIMAC.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ConsultarSistemas.Designer.vb">
@@ -174,6 +198,12 @@
     <EmbeddedResource Include="AgregarMagnusCONTA.resx">
       <DependentUpon>AgregarMagnusCONTA.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AgregarMagnusERP.resx">
+      <DependentUpon>AgregarMagnusERP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarSIMAC.resx">
+      <DependentUpon>AgregarSIMAC.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AgregarSistema.resx">
       <DependentUpon>AgregarSistema.vb</DependentUpon>
     </EmbeddedResource>
@@ -186,8 +216,14 @@
     <EmbeddedResource Include="ConsultarMagnusCONTA.resx">
       <DependentUpon>ConsultarMagnusCONTA.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarMagnusERP.resx">
+      <DependentUpon>ConsultarMagnusERP.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultarMagnusGo.resx">
       <DependentUpon>ConsultarMagnusGo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarSIMAC.resx">
+      <DependentUpon>ConsultarSIMAC.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarSistemas.resx">
       <DependentUpon>ConsultarSistemas.vb</DependentUpon>
