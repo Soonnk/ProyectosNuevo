@@ -274,6 +274,38 @@ Public Class AgregarTienda
                 report.DataSource = ds
                 report.DataMember = "Ticket"
             End If
+            If CurrentReporte.Item("Tipo") = "SalidaDinero" Then
+                report.DataSource = ds
+                report.DataMember = "SalidaDinero"
+            End If
+            If CurrentReporte.Item("Tipo") = "Aperturas" Then
+                report.DataSource = ds
+                report.DataMember = "Aperturas"
+            End If
+            If CurrentReporte.Item("Tipo") = "ListaCortes" Then
+                report.DataSource = ds
+                report.DataMember = "ListaCortes"
+            End If
+            If CurrentReporte.Item("Tipo") = "TicketFacturado" Then
+                report.DataSource = ds
+                report.DataMember = "TicketFacturado"
+            End If
+            If CurrentReporte.Item("Tipo") = "Recibo" Then
+                report.DataSource = ds
+                report.DataMember = "Recibo"
+            End If
+            If CurrentReporte.Item("Tipo") = "Ventas" Then
+                report.DataSource = ds
+                report.DataMember = "Ventas"
+            End If
+            If CurrentReporte.Item("Tipo") = "Corte" Then
+                report.DataSource = ds
+                report.DataMember = "Corte"
+            End If
+            If CurrentReporte.Item("Tipo") = "DetalleTickets" Then
+                report.DataSource = ds
+                report.DataMember = "DetalleTickets"
+            End If
             report.ShowRibbonDesigner
         Catch ex As Exception
             MsgBox(ex.Message)
