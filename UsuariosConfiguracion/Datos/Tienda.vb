@@ -143,7 +143,7 @@ Public Class Tienda
         Try
 
             Query = "insert ReportesPuntoventa(Nombre, FechaModificacion, Tipo, Archivo, Tienda)values
-                    ('" & entReporte.Nombre & "', '" & Format(entReporte.FechaModificacion, "yyyy/MM/dd") & "', '" & entReporte.Tipo & "', @Imagen, " & entReporte.Tienda & ")"
+                    ('" & entReporte.Nombre & "', '" & Format(entReporte.FechaModificacion, "yyyyMMdd") & "', '" & entReporte.Tipo & "', @Imagen, " & entReporte.Tienda & ")"
 
             Dim conn = New SqlConnection(clsSQL.StringConn)
             conn.Open()

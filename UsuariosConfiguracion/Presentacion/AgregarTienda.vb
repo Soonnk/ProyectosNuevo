@@ -1,4 +1,6 @@
 ﻿Imports System.ComponentModel
+
+Imports DevExpress.XtraReports.UI
 'Imports System.
 Public Class AgregarTienda
     Public modo As tipo
@@ -258,30 +260,32 @@ Public Class AgregarTienda
         End Try
     End Function
 
-    'Public Sub AbrirReporte()
-    '    Try
-    '        Dim CurrentReporte As New Entidades.ReportesPuntoVenta()
-    '        'CurrentReporte = Me.GridViewReportes.GetFocusedRow
-    '        Dim ds As New DsTicket
-    '        Dim stream As New IO.MemoryStream(CurrentReporte.Archivo)
-    '        'Dim report As New DevExpress.XtraReports.UI.XtraReport
-    '        'report = DevExpress.XtraReports.UI.XtraReport.FromStream(stream, True)
-    '        'If CurrentReporte.Nombre = "Ticket" Then
-    '        '    report.DataSource = ds
-    '        '    report.DataMember = "Datos"
-    '        'End If
-    '        'report.ShowRibbonDesigner()
-    '    Catch ex As Exception
-    '        MsgBox(ex.Message)
-    '    End Try
-    'End Sub
+    Public Sub AbrirReporte()
+        Try
+            Dim CurrentReporte As DataRow
+            CurrentReporte = Me.GridView1.GetFocusedDataRow
+            If CurrentReporte.IsNull("Archivo") Then Exit Sub
+
+            Dim ds As New DsTicket
+            Dim stream As New IO.MemoryStream(CurrentReporte.Item("Archivo"), True)
+            Dim report As New XtraReport
+            report = XtraReport.FromStream(stream, True)
+            If CurrentReporte.Item("Tipo") = "Ticket" Then
+                report.DataSource = ds
+                report.DataMember = "Ticket"
+            End If
+            report.ShowRibbonDesigner
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
 
     Private Sub btnEditarReporte_Click(sender As Object, e As EventArgs) Handles btnEditarReporte.Click
-        'Try
-        '    Me.AbrirReporte()
-        'Catch ex As Exception
-        '    MsgBox(ex.Message)
-        'End Try
+        Try
+            Me.AbrirReporte()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 
     Private Sub btnCargarArchivo_Click(sender As Object, e As EventArgs) Handles btnCargarArchivo.Click

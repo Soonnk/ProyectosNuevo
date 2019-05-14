@@ -38,7 +38,7 @@
                 Dim frmEmpresas As New ConsultarEmpresa
                 frmEmpresas.MdiParent = Me
                 frmEmpresas.Show()
-            Else : f.Activate
+            Else : f.Activate()
             End If
 
         Catch ex As Exception
@@ -53,7 +53,7 @@
                 Dim frmSistemas As New ConsultarSistemas
                 frmSistemas.MdiParent = Me
                 frmSistemas.Show()
-            Else : f.Activate
+            Else : f.Activate()
             End If
 
         Catch ex As Exception
@@ -82,7 +82,7 @@
                 Dim frmMagnusCONTA As New ConsultarMagnusCONTA
                 frmMagnusCONTA.MdiParent = Me
                 frmMagnusCONTA.Show()
-            Else : f.Activate
+            Else : f.Activate()
             End If
         Catch ex As Exception
             MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -132,7 +132,7 @@
                         Case "ConsultarMagnusCONTA"
                             Dim frmNuevo As New AgregarMagnusCONTA
                             frmNuevo.modo = AgregarMagnusCONTA.tipo.Nuevo
-                            frmNuevo.Owner = MagnusConta
+                            frmNuevo.Owner = MagnusCONTA
                             frmNuevo.ShowDialog()
                         Case "ConsultarMagnusGo"
                             oPresentacion.modo = AgregarTienda.tipo.Nuevo
@@ -241,11 +241,22 @@
     End Function
 
     Private Sub btnGuardarSuperior_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnGuardarSuperior.ItemClick
-        Try
-            oPresentacion.GuardarTienda()
-        Catch ex As Exception
+        Dim frmActivo As Form = Me.ActiveMdiChild
 
-        End Try
+        If frmActivo Is Nothing Then Return
+        Select Case RibbonControl1.SelectedPage.Text
+            Case "Configuración"
+                Select Case frmActivo.Name
+                    Case "AgregarTienda"
+                        Dim frmEditar As New AgregarTienda
+                        frmEditar = frmActivo
+                        frmEditar.GuardarTienda()
+                End Select
+            Case "Usuarios"
+                Select Case frmActivo.Name
+
+                End Select
+        End Select
 
     End Sub
 End Class
