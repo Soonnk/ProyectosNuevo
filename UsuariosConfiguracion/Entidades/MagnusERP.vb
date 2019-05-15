@@ -578,7 +578,7 @@
     End Property
 
     Private _IdProductoEstimacion As String
-    Public Property NewProperty() As String
+    Public Property IdProductoEstimacion() As String
         Get
             Return _IdProductoEstimacion
         End Get
@@ -587,60 +587,526 @@
         End Set
     End Property
 
+    Private _IdProductoEstimacionSub As String
+    Public Property IdProductoEstimacionSub() As String
+        Get
+            Return _IdProductoEstimacionSub
+        End Get
+        Set(ByVal value As String)
+            _IdProductoEstimacionSub = value
+        End Set
+    End Property
+
+    Private _ReporteHojaGeneradora As String
+    Public Property ReporteHojaGeneradora() As String
+        Get
+            Return _ReporteHojaGeneradora
+        End Get
+        Set(ByVal value As String)
+            _ReporteHojaGeneradora = value
+        End Set
+    End Property
+
+    Private _ReporteEstimacion As String
+    Public Property ReporteEstimacion() As String
+        Get
+            Return _ReporteEstimacion
+        End Get
+        Set(ByVal value As String)
+            _ReporteEstimacion = value
+        End Set
+    End Property
+
+    Private _ReporteCaratulaEstimacion As String
+    Public Property ReporteCaratulaEstimacion() As String
+        Get
+            Return _ReporteCaratulaEstimacion
+        End Get
+        Set(ByVal value As String)
+            _ReporteCaratulaEstimacion = value
+        End Set
+    End Property
+
+    Private _ValidacionCredito As Integer
+    Public Property ValidacionCredito() As Integer
+        Get
+            Return _ValidacionCredito
+        End Get
+        Set(ByVal value As Integer)
+            _ValidacionCredito = value
+        End Set
+    End Property
+
+    Private _PeriodoMaxMin As Integer
+    Public Property PeriodoMaxMin() As Integer
+        Get
+            Return _PeriodoMaxMin
+        End Get
+        Set(ByVal value As Integer)
+            _PeriodoMaxMin = value
+        End Set
+    End Property
+
+    Private _NumLiquidacion As Integer
+    Public Property NumLiquidacion() As Integer
+        Get
+            Return _NumLiquidacion
+        End Get
+        Set(ByVal value As Integer)
+            _NumLiquidacion = value
+        End Set
+    End Property
+
+    Private _ConceptosLiquidaciones As String
+    Public Property ConceptosLiquidaciones() As String
+        Get
+            Return _ConceptosLiquidaciones
+        End Get
+        Set(ByVal value As String)
+            _ConceptosLiquidaciones = value
+        End Set
+    End Property
+
+    Private _CuentasComplemento As Boolean
+    Public Property CuentasComplemento() As Boolean
+        Get
+            Return _CuentasComplemento
+        End Get
+        Set(ByVal value As Boolean)
+            _CuentasComplemento = value
+        End Set
+    End Property
+
+    Private _DecimalesEntrada As Integer
+    Public Property DecimalesEntrada() As Integer
+        Get
+            Return _DecimalesEntrada
+        End Get
+        Set(ByVal value As Integer)
+            _DecimalesEntrada = value
+        End Set
+    End Property
+
+    Private _DecimalesSalida As Integer
+    Public Property DecimalesSalida() As Integer
+        Get
+            Return _DecimalesSalida
+        End Get
+        Set(ByVal value As Integer)
+            _DecimalesSalida = value
+        End Set
+    End Property
+
+    Private _ServicioEmbarque As String
+    Public Property ServicioEmbarque() As String
+        Get
+            Return _ServicioEmbarque
+        End Get
+        Set(ByVal value As String)
+            _ServicioEmbarque = value
+        End Set
+    End Property
+
+    Private _RevisionPagos As Boolean
+    Public Property RevisionPagos() As Boolean
+        Get
+            Return _RevisionPagos
+        End Get
+        Set(ByVal value As Boolean)
+            _RevisionPagos = value
+        End Set
+    End Property
+
+    Private _RptEnlaces As String
+    Public Property RptEnlaces() As String
+        Get
+            Return _RptEnlaces
+        End Get
+        Set(ByVal value As String)
+            _RptEnlaces = value
+        End Set
+    End Property
+
+    Private _AutonumeracionLotes As Boolean
+    Public Property AutonumeracionLotes() As Boolean
+        Get
+            Return _AutonumeracionLotes
+        End Get
+        Set(ByVal value As Boolean)
+            _AutonumeracionLotes = value
+        End Set
+    End Property
+
+    Private _CantidadTotalLote As Boolean
+    Public Property CantidadTotalLotes() As Boolean
+        Get
+            Return _CantidadTotalLote
+        End Get
+        Set(ByVal value As Boolean)
+            _CantidadTotalLote = value
+        End Set
+    End Property
+
+    Private _EditarComision As Boolean
+    Public Property EditarComision() As Boolean
+        Get
+            Return _EditarComision
+        End Get
+        Set(ByVal value As Boolean)
+            _EditarComision = value
+        End Set
+    End Property
+
+    Private _ProcentajeEmpresa As Integer
+    Public Property PorcentajeEmpresa() As Integer
+        Get
+            Return _ProcentajeEmpresa
+        End Get
+        Set(ByVal value As Integer)
+            _ProcentajeEmpresa = value
+        End Set
+    End Property
+
+    Private _PorcentajeOperador As Integer
+    Public Property PorcentajeOperador() As Integer
+        Get
+            Return _PorcentajeOperador
+        End Get
+        Set(ByVal value As Integer)
+            _PorcentajeOperador = value
+        End Set
+    End Property
+
+    Private _AgruparClavesIguales As Boolean
+    Public Property AgruparClavesIguales() As Boolean
+        Get
+            Return _AgruparClavesIguales
+        End Get
+        Set(ByVal value As Boolean)
+            _AgruparClavesIguales = value
+        End Set
+    End Property
+
+    Private _manejaMovil As Integer
+    Public Property manejaMovil() As Integer
+        Get
+            Return _manejaMovil
+        End Get
+        Set(ByVal value As Integer)
+            _manejaMovil = value
+        End Set
+    End Property
+
+    Private _nivelAlmacen As Integer
+    Public Property nivelAlmacen() As Integer
+        Get
+            Return _nivelAlmacen
+        End Get
+        Set(ByVal value As Integer)
+            _nivelAlmacen = value
+        End Set
+    End Property
+
+    Private _EnlaceVarios As Boolean
+    Public Property EnlaceVarios() As Boolean
+        Get
+            Return _EnlaceVarios
+        End Get
+        Set(ByVal value As Boolean)
+            _EnlaceVarios = value
+        End Set
+    End Property
+
+    Private _ReporteOEmbarques As String
+    Public Property ReporteOEmbarques() As String
+        Get
+            Return _ReporteOEmbarques
+        End Get
+        Set(ByVal value As String)
+            _ReporteOEmbarques = value
+        End Set
+    End Property
+
+    Private _ReporteAutorizaciones As String
+    Public Property ReporteAutorizaciones() As String
+        Get
+            Return _ReporteAutorizaciones
+        End Get
+        Set(ByVal value As String)
+            _ReporteAutorizaciones = value
+        End Set
+    End Property
+
+    Private _ReportePeriodoAutorizaciones As String
+    Public Property ReportePeriodoAutorizaciones() As String
+        Get
+            Return _ReportePeriodoAutorizaciones
+        End Get
+        Set(ByVal value As String)
+            _ReportePeriodoAutorizaciones = value
+        End Set
+    End Property
+
+    Private _ReportePeriodoEntregasEmbarque As String
+    Public Property ReportePeriodoEntregasEmbarque() As String
+        Get
+            Return _ReportePeriodoEntregasEmbarque
+        End Get
+        Set(ByVal value As String)
+            _ReportePeriodoEntregasEmbarque = value
+        End Set
+    End Property
+
+    Private _envioProduccion As Boolean
+    Public Property envioProduccion() As Boolean
+        Get
+            Return _envioProduccion
+        End Get
+        Set(ByVal value As Boolean)
+            _envioProduccion = value
+        End Set
+    End Property
+
+    Private _ReporteInventario As String
+    Public Property ReporteInventario() As String
+        Get
+            Return _ReporteInventario
+        End Get
+        Set(ByVal value As String)
+            _ReporteInventario = value
+        End Set
+    End Property
+
+    Private _EquivalenciaClientes As Boolean
+    Public Property EquivalenciaClientes() As Boolean
+        Get
+            Return _EquivalenciaClientes
+        End Get
+        Set(ByVal value As Boolean)
+            _EquivalenciaClientes = value
+        End Set
+    End Property
+
+    Private _ReporteLotesDocumento As String
+    Public Property ReporteLotesDocumento() As String
+        Get
+            Return _ReporteLotesDocumento
+        End Get
+        Set(ByVal value As String)
+            _ReporteLotesDocumento = value
+        End Set
+    End Property
+
+    Private _controLotes As Boolean
+    Public Property controLotes() As Boolean
+        Get
+            Return _controLotes
+        End Get
+        Set(ByVal value As Boolean)
+            _controLotes = value
+        End Set
+    End Property
+
+    Private _rptPendientesPorSurtir As String
+    Public Property rptPendientesPorSurtir() As String
+        Get
+            Return _rptPendientesPorSurtir
+        End Get
+        Set(ByVal value As String)
+            _rptPendientesPorSurtir = value
+        End Set
+    End Property
+
+    Private _ManejaDescuentoComision As Boolean
+    Public Property ManejaDescuentoComision() As Boolean
+        Get
+            Return _ManejaDescuentoComision
+        End Get
+        Set(ByVal value As Boolean)
+            _ManejaDescuentoComision = value
+        End Set
+    End Property
+
+    Private _EditarTipoPago As Boolean
+    Public Property EditarTipoPago() As Boolean
+        Get
+            Return _EditarTipoPago
+        End Get
+        Set(ByVal value As Boolean)
+            _EditarTipoPago = value
+        End Set
+    End Property
+
+    Private _ServicioFleteFactura As Boolean
+    Public Property ServicioFleteFactura() As Boolean
+        Get
+            Return _ServicioFleteFactura
+        End Get
+        Set(ByVal value As Boolean)
+            _ServicioFleteFactura = value
+        End Set
+    End Property
+
+    Private _ProdServicioFlete As String
+    Public Property ProdServicioFlete() As String
+        Get
+            Return _ProdServicioFlete
+        End Get
+        Set(ByVal value As String)
+            _ProdServicioFlete = value
+        End Set
+    End Property
+
+    Private _LecturaPickingIncrementoUnidad As Boolean
+    Public Property LecturaPickingIncrementoUnidad() As Boolean
+        Get
+            Return _LecturaPickingIncrementoUnidad
+        End Get
+        Set(ByVal value As Boolean)
+            _LecturaPickingIncrementoUnidad = value
+        End Set
+    End Property
+
+    Private _ContabilizaNivelCuatro As Boolean
+    Public Property ContabilizaNivelCuatro() As Boolean
+        Get
+            Return _ContabilizaNivelCuatro
+        End Get
+        Set(ByVal value As Boolean)
+            _ContabilizaNivelCuatro = value
+        End Set
+    End Property
+
+    Private _incluirDescuentoPrecioXML As Boolean
+    Public Property incluirDescuentoPrecioXML() As Boolean
+        Get
+            Return _incluirDescuentoPrecioXML
+        End Get
+        Set(ByVal value As Boolean)
+            _incluirDescuentoPrecioXML = value
+        End Set
+    End Property
+
+    Private _CentroCostosCompras As Boolean
+    Public Property CentroCostosCompras() As Boolean
+        Get
+            Return _CentroCostosCompras
+        End Get
+        Set(ByVal value As Boolean)
+            _CentroCostosCompras = value
+        End Set
+    End Property
+
+    Private _enlazarParcialPicking As Boolean
+    Public Property enlazarParcialPicking() As Boolean
+        Get
+            Return _enlazarParcialPicking
+        End Get
+        Set(ByVal value As Boolean)
+            _enlazarParcialPicking = value
+        End Set
+    End Property
+
+    Private _equivalenciasDuplicadas As Boolean
+    Public Property equivalenciasDuplicadas() As Boolean
+        Get
+            Return _equivalenciasDuplicadas
+        End Get
+        Set(ByVal value As Boolean)
+            _equivalenciasDuplicadas = value
+        End Set
+    End Property
+
+    Private _detallarLotesSIMAC As Boolean
+    Public Property detallarLotesSIMAC() As Boolean
+        Get
+            Return _detallarLotesSIMAC
+        End Get
+        Set(ByVal value As Boolean)
+            _detallarLotesSIMAC = value
+        End Set
+    End Property
+
+    Private _decimalesPrecio As Integer
+    Public Property decimalesPrecio() As Integer
+        Get
+            Return _decimalesPrecio
+        End Get
+        Set(ByVal value As Integer)
+            _decimalesPrecio = value
+        End Set
+    End Property
+
+    Private _ventaSoloListaPrecio As Boolean
+    Public Property ventaSoloListaPrecio() As Boolean
+        Get
+            Return _ventaSoloListaPrecio
+        End Get
+        Set(ByVal value As Boolean)
+            _ventaSoloListaPrecio = value
+        End Set
+    End Property
+
+    Private _envioPedidosSimac As Integer
+    Public Property envioPedidosSimac() As Integer
+        Get
+            Return _envioPedidosSimac
+        End Get
+        Set(ByVal value As Integer)
+            _envioPedidosSimac = value
+        End Set
+    End Property
+
+    Private _ClientePedido As String
+    Public Property ClientePedido() As String
+        Get
+            Return _ClientePedido
+        End Get
+        Set(ByVal value As String)
+            _ClientePedido = value
+        End Set
+    End Property
+
+    Private _ReporteLiquidacionMovil As String
+    Public Property ReporteLiquidacionMovil() As String
+        Get
+            Return _ReporteLiquidacionMovil
+        End Get
+        Set(ByVal value As String)
+            _ReporteLiquidacionMovil = value
+        End Set
+    End Property
+
+    Private _ReporteAdeudoRetornable As String
+    Public Property ReporteAdeudoRetornable() As String
+        Get
+            Return _ReporteAdeudoRetornable
+        End Get
+        Set(ByVal value As String)
+            _ReporteAdeudoRetornable = value
+        End Set
+    End Property
+
+    Private _ReporteListaPrecios As String
+    Public Property ReporteListaPrecios() As String
+        Get
+            Return _ReporteListaPrecios
+        End Get
+        Set(ByVal value As String)
+            _ReporteListaPrecios = value
+        End Set
+    End Property
+
+    Private _cantidadPorPrecio As Boolean
+    Public Property cantidadPorPrecio() As Boolean
+        Get
+            Return _cantidadPorPrecio
+        End Get
+        Set(ByVal value As Boolean)
+            _cantidadPorPrecio = value
+        End Set
+    End Property
 
 End Class
 
 
-'IdProductoEstimacion
-'IdProductoEstimacionSub
-'ReporteHojaGeneradora
-'ReporteEstimacion
-'ReporteCaratulaEstimacion
-'ValidacionCredito
-'PeriodoMaxMin
-'NumLiquidacion
-'ConceptosLiquidaciones
-'CuentasComplemento
-'DecimalesEntrada
-'DecimalesSalida
-'ServicioEmbarque
-'RevisionPagos
-'RptEnlaces
-'AutonumeracionLotes
-'CantidadTotalLote
-'EditarComision
-'PorcentajeEmpresa
-'PorcentajeOperador
-'AgruparClavesIguales
-'manejaMovil
-'nivelAlmacen
-'EnlaceVarios
-'ReporteOEmbarques
-'ReporteAutorizaciones
-'ReportePeriodoAutorizaciones
-'ReportePeriodoEntregasEmbarque
-'envioProduccion
-'ReporteInventario
-'EquivalenciaClientes
-'ReporteLotesDocumento
-'controLotes
-'rptPendientesPorSurtir
-'ManejaDescuentoComision
-'EditarTipoPago
-'ServicioFleteFactura
-'ProdServicioFlete
-'LecturaPickingIncrementoUnidad
-'ContabilizaNivelCuatro
-'incluirDescuentoPrecioXML
-'CentroCostosCompras
-'enlazarParcialPicking
-'equivalenciasDuplicadas
-'detallarLotesSIMAC
-'decimalesPrecio
-'ventaSoloListaPrecio
-'envioPedidosSimac
-'ClientePedido
-'ReporteLiquidacionMovil
-'ReporteAdeudoRetornable
-'ReporteListaPrecios
-'cantidadPorPrecio

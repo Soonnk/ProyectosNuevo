@@ -259,5 +259,306 @@
         End Set
     End Property
 
+    Private _Sistema As Integer
+    Public Property Sistema() As Integer
+        Get
+            Return _Sistema
+        End Get
+        Set(ByVal value As Integer)
+            _Sistema = value
+        End Set
+    End Property
+
+    Private _DBSimac As String
+    Public Property DBSimac() As String
+        Get
+            Return _DBSimac
+        End Get
+        Set(ByVal value As String)
+            _DBSimac = value
+        End Set
+    End Property
+
+    Private _ProgBase As Boolean
+    Public Property ProgBase() As Boolean
+        Get
+            Return _ProgBase
+        End Get
+        Set(ByVal value As Boolean)
+            _ProgBase = value
+        End Set
+    End Property
+
+    Private _ValidaUnidad As Boolean
+    Public Property ValidaUnidad() As Boolean
+        Get
+            Return _ValidaUnidad
+        End Get
+        Set(ByVal value As Boolean)
+            _ValidaUnidad = value
+        End Set
+    End Property
+
+    Private _AutPedido As Boolean
+    Public Property AutPedido() As Boolean
+        Get
+            Return _AutPedido
+        End Get
+        Set(ByVal value As Boolean)
+            _AutPedido = value
+        End Set
+    End Property
+
+    Private _DestajosAvance As Boolean
+    Public Property DestajosAvance() As Boolean
+        Get
+            Return _DestajosAvance
+        End Get
+        Set(ByVal value As Boolean)
+            _DestajosAvance = value
+        End Set
+    End Property
+
+    Private _ValidadSuPedido As Boolean
+    Public Property ValidadSuPedido() As Boolean
+        Get
+            Return _ValidadSuPedido
+        End Get
+        Set(ByVal value As Boolean)
+            _ValidadSuPedido = value
+        End Set
+    End Property
+
+    Private _EntregaParcial As Boolean
+    Public Property EntregaParcial() As Boolean
+        Get
+            Return _EntregaParcial
+        End Get
+        Set(ByVal value As Boolean)
+            _EntregaParcial = value
+        End Set
+    End Property
+
+    Private _CalculoDesperdicio As Boolean
+    Public Property CalculoDesperdicio() As Boolean
+        Get
+            Return _CalculoDesperdicio
+        End Get
+        Set(ByVal value As Boolean)
+            _CalculoDesperdicio = value
+        End Set
+    End Property
+
+    Private _ManejaTenerias As Boolean
+    Public Property ManejaTenerias() As Boolean
+        Get
+            Return _ManejaTenerias
+        End Get
+        Set(ByVal value As Boolean)
+            _ManejaTenerias = value
+        End Set
+    End Property
+
+    Private _PedProdAutorizado As Boolean
+    Public Property PedProdAutorizado() As Boolean
+        Get
+            Return _PedProdAutorizado
+        End Get
+        Set(ByVal value As Boolean)
+            _PedProdAutorizado = value
+        End Set
+    End Property
+
+    Private _MinutosSemanales As Integer
+    Public Property MinutosSemanales() As Integer
+        Get
+            Return _MinutosSemanales
+        End Get
+        Set(ByVal value As Integer)
+            _MinutosSemanales = value
+        End Set
+    End Property
+
+    Private _hcCarga As Boolean
+    Public Property hcCarga() As Boolean
+        Get
+            Return _hcCarga
+        End Get
+        Set(ByVal value As Boolean)
+            _hcCarga = value
+        End Set
+    End Property
+
+    Private _hcDerivados As Boolean
+    Public Property hcDerivados() As Boolean
+        Get
+            Return _hcDerivados
+        End Get
+        Set(ByVal value As Boolean)
+            _hcDerivados = value
+        End Set
+    End Property
+
+    Private _hcFormulas As Boolean
+    Public Property hcFormulas() As Boolean
+        Get
+            Return _hcFormulas
+        End Get
+        Set(ByVal value As Boolean)
+            _hcFormulas = value
+        End Set
+    End Property
+
+    Private _hcMaterialess As Boolean
+    Public Property hcMaterialess() As Boolean
+        Get
+            Return _hcMaterialess
+        End Get
+        Set(ByVal value As Boolean)
+            _hcMaterialess = value
+        End Set
+    End Property
+
+    Private _rptFormulas As String
+    Public Property rptFormulas() As String
+        Get
+            Return _rptFormulas
+        End Get
+        Set(ByVal value As String)
+            _rptFormulas = value
+        End Set
+    End Property
+
+    Private _avancePorProceso As Boolean
+    Public Property avancePorProceso() As Boolean
+        Get
+            Return _avancePorProceso
+        End Get
+        Set(ByVal value As Boolean)
+            _avancePorProceso = value
+        End Set
+    End Property
+
+    Private _dividirLote As Boolean
+    Public Property dividirLote() As Boolean
+        Get
+            Return _dividirLote
+        End Get
+        Set(ByVal value As Boolean)
+            _dividirLote = value
+        End Set
+    End Property
+
+    Private _avanceNoValidarProg As Boolean
+    Public Property avanceNoValidarProg() As Boolean
+        Get
+            Return _avanceNoValidarProg
+        End Get
+        Set(ByVal value As Boolean)
+            _avanceNoValidarProg = value
+        End Set
+    End Property
+
+    Private _rptPreasignacion As String
+    Public Property rptPreasignacion() As String
+        Get
+            Return _rptPreasignacion
+        End Get
+        Set(ByVal value As String)
+            _rptPreasignacion = value
+        End Set
+    End Property
+
+    Private _Tabla7 As String
+    Public Property Tabla7() As String
+        Get
+            Return _Tabla7
+        End Get
+        Set(ByVal value As String)
+            _Tabla7 = value
+        End Set
+    End Property
+
+    Private _Tabla8 As String
+    Public Property Tabla8() As String
+        Get
+            Return _Tabla8
+        End Get
+        Set(ByVal value As String)
+            _Tabla8 = value
+        End Set
+    End Property
+
+    Private _Tabla9 As String
+    Public Property Tabla9() As String
+        Get
+            Return _Tabla9
+        End Get
+        Set(ByVal value As String)
+            _Tabla9 = value
+        End Set
+    End Property
+
+    Private _Tabla10 As String
+    Public Property Tabla10() As String
+        Get
+            Return _Tabla10
+        End Get
+        Set(ByVal value As String)
+            _Tabla10 = value
+        End Set
+    End Property
+
+    Private _Tabla11 As String
+    Public Property Tabla11() As String
+        Get
+            Return _Tabla11
+        End Get
+        Set(ByVal value As String)
+            _Tabla11 = value
+        End Set
+    End Property
+
+    Private _Tabla12 As String
+    Public Property Tabla12() As String
+        Get
+            Return _Tabla12
+        End Get
+        Set(ByVal value As String)
+            _Tabla12 = value
+        End Set
+    End Property
+
+    Private _rptExplosionFormulas As String
+    Public Property rptExplosionFormulas() As String
+        Get
+            Return _rptExplosionFormulas
+        End Get
+        Set(ByVal value As String)
+            _rptExplosionFormulas = value
+        End Set
+    End Property
+
+
+    Private _editarCantidadDestajo As Boolean
+    Public Property editarCantidadDestajo() As Boolean
+        Get
+            Return _editarCantidadDestajo
+        End Get
+        Set(ByVal value As Boolean)
+            _editarCantidadDestajo = value
+        End Set
+    End Property
+
+    Private _editarCostoDestaje As Boolean
+    Public Property editarCostoDestaje() As Boolean
+        Get
+            Return _editarCostoDestaje
+        End Get
+        Set(ByVal value As Boolean)
+            _editarCostoDestaje = value
+        End Set
+    End Property
+
 
 End Class
