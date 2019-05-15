@@ -241,21 +241,29 @@ Public Class AgregarTienda
     End Sub
 
     Public Function GeneraObjReporte(ByVal FileBytes() As Byte) As Entidades.ReportesPuntoVenta
+        Dim _Clave As New Integer
         Try
             Dim ReportePV As New Entidades.ReportesPuntoVenta()
             If ModoForma = enuModoForma.Editar Then
                 Dim dt As DataRow
                 dt = Me.GridView1.GetDataRow(GridView1.FocusedRowHandle)
+                _Clave = dt("Clave")
                 ReportePV.Tipo = dt("Tipo")
-            End If
-            If Me.txtTipoReporte.EditValue Is Nothing Then
-                MsgBox("No has capturado un tipo", MsgBoxStyle.Exclamation, "Tiendas")
-            Else
-                ReportePV.Tipo = Me.txtTipoReporte.EditValue
                 ReportePV.Archivo = FileBytes
-                ReportePV.Nombre = Me.txtNombreReporte.EditValue
+                ReportePV.Nombre = dt("Nombre")
                 ReportePV.FechaModificacion = Date.Now
                 ReportePV.Tienda = _IdTienda
+                ReportePV.OID = _Clave
+            Else
+                If Me.txtTipoReporte.EditValue Is Nothing Then
+                    MsgBox("No has capturado un tipo", MsgBoxStyle.Exclamation, "Tiendas")
+                Else
+                    ReportePV.Tipo = Me.txtTipoReporte.EditValue
+                    ReportePV.Archivo = FileBytes
+                    ReportePV.Nombre = Me.txtNombreReporte.EditValue
+                    ReportePV.FechaModificacion = Date.Now
+                    ReportePV.Tienda = _IdTienda
+                End If
             End If
             Return ReportePV
         Catch ex As Exception
@@ -369,15 +377,16 @@ Public Class AgregarTienda
             Select Case ModoForma
                 Case enuModoForma.Editar
                     nTienda.EditarReportePuntoVenta(Me.GeneraObjReporte(GetArchivoBytes))
+                    CargarReporte()
                     'Me.tienda.Reportes.Add(Me.GeneraObjReporte(Me.GetArchivoBytes, Me.tienda.Session))
                 Case enuModoForma.Nuevo
                     nTienda.GuardarReportePuntoVenta(Me.GeneraObjReporte(GetArchivoBytes()))
                     CargarReporte()
             End Select
-            'Me.txtTipoReporte.EditValue = Nothing
-            'Me.txtNombreReporte.EditValue = Nothing
+            Me.txtTipoReporte.EditValue = Nothing
+            Me.txtNombreReporte.EditValue = Nothing
         Catch ex As Exception
-            MsgBox(ex.Message)
+            'MsgBox(ex.Message)
             Return Nothing
         End Try
     End Function

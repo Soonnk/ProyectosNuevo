@@ -152,7 +152,7 @@ Public Class Tienda
         Dim Query As String
         Try
             With entReporte
-                Query = "UPDATE ReportesPuntoVenta SET FechaModificacion = '" & Format(entReporte.FechaModificacion, "yyyy/MM/dd") & "',
+                Query = "UPDATE ReportesPuntoVenta SET FechaModificacion = '" & Format(entReporte.FechaModificacion, "yyyyMMdd") & "',
                                         Archivo = @Imagen WHERE Clave = " & .OID
                 Dim conn = New SqlConnection(clsSQL.StringConn)
                 conn.Open()
