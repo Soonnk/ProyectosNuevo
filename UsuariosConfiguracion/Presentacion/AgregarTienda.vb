@@ -1,7 +1,6 @@
 ﻿Imports System.ComponentModel
 
 Imports DevExpress.XtraReports.UI
-'Imports System.
 Public Class AgregarTienda
     Public modo As tipo
     Private _mdiPrincipal As mdiPrincipal

@@ -1,5 +1,4 @@
 ﻿Imports System.Data.SqlClient
-
 Public Class Tienda
     Dim obj As New clsSQL
     Public ds As DataSet
@@ -58,7 +57,6 @@ Public Class Tienda
                                         '" & tienda.IdAlmacen & "','" & tienda.IdFolio & "',
                                         '" & tienda.BasePuntoVenta & "',
                                         '" & tienda.PrecioMinimoVenta & "','" & tienda.Empresa & "')"
-
             Return obj.commandSQL(Query)
         Catch ex As Exception
             MsgBox(ex)
@@ -89,10 +87,8 @@ Public Class Tienda
             dt = obj.RegresarDatos(Query)
             Return dt
         Finally
-
         End Try
     End Function
-
 
     Public Function GetDB() As DataTable
         Try
@@ -114,7 +110,6 @@ Public Class Tienda
             dt = obj.RegresarDatosMagnus(Query)
             Return dt
         Finally
-
         End Try
     End Function
 
@@ -126,25 +121,19 @@ Public Class Tienda
             dt = obj.RegresarDatosMagnus(Query)
             Return dt
         Finally
-
         End Try
     End Function
 
     Public Function UnicodeBytesToString(ByVal bytes() As Byte) As String
-
         Return System.Text.Encoding.Unicode.GetString(bytes)
     End Function
 
     Public Function GuardarReportePuntoVenta(ByVal entReporte As Entidades.ReportesPuntoVenta) As Boolean
         Dim dt As New DataTable
         Dim Query As String
-
-
         Try
-
             Query = "insert ReportesPuntoventa(Nombre, FechaModificacion, Tipo, Archivo, Tienda)values
                     ('" & entReporte.Nombre & "', '" & Format(entReporte.FechaModificacion, "yyyyMMdd") & "', '" & entReporte.Tipo & "', @Imagen, " & entReporte.Tienda & ")"
-
             Dim conn = New SqlConnection(clsSQL.StringConn)
             conn.Open()
             Dim command = New SqlCommand(Query, conn)
@@ -186,9 +175,7 @@ Public Class Tienda
             Query = " SELECT * FROM ReportesPuntoVenta WHERE Tienda = " & tienda
             dt = obj.RegresarDatos(Query)
             Return dt
-
         Catch ex As Exception
-
         End Try
     End Function
 End Class
