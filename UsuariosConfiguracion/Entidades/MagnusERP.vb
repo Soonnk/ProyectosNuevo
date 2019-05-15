@@ -38,16 +38,89 @@
             _DBMagnus = value
         End Set
     End Property
+    Private _usuarioActivo As Integer
+    Public Property usuarioActivo() As Integer
+        Get
+            Return _usuarioActivo
+        End Get
+        Set(ByVal value As Integer)
+            _usuarioActivo = value
+        End Set
+    End Property
+    Private _autonumerico As String
+    Public Property autonumerico() As String
+        Get
+            Return _autonumerico
+        End Get
+        Set(ByVal value As String)
+            _autonumerico = value
+        End Set
+    End Property
+
+    Private _server1 As String
+    Public Property server1() As String
+        Get
+            Return _server1
+        End Get
+        Set(ByVal value As String)
+            _server1 = value
+        End Set
+    End Property
+
+    Private _usuario As String
+    Public Property usuario() As String
+        Get
+            Return _usuario
+        End Get
+        Set(ByVal value As String)
+            _usuario = value
+        End Set
+    End Property
+
+    Private _manejaRenta As Integer
+    Public Property manejaRenta() As Integer
+        Get
+            Return _manejaRenta
+        End Get
+        Set(ByVal value As Integer)
+            _manejaRenta = value
+        End Set
+    End Property
+
+    Private _manejaObras As Integer
+    Public Property manejaObras() As Integer
+        Get
+            Return _manejaObras
+        End Get
+        Set(ByVal value As Integer)
+            _manejaObras = value
+        End Set
+    End Property
+
+    Private _manejaTransportes As Integer
+    Public Property manejaTransportes() As Integer
+        Get
+            Return _manejaTransportes
+        End Get
+        Set(ByVal value As Integer)
+            _manejaTransportes = value
+        End Set
+    End Property
+
+    Private _pathCer As String
+    Public Property pathCer() As String
+        Get
+            Return _pathCer
+        End Get
+        Set(ByVal value As String)
+            _pathCer = value
+        End Set
+    End Property
 
 End Class
 
-'usuarioActivo
-'autonumerico
-'server
-'usuario
-'manejaRenta
-'manejaObras
-'manejaTransportes
+
+
 'pathCer
 'pathXml
 'rutaReportes
