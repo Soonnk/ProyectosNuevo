@@ -135,11 +135,44 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem47 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.txtFolioPedidoA = New DevExpress.XtraEditors.TextEdit()
         Me.LayoutControlItem17 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.bteEtiqueta = New DevExpress.XtraEditors.ButtonEdit()
+        Me.LayoutControlItem48 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.bteOrden = New DevExpress.XtraEditors.ButtonEdit()
+        Me.LayoutControlItem49 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.bteProduccion = New DevExpress.XtraEditors.ButtonEdit()
+        Me.LayoutControlItem50 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.btePreasignacionCelulas = New DevExpress.XtraEditors.ButtonEdit()
+        Me.LayoutControlItem51 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.bteHojaCosto = New DevExpress.XtraEditors.ButtonEdit()
+        Me.LayoutControlItem52 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.bteAvance = New DevExpress.XtraEditors.ButtonEdit()
+        Me.LayoutControlItem53 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.bteEmbarque = New DevExpress.XtraEditors.ButtonEdit()
+        Me.LayoutControlItem54 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.bteListaEmbarque = New DevExpress.XtraEditors.ButtonEdit()
+        Me.LayoutControlItem55 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.bteHojaCostoMasiva = New DevExpress.XtraEditors.ButtonEdit()
+        Me.LayoutControlItem56 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.bteHojaCostoProv = New DevExpress.XtraEditors.ButtonEdit()
+        Me.LayoutControlItem57 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.bteProductosExplosion = New DevExpress.XtraEditors.ButtonEdit()
+        Me.LayoutControlItem58 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.btePedido = New DevExpress.XtraEditors.ButtonEdit()
+        Me.LayoutControlItem59 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.bteConcentradoMateriales = New DevExpress.XtraEditors.ButtonEdit()
+        Me.LayoutControlItem60 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.bteFormulas = New DevExpress.XtraEditors.ButtonEdit()
+        Me.LayoutControlItem61 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.bteExplosionFormulas = New DevExpress.XtraEditors.ButtonEdit()
+        Me.LayoutControlItem62 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.bteOrdenPiezas = New DevExpress.XtraEditors.ButtonEdit()
+        Me.LayoutControlItem63 = New DevExpress.XtraLayout.LayoutControlItem()
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl1.SuspendLayout()
         CType(Me.GroupControl8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl8.SuspendLayout()
         CType(Me.LayoutControl9, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.LayoutControl9.SuspendLayout()
         CType(Me.LayoutControlGroup9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GroupControl7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl7.SuspendLayout()
@@ -264,6 +297,38 @@ Partial Class AgregarSIMAC
         CType(Me.LayoutControlItem47, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtFolioPedidoA.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem17, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bteEtiqueta.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem48, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bteOrden.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem49, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bteProduccion.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem50, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btePreasignacionCelulas.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem51, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bteHojaCosto.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem52, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bteAvance.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem53, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bteEmbarque.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem54, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bteListaEmbarque.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem55, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bteHojaCostoMasiva.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem56, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bteHojaCostoProv.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem57, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bteProductosExplosion.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem58, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btePedido.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem59, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bteConcentradoMateriales.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem60, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bteFormulas.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem61, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bteExplosionFormulas.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem62, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bteOrdenPiezas.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem63, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LayoutControl1
@@ -280,26 +345,42 @@ Partial Class AgregarSIMAC
         Me.LayoutControl1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControl1.Name = "LayoutControl1"
         Me.LayoutControl1.Root = Me.LayoutControlGroup1
-        Me.LayoutControl1.Size = New System.Drawing.Size(892, 657)
+        Me.LayoutControl1.Size = New System.Drawing.Size(892, 727)
         Me.LayoutControl1.TabIndex = 0
         Me.LayoutControl1.Text = "LayoutControl1"
         '
         'GroupControl8
         '
         Me.GroupControl8.Controls.Add(Me.LayoutControl9)
-        Me.GroupControl8.Location = New System.Drawing.Point(365, 318)
+        Me.GroupControl8.Location = New System.Drawing.Point(365, 314)
         Me.GroupControl8.Name = "GroupControl8"
-        Me.GroupControl8.Size = New System.Drawing.Size(525, 337)
+        Me.GroupControl8.Size = New System.Drawing.Size(525, 411)
         Me.GroupControl8.TabIndex = 11
-        Me.GroupControl8.Text = "GroupControl8"
+        Me.GroupControl8.Text = "Ruta de reportes"
         '
         'LayoutControl9
         '
+        Me.LayoutControl9.Controls.Add(Me.bteOrdenPiezas)
+        Me.LayoutControl9.Controls.Add(Me.bteExplosionFormulas)
+        Me.LayoutControl9.Controls.Add(Me.bteFormulas)
+        Me.LayoutControl9.Controls.Add(Me.bteConcentradoMateriales)
+        Me.LayoutControl9.Controls.Add(Me.btePedido)
+        Me.LayoutControl9.Controls.Add(Me.bteProductosExplosion)
+        Me.LayoutControl9.Controls.Add(Me.bteHojaCostoProv)
+        Me.LayoutControl9.Controls.Add(Me.bteHojaCostoMasiva)
+        Me.LayoutControl9.Controls.Add(Me.bteListaEmbarque)
+        Me.LayoutControl9.Controls.Add(Me.bteEmbarque)
+        Me.LayoutControl9.Controls.Add(Me.bteAvance)
+        Me.LayoutControl9.Controls.Add(Me.bteHojaCosto)
+        Me.LayoutControl9.Controls.Add(Me.btePreasignacionCelulas)
+        Me.LayoutControl9.Controls.Add(Me.bteProduccion)
+        Me.LayoutControl9.Controls.Add(Me.bteOrden)
+        Me.LayoutControl9.Controls.Add(Me.bteEtiqueta)
         Me.LayoutControl9.Dock = System.Windows.Forms.DockStyle.Fill
         Me.LayoutControl9.Location = New System.Drawing.Point(2, 20)
         Me.LayoutControl9.Name = "LayoutControl9"
         Me.LayoutControl9.Root = Me.LayoutControlGroup9
-        Me.LayoutControl9.Size = New System.Drawing.Size(521, 315)
+        Me.LayoutControl9.Size = New System.Drawing.Size(521, 389)
         Me.LayoutControl9.TabIndex = 0
         Me.LayoutControl9.Text = "LayoutControl9"
         '
@@ -307,9 +388,12 @@ Partial Class AgregarSIMAC
         '
         Me.LayoutControlGroup9.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
         Me.LayoutControlGroup9.GroupBordersVisible = False
+        Me.LayoutControlGroup9.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem48, Me.LayoutControlItem49, Me.LayoutControlItem50, Me.LayoutControlItem51, Me.LayoutControlItem52, Me.LayoutControlItem53, Me.LayoutControlItem54, Me.LayoutControlItem55, Me.LayoutControlItem56, Me.LayoutControlItem57, Me.LayoutControlItem58, Me.LayoutControlItem59, Me.LayoutControlItem60, Me.LayoutControlItem61, Me.LayoutControlItem62, Me.LayoutControlItem63})
         Me.LayoutControlGroup9.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup9.Name = "LayoutControlGroup9"
-        Me.LayoutControlGroup9.Size = New System.Drawing.Size(439, 315)
+        Me.LayoutControlGroup9.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
+        Me.LayoutControlGroup9.Size = New System.Drawing.Size(521, 389)
+        Me.LayoutControlGroup9.Spacing = New DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2)
         Me.LayoutControlGroup9.TextVisible = False
         '
         'GroupControl7
@@ -317,9 +401,9 @@ Partial Class AgregarSIMAC
         Me.GroupControl7.Controls.Add(Me.LayoutControl7)
         Me.GroupControl7.Location = New System.Drawing.Point(621, 2)
         Me.GroupControl7.Name = "GroupControl7"
-        Me.GroupControl7.Size = New System.Drawing.Size(269, 312)
+        Me.GroupControl7.Size = New System.Drawing.Size(269, 308)
         Me.GroupControl7.TabIndex = 10
-        Me.GroupControl7.Text = "GroupControl7"
+        Me.GroupControl7.Text = "Avances"
         '
         'LayoutControl7
         '
@@ -336,7 +420,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControl7.Location = New System.Drawing.Point(2, 20)
         Me.LayoutControl7.Name = "LayoutControl7"
         Me.LayoutControl7.Root = Me.LayoutControlGroup7
-        Me.LayoutControl7.Size = New System.Drawing.Size(265, 290)
+        Me.LayoutControl7.Size = New System.Drawing.Size(265, 286)
         Me.LayoutControl7.TabIndex = 0
         Me.LayoutControl7.Text = "LayoutControl7"
         '
@@ -348,18 +432,18 @@ Partial Class AgregarSIMAC
         Me.LayoutControlGroup7.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup7.Name = "LayoutControlGroup7"
         Me.LayoutControlGroup7.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup7.Size = New System.Drawing.Size(265, 290)
+        Me.LayoutControlGroup7.Size = New System.Drawing.Size(265, 286)
         Me.LayoutControlGroup7.Spacing = New DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2)
         Me.LayoutControlGroup7.TextVisible = False
         '
         'GroupControl6
         '
         Me.GroupControl6.Controls.Add(Me.LayoutControl6)
-        Me.GroupControl6.Location = New System.Drawing.Point(313, 213)
+        Me.GroupControl6.Location = New System.Drawing.Point(313, 214)
         Me.GroupControl6.Name = "GroupControl6"
-        Me.GroupControl6.Size = New System.Drawing.Size(304, 101)
+        Me.GroupControl6.Size = New System.Drawing.Size(304, 96)
         Me.GroupControl6.TabIndex = 9
-        Me.GroupControl6.Text = "GroupControl6"
+        Me.GroupControl6.Text = "Programación"
         '
         'LayoutControl6
         '
@@ -370,7 +454,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControl6.Location = New System.Drawing.Point(2, 20)
         Me.LayoutControl6.Name = "LayoutControl6"
         Me.LayoutControl6.Root = Me.LayoutControlGroup6
-        Me.LayoutControl6.Size = New System.Drawing.Size(300, 79)
+        Me.LayoutControl6.Size = New System.Drawing.Size(300, 74)
         Me.LayoutControl6.TabIndex = 0
         Me.LayoutControl6.Text = "LayoutControl6"
         '
@@ -382,7 +466,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlGroup6.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup6.Name = "LayoutControlGroup6"
         Me.LayoutControlGroup6.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup6.Size = New System.Drawing.Size(300, 79)
+        Me.LayoutControlGroup6.Size = New System.Drawing.Size(300, 74)
         Me.LayoutControlGroup6.Spacing = New DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2)
         Me.LayoutControlGroup6.TextVisible = False
         '
@@ -391,7 +475,7 @@ Partial Class AgregarSIMAC
         Me.GroupControl5.Controls.Add(Me.LayoutControl5)
         Me.GroupControl5.Location = New System.Drawing.Point(313, 2)
         Me.GroupControl5.Name = "GroupControl5"
-        Me.GroupControl5.Size = New System.Drawing.Size(304, 207)
+        Me.GroupControl5.Size = New System.Drawing.Size(304, 208)
         Me.GroupControl5.TabIndex = 8
         Me.GroupControl5.Text = "Pedidos"
         '
@@ -408,7 +492,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControl5.Location = New System.Drawing.Point(2, 20)
         Me.LayoutControl5.Name = "LayoutControl5"
         Me.LayoutControl5.Root = Me.LayoutControlGroup5
-        Me.LayoutControl5.Size = New System.Drawing.Size(300, 185)
+        Me.LayoutControl5.Size = New System.Drawing.Size(300, 186)
         Me.LayoutControl5.TabIndex = 0
         Me.LayoutControl5.Text = "LayoutControl5"
         '
@@ -471,7 +555,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlGroup5.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup5.Name = "LayoutControlGroup5"
         Me.LayoutControlGroup5.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup5.Size = New System.Drawing.Size(300, 185)
+        Me.LayoutControlGroup5.Size = New System.Drawing.Size(300, 186)
         Me.LayoutControlGroup5.Spacing = New DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2)
         Me.LayoutControlGroup5.TextVisible = False
         '
@@ -525,16 +609,16 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem23.Control = Me.cheCargarSoloProductosAutorizados
         Me.LayoutControlItem23.Location = New System.Drawing.Point(0, 142)
         Me.LayoutControlItem23.Name = "LayoutControlItem23"
-        Me.LayoutControlItem23.Size = New System.Drawing.Size(296, 39)
+        Me.LayoutControlItem23.Size = New System.Drawing.Size(296, 40)
         Me.LayoutControlItem23.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem23.TextVisible = False
         '
         'GroupControl4
         '
         Me.GroupControl4.Controls.Add(Me.LayoutControl8)
-        Me.GroupControl4.Location = New System.Drawing.Point(2, 318)
+        Me.GroupControl4.Location = New System.Drawing.Point(2, 314)
         Me.GroupControl4.Name = "GroupControl4"
-        Me.GroupControl4.Size = New System.Drawing.Size(359, 337)
+        Me.GroupControl4.Size = New System.Drawing.Size(359, 411)
         Me.GroupControl4.TabIndex = 7
         Me.GroupControl4.Text = "Características"
         '
@@ -556,7 +640,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControl8.Location = New System.Drawing.Point(2, 20)
         Me.LayoutControl8.Name = "LayoutControl8"
         Me.LayoutControl8.Root = Me.LayoutControlGroup8
-        Me.LayoutControl8.Size = New System.Drawing.Size(355, 315)
+        Me.LayoutControl8.Size = New System.Drawing.Size(355, 389)
         Me.LayoutControl8.TabIndex = 0
         Me.LayoutControl8.Text = "LayoutControl8"
         '
@@ -568,16 +652,16 @@ Partial Class AgregarSIMAC
         Me.LayoutControlGroup8.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup8.Name = "LayoutControlGroup8"
         Me.LayoutControlGroup8.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup8.Size = New System.Drawing.Size(355, 315)
+        Me.LayoutControlGroup8.Size = New System.Drawing.Size(355, 389)
         Me.LayoutControlGroup8.Spacing = New DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2)
         Me.LayoutControlGroup8.TextVisible = False
         '
         'GroupControl3
         '
         Me.GroupControl3.Controls.Add(Me.LayoutControl4)
-        Me.GroupControl3.Location = New System.Drawing.Point(2, 176)
+        Me.GroupControl3.Location = New System.Drawing.Point(2, 183)
         Me.GroupControl3.Name = "GroupControl3"
-        Me.GroupControl3.Size = New System.Drawing.Size(307, 138)
+        Me.GroupControl3.Size = New System.Drawing.Size(307, 127)
         Me.GroupControl3.TabIndex = 6
         Me.GroupControl3.Text = "Destajos"
         '
@@ -591,7 +675,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControl4.Location = New System.Drawing.Point(2, 20)
         Me.LayoutControl4.Name = "LayoutControl4"
         Me.LayoutControl4.Root = Me.LayoutControlGroup4
-        Me.LayoutControl4.Size = New System.Drawing.Size(303, 116)
+        Me.LayoutControl4.Size = New System.Drawing.Size(303, 105)
         Me.LayoutControl4.TabIndex = 0
         Me.LayoutControl4.Text = "LayoutControl4"
         '
@@ -638,7 +722,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlGroup4.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup4.Name = "LayoutControlGroup4"
         Me.LayoutControlGroup4.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup4.Size = New System.Drawing.Size(303, 108)
+        Me.LayoutControlGroup4.Size = New System.Drawing.Size(303, 105)
         Me.LayoutControlGroup4.Spacing = New DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2)
         Me.LayoutControlGroup4.TextVisible = False
         '
@@ -674,16 +758,16 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem16.Control = Me.txtMinutoSemanales
         Me.LayoutControlItem16.Location = New System.Drawing.Point(0, 69)
         Me.LayoutControlItem16.Name = "LayoutControlItem16"
-        Me.LayoutControlItem16.Size = New System.Drawing.Size(299, 43)
+        Me.LayoutControlItem16.Size = New System.Drawing.Size(299, 32)
         Me.LayoutControlItem16.Text = "Minutos Semanales"
         Me.LayoutControlItem16.TextSize = New System.Drawing.Size(91, 13)
         '
         'GroupControl2
         '
         Me.GroupControl2.Controls.Add(Me.LayoutControl3)
-        Me.GroupControl2.Location = New System.Drawing.Point(2, 92)
+        Me.GroupControl2.Location = New System.Drawing.Point(2, 102)
         Me.GroupControl2.Name = "GroupControl2"
-        Me.GroupControl2.Size = New System.Drawing.Size(307, 80)
+        Me.GroupControl2.Size = New System.Drawing.Size(307, 77)
         Me.GroupControl2.TabIndex = 5
         Me.GroupControl2.Text = "Hoja de Costos"
         '
@@ -695,7 +779,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControl3.Location = New System.Drawing.Point(2, 20)
         Me.LayoutControl3.Name = "LayoutControl3"
         Me.LayoutControl3.Root = Me.LayoutControlGroup3
-        Me.LayoutControl3.Size = New System.Drawing.Size(303, 58)
+        Me.LayoutControl3.Size = New System.Drawing.Size(303, 55)
         Me.LayoutControl3.TabIndex = 0
         Me.LayoutControl3.Text = "LayoutControl3"
         '
@@ -724,7 +808,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlGroup3.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup3.Name = "LayoutControlGroup3"
         Me.LayoutControlGroup3.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup3.Size = New System.Drawing.Size(303, 66)
+        Me.LayoutControlGroup3.Size = New System.Drawing.Size(303, 55)
         Me.LayoutControlGroup3.Spacing = New DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2)
         Me.LayoutControlGroup3.TextVisible = False
         '
@@ -742,7 +826,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem12.Control = Me.cheModuloCalculoDesperdicio
         Me.LayoutControlItem12.Location = New System.Drawing.Point(0, 24)
         Me.LayoutControlItem12.Name = "LayoutControlItem12"
-        Me.LayoutControlItem12.Size = New System.Drawing.Size(299, 30)
+        Me.LayoutControlItem12.Size = New System.Drawing.Size(299, 27)
         Me.LayoutControlItem12.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem12.TextVisible = False
         '
@@ -751,7 +835,7 @@ Partial Class AgregarSIMAC
         Me.GroupControl1.Controls.Add(Me.LayoutControl2)
         Me.GroupControl1.Location = New System.Drawing.Point(0, 0)
         Me.GroupControl1.Name = "GroupControl1"
-        Me.GroupControl1.Size = New System.Drawing.Size(311, 90)
+        Me.GroupControl1.Size = New System.Drawing.Size(311, 100)
         Me.GroupControl1.TabIndex = 4
         Me.GroupControl1.Text = "Parámetros"
         '
@@ -763,7 +847,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControl2.Location = New System.Drawing.Point(2, 20)
         Me.LayoutControl2.Name = "LayoutControl2"
         Me.LayoutControl2.Root = Me.LayoutControlGroup2
-        Me.LayoutControl2.Size = New System.Drawing.Size(307, 68)
+        Me.LayoutControl2.Size = New System.Drawing.Size(307, 78)
         Me.LayoutControl2.TabIndex = 0
         Me.LayoutControl2.Text = "LayoutControl2"
         '
@@ -803,7 +887,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlGroup2.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup2.Name = "LayoutControlGroup2"
         Me.LayoutControlGroup2.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup2.Size = New System.Drawing.Size(307, 68)
+        Me.LayoutControlGroup2.Size = New System.Drawing.Size(307, 78)
         Me.LayoutControlGroup2.Spacing = New DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2)
         Me.LayoutControlGroup2.TextVisible = False
         '
@@ -821,7 +905,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem10.Control = Me.cheManejaTenerias
         Me.LayoutControlItem10.Location = New System.Drawing.Point(0, 24)
         Me.LayoutControlItem10.Name = "LayoutControlItem10"
-        Me.LayoutControlItem10.Size = New System.Drawing.Size(303, 40)
+        Me.LayoutControlItem10.Size = New System.Drawing.Size(303, 50)
         Me.LayoutControlItem10.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem10.TextVisible = False
         '
@@ -833,7 +917,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlGroup1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup1.Name = "LayoutControlGroup1"
         Me.LayoutControlGroup1.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup1.Size = New System.Drawing.Size(892, 657)
+        Me.LayoutControlGroup1.Size = New System.Drawing.Size(892, 727)
         Me.LayoutControlGroup1.TextVisible = False
         '
         'LayoutControlItem1
@@ -842,34 +926,34 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem1.Name = "LayoutControlItem1"
         Me.LayoutControlItem1.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(311, 90)
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(311, 100)
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem1.TextVisible = False
         '
         'LayoutControlItem3
         '
         Me.LayoutControlItem3.Control = Me.GroupControl3
-        Me.LayoutControlItem3.Location = New System.Drawing.Point(0, 174)
+        Me.LayoutControlItem3.Location = New System.Drawing.Point(0, 181)
         Me.LayoutControlItem3.Name = "LayoutControlItem3"
-        Me.LayoutControlItem3.Size = New System.Drawing.Size(311, 142)
+        Me.LayoutControlItem3.Size = New System.Drawing.Size(311, 131)
         Me.LayoutControlItem3.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem3.TextVisible = False
         '
         'LayoutControlItem4
         '
         Me.LayoutControlItem4.Control = Me.GroupControl4
-        Me.LayoutControlItem4.Location = New System.Drawing.Point(0, 316)
+        Me.LayoutControlItem4.Location = New System.Drawing.Point(0, 312)
         Me.LayoutControlItem4.Name = "LayoutControlItem4"
-        Me.LayoutControlItem4.Size = New System.Drawing.Size(363, 341)
+        Me.LayoutControlItem4.Size = New System.Drawing.Size(363, 415)
         Me.LayoutControlItem4.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem4.TextVisible = False
         '
         'LayoutControlItem2
         '
         Me.LayoutControlItem2.Control = Me.GroupControl2
-        Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 90)
+        Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 100)
         Me.LayoutControlItem2.Name = "LayoutControlItem2"
-        Me.LayoutControlItem2.Size = New System.Drawing.Size(311, 84)
+        Me.LayoutControlItem2.Size = New System.Drawing.Size(311, 81)
         Me.LayoutControlItem2.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem2.TextVisible = False
         '
@@ -878,16 +962,16 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem5.Control = Me.GroupControl5
         Me.LayoutControlItem5.Location = New System.Drawing.Point(311, 0)
         Me.LayoutControlItem5.Name = "LayoutControlItem5"
-        Me.LayoutControlItem5.Size = New System.Drawing.Size(308, 211)
+        Me.LayoutControlItem5.Size = New System.Drawing.Size(308, 212)
         Me.LayoutControlItem5.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem5.TextVisible = False
         '
         'LayoutControlItem6
         '
         Me.LayoutControlItem6.Control = Me.GroupControl6
-        Me.LayoutControlItem6.Location = New System.Drawing.Point(311, 211)
+        Me.LayoutControlItem6.Location = New System.Drawing.Point(311, 212)
         Me.LayoutControlItem6.Name = "LayoutControlItem6"
-        Me.LayoutControlItem6.Size = New System.Drawing.Size(308, 105)
+        Me.LayoutControlItem6.Size = New System.Drawing.Size(308, 100)
         Me.LayoutControlItem6.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem6.TextVisible = False
         '
@@ -896,16 +980,16 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem7.Control = Me.GroupControl7
         Me.LayoutControlItem7.Location = New System.Drawing.Point(619, 0)
         Me.LayoutControlItem7.Name = "LayoutControlItem7"
-        Me.LayoutControlItem7.Size = New System.Drawing.Size(273, 316)
+        Me.LayoutControlItem7.Size = New System.Drawing.Size(273, 312)
         Me.LayoutControlItem7.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem7.TextVisible = False
         '
         'LayoutControlItem8
         '
         Me.LayoutControlItem8.Control = Me.GroupControl8
-        Me.LayoutControlItem8.Location = New System.Drawing.Point(363, 316)
+        Me.LayoutControlItem8.Location = New System.Drawing.Point(363, 312)
         Me.LayoutControlItem8.Name = "LayoutControlItem8"
-        Me.LayoutControlItem8.Size = New System.Drawing.Size(529, 341)
+        Me.LayoutControlItem8.Size = New System.Drawing.Size(529, 415)
         Me.LayoutControlItem8.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem8.TextVisible = False
         '
@@ -959,7 +1043,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem26.Control = Me.cheDividirLotes
         Me.LayoutControlItem26.Location = New System.Drawing.Point(0, 46)
         Me.LayoutControlItem26.Name = "LayoutControlItem26"
-        Me.LayoutControlItem26.Size = New System.Drawing.Size(296, 29)
+        Me.LayoutControlItem26.Size = New System.Drawing.Size(296, 24)
         Me.LayoutControlItem26.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem26.TextVisible = False
         '
@@ -1119,7 +1203,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem35.Control = Me.txtAlmacenProductoTerminado
         Me.LayoutControlItem35.Location = New System.Drawing.Point(0, 185)
         Me.LayoutControlItem35.Name = "LayoutControlItem35"
-        Me.LayoutControlItem35.Size = New System.Drawing.Size(261, 101)
+        Me.LayoutControlItem35.Size = New System.Drawing.Size(261, 97)
         Me.LayoutControlItem35.Text = "Almacen producto terminado:"
         Me.LayoutControlItem35.TextSize = New System.Drawing.Size(141, 13)
         '
@@ -1323,7 +1407,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem47.Control = Me.txtTabla12
         Me.LayoutControlItem47.Location = New System.Drawing.Point(0, 264)
         Me.LayoutControlItem47.Name = "LayoutControlItem47"
-        Me.LayoutControlItem47.Size = New System.Drawing.Size(351, 47)
+        Me.LayoutControlItem47.Size = New System.Drawing.Size(351, 121)
         Me.LayoutControlItem47.Text = "Tabla 12:"
         Me.LayoutControlItem47.TextSize = New System.Drawing.Size(45, 13)
         '
@@ -1344,11 +1428,299 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem17.Text = "Folio pedido A"
         Me.LayoutControlItem17.TextSize = New System.Drawing.Size(67, 13)
         '
+        'bteEtiqueta
+        '
+        Me.bteEtiqueta.Location = New System.Drawing.Point(136, 4)
+        Me.bteEtiqueta.Name = "bteEtiqueta"
+        Me.bteEtiqueta.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+        Me.bteEtiqueta.Size = New System.Drawing.Size(381, 20)
+        Me.bteEtiqueta.StyleController = Me.LayoutControl9
+        Me.bteEtiqueta.TabIndex = 4
+        '
+        'LayoutControlItem48
+        '
+        Me.LayoutControlItem48.Control = Me.bteEtiqueta
+        Me.LayoutControlItem48.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem48.Name = "LayoutControlItem48"
+        Me.LayoutControlItem48.Size = New System.Drawing.Size(517, 24)
+        Me.LayoutControlItem48.Text = "Etiqueta"
+        Me.LayoutControlItem48.TextSize = New System.Drawing.Size(129, 13)
+        '
+        'bteOrden
+        '
+        Me.bteOrden.Location = New System.Drawing.Point(136, 28)
+        Me.bteOrden.Name = "bteOrden"
+        Me.bteOrden.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+        Me.bteOrden.Size = New System.Drawing.Size(381, 20)
+        Me.bteOrden.StyleController = Me.LayoutControl9
+        Me.bteOrden.TabIndex = 5
+        '
+        'LayoutControlItem49
+        '
+        Me.LayoutControlItem49.Control = Me.bteOrden
+        Me.LayoutControlItem49.Location = New System.Drawing.Point(0, 24)
+        Me.LayoutControlItem49.Name = "LayoutControlItem49"
+        Me.LayoutControlItem49.Size = New System.Drawing.Size(517, 24)
+        Me.LayoutControlItem49.Text = "Orden"
+        Me.LayoutControlItem49.TextSize = New System.Drawing.Size(129, 13)
+        '
+        'bteProduccion
+        '
+        Me.bteProduccion.Location = New System.Drawing.Point(136, 76)
+        Me.bteProduccion.Name = "bteProduccion"
+        Me.bteProduccion.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+        Me.bteProduccion.Size = New System.Drawing.Size(381, 20)
+        Me.bteProduccion.StyleController = Me.LayoutControl9
+        Me.bteProduccion.TabIndex = 6
+        '
+        'LayoutControlItem50
+        '
+        Me.LayoutControlItem50.Control = Me.bteProduccion
+        Me.LayoutControlItem50.Location = New System.Drawing.Point(0, 72)
+        Me.LayoutControlItem50.Name = "LayoutControlItem50"
+        Me.LayoutControlItem50.Size = New System.Drawing.Size(517, 24)
+        Me.LayoutControlItem50.Text = "Producción"
+        Me.LayoutControlItem50.TextSize = New System.Drawing.Size(129, 13)
+        '
+        'btePreasignacionCelulas
+        '
+        Me.btePreasignacionCelulas.Location = New System.Drawing.Point(136, 100)
+        Me.btePreasignacionCelulas.Name = "btePreasignacionCelulas"
+        Me.btePreasignacionCelulas.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+        Me.btePreasignacionCelulas.Size = New System.Drawing.Size(381, 20)
+        Me.btePreasignacionCelulas.StyleController = Me.LayoutControl9
+        Me.btePreasignacionCelulas.TabIndex = 7
+        '
+        'LayoutControlItem51
+        '
+        Me.LayoutControlItem51.Control = Me.btePreasignacionCelulas
+        Me.LayoutControlItem51.Location = New System.Drawing.Point(0, 96)
+        Me.LayoutControlItem51.Name = "LayoutControlItem51"
+        Me.LayoutControlItem51.Size = New System.Drawing.Size(517, 24)
+        Me.LayoutControlItem51.Text = "Preasignación de celulas"
+        Me.LayoutControlItem51.TextSize = New System.Drawing.Size(129, 13)
+        '
+        'bteHojaCosto
+        '
+        Me.bteHojaCosto.Location = New System.Drawing.Point(136, 124)
+        Me.bteHojaCosto.Name = "bteHojaCosto"
+        Me.bteHojaCosto.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+        Me.bteHojaCosto.Size = New System.Drawing.Size(381, 20)
+        Me.bteHojaCosto.StyleController = Me.LayoutControl9
+        Me.bteHojaCosto.TabIndex = 8
+        '
+        'LayoutControlItem52
+        '
+        Me.LayoutControlItem52.Control = Me.bteHojaCosto
+        Me.LayoutControlItem52.Location = New System.Drawing.Point(0, 120)
+        Me.LayoutControlItem52.Name = "LayoutControlItem52"
+        Me.LayoutControlItem52.Size = New System.Drawing.Size(517, 24)
+        Me.LayoutControlItem52.Text = "Hoja de costo"
+        Me.LayoutControlItem52.TextSize = New System.Drawing.Size(129, 13)
+        '
+        'bteAvance
+        '
+        Me.bteAvance.Location = New System.Drawing.Point(136, 148)
+        Me.bteAvance.Name = "bteAvance"
+        Me.bteAvance.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+        Me.bteAvance.Size = New System.Drawing.Size(381, 20)
+        Me.bteAvance.StyleController = Me.LayoutControl9
+        Me.bteAvance.TabIndex = 9
+        '
+        'LayoutControlItem53
+        '
+        Me.LayoutControlItem53.Control = Me.bteAvance
+        Me.LayoutControlItem53.Location = New System.Drawing.Point(0, 144)
+        Me.LayoutControlItem53.Name = "LayoutControlItem53"
+        Me.LayoutControlItem53.Size = New System.Drawing.Size(517, 24)
+        Me.LayoutControlItem53.Text = "Avance"
+        Me.LayoutControlItem53.TextSize = New System.Drawing.Size(129, 13)
+        '
+        'bteEmbarque
+        '
+        Me.bteEmbarque.Location = New System.Drawing.Point(136, 172)
+        Me.bteEmbarque.Name = "bteEmbarque"
+        Me.bteEmbarque.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+        Me.bteEmbarque.Size = New System.Drawing.Size(381, 20)
+        Me.bteEmbarque.StyleController = Me.LayoutControl9
+        Me.bteEmbarque.TabIndex = 10
+        '
+        'LayoutControlItem54
+        '
+        Me.LayoutControlItem54.Control = Me.bteEmbarque
+        Me.LayoutControlItem54.Location = New System.Drawing.Point(0, 168)
+        Me.LayoutControlItem54.Name = "LayoutControlItem54"
+        Me.LayoutControlItem54.Size = New System.Drawing.Size(517, 24)
+        Me.LayoutControlItem54.Text = "Embarque"
+        Me.LayoutControlItem54.TextSize = New System.Drawing.Size(129, 13)
+        '
+        'bteListaEmbarque
+        '
+        Me.bteListaEmbarque.Location = New System.Drawing.Point(136, 196)
+        Me.bteListaEmbarque.Name = "bteListaEmbarque"
+        Me.bteListaEmbarque.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+        Me.bteListaEmbarque.Size = New System.Drawing.Size(381, 20)
+        Me.bteListaEmbarque.StyleController = Me.LayoutControl9
+        Me.bteListaEmbarque.TabIndex = 11
+        '
+        'LayoutControlItem55
+        '
+        Me.LayoutControlItem55.Control = Me.bteListaEmbarque
+        Me.LayoutControlItem55.Location = New System.Drawing.Point(0, 192)
+        Me.LayoutControlItem55.Name = "LayoutControlItem55"
+        Me.LayoutControlItem55.Size = New System.Drawing.Size(517, 24)
+        Me.LayoutControlItem55.Text = "Lista embarque"
+        Me.LayoutControlItem55.TextSize = New System.Drawing.Size(129, 13)
+        '
+        'bteHojaCostoMasiva
+        '
+        Me.bteHojaCostoMasiva.Location = New System.Drawing.Point(136, 220)
+        Me.bteHojaCostoMasiva.Name = "bteHojaCostoMasiva"
+        Me.bteHojaCostoMasiva.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+        Me.bteHojaCostoMasiva.Size = New System.Drawing.Size(381, 20)
+        Me.bteHojaCostoMasiva.StyleController = Me.LayoutControl9
+        Me.bteHojaCostoMasiva.TabIndex = 12
+        '
+        'LayoutControlItem56
+        '
+        Me.LayoutControlItem56.Control = Me.bteHojaCostoMasiva
+        Me.LayoutControlItem56.Location = New System.Drawing.Point(0, 216)
+        Me.LayoutControlItem56.Name = "LayoutControlItem56"
+        Me.LayoutControlItem56.Size = New System.Drawing.Size(517, 24)
+        Me.LayoutControlItem56.Text = "Hoja costo masiva"
+        Me.LayoutControlItem56.TextSize = New System.Drawing.Size(129, 13)
+        '
+        'bteHojaCostoProv
+        '
+        Me.bteHojaCostoProv.Location = New System.Drawing.Point(136, 244)
+        Me.bteHojaCostoProv.Name = "bteHojaCostoProv"
+        Me.bteHojaCostoProv.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+        Me.bteHojaCostoProv.Size = New System.Drawing.Size(381, 20)
+        Me.bteHojaCostoProv.StyleController = Me.LayoutControl9
+        Me.bteHojaCostoProv.TabIndex = 13
+        '
+        'LayoutControlItem57
+        '
+        Me.LayoutControlItem57.Control = Me.bteHojaCostoProv
+        Me.LayoutControlItem57.Location = New System.Drawing.Point(0, 240)
+        Me.LayoutControlItem57.Name = "LayoutControlItem57"
+        Me.LayoutControlItem57.Size = New System.Drawing.Size(517, 24)
+        Me.LayoutControlItem57.Text = "Hoja costo prov"
+        Me.LayoutControlItem57.TextSize = New System.Drawing.Size(129, 13)
+        '
+        'bteProductosExplosion
+        '
+        Me.bteProductosExplosion.Location = New System.Drawing.Point(136, 268)
+        Me.bteProductosExplosion.Name = "bteProductosExplosion"
+        Me.bteProductosExplosion.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+        Me.bteProductosExplosion.Size = New System.Drawing.Size(381, 20)
+        Me.bteProductosExplosion.StyleController = Me.LayoutControl9
+        Me.bteProductosExplosion.TabIndex = 14
+        '
+        'LayoutControlItem58
+        '
+        Me.LayoutControlItem58.Control = Me.bteProductosExplosion
+        Me.LayoutControlItem58.Location = New System.Drawing.Point(0, 264)
+        Me.LayoutControlItem58.Name = "LayoutControlItem58"
+        Me.LayoutControlItem58.Size = New System.Drawing.Size(517, 24)
+        Me.LayoutControlItem58.Text = "Productos explosión"
+        Me.LayoutControlItem58.TextSize = New System.Drawing.Size(129, 13)
+        '
+        'btePedido
+        '
+        Me.btePedido.Location = New System.Drawing.Point(136, 292)
+        Me.btePedido.Name = "btePedido"
+        Me.btePedido.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+        Me.btePedido.Size = New System.Drawing.Size(381, 20)
+        Me.btePedido.StyleController = Me.LayoutControl9
+        Me.btePedido.TabIndex = 15
+        '
+        'LayoutControlItem59
+        '
+        Me.LayoutControlItem59.Control = Me.btePedido
+        Me.LayoutControlItem59.Location = New System.Drawing.Point(0, 288)
+        Me.LayoutControlItem59.Name = "LayoutControlItem59"
+        Me.LayoutControlItem59.Size = New System.Drawing.Size(517, 24)
+        Me.LayoutControlItem59.Text = "Pedido"
+        Me.LayoutControlItem59.TextSize = New System.Drawing.Size(129, 13)
+        '
+        'bteConcentradoMateriales
+        '
+        Me.bteConcentradoMateriales.Location = New System.Drawing.Point(136, 316)
+        Me.bteConcentradoMateriales.Name = "bteConcentradoMateriales"
+        Me.bteConcentradoMateriales.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+        Me.bteConcentradoMateriales.Size = New System.Drawing.Size(381, 20)
+        Me.bteConcentradoMateriales.StyleController = Me.LayoutControl9
+        Me.bteConcentradoMateriales.TabIndex = 16
+        '
+        'LayoutControlItem60
+        '
+        Me.LayoutControlItem60.Control = Me.bteConcentradoMateriales
+        Me.LayoutControlItem60.Location = New System.Drawing.Point(0, 312)
+        Me.LayoutControlItem60.Name = "LayoutControlItem60"
+        Me.LayoutControlItem60.Size = New System.Drawing.Size(517, 24)
+        Me.LayoutControlItem60.Text = "Concentrado de materiales"
+        Me.LayoutControlItem60.TextSize = New System.Drawing.Size(129, 13)
+        '
+        'bteFormulas
+        '
+        Me.bteFormulas.Location = New System.Drawing.Point(136, 340)
+        Me.bteFormulas.Name = "bteFormulas"
+        Me.bteFormulas.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+        Me.bteFormulas.Size = New System.Drawing.Size(381, 20)
+        Me.bteFormulas.StyleController = Me.LayoutControl9
+        Me.bteFormulas.TabIndex = 17
+        '
+        'LayoutControlItem61
+        '
+        Me.LayoutControlItem61.Control = Me.bteFormulas
+        Me.LayoutControlItem61.Location = New System.Drawing.Point(0, 336)
+        Me.LayoutControlItem61.Name = "LayoutControlItem61"
+        Me.LayoutControlItem61.Size = New System.Drawing.Size(517, 24)
+        Me.LayoutControlItem61.Text = "Fórmulas"
+        Me.LayoutControlItem61.TextSize = New System.Drawing.Size(129, 13)
+        '
+        'bteExplosionFormulas
+        '
+        Me.bteExplosionFormulas.Location = New System.Drawing.Point(136, 364)
+        Me.bteExplosionFormulas.Name = "bteExplosionFormulas"
+        Me.bteExplosionFormulas.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+        Me.bteExplosionFormulas.Size = New System.Drawing.Size(381, 20)
+        Me.bteExplosionFormulas.StyleController = Me.LayoutControl9
+        Me.bteExplosionFormulas.TabIndex = 18
+        '
+        'LayoutControlItem62
+        '
+        Me.LayoutControlItem62.Control = Me.bteExplosionFormulas
+        Me.LayoutControlItem62.Location = New System.Drawing.Point(0, 360)
+        Me.LayoutControlItem62.Name = "LayoutControlItem62"
+        Me.LayoutControlItem62.Size = New System.Drawing.Size(517, 25)
+        Me.LayoutControlItem62.Text = "Explosión de fórmulas"
+        Me.LayoutControlItem62.TextSize = New System.Drawing.Size(129, 13)
+        '
+        'bteOrdenPiezas
+        '
+        Me.bteOrdenPiezas.Location = New System.Drawing.Point(136, 52)
+        Me.bteOrdenPiezas.Name = "bteOrdenPiezas"
+        Me.bteOrdenPiezas.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+        Me.bteOrdenPiezas.Size = New System.Drawing.Size(381, 20)
+        Me.bteOrdenPiezas.StyleController = Me.LayoutControl9
+        Me.bteOrdenPiezas.TabIndex = 19
+        '
+        'LayoutControlItem63
+        '
+        Me.LayoutControlItem63.Control = Me.bteOrdenPiezas
+        Me.LayoutControlItem63.Location = New System.Drawing.Point(0, 48)
+        Me.LayoutControlItem63.Name = "LayoutControlItem63"
+        Me.LayoutControlItem63.Size = New System.Drawing.Size(517, 24)
+        Me.LayoutControlItem63.Text = "Orden de Piezas"
+        Me.LayoutControlItem63.TextSize = New System.Drawing.Size(129, 13)
+        '
         'AgregarSIMAC
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(892, 657)
+        Me.ClientSize = New System.Drawing.Size(892, 727)
         Me.Controls.Add(Me.LayoutControl1)
         Me.Name = "AgregarSIMAC"
         Me.Text = "AgregarSIMAC"
@@ -1357,6 +1729,7 @@ Partial Class AgregarSIMAC
         CType(Me.GroupControl8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupControl8.ResumeLayout(False)
         CType(Me.LayoutControl9, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.LayoutControl9.ResumeLayout(False)
         CType(Me.LayoutControlGroup9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GroupControl7, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupControl7.ResumeLayout(False)
@@ -1481,6 +1854,38 @@ Partial Class AgregarSIMAC
         CType(Me.LayoutControlItem47, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtFolioPedidoA.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem17, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bteEtiqueta.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem48, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bteOrden.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem49, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bteProduccion.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem50, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btePreasignacionCelulas.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem51, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bteHojaCosto.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem52, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bteAvance.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem53, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bteEmbarque.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem54, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bteListaEmbarque.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem55, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bteHojaCostoMasiva.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem56, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bteHojaCostoProv.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem57, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bteProductosExplosion.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem58, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btePedido.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem59, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bteConcentradoMateriales.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem60, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bteFormulas.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem61, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bteExplosionFormulas.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem62, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bteOrdenPiezas.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem63, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1598,4 +2003,36 @@ Partial Class AgregarSIMAC
     Friend WithEvents LayoutControlItem45 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem46 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem47 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents bteOrdenPiezas As DevExpress.XtraEditors.ButtonEdit
+    Friend WithEvents bteExplosionFormulas As DevExpress.XtraEditors.ButtonEdit
+    Friend WithEvents bteFormulas As DevExpress.XtraEditors.ButtonEdit
+    Friend WithEvents bteConcentradoMateriales As DevExpress.XtraEditors.ButtonEdit
+    Friend WithEvents btePedido As DevExpress.XtraEditors.ButtonEdit
+    Friend WithEvents bteProductosExplosion As DevExpress.XtraEditors.ButtonEdit
+    Friend WithEvents bteHojaCostoProv As DevExpress.XtraEditors.ButtonEdit
+    Friend WithEvents bteHojaCostoMasiva As DevExpress.XtraEditors.ButtonEdit
+    Friend WithEvents bteListaEmbarque As DevExpress.XtraEditors.ButtonEdit
+    Friend WithEvents bteEmbarque As DevExpress.XtraEditors.ButtonEdit
+    Friend WithEvents bteAvance As DevExpress.XtraEditors.ButtonEdit
+    Friend WithEvents bteHojaCosto As DevExpress.XtraEditors.ButtonEdit
+    Friend WithEvents btePreasignacionCelulas As DevExpress.XtraEditors.ButtonEdit
+    Friend WithEvents bteProduccion As DevExpress.XtraEditors.ButtonEdit
+    Friend WithEvents bteOrden As DevExpress.XtraEditors.ButtonEdit
+    Friend WithEvents bteEtiqueta As DevExpress.XtraEditors.ButtonEdit
+    Friend WithEvents LayoutControlItem48 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem49 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem50 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem51 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem52 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem53 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem54 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem55 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem56 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem57 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem58 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem59 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem60 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem61 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem62 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem63 As DevExpress.XtraLayout.LayoutControlItem
 End Class
