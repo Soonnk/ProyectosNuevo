@@ -88,6 +88,8 @@ Partial Class AgregarSistema
         'btnCancelar
         '
         Me.btnCancelar.Location = New System.Drawing.Point(251, 168)
+        Me.btnCancelar.MaximumSize = New System.Drawing.Size(80, 22)
+        Me.btnCancelar.MinimumSize = New System.Drawing.Size(80, 22)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(80, 22)
         Me.btnCancelar.StyleController = Me.LayoutControl1
@@ -96,9 +98,11 @@ Partial Class AgregarSistema
         '
         'btnGuardar
         '
-        Me.btnGuardar.Location = New System.Drawing.Point(168, 168)
+        Me.btnGuardar.Location = New System.Drawing.Point(167, 168)
+        Me.btnGuardar.MaximumSize = New System.Drawing.Size(80, 22)
+        Me.btnGuardar.MinimumSize = New System.Drawing.Size(80, 22)
         Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(79, 22)
+        Me.btnGuardar.Size = New System.Drawing.Size(80, 22)
         Me.btnGuardar.StyleController = Me.LayoutControl1
         Me.btnGuardar.TabIndex = 5
         Me.btnGuardar.Text = "Guardar"
@@ -291,15 +295,15 @@ Partial Class AgregarSistema
         Me.EmptySpaceItem1.AllowHotTrack = False
         Me.EmptySpaceItem1.Location = New System.Drawing.Point(0, 166)
         Me.EmptySpaceItem1.Name = "EmptySpaceItem1"
-        Me.EmptySpaceItem1.Size = New System.Drawing.Size(166, 26)
+        Me.EmptySpaceItem1.Size = New System.Drawing.Size(165, 26)
         Me.EmptySpaceItem1.TextSize = New System.Drawing.Size(0, 0)
         '
         'LayoutControlItem7
         '
         Me.LayoutControlItem7.Control = Me.btnGuardar
-        Me.LayoutControlItem7.Location = New System.Drawing.Point(166, 166)
+        Me.LayoutControlItem7.Location = New System.Drawing.Point(165, 166)
         Me.LayoutControlItem7.Name = "LayoutControlItem7"
-        Me.LayoutControlItem7.Size = New System.Drawing.Size(83, 26)
+        Me.LayoutControlItem7.Size = New System.Drawing.Size(84, 26)
         Me.LayoutControlItem7.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem7.TextVisible = False
         '

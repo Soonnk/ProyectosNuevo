@@ -229,13 +229,13 @@
         End Set
     End Property
 
-    Private _MateriaAlmacen As Integer
-    Public Property MateriaAlmacen() As Integer
+    Private _MaterialAlmacen As Integer
+    Public Property MaterialAlmacen() As Integer
         Get
-            Return _MateriaAlmacen
+            Return _MaterialAlmacen
         End Get
         Set(ByVal value As Integer)
-            _MateriaAlmacen = value
+            _MaterialAlmacen = value
         End Set
     End Property
 
@@ -246,6 +246,16 @@
         End Get
         Set(ByVal value As Integer)
             _ProductoAlmacen = value
+        End Set
+    End Property
+
+    Private _MaxLote As Decimal
+    Public Property MaxLote() As Decimal
+        Get
+            Return _MaxLote
+        End Get
+        Set(ByVal value As Decimal)
+            _MaxLote = value
         End Set
     End Property
 
@@ -409,13 +419,13 @@
         End Set
     End Property
 
-    Private _hcMaterialess As Boolean
-    Public Property hcMaterialess() As Boolean
+    Private _hcMateriales As Boolean
+    Public Property hcMateriales() As Boolean
         Get
-            Return _hcMaterialess
+            Return _hcMateriales
         End Get
         Set(ByVal value As Boolean)
-            _hcMaterialess = value
+            _hcMateriales = value
         End Set
     End Property
 

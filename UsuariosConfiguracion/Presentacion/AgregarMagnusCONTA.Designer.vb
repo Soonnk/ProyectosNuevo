@@ -394,7 +394,9 @@ Partial Class AgregarMagnusCONTA
         Me.GridLookUpEdit2View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
         Me.GridLookUpEdit2View.Name = "GridLookUpEdit2View"
         Me.GridLookUpEdit2View.OptionsSelection.EnableAppearanceFocusedCell = False
+        Me.GridLookUpEdit2View.OptionsView.ShowAutoFilterRow = True
         Me.GridLookUpEdit2View.OptionsView.ShowGroupPanel = False
+        Me.GridLookUpEdit2View.OptionsView.ShowIndicator = False
         '
         'GridColumn1
         '
@@ -438,7 +440,9 @@ Partial Class AgregarMagnusCONTA
         Me.GridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
         Me.GridLookUpEdit1View.Name = "GridLookUpEdit1View"
         Me.GridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = False
+        Me.GridLookUpEdit1View.OptionsView.ShowAutoFilterRow = True
         Me.GridLookUpEdit1View.OptionsView.ShowGroupPanel = False
+        Me.GridLookUpEdit1View.OptionsView.ShowIndicator = False
         '
         'LayoutControlGroup2
         '

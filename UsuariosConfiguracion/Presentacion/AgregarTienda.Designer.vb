@@ -165,18 +165,22 @@ Partial Class AgregarTienda
         '
         'btnCargarArchivo
         '
-        Me.btnCargarArchivo.Location = New System.Drawing.Point(588, 30)
+        Me.btnCargarArchivo.Location = New System.Drawing.Point(593, 30)
+        Me.btnCargarArchivo.MaximumSize = New System.Drawing.Size(80, 22)
+        Me.btnCargarArchivo.MinimumSize = New System.Drawing.Size(80, 22)
         Me.btnCargarArchivo.Name = "btnCargarArchivo"
-        Me.btnCargarArchivo.Size = New System.Drawing.Size(86, 22)
+        Me.btnCargarArchivo.Size = New System.Drawing.Size(80, 22)
         Me.btnCargarArchivo.StyleController = Me.LayoutControl4
         Me.btnCargarArchivo.TabIndex = 6
         Me.btnCargarArchivo.Text = "Cargar Archivo"
         '
         'btnEditarReporte
         '
-        Me.btnEditarReporte.Location = New System.Drawing.Point(588, 4)
+        Me.btnEditarReporte.Location = New System.Drawing.Point(593, 4)
+        Me.btnEditarReporte.MaximumSize = New System.Drawing.Size(80, 22)
+        Me.btnEditarReporte.MinimumSize = New System.Drawing.Size(80, 22)
         Me.btnEditarReporte.Name = "btnEditarReporte"
-        Me.btnEditarReporte.Size = New System.Drawing.Size(86, 22)
+        Me.btnEditarReporte.Size = New System.Drawing.Size(80, 22)
         Me.btnEditarReporte.StyleController = Me.LayoutControl4
         Me.btnEditarReporte.TabIndex = 5
         Me.btnEditarReporte.Text = "Editar"
@@ -186,7 +190,7 @@ Partial Class AgregarTienda
         Me.GridControl1.Location = New System.Drawing.Point(4, 4)
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(580, 319)
+        Me.GridControl1.Size = New System.Drawing.Size(585, 319)
         Me.GridControl1.TabIndex = 4
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
@@ -244,25 +248,25 @@ Partial Class AgregarTienda
         Me.LayoutControlItem11.Control = Me.GridControl1
         Me.LayoutControlItem11.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem11.Name = "LayoutControlItem11"
-        Me.LayoutControlItem11.Size = New System.Drawing.Size(584, 323)
+        Me.LayoutControlItem11.Size = New System.Drawing.Size(589, 323)
         Me.LayoutControlItem11.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem11.TextVisible = False
         '
         'LayoutControlItem12
         '
         Me.LayoutControlItem12.Control = Me.btnEditarReporte
-        Me.LayoutControlItem12.Location = New System.Drawing.Point(584, 0)
+        Me.LayoutControlItem12.Location = New System.Drawing.Point(589, 0)
         Me.LayoutControlItem12.Name = "LayoutControlItem12"
-        Me.LayoutControlItem12.Size = New System.Drawing.Size(90, 26)
+        Me.LayoutControlItem12.Size = New System.Drawing.Size(85, 26)
         Me.LayoutControlItem12.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem12.TextVisible = False
         '
         'LayoutControlItem13
         '
         Me.LayoutControlItem13.Control = Me.btnCargarArchivo
-        Me.LayoutControlItem13.Location = New System.Drawing.Point(584, 26)
+        Me.LayoutControlItem13.Location = New System.Drawing.Point(589, 26)
         Me.LayoutControlItem13.Name = "LayoutControlItem13"
-        Me.LayoutControlItem13.Size = New System.Drawing.Size(90, 297)
+        Me.LayoutControlItem13.Size = New System.Drawing.Size(85, 297)
         Me.LayoutControlItem13.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem13.TextVisible = False
         '

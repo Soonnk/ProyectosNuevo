@@ -83,6 +83,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ReporteSIMAC.vb" />
     <Compile Include="ReportesPuntoVenta.vb" />
     <Compile Include="SIMAC.vb" />
     <Compile Include="Sistema.vb" />
