@@ -1,4 +1,5 @@
-﻿Public Class Sistema
+﻿'Consultas a la base de datos en la tabla Sistemas
+Public Class Sistema
     Dim obj As New clsSQL
     Public ds As DataSet
 

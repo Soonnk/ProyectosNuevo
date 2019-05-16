@@ -1,4 +1,5 @@
-﻿Imports System.Data.SqlClient
+﻿'Consultas a la base de datos en la tabla Tiendas
+Imports System.Data.SqlClient
 Public Class Tienda
     Dim obj As New clsSQL
     Public ds As DataSet

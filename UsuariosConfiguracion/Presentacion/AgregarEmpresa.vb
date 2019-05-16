@@ -12,9 +12,10 @@
 
     Public Forma As New ConsultarEmpresa
 
+    'Metodo que permite el registro de una empresa o la edición de sus datos para que queden almacenados los cambios en la base de datos
     Private Sub GuardarEmpresa()
+        Dim oNegocio As New Negocios.Empresa
         Try
-            Dim oNegocio As New Negocios.Empresa
             Dim camposVacios As String = ""
             Select Case modo
                 Case tipo.Nuevo
@@ -35,12 +36,12 @@
                         MessageBox.Show("No se han podido modificar los datos solicitados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End If
             End Select
-
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
     End Sub
 
+    'Metodo para validar que los campos obligatorios no esten vacios, se manda llamar en el metodo de GuardarEmpresa()
     Public Function ValidarCampos(ByVal camposVacios As String) As Boolean
         Try
             camposVacios = "Los siguientes campos esta vacios:" & Chr(10) & Chr(10)
@@ -64,6 +65,7 @@
         End Try
     End Function
 
+    'Permite que los campos se limpien, una vez que la empresa haya sido guardada.
     Public Sub LimpiarCampos()
         txtNombre.EditValue = ""
         txtDireccion.EditValue = ""
@@ -77,6 +79,8 @@
         ceActiva.Checked = False
         peLogotipo.EditValue = Nothing
     End Sub
+
+    'Encabezado del formulario que distingue si es un registro nuevo o una edición.
     Public Sub Cargar()
         Try
             Select Case modo
@@ -91,6 +95,7 @@
         End Try
     End Sub
 
+    'Llena los campos del formulario, sirve cuando un registro será editado.
     Public Sub CargarEmpresa()
         Dim oNegocio As New Negocios.Empresa
         Dim oEntidad As New Entidades.Empresa
@@ -107,11 +112,13 @@
             Me.txtGiro.Text = oEntidad.Giro
             Me.txtTelefono.Text = oEntidad.Telefono
             Me.ceActiva.Checked = oEntidad.Estatus
+            Me.peLogotipo.EditValue = oEntidad.Logotipo
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
     End Sub
 
+    'Permite que los valores ingresados por el usuario, se almacenen en su variable de la entidad, que es la que permitirá que el registro sea almecenado.
     Public Function llenarEntidades() As Entidades.Empresa
         Dim eEmpresa As New Entidades.Empresa
         eEmpresa.Nombre = Me.txtNombre.Text
@@ -128,6 +135,7 @@
         Return eEmpresa
     End Function
 
+    'Para la edición es necesario concoer a cual clave de registro se le asignarán los nuevos datos, permite lo mismo que el anterior pero con la variación de llenar el campo de la clave desde este momento.
     Public Function llenarEntidades2() As Entidades.Empresa
         Dim eEmpresa As New Entidades.Empresa
         eEmpresa.OID = _IdEmpresa
@@ -141,6 +149,7 @@
         eEmpresa.Giro = Me.txtGiro.Text
         eEmpresa.Telefono = Me.txtTelefono.Text
         eEmpresa.Estatus = Me.ceActiva.Checked
+        'eEmpresa.Logotipo = Me.peLogotipo.EditValue
         Return eEmpresa
     End Function
 

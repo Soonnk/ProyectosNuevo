@@ -1,4 +1,5 @@
-﻿Public Class MagnusCONTA
+﻿'Consultas a la base de datos en la tabla Configuracion_Conta
+Public Class MagnusCONTA
     Dim obj As New clsSQL
     Public ds As DataSet
 
@@ -39,6 +40,25 @@
         End Try
     End Function
 
+    Public Function CargarEntidadMagnusConta(ByRef _OID As Integer) As Entidades.Sistema
+        Dim query As String = "SELECT * FROM Sistemas WHERE Empresa = " & _OID
+        Try
+            Dim magnusConta As New Entidades.Sistema
+            Dim dt As DataTable = obj.RegresarDatos(query)
+            With dt.Rows(0)
+                magnusConta.OID = .Item("OID")
+                magnusConta.Nombre = .Item("Nombre")
+                magnusConta.Empresa = .Item("Empresa")
+                magnusConta.Codigo = .Item("Codigo")
+                magnusConta.Serie = .Item("Serie")
+                magnusConta.Activacion = .Item("Activacion")
+            End With
+            Return magnusConta
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
+
     Public Function InsertarMagnusCONTA(ByRef eMagnusC As Entidades.MagnusCONTA) As Boolean
         Dim Query As String
         Dim id = obj.Incrementar("Configuracion_Conta")
@@ -57,7 +77,7 @@
 
             Return obj.commandSQL(Query)
         Catch ex As Exception
-            MsgBox(ex)
+            'MsgBox(ex)
             Return False
         End Try
     End Function
@@ -67,7 +87,7 @@
         With eMagnusC
             Query = "UPDATE Configuracion_Conta SET
                                          DBConta = '" & .DBConta & "', Empresa = '" & .Empresa & "',
-                                         Sistema = '" & .Sistema & "', Autonumerico = '" & .Autonumerico & "',
+                                         Autonumerico = '" & .Autonumerico & "',
                                          EjercicioUno = '" & .EjercicioUno & "', ManejarFiscal = '" & .ManejarFiscal & "',
                                          Catalogo2 = '" & .Catalogo2 & "', Reubicaciones = '" & .Reubicaciones & "',
                                          PorSucursal = '" & .PorSucursal & "', ConceptoNotaCredito = '" & .ConceptoNotaCredito & "',
@@ -84,7 +104,7 @@
             Query = "SELECT Configuracion_Conta.OID, DBConta,Configuracion_Conta.Empresa,Sistema,Autonumerico, EjercicioUno,
 ManejarFiscal,Catalogo2,Reubicaciones,PorSucursal,ConceptoNotaCredito,ContrapartidaCancelacion,VistaPrevia,
 Empresas.Nombre as nom, Sistemas.Nombre as sis from Configuracion_Conta inner join
-Empresas ON (Configuracion_Conta.Empresa = Empresas.OID) inner join Sistemas ON (Configuracion_Conta.Sistema = Sistemas.OID)"
+Empresas ON (Configuracion_Conta.Empresa = Empresas.OID) inner join Sistemas ON (Configuracion_Conta.Sistema = Sistemas.OID) WHERE Sistemas.Nombre = 'Magnus CONTA'"
             dt = obj.RegresarDatos(Query)
             Return dt
         Finally
@@ -99,8 +119,20 @@ Empresas ON (Configuracion_Conta.Empresa = Empresas.OID) inner join Sistemas ON 
             query = "Select name From sys.databases Order By create_date Desc"
             Return obj.RegresarDatos(query)
         Catch ex As Exception
-            MsgBox(ex.Message)
+            'MsgBox(ex.Message)
             Return Nothing
+        End Try
+    End Function
+
+    Public Function CargarEmpresa() As DataTable
+        Dim dt As New DataTable
+        Dim Query As String
+        Try
+            Query = "SELECT Empresas.OID, Empresas.Nombre from Empresas inner join Sistemas ON Empresas.OID = Sistemas.Empresa Where Sistemas.Nombre = 'Magnus CONTA' "
+            dt = obj.RegresarDatos(Query)
+            Return dt
+        Finally
+
         End Try
     End Function
 

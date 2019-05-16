@@ -47,10 +47,7 @@ Partial Class AgregarMagnusCONTA
         Me.LayoutControlItem8 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
         Me.LayoutControl2 = New DevExpress.XtraLayout.LayoutControl()
-        Me.txtSistema = New DevExpress.XtraEditors.GridLookUpEdit()
-        Me.GridLookUpEdit3View = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.GridColumn3 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.txtNumeroActivacion = New DevExpress.XtraEditors.TextEdit()
         Me.txtEmpresa = New DevExpress.XtraEditors.GridLookUpEdit()
         Me.GridLookUpEdit2View = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -62,7 +59,7 @@ Partial Class AgregarMagnusCONTA
         Me.LayoutControlItem6 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem7 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem14 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem15 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem17 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem2 = New DevExpress.XtraLayout.LayoutControlItem()
@@ -101,8 +98,7 @@ Partial Class AgregarMagnusCONTA
         Me.GroupControl1.SuspendLayout()
         CType(Me.LayoutControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl2.SuspendLayout()
-        CType(Me.txtSistema.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GridLookUpEdit3View, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtNumeroActivacion.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtEmpresa.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridLookUpEdit2View, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtEjercicioUno.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -112,7 +108,7 @@ Partial Class AgregarMagnusCONTA
         CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem14, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem15, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem17, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -359,7 +355,7 @@ Partial Class AgregarMagnusCONTA
         '
         'LayoutControl2
         '
-        Me.LayoutControl2.Controls.Add(Me.txtSistema)
+        Me.LayoutControl2.Controls.Add(Me.txtNumeroActivacion)
         Me.LayoutControl2.Controls.Add(Me.txtEmpresa)
         Me.LayoutControl2.Controls.Add(Me.txtEjercicioUno)
         Me.LayoutControl2.Controls.Add(Me.txtBase)
@@ -371,53 +367,24 @@ Partial Class AgregarMagnusCONTA
         Me.LayoutControl2.TabIndex = 0
         Me.LayoutControl2.Text = "LayoutControl2"
         '
-        'txtSistema
+        'txtNumeroActivacion
         '
-        Me.txtSistema.Location = New System.Drawing.Point(73, 26)
-        Me.txtSistema.Name = "txtSistema"
-        Me.txtSistema.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.txtSistema.Properties.DisplayMember = "Nombre"
-        Me.txtSistema.Properties.NullText = ""
-        Me.txtSistema.Properties.ValueMember = "OID"
-        Me.txtSistema.Properties.View = Me.GridLookUpEdit3View
-        Me.txtSistema.Size = New System.Drawing.Size(235, 20)
-        Me.txtSistema.StyleController = Me.LayoutControl2
-        Me.txtSistema.TabIndex = 7
-        '
-        'GridLookUpEdit3View
-        '
-        Me.GridLookUpEdit3View.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn3, Me.GridColumn4})
-        Me.GridLookUpEdit3View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
-        Me.GridLookUpEdit3View.Name = "GridLookUpEdit3View"
-        Me.GridLookUpEdit3View.OptionsSelection.EnableAppearanceFocusedCell = False
-        Me.GridLookUpEdit3View.OptionsView.ShowGroupPanel = False
-        '
-        'GridColumn3
-        '
-        Me.GridColumn3.Caption = "Clave"
-        Me.GridColumn3.FieldName = "OID"
-        Me.GridColumn3.Name = "GridColumn3"
-        Me.GridColumn3.Visible = True
-        Me.GridColumn3.VisibleIndex = 0
-        '
-        'GridColumn4
-        '
-        Me.GridColumn4.Caption = "Sistema"
-        Me.GridColumn4.FieldName = "Nombre"
-        Me.GridColumn4.Name = "GridColumn4"
-        Me.GridColumn4.Visible = True
-        Me.GridColumn4.VisibleIndex = 1
+        Me.txtNumeroActivacion.Location = New System.Drawing.Point(104, 26)
+        Me.txtNumeroActivacion.Name = "txtNumeroActivacion"
+        Me.txtNumeroActivacion.Size = New System.Drawing.Size(204, 20)
+        Me.txtNumeroActivacion.StyleController = Me.LayoutControl2
+        Me.txtNumeroActivacion.TabIndex = 8
         '
         'txtEmpresa
         '
-        Me.txtEmpresa.Location = New System.Drawing.Point(73, 2)
+        Me.txtEmpresa.Location = New System.Drawing.Point(104, 2)
         Me.txtEmpresa.Name = "txtEmpresa"
         Me.txtEmpresa.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.txtEmpresa.Properties.DisplayMember = "Nombre"
         Me.txtEmpresa.Properties.NullText = ""
         Me.txtEmpresa.Properties.ValueMember = "OID"
         Me.txtEmpresa.Properties.View = Me.GridLookUpEdit2View
-        Me.txtEmpresa.Size = New System.Drawing.Size(235, 20)
+        Me.txtEmpresa.Size = New System.Drawing.Size(204, 20)
         Me.txtEmpresa.StyleController = Me.LayoutControl2
         Me.txtEmpresa.TabIndex = 6
         '
@@ -447,22 +414,22 @@ Partial Class AgregarMagnusCONTA
         '
         'txtEjercicioUno
         '
-        Me.txtEjercicioUno.Location = New System.Drawing.Point(73, 74)
+        Me.txtEjercicioUno.Location = New System.Drawing.Point(104, 74)
         Me.txtEjercicioUno.Name = "txtEjercicioUno"
-        Me.txtEjercicioUno.Size = New System.Drawing.Size(235, 20)
+        Me.txtEjercicioUno.Size = New System.Drawing.Size(204, 20)
         Me.txtEjercicioUno.StyleController = Me.LayoutControl2
         Me.txtEjercicioUno.TabIndex = 5
         '
         'txtBase
         '
-        Me.txtBase.Location = New System.Drawing.Point(73, 50)
+        Me.txtBase.Location = New System.Drawing.Point(104, 50)
         Me.txtBase.Name = "txtBase"
         Me.txtBase.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.txtBase.Properties.DisplayMember = "name"
         Me.txtBase.Properties.NullText = ""
         Me.txtBase.Properties.ValueMember = "name"
         Me.txtBase.Properties.View = Me.GridLookUpEdit1View
-        Me.txtBase.Size = New System.Drawing.Size(235, 20)
+        Me.txtBase.Size = New System.Drawing.Size(204, 20)
         Me.txtBase.StyleController = Me.LayoutControl2
         Me.txtBase.TabIndex = 4
         '
@@ -477,7 +444,7 @@ Partial Class AgregarMagnusCONTA
         '
         Me.LayoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
         Me.LayoutControlGroup2.GroupBordersVisible = False
-        Me.LayoutControlGroup2.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem6, Me.LayoutControlItem7, Me.LayoutControlItem14, Me.LayoutControlItem15})
+        Me.LayoutControlGroup2.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem6, Me.LayoutControlItem7, Me.LayoutControlItem14, Me.LayoutControlItem17})
         Me.LayoutControlGroup2.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup2.Name = "LayoutControlGroup2"
         Me.LayoutControlGroup2.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
@@ -491,7 +458,7 @@ Partial Class AgregarMagnusCONTA
         Me.LayoutControlItem6.Name = "LayoutControlItem6"
         Me.LayoutControlItem6.Size = New System.Drawing.Size(310, 24)
         Me.LayoutControlItem6.Text = "Base de datos"
-        Me.LayoutControlItem6.TextSize = New System.Drawing.Size(68, 13)
+        Me.LayoutControlItem6.TextSize = New System.Drawing.Size(99, 13)
         '
         'LayoutControlItem7
         '
@@ -500,7 +467,7 @@ Partial Class AgregarMagnusCONTA
         Me.LayoutControlItem7.Name = "LayoutControlItem7"
         Me.LayoutControlItem7.Size = New System.Drawing.Size(310, 28)
         Me.LayoutControlItem7.Text = "Ejercicio Uno"
-        Me.LayoutControlItem7.TextSize = New System.Drawing.Size(68, 13)
+        Me.LayoutControlItem7.TextSize = New System.Drawing.Size(99, 13)
         '
         'LayoutControlItem14
         '
@@ -509,16 +476,16 @@ Partial Class AgregarMagnusCONTA
         Me.LayoutControlItem14.Name = "LayoutControlItem14"
         Me.LayoutControlItem14.Size = New System.Drawing.Size(310, 24)
         Me.LayoutControlItem14.Text = "Empresa"
-        Me.LayoutControlItem14.TextSize = New System.Drawing.Size(68, 13)
+        Me.LayoutControlItem14.TextSize = New System.Drawing.Size(99, 13)
         '
-        'LayoutControlItem15
+        'LayoutControlItem17
         '
-        Me.LayoutControlItem15.Control = Me.txtSistema
-        Me.LayoutControlItem15.Location = New System.Drawing.Point(0, 24)
-        Me.LayoutControlItem15.Name = "LayoutControlItem15"
-        Me.LayoutControlItem15.Size = New System.Drawing.Size(310, 24)
-        Me.LayoutControlItem15.Text = "Sistema"
-        Me.LayoutControlItem15.TextSize = New System.Drawing.Size(68, 13)
+        Me.LayoutControlItem17.Control = Me.txtNumeroActivacion
+        Me.LayoutControlItem17.Location = New System.Drawing.Point(0, 24)
+        Me.LayoutControlItem17.Name = "LayoutControlItem17"
+        Me.LayoutControlItem17.Size = New System.Drawing.Size(310, 24)
+        Me.LayoutControlItem17.Text = "Código de activación"
+        Me.LayoutControlItem17.TextSize = New System.Drawing.Size(99, 13)
         '
         'LayoutControlGroup1
         '
@@ -638,8 +605,7 @@ Partial Class AgregarMagnusCONTA
         Me.GroupControl1.ResumeLayout(False)
         CType(Me.LayoutControl2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LayoutControl2.ResumeLayout(False)
-        CType(Me.txtSistema.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GridLookUpEdit3View, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtNumeroActivacion.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtEmpresa.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridLookUpEdit2View, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtEjercicioUno.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -649,7 +615,7 @@ Partial Class AgregarMagnusCONTA
         CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem14, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem15, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem17, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -701,14 +667,11 @@ Partial Class AgregarMagnusCONTA
     Friend WithEvents LayoutControlItem16 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents txtConceptoNotaCredito As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LayoutControlItem8 As DevExpress.XtraLayout.LayoutControlItem
-    Friend WithEvents txtSistema As DevExpress.XtraEditors.GridLookUpEdit
-    Friend WithEvents GridLookUpEdit3View As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents txtEmpresa As DevExpress.XtraEditors.GridLookUpEdit
     Friend WithEvents GridLookUpEdit2View As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents LayoutControlItem14 As DevExpress.XtraLayout.LayoutControlItem
-    Friend WithEvents LayoutControlItem15 As DevExpress.XtraLayout.LayoutControlItem
-    Friend WithEvents GridColumn3 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents GridColumn4 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn1 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn2 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents txtNumeroActivacion As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents LayoutControlItem17 As DevExpress.XtraLayout.LayoutControlItem
 End Class

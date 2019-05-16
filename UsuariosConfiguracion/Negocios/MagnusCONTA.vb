@@ -28,4 +28,18 @@
             Return Nothing
         End Try
     End Function
+
+    Public Function CargarEmpresas() As DataTable
+        Try
+            Return oMagnusConta.CargarEmpresa
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        End Try
+    End Function
+
+    Public Function CargarEntidadMagnusConta(ByRef _OID As Integer) As Entidades.Sistema
+        Return oMagnusConta.CargarEntidadMagnusConta(_OID)
+    End Function
+
 End Class

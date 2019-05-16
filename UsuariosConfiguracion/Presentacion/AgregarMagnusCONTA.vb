@@ -2,6 +2,7 @@
     Public modo As tipo
     Private _mdiPrincipal As mdiPrincipal
     Public _IdMagnusC As Integer
+    Public idSistema As Integer
     Enum tipo
         Nuevo
         Editar
@@ -11,20 +12,10 @@
 
     Private Sub CargarEmpresas()
         Dim dt As New DataTable
-        Dim nEmpresa As New Negocios.Empresa
+        Dim nEmpresa As New Negocios.MagnusCONTA
         Try
-            dt = nEmpresa.Cargar
+            dt = nEmpresa.CargarEmpresas
             txtEmpresa.Properties.DataSource = dt
-        Catch ex As Exception
-            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
-    Private Sub CargarSistema()
-        Dim dt As New DataTable
-        Dim nSistema As New Negocios.Sistema
-        Try
-            dt = nSistema.Cargar
-            txtSistema.Properties.DataSource = dt
         Catch ex As Exception
             MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
@@ -43,7 +34,6 @@
 
     Private Sub AgregarMagnusCONTA_Load(sender As Object, e As EventArgs) Handles Me.Load
         CargarEmpresas()
-        CargarSistema()
         CargarDB()
     End Sub
 
@@ -71,7 +61,7 @@
                     End If
             End Select
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            'MessageBox.Show(ex.Message)
         Finally
             oNegocio = Nothing
         End Try
@@ -81,7 +71,7 @@
         Dim eMagnusC As New Entidades.MagnusCONTA
         eMagnusC.DBConta = Me.txtBase.EditValue
         eMagnusC.Empresa = Me.txtEmpresa.EditValue
-        eMagnusC.Sistema = Me.txtSistema.EditValue
+        eMagnusC.Sistema = idSistema
         eMagnusC.Autonumerico = Me.ceAutonumerico.Checked
         eMagnusC.EjercicioUno = Me.txtEjercicioUno.Text
         eMagnusC.ManejarFiscal = Me.ceManejarFiscal.Checked
@@ -99,7 +89,7 @@
         eMagnusC.OID = _IdMagnusC
         eMagnusC.DBConta = Me.txtBase.EditValue
         eMagnusC.Empresa = Me.txtEmpresa.EditValue
-        eMagnusC.Sistema = Me.txtSistema.EditValue
+        eMagnusC.Sistema = idSistema
         eMagnusC.Autonumerico = Me.ceAutonumerico.Checked
         eMagnusC.EjercicioUno = Me.txtEjercicioUno.Text
         eMagnusC.ManejarFiscal = Me.ceManejarFiscal.Checked
@@ -113,7 +103,6 @@
 
     Public Sub LimpiarCampos()
         txtBase.EditValue = ""
-        txtSistema.EditValue = ""
         ceAutonumerico.Checked = False
         txtEjercicioUno.EditValue = ""
         txtConceptoNotaCredito.EditValue = ""
@@ -123,14 +112,15 @@
         ceReubicaciones.Checked = False
         cePorSucursal.Checked = False
         ceVistaPrevia.Checked = False
+        txtNumeroActivacion.EditValue = ""
     End Sub
 
     Public Sub consultarMagnusCONTA(ByVal row As DataRow)
         Try
+            txtNumeroActivacion.ReadOnly = True
             _IdMagnusC = row("OID")
             txtBase.EditValue = row("DBConta")
             txtEmpresa.EditValue = row("Empresa")
-            txtSistema.EditValue = row("Sistema")
             ceAutonumerico.Checked = row("Autonumerico")
             txtEjercicioUno.EditValue = row("EjercicioUno")
             ceManejarFiscal.Checked = row("ManejarFiscal")
@@ -140,7 +130,7 @@
             ceContrapartidaCancelacion.Checked = row("ContrapartidaCancelacion")
             ceVistaPrevia.Checked = row("VistaPrevia")
         Catch ex As Exception
-            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            'MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -154,7 +144,7 @@
                     CargarMagnusCONTA()
             End Select
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            'MessageBox.Show(ex.Message)
         End Try
     End Sub
 
@@ -165,7 +155,7 @@
             oEntidad = oNegocio.CargarMagnusCONTA(_IdMagnusC)
             Me.txtBase.Text = oEntidad.DBConta
             Me.txtEmpresa.Text = oEntidad.Empresa
-            Me.txtSistema.Text = oEntidad.Sistema
+            idSistema = oEntidad.Sistema
             Me.txtEjercicioUno.Text = oEntidad.EjercicioUno
             Me.txtConceptoNotaCredito.Text = oEntidad.ConceptoNotaCredito
             Me.ceAutonumerico.Checked = oEntidad.Autonumerico
@@ -175,7 +165,7 @@
             Me.ceReubicaciones.Checked = oEntidad.Reubicaciones
             Me.ceVistaPrevia.Checked = oEntidad.VistaPrevia
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            'MessageBox.Show(ex.Message)
         End Try
     End Sub
 
@@ -186,5 +176,14 @@
 
     Private Sub SimpleButton2_Click(sender As Object, e As EventArgs) Handles SimpleButton2.Click
         Me.Close()
+    End Sub
+
+    Private Sub txtEmpresa_EditValueChanged(sender As Object, e As EventArgs) Handles txtEmpresa.EditValueChanged
+        Dim nConta As New Negocios.MagnusCONTA
+        Dim eSistemas As New Entidades.Sistema
+        eSistemas = nConta.CargarEntidadMagnusConta(txtEmpresa.EditValue)
+        txtNumeroActivacion.EditValue = eSistemas.Activacion
+        idSistema = eSistemas.OID
+        txtNumeroActivacion.ReadOnly = True
     End Sub
 End Class

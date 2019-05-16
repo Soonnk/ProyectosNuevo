@@ -1,4 +1,5 @@
-﻿Public Class Empresa
+﻿'Consultas a la base de datos en la tabla empresas
+Public Class Empresa
     Dim obj As New clsSQL
     Public ds As DataSet
 
