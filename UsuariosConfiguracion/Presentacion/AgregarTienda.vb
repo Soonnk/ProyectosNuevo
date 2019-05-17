@@ -167,11 +167,6 @@ Public Class AgregarTienda
         txtEmpresa.EditValue = ""
     End Sub
 
-    Public Sub LimpiarCamposReporte()
-        txtNombreReporte.EditValue = ""
-        txtTipoReporte.EditValue = ""
-    End Sub
-
     Public Sub Cargar()
         Try
             Select Case modo
@@ -398,4 +393,5 @@ Public Class AgregarTienda
         dt = neg.CargarReportePuntoVenta(_IdTienda)
         GridControl1.DataSource = dt
     End Sub
+
 End Class

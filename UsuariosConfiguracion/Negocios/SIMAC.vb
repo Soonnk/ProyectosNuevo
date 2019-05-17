@@ -30,7 +30,7 @@
     End Function
 
 
-    Public Function GuardarReportePuntoVenta(ByVal entReporte As Entidades.ReporteSIMAC) As Boolean
+    Public Function GuardarReporteSIMAC(ByVal entReporte As Entidades.ReporteSIMAC) As Boolean
         Return oSimac.GuardarReporteSIMAC(entReporte)
     End Function
 
