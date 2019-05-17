@@ -103,7 +103,7 @@ Public Class AgregarSIMAC
                     End If
             End Select
         Catch ex As Exception
-            'MessageBox.Show(ex.Message)
+            MessageBox.Show(ex.Message)
         Finally
             oNegocio = Nothing
         End Try
@@ -150,8 +150,8 @@ Public Class AgregarSIMAC
         eSimac.avancePorProceso = Me.cheAvanceProceso.Checked
         eSimac.avanceNoValidarProg = Me.cheNoValidarFechaProgramacion.Checked
         eSimac.MultiAlmacen = Me.cheMultialmacen.Checked
-        eSimac.MateriaPrima = Me.txtAlmacenMateriaPrima.Text
-        eSimac.ProductoTerminado = Me.txtAlmacenProductoTerminado.Text
+        eSimac.MaterialAlmacen = Me.txtAlmacenMateriaPrima.Text
+        eSimac.ProductoAlmacen = Me.txtAlmacenProductoTerminado.Text
         Return eSimac
     End Function
 
@@ -197,8 +197,8 @@ Public Class AgregarSIMAC
         eSimac.avancePorProceso = Me.cheAvanceProceso.Checked
         eSimac.avanceNoValidarProg = Me.cheNoValidarFechaProgramacion.Checked
         eSimac.MultiAlmacen = Me.cheMultialmacen.Checked
-        eSimac.MateriaPrima = Me.txtAlmacenMateriaPrima.Text
-        eSimac.ProductoTerminado = Me.txtAlmacenProductoTerminado.Text
+        eSimac.MaterialAlmacen = Me.txtAlmacenMateriaPrima.Text
+        eSimac.ProductoAlmacen = Me.txtAlmacenProductoTerminado.Text
         Return eSimac
     End Function
 
@@ -289,8 +289,8 @@ Public Class AgregarSIMAC
             Me.cheAvanceProceso.Checked = row("avancePorProceso")
             Me.cheNoValidarFechaProgramacion.Checked = row("avanceNoValidarProg")
             Me.cheMultialmacen.Checked = row("MultiAlmacen")
-            Me.txtAlmacenMateriaPrima.EditValue = row("MateriaPrima")
-            Me.txtAlmacenProductoTerminado.EditValue = row("ProductoTerminado")
+            Me.txtAlmacenMateriaPrima.EditValue = row("MaterialAlmacen")
+            Me.txtAlmacenProductoTerminado.EditValue = row("ProductoAlmacen")
         Catch ex As Exception
             MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try

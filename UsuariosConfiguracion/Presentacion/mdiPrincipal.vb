@@ -63,13 +63,13 @@
 
     Private Sub btnMagnusERP_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnMagnusERP.ItemClick
         Try
-            'Dim f As ConsultarMagnusERP = BuscarFormulario(Me.RibbonControl1.Pages.Item(0).Tag, Me.RibbonControl1.Pages.Item(0).Groups(1).Tag, Me.RibbonControl1.Pages.Item(0).Groups(1).ItemLinks(0).Item.Tag)
-            'If Object.Equals(f, Nothing) Then
-            '    Dim frmMagnusERP As New ConsultarMagnusERP
-            '    frmMagnusERP.MdiParent = Me
-            '    frmMagnusERP.Show()
-            'Else : f.Activate
-            'End If
+            Dim f As ConsultarMagnusERP = BuscarFormulario(Me.RibbonControl1.Pages.Item(0).Tag, Me.RibbonControl1.Pages.Item(0).Groups(1).Tag, Me.RibbonControl1.Pages.Item(0).Groups(1).ItemLinks(0).Item.Tag)
+            If Object.Equals(f, Nothing) Then
+                Dim frmMagnusERP As New ConsultarMagnusERP
+                frmMagnusERP.MdiParent = Me
+                frmMagnusERP.Show()
+            Else : f.Activate()
+            End If
         Catch ex As Exception
             MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
@@ -91,7 +91,13 @@
 
     Private Sub btnSIMAC_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnSIMAC.ItemClick
         Try
-            'Dim f As ConsultarSIMAC = BuscarFormulario(Me.RibbonControl1.Pages.Item(0).Tag, Me.RibbonControl1.Pages.Item(0).Groups(1).Tag, Me.RibbonControl1.Pages.Item(0).Groups(1).ItemLinks(2).Item.Tag)
+            Dim f As ConsultarSIMAC = BuscarFormulario(Me.RibbonControl1.Pages.Item(0).Tag, Me.RibbonControl1.Pages.Item(0).Groups(1).Tag, Me.RibbonControl1.Pages.Item(0).Groups(1).ItemLinks(2).Item.Tag)
+            If Object.Equals(f, Nothing) Then
+                Dim frmSimac As New ConsultarSIMAC
+                frmSimac.MdiParent = Me
+                frmSimac.Show()
+            Else : f.Activate()
+            End If
         Catch ex As Exception
             MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
@@ -134,6 +140,11 @@
                             frmNuevo.modo = AgregarMagnusCONTA.tipo.Nuevo
                             frmNuevo.Owner = MagnusCONTA
                             frmNuevo.ShowDialog()
+                        Case "ConsultarSIMAC"
+                            Dim frmNuevo As New AgregarSIMAC
+                            frmNuevo.modo = AgregarSIMAC.tipo.Nuevo
+                            frmNuevo.MdiParent = Me
+                            frmNuevo.Show()
                         Case "ConsultarMagnusGo"
                             oPresentacion.modo = AgregarTienda.tipo.Nuevo
                             oPresentacion.MdiParent = Me
@@ -213,9 +224,23 @@
                             End Select
                         Case 1200
                             Select Case boton
+                                Case 1210
+                                    For Each f In Me.MdiChildren
+                                        If Object.Equals(f.GetType(), GetType(ConsultarMagnusERP)) Then
+                                            exist = True
+                                            Exit For
+                                        End If
+                                    Next
                                 Case 1220
                                     For Each f In Me.MdiChildren
                                         If Object.Equals(f.GetType(), GetType(ConsultarMagnusCONTA)) Then
+                                            exist = True
+                                            Exit For
+                                        End If
+                                    Next
+                                Case 1230
+                                    For Each f In Me.MdiChildren
+                                        If Object.Equals(f.GetType(), GetType(ConsultarSIMAC)) Then
                                             exist = True
                                             Exit For
                                         End If
@@ -251,6 +276,10 @@
                         Dim frmEditar As New AgregarTienda
                         frmEditar = frmActivo
                         frmEditar.GuardarTienda()
+                    Case "AgregarSIMAC"
+                        Dim frmEditar As New AgregarSIMAC
+                        frmEditar = frmActivo
+                        frmEditar.Guardar()
                 End Select
             Case "Usuarios"
                 Select Case frmActivo.Name
