@@ -19,13 +19,13 @@
         End Set
     End Property
 
-    Private _NoEmpresa As String
-    Public Property NoEmpresa() As String
+    Private _Empresa As Integer
+    Public Property Empresa() As Integer
         Get
-            Return _NoEmpresa
+            Return _Empresa
         End Get
-        Set(ByVal value As String)
-            _NoEmpresa = value
+        Set(ByVal value As Integer)
+            _Empresa = value
         End Set
     End Property
 

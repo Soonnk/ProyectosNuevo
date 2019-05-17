@@ -125,9 +125,7 @@ Public Class Tienda
         End Try
     End Function
 
-    Public Function UnicodeBytesToString(ByVal bytes() As Byte) As String
-        Return System.Text.Encoding.Unicode.GetString(bytes)
-    End Function
+
 
     Public Function GuardarReportePuntoVenta(ByVal entReporte As Entidades.ReportesPuntoVenta) As Boolean
         Dim dt As New DataTable

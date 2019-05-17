@@ -4,6 +4,7 @@
     Private _Archivo As Byte()
     Private _Nombre As String
     Private _FechaModificacion As Date
+    Private _SIMAC As Integer
 
     Public Sub New()
         Me._OID = 0
@@ -11,6 +12,7 @@
         Me._Tipo = ""
         Me._Archivo = Nothing
         Me._FechaModificacion = Now
+        Me._SIMAC = 0
     End Sub
 
     Public Property OID() As Integer
@@ -59,5 +61,13 @@
         End Set
     End Property
 
+    Public Property SIMAC() As Integer
+        Get
+            Return Me._SIMAC
+        End Get
+        Set(ByVal value As Integer)
+            _SIMAC = value
+        End Set
+    End Property
 
 End Class
