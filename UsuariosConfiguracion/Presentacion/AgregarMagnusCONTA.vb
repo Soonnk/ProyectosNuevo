@@ -10,6 +10,13 @@
 
     Public Forma As New ConsultarMagnusCONTA
 
+
+
+    Private Sub AgregarMagnusCONTA_Load(sender As Object, e As EventArgs) Handles Me.Load
+        CargarEmpresas()
+        CargarDB()
+    End Sub
+
     Private Sub CargarEmpresas()
         Dim dt As New DataTable
         Dim nEmpresa As New Negocios.MagnusCONTA
@@ -30,11 +37,6 @@
         Finally
             oNegocioMagnusC = Nothing
         End Try
-    End Sub
-
-    Private Sub AgregarMagnusCONTA_Load(sender As Object, e As EventArgs) Handles Me.Load
-        CargarEmpresas()
-        CargarDB()
     End Sub
 
     Public Sub Guardar()

@@ -154,7 +154,7 @@ Public Class SIMAC
         End Try
     End Function
 
-    Public Function EditarTienda(ByRef simac As Entidades.SIMAC) As Boolean
+    Public Function EditarSIMAC(ByRef simac As Entidades.SIMAC) As Boolean
         Dim Query As String
         With simac
             Query = "UPDATE Configuracion_Simac SET
@@ -209,7 +209,7 @@ Public Class SIMAC
         End Try
     End Function
 
-    Public Function EditarReporte(ByRef entReporte As Entidades.ReportesPuntoVenta) As Boolean
+    Public Function EditarReporte(ByRef entReporte As Entidades.ReporteSIMAC) As Boolean
         Dim dt As New DataTable
         Dim Query As String
         Try
@@ -253,5 +253,35 @@ Public Class SIMAC
         End Try
     End Function
 
+    Public Function CargarEntidadSIMAC(ByRef _OID As Integer) As Entidades.Sistema
+        Dim query As String = "SELECT * FROM Sistemas WHERE Empresa = " & _OID
+        Try
+            Dim simac As New Entidades.Sistema
+            Dim dt As DataTable = obj.RegresarDatos(query)
+            With dt.Rows(0)
+                simac.OID = .Item("OID")
+                simac.Nombre = .Item("Nombre")
+                simac.Empresa = .Item("Empresa")
+                simac.Codigo = .Item("Codigo")
+                simac.Serie = .Item("Serie")
+                simac.Activacion = .Item("Activacion")
+            End With
+            Return simac
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
+
+    Public Function CargarEmpresa() As DataTable
+        Dim dt As New DataTable
+        Dim Query As String
+        Try
+            Query = "SELECT Empresas.OID, Empresas.Nombre from Empresas inner join Sistemas ON Empresas.OID = Sistemas.Empresa Where Sistemas.Nombre = 'SIMAC' "
+            dt = obj.RegresarDatos(Query)
+            Return dt
+        Finally
+
+        End Try
+    End Function
 
 End Class

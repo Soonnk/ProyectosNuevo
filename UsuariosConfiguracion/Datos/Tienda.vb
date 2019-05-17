@@ -177,4 +177,23 @@ Public Class Tienda
         Catch ex As Exception
         End Try
     End Function
+
+    Public Function CargarEntidadTienda(ByRef _OID As Integer) As Entidades.Sistema
+        Dim query As String = "SELECT * FROM Sistemas WHERE Empresa = " & _OID
+        Try
+            Dim tienda As New Entidades.Sistema
+            Dim dt As DataTable = obj.RegresarDatos(query)
+            With dt.Rows(0)
+                tienda.OID = .Item("OID")
+                tienda.Nombre = .Item("Nombre")
+                tienda.Empresa = .Item("Empresa")
+                tienda.Codigo = .Item("Codigo")
+                tienda.Serie = .Item("Serie")
+                tienda.Activacion = .Item("Activacion")
+            End With
+            Return tienda
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
 End Class

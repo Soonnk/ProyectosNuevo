@@ -123,7 +123,6 @@ Partial Class AgregarSIMAC
         Me.LayoutControl4 = New DevExpress.XtraLayout.LayoutControl()
         Me.txtMinutoSemanales = New DevExpress.XtraEditors.TextEdit()
         Me.cheSaldarDestajosAvanzar = New DevExpress.XtraEditors.CheckEdit()
-        Me.cheEditarCostoPagoDestajos = New DevExpress.XtraEditors.CheckEdit()
         Me.cheEditarCantidadPagoDestajos = New DevExpress.XtraEditors.CheckEdit()
         Me.LayoutControlGroup4 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem13 = New DevExpress.XtraLayout.LayoutControlItem()
@@ -133,11 +132,14 @@ Partial Class AgregarSIMAC
         Me.LayoutControl3 = New DevExpress.XtraLayout.LayoutControl()
         Me.cheModuloCalculoDesperdicio = New DevExpress.XtraEditors.CheckEdit()
         Me.txtDefaultMaximoLote = New DevExpress.XtraEditors.TextEdit()
+        Me.cheEditarCostoPagoDestajos = New DevExpress.XtraEditors.CheckEdit()
         Me.LayoutControlGroup3 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem11 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem12 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem14 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
         Me.LayoutControl2 = New DevExpress.XtraLayout.LayoutControl()
+        Me.txtNumeroActivacion = New DevExpress.XtraEditors.TextEdit()
         Me.txtEmpresa = New DevExpress.XtraEditors.GridLookUpEdit()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -149,6 +151,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem9 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem10 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem64 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.txt = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem3 = New DevExpress.XtraLayout.LayoutControlItem()
@@ -158,9 +161,6 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem6 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem7 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem8 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.txtNumeroActivacion = New DevExpress.XtraEditors.TextEdit()
-        Me.txt = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem14 = New DevExpress.XtraLayout.LayoutControlItem()
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl1.SuspendLayout()
         CType(Me.GroupControl8, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -269,7 +269,6 @@ Partial Class AgregarSIMAC
         Me.LayoutControl4.SuspendLayout()
         CType(Me.txtMinutoSemanales.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cheSaldarDestajosAvanzar.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cheEditarCostoPagoDestajos.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cheEditarCantidadPagoDestajos.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem13, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -281,13 +280,16 @@ Partial Class AgregarSIMAC
         Me.LayoutControl3.SuspendLayout()
         CType(Me.cheModuloCalculoDesperdicio.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtDefaultMaximoLote.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cheEditarCostoPagoDestajos.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem14, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl1.SuspendLayout()
         CType(Me.LayoutControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl2.SuspendLayout()
+        CType(Me.txtNumeroActivacion.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtEmpresa.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cheManejaTenerias.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -297,6 +299,7 @@ Partial Class AgregarSIMAC
         CType(Me.LayoutControlItem9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem64, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txt, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -306,9 +309,6 @@ Partial Class AgregarSIMAC
         CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtNumeroActivacion.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txt, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem14, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LayoutControl1
@@ -742,9 +742,9 @@ Partial Class AgregarSIMAC
         'GroupControl6
         '
         Me.GroupControl6.Controls.Add(Me.LayoutControl6)
-        Me.GroupControl6.Location = New System.Drawing.Point(331, 200)
+        Me.GroupControl6.Location = New System.Drawing.Point(331, 207)
         Me.GroupControl6.Name = "GroupControl6"
-        Me.GroupControl6.Size = New System.Drawing.Size(286, 123)
+        Me.GroupControl6.Size = New System.Drawing.Size(286, 116)
         Me.GroupControl6.TabIndex = 9
         Me.GroupControl6.Text = "Programación"
         '
@@ -757,7 +757,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControl6.Location = New System.Drawing.Point(2, 20)
         Me.LayoutControl6.Name = "LayoutControl6"
         Me.LayoutControl6.Root = Me.LayoutControlGroup6
-        Me.LayoutControl6.Size = New System.Drawing.Size(282, 101)
+        Me.LayoutControl6.Size = New System.Drawing.Size(282, 94)
         Me.LayoutControl6.TabIndex = 0
         Me.LayoutControl6.Text = "LayoutControl6"
         '
@@ -796,7 +796,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlGroup6.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup6.Name = "LayoutControlGroup6"
         Me.LayoutControlGroup6.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup6.Size = New System.Drawing.Size(282, 101)
+        Me.LayoutControlGroup6.Size = New System.Drawing.Size(282, 94)
         Me.LayoutControlGroup6.Spacing = New DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2)
         Me.LayoutControlGroup6.TextVisible = False
         '
@@ -823,7 +823,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem26.Control = Me.cheDividirLotes
         Me.LayoutControlItem26.Location = New System.Drawing.Point(0, 46)
         Me.LayoutControlItem26.Name = "LayoutControlItem26"
-        Me.LayoutControlItem26.Size = New System.Drawing.Size(278, 51)
+        Me.LayoutControlItem26.Size = New System.Drawing.Size(278, 44)
         Me.LayoutControlItem26.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem26.TextVisible = False
         '
@@ -832,7 +832,7 @@ Partial Class AgregarSIMAC
         Me.GroupControl5.Controls.Add(Me.LayoutControl5)
         Me.GroupControl5.Location = New System.Drawing.Point(331, 2)
         Me.GroupControl5.Name = "GroupControl5"
-        Me.GroupControl5.Size = New System.Drawing.Size(286, 194)
+        Me.GroupControl5.Size = New System.Drawing.Size(286, 201)
         Me.GroupControl5.TabIndex = 8
         Me.GroupControl5.Text = "Pedidos"
         '
@@ -849,7 +849,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControl5.Location = New System.Drawing.Point(2, 20)
         Me.LayoutControl5.Name = "LayoutControl5"
         Me.LayoutControl5.Root = Me.LayoutControlGroup5
-        Me.LayoutControl5.Size = New System.Drawing.Size(282, 172)
+        Me.LayoutControl5.Size = New System.Drawing.Size(282, 179)
         Me.LayoutControl5.TabIndex = 0
         Me.LayoutControl5.Text = "LayoutControl5"
         '
@@ -920,7 +920,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlGroup5.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup5.Name = "LayoutControlGroup5"
         Me.LayoutControlGroup5.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup5.Size = New System.Drawing.Size(282, 172)
+        Me.LayoutControlGroup5.Size = New System.Drawing.Size(282, 179)
         Me.LayoutControlGroup5.Spacing = New DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2)
         Me.LayoutControlGroup5.TextVisible = False
         '
@@ -965,7 +965,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem23.Control = Me.cheCargarSoloProductosAutorizados
         Me.LayoutControlItem23.Location = New System.Drawing.Point(0, 142)
         Me.LayoutControlItem23.Name = "LayoutControlItem23"
-        Me.LayoutControlItem23.Size = New System.Drawing.Size(278, 26)
+        Me.LayoutControlItem23.Size = New System.Drawing.Size(278, 33)
         Me.LayoutControlItem23.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem23.TextVisible = False
         '
@@ -1237,9 +1237,9 @@ Partial Class AgregarSIMAC
         'GroupControl3
         '
         Me.GroupControl3.Controls.Add(Me.LayoutControl4)
-        Me.GroupControl3.Location = New System.Drawing.Point(2, 204)
+        Me.GroupControl3.Location = New System.Drawing.Point(2, 227)
         Me.GroupControl3.Name = "GroupControl3"
-        Me.GroupControl3.Size = New System.Drawing.Size(325, 119)
+        Me.GroupControl3.Size = New System.Drawing.Size(325, 96)
         Me.GroupControl3.TabIndex = 6
         Me.GroupControl3.Text = "Destajos"
         '
@@ -1252,7 +1252,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControl4.Location = New System.Drawing.Point(2, 20)
         Me.LayoutControl4.Name = "LayoutControl4"
         Me.LayoutControl4.Root = Me.LayoutControlGroup4
-        Me.LayoutControl4.Size = New System.Drawing.Size(321, 97)
+        Me.LayoutControl4.Size = New System.Drawing.Size(321, 74)
         Me.LayoutControl4.TabIndex = 0
         Me.LayoutControl4.Text = "LayoutControl4"
         '
@@ -1273,15 +1273,6 @@ Partial Class AgregarSIMAC
         Me.cheSaldarDestajosAvanzar.StyleController = Me.LayoutControl4
         Me.cheSaldarDestajosAvanzar.TabIndex = 6
         '
-        'cheEditarCostoPagoDestajos
-        '
-        Me.cheEditarCostoPagoDestajos.Location = New System.Drawing.Point(4, 51)
-        Me.cheEditarCostoPagoDestajos.Name = "cheEditarCostoPagoDestajos"
-        Me.cheEditarCostoPagoDestajos.Properties.Caption = "Editar costo en pago de destajos"
-        Me.cheEditarCostoPagoDestajos.Size = New System.Drawing.Size(296, 19)
-        Me.cheEditarCostoPagoDestajos.StyleController = Me.LayoutControl3
-        Me.cheEditarCostoPagoDestajos.TabIndex = 5
-        '
         'cheEditarCantidadPagoDestajos
         '
         Me.cheEditarCantidadPagoDestajos.Location = New System.Drawing.Point(4, 4)
@@ -1299,7 +1290,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlGroup4.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup4.Name = "LayoutControlGroup4"
         Me.LayoutControlGroup4.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup4.Size = New System.Drawing.Size(321, 97)
+        Me.LayoutControlGroup4.Size = New System.Drawing.Size(321, 74)
         Me.LayoutControlGroup4.Spacing = New DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2)
         Me.LayoutControlGroup4.TextVisible = False
         '
@@ -1326,7 +1317,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem16.Control = Me.txtMinutoSemanales
         Me.LayoutControlItem16.Location = New System.Drawing.Point(0, 46)
         Me.LayoutControlItem16.Name = "LayoutControlItem16"
-        Me.LayoutControlItem16.Size = New System.Drawing.Size(317, 47)
+        Me.LayoutControlItem16.Size = New System.Drawing.Size(317, 24)
         Me.LayoutControlItem16.Text = "Minutos Semanales"
         Me.LayoutControlItem16.TextSize = New System.Drawing.Size(91, 13)
         '
@@ -1335,7 +1326,7 @@ Partial Class AgregarSIMAC
         Me.GroupControl2.Controls.Add(Me.LayoutControl3)
         Me.GroupControl2.Location = New System.Drawing.Point(2, 127)
         Me.GroupControl2.Name = "GroupControl2"
-        Me.GroupControl2.Size = New System.Drawing.Size(325, 73)
+        Me.GroupControl2.Size = New System.Drawing.Size(325, 96)
         Me.GroupControl2.TabIndex = 5
         Me.GroupControl2.Text = "Hoja de Costos"
         '
@@ -1348,7 +1339,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControl3.Location = New System.Drawing.Point(2, 20)
         Me.LayoutControl3.Name = "LayoutControl3"
         Me.LayoutControl3.Root = Me.LayoutControlGroup3
-        Me.LayoutControl3.Size = New System.Drawing.Size(321, 51)
+        Me.LayoutControl3.Size = New System.Drawing.Size(321, 74)
         Me.LayoutControl3.TabIndex = 0
         Me.LayoutControl3.Text = "LayoutControl3"
         '
@@ -1357,7 +1348,7 @@ Partial Class AgregarSIMAC
         Me.cheModuloCalculoDesperdicio.Location = New System.Drawing.Point(4, 28)
         Me.cheModuloCalculoDesperdicio.Name = "cheModuloCalculoDesperdicio"
         Me.cheModuloCalculoDesperdicio.Properties.Caption = "Módulo Cálculo de Desperdicio"
-        Me.cheModuloCalculoDesperdicio.Size = New System.Drawing.Size(296, 19)
+        Me.cheModuloCalculoDesperdicio.Size = New System.Drawing.Size(313, 19)
         Me.cheModuloCalculoDesperdicio.StyleController = Me.LayoutControl3
         Me.cheModuloCalculoDesperdicio.TabIndex = 5
         '
@@ -1365,9 +1356,18 @@ Partial Class AgregarSIMAC
         '
         Me.txtDefaultMaximoLote.Location = New System.Drawing.Point(120, 4)
         Me.txtDefaultMaximoLote.Name = "txtDefaultMaximoLote"
-        Me.txtDefaultMaximoLote.Size = New System.Drawing.Size(180, 20)
+        Me.txtDefaultMaximoLote.Size = New System.Drawing.Size(197, 20)
         Me.txtDefaultMaximoLote.StyleController = Me.LayoutControl3
         Me.txtDefaultMaximoLote.TabIndex = 4
+        '
+        'cheEditarCostoPagoDestajos
+        '
+        Me.cheEditarCostoPagoDestajos.Location = New System.Drawing.Point(4, 51)
+        Me.cheEditarCostoPagoDestajos.Name = "cheEditarCostoPagoDestajos"
+        Me.cheEditarCostoPagoDestajos.Properties.Caption = "Editar costo en pago de destajos"
+        Me.cheEditarCostoPagoDestajos.Size = New System.Drawing.Size(313, 19)
+        Me.cheEditarCostoPagoDestajos.StyleController = Me.LayoutControl3
+        Me.cheEditarCostoPagoDestajos.TabIndex = 5
         '
         'LayoutControlGroup3
         '
@@ -1377,7 +1377,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlGroup3.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup3.Name = "LayoutControlGroup3"
         Me.LayoutControlGroup3.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup3.Size = New System.Drawing.Size(304, 74)
+        Me.LayoutControlGroup3.Size = New System.Drawing.Size(321, 74)
         Me.LayoutControlGroup3.Spacing = New DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2)
         Me.LayoutControlGroup3.TextVisible = False
         '
@@ -1386,7 +1386,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem11.Control = Me.txtDefaultMaximoLote
         Me.LayoutControlItem11.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem11.Name = "LayoutControlItem11"
-        Me.LayoutControlItem11.Size = New System.Drawing.Size(300, 24)
+        Me.LayoutControlItem11.Size = New System.Drawing.Size(317, 24)
         Me.LayoutControlItem11.Text = "Default Máximo de Lote"
         Me.LayoutControlItem11.TextSize = New System.Drawing.Size(113, 13)
         '
@@ -1395,9 +1395,18 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem12.Control = Me.cheModuloCalculoDesperdicio
         Me.LayoutControlItem12.Location = New System.Drawing.Point(0, 24)
         Me.LayoutControlItem12.Name = "LayoutControlItem12"
-        Me.LayoutControlItem12.Size = New System.Drawing.Size(300, 23)
+        Me.LayoutControlItem12.Size = New System.Drawing.Size(317, 23)
         Me.LayoutControlItem12.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem12.TextVisible = False
+        '
+        'LayoutControlItem14
+        '
+        Me.LayoutControlItem14.Control = Me.cheEditarCostoPagoDestajos
+        Me.LayoutControlItem14.Location = New System.Drawing.Point(0, 47)
+        Me.LayoutControlItem14.Name = "LayoutControlItem14"
+        Me.LayoutControlItem14.Size = New System.Drawing.Size(317, 23)
+        Me.LayoutControlItem14.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem14.TextVisible = False
         '
         'GroupControl1
         '
@@ -1421,6 +1430,14 @@ Partial Class AgregarSIMAC
         Me.LayoutControl2.Size = New System.Drawing.Size(325, 103)
         Me.LayoutControl2.TabIndex = 0
         Me.LayoutControl2.Text = "LayoutControl2"
+        '
+        'txtNumeroActivacion
+        '
+        Me.txtNumeroActivacion.Location = New System.Drawing.Point(111, 28)
+        Me.txtNumeroActivacion.Name = "txtNumeroActivacion"
+        Me.txtNumeroActivacion.Size = New System.Drawing.Size(210, 20)
+        Me.txtNumeroActivacion.StyleController = Me.LayoutControl2
+        Me.txtNumeroActivacion.TabIndex = 7
         '
         'txtEmpresa
         '
@@ -1532,6 +1549,15 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem64.Text = "Empresa"
         Me.LayoutControlItem64.TextSize = New System.Drawing.Size(104, 13)
         '
+        'txt
+        '
+        Me.txt.Control = Me.txtNumeroActivacion
+        Me.txt.Location = New System.Drawing.Point(0, 24)
+        Me.txt.Name = "txt"
+        Me.txt.Size = New System.Drawing.Size(321, 24)
+        Me.txt.Text = "Código de activación"
+        Me.txt.TextSize = New System.Drawing.Size(104, 13)
+        '
         'LayoutControlGroup1
         '
         Me.LayoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
@@ -1556,9 +1582,9 @@ Partial Class AgregarSIMAC
         'LayoutControlItem3
         '
         Me.LayoutControlItem3.Control = Me.GroupControl3
-        Me.LayoutControlItem3.Location = New System.Drawing.Point(0, 202)
+        Me.LayoutControlItem3.Location = New System.Drawing.Point(0, 225)
         Me.LayoutControlItem3.Name = "LayoutControlItem3"
-        Me.LayoutControlItem3.Size = New System.Drawing.Size(329, 123)
+        Me.LayoutControlItem3.Size = New System.Drawing.Size(329, 100)
         Me.LayoutControlItem3.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem3.TextVisible = False
         '
@@ -1577,7 +1603,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem2.Control = Me.GroupControl2
         Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 125)
         Me.LayoutControlItem2.Name = "LayoutControlItem2"
-        Me.LayoutControlItem2.Size = New System.Drawing.Size(329, 77)
+        Me.LayoutControlItem2.Size = New System.Drawing.Size(329, 100)
         Me.LayoutControlItem2.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem2.TextVisible = False
         '
@@ -1586,16 +1612,16 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem5.Control = Me.GroupControl5
         Me.LayoutControlItem5.Location = New System.Drawing.Point(329, 0)
         Me.LayoutControlItem5.Name = "LayoutControlItem5"
-        Me.LayoutControlItem5.Size = New System.Drawing.Size(290, 198)
+        Me.LayoutControlItem5.Size = New System.Drawing.Size(290, 205)
         Me.LayoutControlItem5.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem5.TextVisible = False
         '
         'LayoutControlItem6
         '
         Me.LayoutControlItem6.Control = Me.GroupControl6
-        Me.LayoutControlItem6.Location = New System.Drawing.Point(329, 198)
+        Me.LayoutControlItem6.Location = New System.Drawing.Point(329, 205)
         Me.LayoutControlItem6.Name = "LayoutControlItem6"
-        Me.LayoutControlItem6.Size = New System.Drawing.Size(290, 127)
+        Me.LayoutControlItem6.Size = New System.Drawing.Size(290, 120)
         Me.LayoutControlItem6.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem6.TextVisible = False
         '
@@ -1616,32 +1642,6 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem8.Size = New System.Drawing.Size(568, 402)
         Me.LayoutControlItem8.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem8.TextVisible = False
-        '
-        'txtNumeroActivacion
-        '
-        Me.txtNumeroActivacion.Location = New System.Drawing.Point(111, 28)
-        Me.txtNumeroActivacion.Name = "txtNumeroActivacion"
-        Me.txtNumeroActivacion.Size = New System.Drawing.Size(210, 20)
-        Me.txtNumeroActivacion.StyleController = Me.LayoutControl2
-        Me.txtNumeroActivacion.TabIndex = 7
-        '
-        'txt
-        '
-        Me.txt.Control = Me.txtNumeroActivacion
-        Me.txt.Location = New System.Drawing.Point(0, 24)
-        Me.txt.Name = "txt"
-        Me.txt.Size = New System.Drawing.Size(321, 24)
-        Me.txt.Text = "Código de activación"
-        Me.txt.TextSize = New System.Drawing.Size(104, 13)
-        '
-        'LayoutControlItem14
-        '
-        Me.LayoutControlItem14.Control = Me.cheEditarCostoPagoDestajos
-        Me.LayoutControlItem14.Location = New System.Drawing.Point(0, 47)
-        Me.LayoutControlItem14.Name = "LayoutControlItem14"
-        Me.LayoutControlItem14.Size = New System.Drawing.Size(300, 23)
-        Me.LayoutControlItem14.TextSize = New System.Drawing.Size(0, 0)
-        Me.LayoutControlItem14.TextVisible = False
         '
         'AgregarSIMAC
         '
@@ -1759,7 +1759,6 @@ Partial Class AgregarSIMAC
         Me.LayoutControl4.ResumeLayout(False)
         CType(Me.txtMinutoSemanales.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cheSaldarDestajosAvanzar.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cheEditarCostoPagoDestajos.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cheEditarCantidadPagoDestajos.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem13, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1771,13 +1770,16 @@ Partial Class AgregarSIMAC
         Me.LayoutControl3.ResumeLayout(False)
         CType(Me.cheModuloCalculoDesperdicio.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtDefaultMaximoLote.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cheEditarCostoPagoDestajos.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem14, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupControl1.ResumeLayout(False)
         CType(Me.LayoutControl2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LayoutControl2.ResumeLayout(False)
+        CType(Me.txtNumeroActivacion.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtEmpresa.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cheManejaTenerias.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1787,6 +1789,7 @@ Partial Class AgregarSIMAC
         CType(Me.LayoutControlItem9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem64, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txt, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1796,9 +1799,6 @@ Partial Class AgregarSIMAC
         CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtNumeroActivacion.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txt, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem14, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

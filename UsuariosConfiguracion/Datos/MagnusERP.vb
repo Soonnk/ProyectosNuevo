@@ -16,4 +16,23 @@ Public Class MagnusERP
         End Try
     End Function
 
+    Public Function CargarEntidadMagnusERP(ByRef _OID As Integer) As Entidades.Sistema
+        Dim query As String = "SELECT * FROM Sistemas WHERE Empresa = " & _OID
+        Try
+            Dim magnusERP As New Entidades.Sistema
+            Dim dt As DataTable = obj.RegresarDatos(query)
+            With dt.Rows(0)
+                magnusERP.OID = .Item("OID")
+                magnusERP.Nombre = .Item("Nombre")
+                magnusERP.Empresa = .Item("Empresa")
+                magnusERP.Codigo = .Item("Codigo")
+                magnusERP.Serie = .Item("Serie")
+                magnusERP.Activacion = .Item("Activacion")
+            End With
+            Return magnusERP
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
+
 End Class

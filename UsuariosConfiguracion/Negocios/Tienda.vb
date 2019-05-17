@@ -55,5 +55,8 @@
         Return oTienda.CargarReportePuntoVenta(tienda)
     End Function
 
+    Public Function CargarEntidadTienda(ByRef _OID As Integer) As Entidades.Sistema
+        Return oTienda.CargarEntidadTienda(_OID)
+    End Function
 
 End Class
