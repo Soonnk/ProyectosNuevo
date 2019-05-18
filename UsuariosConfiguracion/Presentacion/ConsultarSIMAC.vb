@@ -15,7 +15,7 @@
             Return TryCast(Me.ParentForm, mdiPrincipal)
         End Get
     End Property
-    Private Sub ConsultarSIMAC_Load(sender As Object, e As EventArgs) Handles Me.Load
+    Private Sub ConsultarSIMAC_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         Cargar()
     End Sub
 
@@ -51,4 +51,6 @@
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+
+
 End Class

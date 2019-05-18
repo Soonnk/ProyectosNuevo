@@ -30,8 +30,6 @@ Partial Class AgregarSIMAC
         Me.GridColumn3 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.SimpleButton3 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
         Me.btnGuardarReporte = New DevExpress.XtraEditors.SimpleButton()
         Me.txtNombreReporte = New DevExpress.XtraEditors.TextEdit()
         Me.txtTipoReporte = New DevExpress.XtraEditors.GridLookUpEdit()
@@ -42,9 +40,6 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem50 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem53 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.EmptySpaceItem1 = New DevExpress.XtraLayout.EmptySpaceItem()
-        Me.LayoutControlItem52 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem51 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.EmptySpaceItem3 = New DevExpress.XtraLayout.EmptySpaceItem()
         Me.GroupControl7 = New DevExpress.XtraEditors.GroupControl()
         Me.LayoutControl7 = New DevExpress.XtraLayout.LayoutControl()
         Me.txtAlmacenProductoTerminado = New DevExpress.XtraEditors.TextEdit()
@@ -178,9 +173,6 @@ Partial Class AgregarSIMAC
         CType(Me.LayoutControlItem50, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem53, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem52, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem51, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EmptySpaceItem3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GroupControl7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl7.SuspendLayout()
         CType(Me.LayoutControl7, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -325,24 +317,22 @@ Partial Class AgregarSIMAC
         Me.LayoutControl1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControl1.Name = "LayoutControl1"
         Me.LayoutControl1.Root = Me.LayoutControlGroup1
-        Me.LayoutControl1.Size = New System.Drawing.Size(892, 727)
+        Me.LayoutControl1.Size = New System.Drawing.Size(892, 514)
         Me.LayoutControl1.TabIndex = 0
         Me.LayoutControl1.Text = "LayoutControl1"
         '
         'GroupControl8
         '
         Me.GroupControl8.Controls.Add(Me.LayoutControl9)
-        Me.GroupControl8.Location = New System.Drawing.Point(326, 327)
+        Me.GroupControl8.Location = New System.Drawing.Point(320, 323)
         Me.GroupControl8.Name = "GroupControl8"
-        Me.GroupControl8.Size = New System.Drawing.Size(564, 398)
+        Me.GroupControl8.Size = New System.Drawing.Size(553, 310)
         Me.GroupControl8.TabIndex = 11
         Me.GroupControl8.Text = "Ruta de reportes"
         '
         'LayoutControl9
         '
         Me.LayoutControl9.Controls.Add(Me.GridControl1)
-        Me.LayoutControl9.Controls.Add(Me.SimpleButton3)
-        Me.LayoutControl9.Controls.Add(Me.SimpleButton2)
         Me.LayoutControl9.Controls.Add(Me.btnGuardarReporte)
         Me.LayoutControl9.Controls.Add(Me.txtNombreReporte)
         Me.LayoutControl9.Controls.Add(Me.txtTipoReporte)
@@ -350,7 +340,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControl9.Location = New System.Drawing.Point(2, 20)
         Me.LayoutControl9.Name = "LayoutControl9"
         Me.LayoutControl9.Root = Me.LayoutControlGroup9
-        Me.LayoutControl9.Size = New System.Drawing.Size(560, 376)
+        Me.LayoutControl9.Size = New System.Drawing.Size(549, 288)
         Me.LayoutControl9.TabIndex = 0
         Me.LayoutControl9.Text = "LayoutControl9"
         '
@@ -359,7 +349,7 @@ Partial Class AgregarSIMAC
         Me.GridControl1.Location = New System.Drawing.Point(2, 76)
         Me.GridControl1.MainView = Me.GridView3
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(556, 272)
+        Me.GridControl1.Size = New System.Drawing.Size(545, 210)
         Me.GridControl1.TabIndex = 9
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView3})
         '
@@ -397,31 +387,9 @@ Partial Class AgregarSIMAC
         Me.GridColumn5.Visible = True
         Me.GridColumn5.VisibleIndex = 2
         '
-        'SimpleButton3
-        '
-        Me.SimpleButton3.Location = New System.Drawing.Point(476, 350)
-        Me.SimpleButton3.MaximumSize = New System.Drawing.Size(80, 22)
-        Me.SimpleButton3.MinimumSize = New System.Drawing.Size(80, 22)
-        Me.SimpleButton3.Name = "SimpleButton3"
-        Me.SimpleButton3.Size = New System.Drawing.Size(80, 22)
-        Me.SimpleButton3.StyleController = Me.LayoutControl9
-        Me.SimpleButton3.TabIndex = 8
-        Me.SimpleButton3.Text = "SimpleButton3"
-        '
-        'SimpleButton2
-        '
-        Me.SimpleButton2.Location = New System.Drawing.Point(392, 350)
-        Me.SimpleButton2.MaximumSize = New System.Drawing.Size(80, 22)
-        Me.SimpleButton2.MinimumSize = New System.Drawing.Size(80, 22)
-        Me.SimpleButton2.Name = "SimpleButton2"
-        Me.SimpleButton2.Size = New System.Drawing.Size(80, 22)
-        Me.SimpleButton2.StyleController = Me.LayoutControl9
-        Me.SimpleButton2.TabIndex = 7
-        Me.SimpleButton2.Text = "SimpleButton2"
-        '
         'btnGuardarReporte
         '
-        Me.btnGuardarReporte.Location = New System.Drawing.Point(476, 52)
+        Me.btnGuardarReporte.Location = New System.Drawing.Point(465, 52)
         Me.btnGuardarReporte.MaximumSize = New System.Drawing.Size(80, 22)
         Me.btnGuardarReporte.MinimumSize = New System.Drawing.Size(80, 22)
         Me.btnGuardarReporte.Name = "btnGuardarReporte"
@@ -434,7 +402,8 @@ Partial Class AgregarSIMAC
         '
         Me.txtNombreReporte.Location = New System.Drawing.Point(44, 4)
         Me.txtNombreReporte.Name = "txtNombreReporte"
-        Me.txtNombreReporte.Size = New System.Drawing.Size(512, 20)
+        Me.txtNombreReporte.Properties.MaxLength = 50
+        Me.txtNombreReporte.Size = New System.Drawing.Size(501, 20)
         Me.txtNombreReporte.StyleController = Me.LayoutControl9
         Me.txtNombreReporte.TabIndex = 5
         '
@@ -445,7 +414,7 @@ Partial Class AgregarSIMAC
         Me.txtTipoReporte.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.txtTipoReporte.Properties.NullText = ""
         Me.txtTipoReporte.Properties.View = Me.GridView2
-        Me.txtTipoReporte.Size = New System.Drawing.Size(512, 20)
+        Me.txtTipoReporte.Size = New System.Drawing.Size(501, 20)
         Me.txtTipoReporte.StyleController = Me.LayoutControl9
         Me.txtTipoReporte.TabIndex = 4
         '
@@ -463,11 +432,11 @@ Partial Class AgregarSIMAC
         '
         Me.LayoutControlGroup9.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
         Me.LayoutControlGroup9.GroupBordersVisible = False
-        Me.LayoutControlGroup9.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem49, Me.LayoutControlItem48, Me.LayoutControlItem50, Me.LayoutControlItem53, Me.EmptySpaceItem1, Me.LayoutControlItem52, Me.LayoutControlItem51, Me.EmptySpaceItem3})
+        Me.LayoutControlGroup9.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem49, Me.LayoutControlItem48, Me.LayoutControlItem50, Me.LayoutControlItem53, Me.EmptySpaceItem1})
         Me.LayoutControlGroup9.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup9.Name = "LayoutControlGroup9"
         Me.LayoutControlGroup9.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup9.Size = New System.Drawing.Size(560, 376)
+        Me.LayoutControlGroup9.Size = New System.Drawing.Size(549, 288)
         Me.LayoutControlGroup9.Spacing = New DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2)
         Me.LayoutControlGroup9.TextVisible = False
         '
@@ -476,7 +445,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem49.Control = Me.txtNombreReporte
         Me.LayoutControlItem49.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem49.Name = "LayoutControlItem49"
-        Me.LayoutControlItem49.Size = New System.Drawing.Size(556, 24)
+        Me.LayoutControlItem49.Size = New System.Drawing.Size(545, 24)
         Me.LayoutControlItem49.Text = "Nombre"
         Me.LayoutControlItem49.TextSize = New System.Drawing.Size(37, 13)
         '
@@ -485,14 +454,14 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem48.Control = Me.txtTipoReporte
         Me.LayoutControlItem48.Location = New System.Drawing.Point(0, 24)
         Me.LayoutControlItem48.Name = "LayoutControlItem48"
-        Me.LayoutControlItem48.Size = New System.Drawing.Size(556, 24)
+        Me.LayoutControlItem48.Size = New System.Drawing.Size(545, 24)
         Me.LayoutControlItem48.Text = "Tipo"
         Me.LayoutControlItem48.TextSize = New System.Drawing.Size(37, 13)
         '
         'LayoutControlItem50
         '
         Me.LayoutControlItem50.Control = Me.btnGuardarReporte
-        Me.LayoutControlItem50.Location = New System.Drawing.Point(472, 48)
+        Me.LayoutControlItem50.Location = New System.Drawing.Point(461, 48)
         Me.LayoutControlItem50.Name = "LayoutControlItem50"
         Me.LayoutControlItem50.Size = New System.Drawing.Size(84, 26)
         Me.LayoutControlItem50.TextSize = New System.Drawing.Size(0, 0)
@@ -504,7 +473,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem53.Location = New System.Drawing.Point(0, 74)
         Me.LayoutControlItem53.Name = "LayoutControlItem53"
         Me.LayoutControlItem53.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlItem53.Size = New System.Drawing.Size(556, 272)
+        Me.LayoutControlItem53.Size = New System.Drawing.Size(545, 210)
         Me.LayoutControlItem53.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem53.TextVisible = False
         '
@@ -513,41 +482,15 @@ Partial Class AgregarSIMAC
         Me.EmptySpaceItem1.AllowHotTrack = False
         Me.EmptySpaceItem1.Location = New System.Drawing.Point(0, 48)
         Me.EmptySpaceItem1.Name = "EmptySpaceItem1"
-        Me.EmptySpaceItem1.Size = New System.Drawing.Size(472, 26)
+        Me.EmptySpaceItem1.Size = New System.Drawing.Size(461, 26)
         Me.EmptySpaceItem1.TextSize = New System.Drawing.Size(0, 0)
-        '
-        'LayoutControlItem52
-        '
-        Me.LayoutControlItem52.Control = Me.SimpleButton3
-        Me.LayoutControlItem52.Location = New System.Drawing.Point(472, 346)
-        Me.LayoutControlItem52.Name = "LayoutControlItem52"
-        Me.LayoutControlItem52.Size = New System.Drawing.Size(84, 26)
-        Me.LayoutControlItem52.TextSize = New System.Drawing.Size(0, 0)
-        Me.LayoutControlItem52.TextVisible = False
-        '
-        'LayoutControlItem51
-        '
-        Me.LayoutControlItem51.Control = Me.SimpleButton2
-        Me.LayoutControlItem51.Location = New System.Drawing.Point(388, 346)
-        Me.LayoutControlItem51.Name = "LayoutControlItem51"
-        Me.LayoutControlItem51.Size = New System.Drawing.Size(84, 26)
-        Me.LayoutControlItem51.TextSize = New System.Drawing.Size(0, 0)
-        Me.LayoutControlItem51.TextVisible = False
-        '
-        'EmptySpaceItem3
-        '
-        Me.EmptySpaceItem3.AllowHotTrack = False
-        Me.EmptySpaceItem3.Location = New System.Drawing.Point(0, 346)
-        Me.EmptySpaceItem3.Name = "EmptySpaceItem3"
-        Me.EmptySpaceItem3.Size = New System.Drawing.Size(388, 26)
-        Me.EmptySpaceItem3.TextSize = New System.Drawing.Size(0, 0)
         '
         'GroupControl7
         '
         Me.GroupControl7.Controls.Add(Me.LayoutControl7)
-        Me.GroupControl7.Location = New System.Drawing.Point(621, 2)
+        Me.GroupControl7.Location = New System.Drawing.Point(609, 2)
         Me.GroupControl7.Name = "GroupControl7"
-        Me.GroupControl7.Size = New System.Drawing.Size(269, 321)
+        Me.GroupControl7.Size = New System.Drawing.Size(264, 317)
         Me.GroupControl7.TabIndex = 10
         Me.GroupControl7.Text = "Avances"
         '
@@ -566,7 +509,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControl7.Location = New System.Drawing.Point(2, 20)
         Me.LayoutControl7.Name = "LayoutControl7"
         Me.LayoutControl7.Root = Me.LayoutControlGroup7
-        Me.LayoutControl7.Size = New System.Drawing.Size(265, 299)
+        Me.LayoutControl7.Size = New System.Drawing.Size(260, 295)
         Me.LayoutControl7.TabIndex = 0
         Me.LayoutControl7.Text = "LayoutControl7"
         '
@@ -574,7 +517,7 @@ Partial Class AgregarSIMAC
         '
         Me.txtAlmacenProductoTerminado.Location = New System.Drawing.Point(148, 189)
         Me.txtAlmacenProductoTerminado.Name = "txtAlmacenProductoTerminado"
-        Me.txtAlmacenProductoTerminado.Size = New System.Drawing.Size(113, 20)
+        Me.txtAlmacenProductoTerminado.Size = New System.Drawing.Size(108, 20)
         Me.txtAlmacenProductoTerminado.StyleController = Me.LayoutControl7
         Me.txtAlmacenProductoTerminado.TabIndex = 12
         '
@@ -582,7 +525,7 @@ Partial Class AgregarSIMAC
         '
         Me.txtAlmacenMateriaPrima.Location = New System.Drawing.Point(148, 165)
         Me.txtAlmacenMateriaPrima.Name = "txtAlmacenMateriaPrima"
-        Me.txtAlmacenMateriaPrima.Size = New System.Drawing.Size(113, 20)
+        Me.txtAlmacenMateriaPrima.Size = New System.Drawing.Size(108, 20)
         Me.txtAlmacenMateriaPrima.StyleController = Me.LayoutControl7
         Me.txtAlmacenMateriaPrima.TabIndex = 11
         '
@@ -591,7 +534,7 @@ Partial Class AgregarSIMAC
         Me.cheMultialmacen.Location = New System.Drawing.Point(4, 142)
         Me.cheMultialmacen.Name = "cheMultialmacen"
         Me.cheMultialmacen.Properties.Caption = "Multialmacen"
-        Me.cheMultialmacen.Size = New System.Drawing.Size(257, 19)
+        Me.cheMultialmacen.Size = New System.Drawing.Size(252, 19)
         Me.cheMultialmacen.StyleController = Me.LayoutControl7
         Me.cheMultialmacen.TabIndex = 10
         '
@@ -600,7 +543,7 @@ Partial Class AgregarSIMAC
         Me.cheNoValidarFechaProgramacion.Location = New System.Drawing.Point(4, 119)
         Me.cheNoValidarFechaProgramacion.Name = "cheNoValidarFechaProgramacion"
         Me.cheNoValidarFechaProgramacion.Properties.Caption = "No validar fecha de programación al avanzar"
-        Me.cheNoValidarFechaProgramacion.Size = New System.Drawing.Size(257, 19)
+        Me.cheNoValidarFechaProgramacion.Size = New System.Drawing.Size(252, 19)
         Me.cheNoValidarFechaProgramacion.StyleController = Me.LayoutControl7
         Me.cheNoValidarFechaProgramacion.TabIndex = 9
         '
@@ -609,7 +552,7 @@ Partial Class AgregarSIMAC
         Me.cheAvanceProceso.Location = New System.Drawing.Point(4, 96)
         Me.cheAvanceProceso.Name = "cheAvanceProceso"
         Me.cheAvanceProceso.Properties.Caption = "Avance por proceso"
-        Me.cheAvanceProceso.Size = New System.Drawing.Size(257, 19)
+        Me.cheAvanceProceso.Size = New System.Drawing.Size(252, 19)
         Me.cheAvanceProceso.StyleController = Me.LayoutControl7
         Me.cheAvanceProceso.TabIndex = 8
         '
@@ -618,7 +561,7 @@ Partial Class AgregarSIMAC
         Me.cheValidaUnidad.Location = New System.Drawing.Point(4, 73)
         Me.cheValidaUnidad.Name = "cheValidaUnidad"
         Me.cheValidaUnidad.Properties.Caption = "Valida unidad"
-        Me.cheValidaUnidad.Size = New System.Drawing.Size(257, 19)
+        Me.cheValidaUnidad.Size = New System.Drawing.Size(252, 19)
         Me.cheValidaUnidad.StyleController = Me.LayoutControl7
         Me.cheValidaUnidad.TabIndex = 7
         '
@@ -627,7 +570,7 @@ Partial Class AgregarSIMAC
         Me.cheFechaAvance.Location = New System.Drawing.Point(4, 50)
         Me.cheFechaAvance.Name = "cheFechaAvance"
         Me.cheFechaAvance.Properties.Caption = "Fecha en avance"
-        Me.cheFechaAvance.Size = New System.Drawing.Size(257, 19)
+        Me.cheFechaAvance.Size = New System.Drawing.Size(252, 19)
         Me.cheFechaAvance.StyleController = Me.LayoutControl7
         Me.cheFechaAvance.TabIndex = 6
         '
@@ -636,7 +579,7 @@ Partial Class AgregarSIMAC
         Me.cheAvanceAutomatico.Location = New System.Drawing.Point(4, 27)
         Me.cheAvanceAutomatico.Name = "cheAvanceAutomatico"
         Me.cheAvanceAutomatico.Properties.Caption = "Avance automático"
-        Me.cheAvanceAutomatico.Size = New System.Drawing.Size(257, 19)
+        Me.cheAvanceAutomatico.Size = New System.Drawing.Size(252, 19)
         Me.cheAvanceAutomatico.StyleController = Me.LayoutControl7
         Me.cheAvanceAutomatico.TabIndex = 5
         '
@@ -645,7 +588,7 @@ Partial Class AgregarSIMAC
         Me.cheSolicitarCantidadAvance.Location = New System.Drawing.Point(4, 4)
         Me.cheSolicitarCantidadAvance.Name = "cheSolicitarCantidadAvance"
         Me.cheSolicitarCantidadAvance.Properties.Caption = "Solicitar cantidad en avance"
-        Me.cheSolicitarCantidadAvance.Size = New System.Drawing.Size(257, 19)
+        Me.cheSolicitarCantidadAvance.Size = New System.Drawing.Size(252, 19)
         Me.cheSolicitarCantidadAvance.StyleController = Me.LayoutControl7
         Me.cheSolicitarCantidadAvance.TabIndex = 4
         '
@@ -657,7 +600,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlGroup7.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup7.Name = "LayoutControlGroup7"
         Me.LayoutControlGroup7.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup7.Size = New System.Drawing.Size(265, 299)
+        Me.LayoutControlGroup7.Size = New System.Drawing.Size(260, 295)
         Me.LayoutControlGroup7.Spacing = New DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2)
         Me.LayoutControlGroup7.TextVisible = False
         '
@@ -666,7 +609,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem27.Control = Me.cheSolicitarCantidadAvance
         Me.LayoutControlItem27.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem27.Name = "LayoutControlItem27"
-        Me.LayoutControlItem27.Size = New System.Drawing.Size(261, 23)
+        Me.LayoutControlItem27.Size = New System.Drawing.Size(256, 23)
         Me.LayoutControlItem27.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem27.TextVisible = False
         '
@@ -675,7 +618,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem29.Control = Me.cheFechaAvance
         Me.LayoutControlItem29.Location = New System.Drawing.Point(0, 46)
         Me.LayoutControlItem29.Name = "LayoutControlItem29"
-        Me.LayoutControlItem29.Size = New System.Drawing.Size(261, 23)
+        Me.LayoutControlItem29.Size = New System.Drawing.Size(256, 23)
         Me.LayoutControlItem29.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem29.TextVisible = False
         '
@@ -684,7 +627,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem31.Control = Me.cheAvanceProceso
         Me.LayoutControlItem31.Location = New System.Drawing.Point(0, 92)
         Me.LayoutControlItem31.Name = "LayoutControlItem31"
-        Me.LayoutControlItem31.Size = New System.Drawing.Size(261, 23)
+        Me.LayoutControlItem31.Size = New System.Drawing.Size(256, 23)
         Me.LayoutControlItem31.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem31.TextVisible = False
         '
@@ -693,7 +636,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem32.Control = Me.cheNoValidarFechaProgramacion
         Me.LayoutControlItem32.Location = New System.Drawing.Point(0, 115)
         Me.LayoutControlItem32.Name = "LayoutControlItem32"
-        Me.LayoutControlItem32.Size = New System.Drawing.Size(261, 23)
+        Me.LayoutControlItem32.Size = New System.Drawing.Size(256, 23)
         Me.LayoutControlItem32.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem32.TextVisible = False
         '
@@ -702,7 +645,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem33.Control = Me.cheMultialmacen
         Me.LayoutControlItem33.Location = New System.Drawing.Point(0, 138)
         Me.LayoutControlItem33.Name = "LayoutControlItem33"
-        Me.LayoutControlItem33.Size = New System.Drawing.Size(261, 23)
+        Me.LayoutControlItem33.Size = New System.Drawing.Size(256, 23)
         Me.LayoutControlItem33.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem33.TextVisible = False
         '
@@ -711,7 +654,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem34.Control = Me.txtAlmacenMateriaPrima
         Me.LayoutControlItem34.Location = New System.Drawing.Point(0, 161)
         Me.LayoutControlItem34.Name = "LayoutControlItem34"
-        Me.LayoutControlItem34.Size = New System.Drawing.Size(261, 24)
+        Me.LayoutControlItem34.Size = New System.Drawing.Size(256, 24)
         Me.LayoutControlItem34.Text = "Almacen materia prima:"
         Me.LayoutControlItem34.TextSize = New System.Drawing.Size(141, 13)
         '
@@ -720,7 +663,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem35.Control = Me.txtAlmacenProductoTerminado
         Me.LayoutControlItem35.Location = New System.Drawing.Point(0, 185)
         Me.LayoutControlItem35.Name = "LayoutControlItem35"
-        Me.LayoutControlItem35.Size = New System.Drawing.Size(261, 110)
+        Me.LayoutControlItem35.Size = New System.Drawing.Size(256, 106)
         Me.LayoutControlItem35.Text = "Almacen producto terminado:"
         Me.LayoutControlItem35.TextSize = New System.Drawing.Size(141, 13)
         '
@@ -729,7 +672,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem28.Control = Me.cheAvanceAutomatico
         Me.LayoutControlItem28.Location = New System.Drawing.Point(0, 23)
         Me.LayoutControlItem28.Name = "LayoutControlItem28"
-        Me.LayoutControlItem28.Size = New System.Drawing.Size(261, 23)
+        Me.LayoutControlItem28.Size = New System.Drawing.Size(256, 23)
         Me.LayoutControlItem28.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem28.TextVisible = False
         '
@@ -738,16 +681,16 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem30.Control = Me.cheValidaUnidad
         Me.LayoutControlItem30.Location = New System.Drawing.Point(0, 69)
         Me.LayoutControlItem30.Name = "LayoutControlItem30"
-        Me.LayoutControlItem30.Size = New System.Drawing.Size(261, 23)
+        Me.LayoutControlItem30.Size = New System.Drawing.Size(256, 23)
         Me.LayoutControlItem30.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem30.TextVisible = False
         '
         'GroupControl6
         '
         Me.GroupControl6.Controls.Add(Me.LayoutControl6)
-        Me.GroupControl6.Location = New System.Drawing.Point(331, 207)
+        Me.GroupControl6.Location = New System.Drawing.Point(325, 204)
         Me.GroupControl6.Name = "GroupControl6"
-        Me.GroupControl6.Size = New System.Drawing.Size(286, 116)
+        Me.GroupControl6.Size = New System.Drawing.Size(280, 115)
         Me.GroupControl6.TabIndex = 9
         Me.GroupControl6.Text = "Programación"
         '
@@ -760,7 +703,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControl6.Location = New System.Drawing.Point(2, 20)
         Me.LayoutControl6.Name = "LayoutControl6"
         Me.LayoutControl6.Root = Me.LayoutControlGroup6
-        Me.LayoutControl6.Size = New System.Drawing.Size(282, 94)
+        Me.LayoutControl6.Size = New System.Drawing.Size(276, 93)
         Me.LayoutControl6.TabIndex = 0
         Me.LayoutControl6.Text = "LayoutControl6"
         '
@@ -769,7 +712,7 @@ Partial Class AgregarSIMAC
         Me.cheDividirLotes.Location = New System.Drawing.Point(4, 50)
         Me.cheDividirLotes.Name = "cheDividirLotes"
         Me.cheDividirLotes.Properties.Caption = "Dividir lotes"
-        Me.cheDividirLotes.Size = New System.Drawing.Size(274, 19)
+        Me.cheDividirLotes.Size = New System.Drawing.Size(268, 19)
         Me.cheDividirLotes.StyleController = Me.LayoutControl6
         Me.cheDividirLotes.TabIndex = 6
         '
@@ -778,7 +721,7 @@ Partial Class AgregarSIMAC
         Me.cheEntregaParcial.Location = New System.Drawing.Point(4, 27)
         Me.cheEntregaParcial.Name = "cheEntregaParcial"
         Me.cheEntregaParcial.Properties.Caption = "Entrega parcial"
-        Me.cheEntregaParcial.Size = New System.Drawing.Size(274, 19)
+        Me.cheEntregaParcial.Size = New System.Drawing.Size(268, 19)
         Me.cheEntregaParcial.StyleController = Me.LayoutControl6
         Me.cheEntregaParcial.TabIndex = 5
         '
@@ -787,7 +730,7 @@ Partial Class AgregarSIMAC
         Me.cheProgramarSistemaBase.Location = New System.Drawing.Point(4, 4)
         Me.cheProgramarSistemaBase.Name = "cheProgramarSistemaBase"
         Me.cheProgramarSistemaBase.Properties.Caption = "Programar por sistema base"
-        Me.cheProgramarSistemaBase.Size = New System.Drawing.Size(274, 19)
+        Me.cheProgramarSistemaBase.Size = New System.Drawing.Size(268, 19)
         Me.cheProgramarSistemaBase.StyleController = Me.LayoutControl6
         Me.cheProgramarSistemaBase.TabIndex = 4
         '
@@ -799,7 +742,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlGroup6.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup6.Name = "LayoutControlGroup6"
         Me.LayoutControlGroup6.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup6.Size = New System.Drawing.Size(282, 94)
+        Me.LayoutControlGroup6.Size = New System.Drawing.Size(276, 93)
         Me.LayoutControlGroup6.Spacing = New DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2)
         Me.LayoutControlGroup6.TextVisible = False
         '
@@ -808,7 +751,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem24.Control = Me.cheProgramarSistemaBase
         Me.LayoutControlItem24.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem24.Name = "LayoutControlItem24"
-        Me.LayoutControlItem24.Size = New System.Drawing.Size(278, 23)
+        Me.LayoutControlItem24.Size = New System.Drawing.Size(272, 23)
         Me.LayoutControlItem24.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem24.TextVisible = False
         '
@@ -817,7 +760,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem25.Control = Me.cheEntregaParcial
         Me.LayoutControlItem25.Location = New System.Drawing.Point(0, 23)
         Me.LayoutControlItem25.Name = "LayoutControlItem25"
-        Me.LayoutControlItem25.Size = New System.Drawing.Size(278, 23)
+        Me.LayoutControlItem25.Size = New System.Drawing.Size(272, 23)
         Me.LayoutControlItem25.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem25.TextVisible = False
         '
@@ -826,16 +769,16 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem26.Control = Me.cheDividirLotes
         Me.LayoutControlItem26.Location = New System.Drawing.Point(0, 46)
         Me.LayoutControlItem26.Name = "LayoutControlItem26"
-        Me.LayoutControlItem26.Size = New System.Drawing.Size(278, 44)
+        Me.LayoutControlItem26.Size = New System.Drawing.Size(272, 43)
         Me.LayoutControlItem26.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem26.TextVisible = False
         '
         'GroupControl5
         '
         Me.GroupControl5.Controls.Add(Me.LayoutControl5)
-        Me.GroupControl5.Location = New System.Drawing.Point(331, 2)
+        Me.GroupControl5.Location = New System.Drawing.Point(325, 2)
         Me.GroupControl5.Name = "GroupControl5"
-        Me.GroupControl5.Size = New System.Drawing.Size(286, 201)
+        Me.GroupControl5.Size = New System.Drawing.Size(280, 198)
         Me.GroupControl5.TabIndex = 8
         Me.GroupControl5.Text = "Pedidos"
         '
@@ -852,7 +795,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControl5.Location = New System.Drawing.Point(2, 20)
         Me.LayoutControl5.Name = "LayoutControl5"
         Me.LayoutControl5.Root = Me.LayoutControlGroup5
-        Me.LayoutControl5.Size = New System.Drawing.Size(282, 179)
+        Me.LayoutControl5.Size = New System.Drawing.Size(276, 176)
         Me.LayoutControl5.TabIndex = 0
         Me.LayoutControl5.Text = "LayoutControl5"
         '
@@ -860,7 +803,7 @@ Partial Class AgregarSIMAC
         '
         Me.txtFolioPedidoA.Location = New System.Drawing.Point(74, 4)
         Me.txtFolioPedidoA.Name = "txtFolioPedidoA"
-        Me.txtFolioPedidoA.Size = New System.Drawing.Size(204, 20)
+        Me.txtFolioPedidoA.Size = New System.Drawing.Size(198, 20)
         Me.txtFolioPedidoA.StyleController = Me.LayoutControl5
         Me.txtFolioPedidoA.TabIndex = 11
         '
@@ -869,7 +812,7 @@ Partial Class AgregarSIMAC
         Me.cheCargarSoloProductosAutorizados.Location = New System.Drawing.Point(4, 146)
         Me.cheCargarSoloProductosAutorizados.Name = "cheCargarSoloProductosAutorizados"
         Me.cheCargarSoloProductosAutorizados.Properties.Caption = "Pedidos: Cargar solo productos autorizados"
-        Me.cheCargarSoloProductosAutorizados.Size = New System.Drawing.Size(274, 19)
+        Me.cheCargarSoloProductosAutorizados.Size = New System.Drawing.Size(268, 19)
         Me.cheCargarSoloProductosAutorizados.StyleController = Me.LayoutControl5
         Me.cheCargarSoloProductosAutorizados.TabIndex = 10
         '
@@ -878,7 +821,7 @@ Partial Class AgregarSIMAC
         Me.cheAutorizarPedidosProduccion.Location = New System.Drawing.Point(4, 123)
         Me.cheAutorizarPedidosProduccion.Name = "cheAutorizarPedidosProduccion"
         Me.cheAutorizarPedidosProduccion.Properties.Caption = "Autorizar pedidos a producción"
-        Me.cheAutorizarPedidosProduccion.Size = New System.Drawing.Size(274, 19)
+        Me.cheAutorizarPedidosProduccion.Size = New System.Drawing.Size(268, 19)
         Me.cheAutorizarPedidosProduccion.StyleController = Me.LayoutControl5
         Me.cheAutorizarPedidosProduccion.TabIndex = 9
         '
@@ -887,7 +830,7 @@ Partial Class AgregarSIMAC
         Me.cheValidarPedido.Location = New System.Drawing.Point(4, 100)
         Me.cheValidarPedido.Name = "cheValidarPedido"
         Me.cheValidarPedido.Properties.Caption = "Validar su pedido"
-        Me.cheValidarPedido.Size = New System.Drawing.Size(274, 19)
+        Me.cheValidarPedido.Size = New System.Drawing.Size(268, 19)
         Me.cheValidarPedido.StyleController = Me.LayoutControl5
         Me.cheValidarPedido.TabIndex = 8
         '
@@ -895,7 +838,7 @@ Partial Class AgregarSIMAC
         '
         Me.txtFolioOrdenB.Location = New System.Drawing.Point(74, 76)
         Me.txtFolioOrdenB.Name = "txtFolioOrdenB"
-        Me.txtFolioOrdenB.Size = New System.Drawing.Size(204, 20)
+        Me.txtFolioOrdenB.Size = New System.Drawing.Size(198, 20)
         Me.txtFolioOrdenB.StyleController = Me.LayoutControl5
         Me.txtFolioOrdenB.TabIndex = 7
         '
@@ -903,7 +846,7 @@ Partial Class AgregarSIMAC
         '
         Me.txtFolioOrdenA.Location = New System.Drawing.Point(74, 52)
         Me.txtFolioOrdenA.Name = "txtFolioOrdenA"
-        Me.txtFolioOrdenA.Size = New System.Drawing.Size(204, 20)
+        Me.txtFolioOrdenA.Size = New System.Drawing.Size(198, 20)
         Me.txtFolioOrdenA.StyleController = Me.LayoutControl5
         Me.txtFolioOrdenA.TabIndex = 6
         '
@@ -911,7 +854,7 @@ Partial Class AgregarSIMAC
         '
         Me.txtFolioPedidoB.Location = New System.Drawing.Point(74, 28)
         Me.txtFolioPedidoB.Name = "txtFolioPedidoB"
-        Me.txtFolioPedidoB.Size = New System.Drawing.Size(204, 20)
+        Me.txtFolioPedidoB.Size = New System.Drawing.Size(198, 20)
         Me.txtFolioPedidoB.StyleController = Me.LayoutControl5
         Me.txtFolioPedidoB.TabIndex = 5
         '
@@ -923,7 +866,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlGroup5.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup5.Name = "LayoutControlGroup5"
         Me.LayoutControlGroup5.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup5.Size = New System.Drawing.Size(282, 179)
+        Me.LayoutControlGroup5.Size = New System.Drawing.Size(276, 176)
         Me.LayoutControlGroup5.Spacing = New DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2)
         Me.LayoutControlGroup5.TextVisible = False
         '
@@ -932,7 +875,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem18.Control = Me.txtFolioPedidoB
         Me.LayoutControlItem18.Location = New System.Drawing.Point(0, 24)
         Me.LayoutControlItem18.Name = "LayoutControlItem18"
-        Me.LayoutControlItem18.Size = New System.Drawing.Size(278, 24)
+        Me.LayoutControlItem18.Size = New System.Drawing.Size(272, 24)
         Me.LayoutControlItem18.Text = "Folio pedido B"
         Me.LayoutControlItem18.TextSize = New System.Drawing.Size(67, 13)
         '
@@ -941,7 +884,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem19.Control = Me.txtFolioOrdenA
         Me.LayoutControlItem19.Location = New System.Drawing.Point(0, 48)
         Me.LayoutControlItem19.Name = "LayoutControlItem19"
-        Me.LayoutControlItem19.Size = New System.Drawing.Size(278, 24)
+        Me.LayoutControlItem19.Size = New System.Drawing.Size(272, 24)
         Me.LayoutControlItem19.Text = "Folio orden A"
         Me.LayoutControlItem19.TextSize = New System.Drawing.Size(67, 13)
         '
@@ -950,7 +893,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem20.Control = Me.txtFolioOrdenB
         Me.LayoutControlItem20.Location = New System.Drawing.Point(0, 72)
         Me.LayoutControlItem20.Name = "LayoutControlItem20"
-        Me.LayoutControlItem20.Size = New System.Drawing.Size(278, 24)
+        Me.LayoutControlItem20.Size = New System.Drawing.Size(272, 24)
         Me.LayoutControlItem20.Text = "Folio orden B"
         Me.LayoutControlItem20.TextSize = New System.Drawing.Size(67, 13)
         '
@@ -959,7 +902,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem21.Control = Me.cheValidarPedido
         Me.LayoutControlItem21.Location = New System.Drawing.Point(0, 96)
         Me.LayoutControlItem21.Name = "LayoutControlItem21"
-        Me.LayoutControlItem21.Size = New System.Drawing.Size(278, 23)
+        Me.LayoutControlItem21.Size = New System.Drawing.Size(272, 23)
         Me.LayoutControlItem21.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem21.TextVisible = False
         '
@@ -968,7 +911,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem23.Control = Me.cheCargarSoloProductosAutorizados
         Me.LayoutControlItem23.Location = New System.Drawing.Point(0, 142)
         Me.LayoutControlItem23.Name = "LayoutControlItem23"
-        Me.LayoutControlItem23.Size = New System.Drawing.Size(278, 33)
+        Me.LayoutControlItem23.Size = New System.Drawing.Size(272, 30)
         Me.LayoutControlItem23.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem23.TextVisible = False
         '
@@ -977,7 +920,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem22.Control = Me.cheAutorizarPedidosProduccion
         Me.LayoutControlItem22.Location = New System.Drawing.Point(0, 119)
         Me.LayoutControlItem22.Name = "LayoutControlItem22"
-        Me.LayoutControlItem22.Size = New System.Drawing.Size(278, 23)
+        Me.LayoutControlItem22.Size = New System.Drawing.Size(272, 23)
         Me.LayoutControlItem22.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem22.TextVisible = False
         '
@@ -986,16 +929,16 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem17.Control = Me.txtFolioPedidoA
         Me.LayoutControlItem17.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem17.Name = "LayoutControlItem17"
-        Me.LayoutControlItem17.Size = New System.Drawing.Size(278, 24)
+        Me.LayoutControlItem17.Size = New System.Drawing.Size(272, 24)
         Me.LayoutControlItem17.Text = "Folio pedido A"
         Me.LayoutControlItem17.TextSize = New System.Drawing.Size(67, 13)
         '
         'GroupControl4
         '
         Me.GroupControl4.Controls.Add(Me.LayoutControl8)
-        Me.GroupControl4.Location = New System.Drawing.Point(0, 325)
+        Me.GroupControl4.Location = New System.Drawing.Point(0, 321)
         Me.GroupControl4.Name = "GroupControl4"
-        Me.GroupControl4.Size = New System.Drawing.Size(324, 402)
+        Me.GroupControl4.Size = New System.Drawing.Size(318, 314)
         Me.GroupControl4.TabIndex = 7
         Me.GroupControl4.Text = "Características"
         '
@@ -1017,7 +960,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControl8.Location = New System.Drawing.Point(2, 20)
         Me.LayoutControl8.Name = "LayoutControl8"
         Me.LayoutControl8.Root = Me.LayoutControlGroup8
-        Me.LayoutControl8.Size = New System.Drawing.Size(320, 380)
+        Me.LayoutControl8.Size = New System.Drawing.Size(314, 292)
         Me.LayoutControl8.TabIndex = 0
         Me.LayoutControl8.Text = "LayoutControl8"
         '
@@ -1025,7 +968,8 @@ Partial Class AgregarSIMAC
         '
         Me.txtTabla12.Location = New System.Drawing.Point(52, 268)
         Me.txtTabla12.Name = "txtTabla12"
-        Me.txtTabla12.Size = New System.Drawing.Size(264, 20)
+        Me.txtTabla12.Properties.MaxLength = 20
+        Me.txtTabla12.Size = New System.Drawing.Size(258, 20)
         Me.txtTabla12.StyleController = Me.LayoutControl8
         Me.txtTabla12.TabIndex = 15
         '
@@ -1033,7 +977,8 @@ Partial Class AgregarSIMAC
         '
         Me.txtTabla8.Location = New System.Drawing.Point(52, 172)
         Me.txtTabla8.Name = "txtTabla8"
-        Me.txtTabla8.Size = New System.Drawing.Size(264, 20)
+        Me.txtTabla8.Properties.MaxLength = 20
+        Me.txtTabla8.Size = New System.Drawing.Size(258, 20)
         Me.txtTabla8.StyleController = Me.LayoutControl8
         Me.txtTabla8.TabIndex = 14
         '
@@ -1041,7 +986,8 @@ Partial Class AgregarSIMAC
         '
         Me.txtTabla7.Location = New System.Drawing.Point(52, 148)
         Me.txtTabla7.Name = "txtTabla7"
-        Me.txtTabla7.Size = New System.Drawing.Size(264, 20)
+        Me.txtTabla7.Properties.MaxLength = 20
+        Me.txtTabla7.Size = New System.Drawing.Size(258, 20)
         Me.txtTabla7.StyleController = Me.LayoutControl8
         Me.txtTabla7.TabIndex = 13
         '
@@ -1049,7 +995,8 @@ Partial Class AgregarSIMAC
         '
         Me.txtTabla6.Location = New System.Drawing.Point(52, 124)
         Me.txtTabla6.Name = "txtTabla6"
-        Me.txtTabla6.Size = New System.Drawing.Size(264, 20)
+        Me.txtTabla6.Properties.MaxLength = 20
+        Me.txtTabla6.Size = New System.Drawing.Size(258, 20)
         Me.txtTabla6.StyleController = Me.LayoutControl8
         Me.txtTabla6.TabIndex = 12
         '
@@ -1057,7 +1004,8 @@ Partial Class AgregarSIMAC
         '
         Me.txtTabla5.Location = New System.Drawing.Point(52, 100)
         Me.txtTabla5.Name = "txtTabla5"
-        Me.txtTabla5.Size = New System.Drawing.Size(264, 20)
+        Me.txtTabla5.Properties.MaxLength = 20
+        Me.txtTabla5.Size = New System.Drawing.Size(258, 20)
         Me.txtTabla5.StyleController = Me.LayoutControl8
         Me.txtTabla5.TabIndex = 11
         '
@@ -1065,7 +1013,8 @@ Partial Class AgregarSIMAC
         '
         Me.txtTabla4.Location = New System.Drawing.Point(52, 76)
         Me.txtTabla4.Name = "txtTabla4"
-        Me.txtTabla4.Size = New System.Drawing.Size(264, 20)
+        Me.txtTabla4.Properties.MaxLength = 20
+        Me.txtTabla4.Size = New System.Drawing.Size(258, 20)
         Me.txtTabla4.StyleController = Me.LayoutControl8
         Me.txtTabla4.TabIndex = 10
         '
@@ -1073,7 +1022,8 @@ Partial Class AgregarSIMAC
         '
         Me.txtTabla3.Location = New System.Drawing.Point(52, 52)
         Me.txtTabla3.Name = "txtTabla3"
-        Me.txtTabla3.Size = New System.Drawing.Size(264, 20)
+        Me.txtTabla3.Properties.MaxLength = 20
+        Me.txtTabla3.Size = New System.Drawing.Size(258, 20)
         Me.txtTabla3.StyleController = Me.LayoutControl8
         Me.txtTabla3.TabIndex = 9
         '
@@ -1081,7 +1031,8 @@ Partial Class AgregarSIMAC
         '
         Me.txtTabla2.Location = New System.Drawing.Point(52, 28)
         Me.txtTabla2.Name = "txtTabla2"
-        Me.txtTabla2.Size = New System.Drawing.Size(264, 20)
+        Me.txtTabla2.Properties.MaxLength = 20
+        Me.txtTabla2.Size = New System.Drawing.Size(258, 20)
         Me.txtTabla2.StyleController = Me.LayoutControl8
         Me.txtTabla2.TabIndex = 8
         '
@@ -1089,7 +1040,8 @@ Partial Class AgregarSIMAC
         '
         Me.txtTabla1.Location = New System.Drawing.Point(52, 4)
         Me.txtTabla1.Name = "txtTabla1"
-        Me.txtTabla1.Size = New System.Drawing.Size(264, 20)
+        Me.txtTabla1.Properties.MaxLength = 20
+        Me.txtTabla1.Size = New System.Drawing.Size(258, 20)
         Me.txtTabla1.StyleController = Me.LayoutControl8
         Me.txtTabla1.TabIndex = 7
         '
@@ -1097,7 +1049,8 @@ Partial Class AgregarSIMAC
         '
         Me.txtTabla9.Location = New System.Drawing.Point(52, 196)
         Me.txtTabla9.Name = "txtTabla9"
-        Me.txtTabla9.Size = New System.Drawing.Size(264, 20)
+        Me.txtTabla9.Properties.MaxLength = 20
+        Me.txtTabla9.Size = New System.Drawing.Size(258, 20)
         Me.txtTabla9.StyleController = Me.LayoutControl8
         Me.txtTabla9.TabIndex = 6
         '
@@ -1105,7 +1058,8 @@ Partial Class AgregarSIMAC
         '
         Me.txtTabla11.Location = New System.Drawing.Point(52, 244)
         Me.txtTabla11.Name = "txtTabla11"
-        Me.txtTabla11.Size = New System.Drawing.Size(264, 20)
+        Me.txtTabla11.Properties.MaxLength = 20
+        Me.txtTabla11.Size = New System.Drawing.Size(258, 20)
         Me.txtTabla11.StyleController = Me.LayoutControl8
         Me.txtTabla11.TabIndex = 5
         '
@@ -1113,7 +1067,8 @@ Partial Class AgregarSIMAC
         '
         Me.txtTabla10.Location = New System.Drawing.Point(52, 220)
         Me.txtTabla10.Name = "txtTabla10"
-        Me.txtTabla10.Size = New System.Drawing.Size(264, 20)
+        Me.txtTabla10.Properties.MaxLength = 20
+        Me.txtTabla10.Size = New System.Drawing.Size(258, 20)
         Me.txtTabla10.StyleController = Me.LayoutControl8
         Me.txtTabla10.TabIndex = 4
         '
@@ -1125,7 +1080,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlGroup8.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup8.Name = "LayoutControlGroup8"
         Me.LayoutControlGroup8.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup8.Size = New System.Drawing.Size(320, 380)
+        Me.LayoutControlGroup8.Size = New System.Drawing.Size(314, 292)
         Me.LayoutControlGroup8.Spacing = New DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2)
         Me.LayoutControlGroup8.TextVisible = False
         '
@@ -1134,7 +1089,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem42.Control = Me.txtTabla4
         Me.LayoutControlItem42.Location = New System.Drawing.Point(0, 72)
         Me.LayoutControlItem42.Name = "LayoutControlItem42"
-        Me.LayoutControlItem42.Size = New System.Drawing.Size(316, 24)
+        Me.LayoutControlItem42.Size = New System.Drawing.Size(310, 24)
         Me.LayoutControlItem42.Text = "Tabla 4:"
         Me.LayoutControlItem42.TextSize = New System.Drawing.Size(45, 13)
         '
@@ -1143,7 +1098,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem43.Control = Me.txtTabla5
         Me.LayoutControlItem43.Location = New System.Drawing.Point(0, 96)
         Me.LayoutControlItem43.Name = "LayoutControlItem43"
-        Me.LayoutControlItem43.Size = New System.Drawing.Size(316, 24)
+        Me.LayoutControlItem43.Size = New System.Drawing.Size(310, 24)
         Me.LayoutControlItem43.Text = "Tabla 5:"
         Me.LayoutControlItem43.TextSize = New System.Drawing.Size(45, 13)
         '
@@ -1152,7 +1107,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem39.Control = Me.txtTabla1
         Me.LayoutControlItem39.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem39.Name = "LayoutControlItem39"
-        Me.LayoutControlItem39.Size = New System.Drawing.Size(316, 24)
+        Me.LayoutControlItem39.Size = New System.Drawing.Size(310, 24)
         Me.LayoutControlItem39.Text = "Tabla 1:"
         Me.LayoutControlItem39.TextSize = New System.Drawing.Size(45, 13)
         '
@@ -1161,7 +1116,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem40.Control = Me.txtTabla2
         Me.LayoutControlItem40.Location = New System.Drawing.Point(0, 24)
         Me.LayoutControlItem40.Name = "LayoutControlItem40"
-        Me.LayoutControlItem40.Size = New System.Drawing.Size(316, 24)
+        Me.LayoutControlItem40.Size = New System.Drawing.Size(310, 24)
         Me.LayoutControlItem40.Text = "Tabla 2:"
         Me.LayoutControlItem40.TextSize = New System.Drawing.Size(45, 13)
         '
@@ -1170,7 +1125,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem41.Control = Me.txtTabla3
         Me.LayoutControlItem41.Location = New System.Drawing.Point(0, 48)
         Me.LayoutControlItem41.Name = "LayoutControlItem41"
-        Me.LayoutControlItem41.Size = New System.Drawing.Size(316, 24)
+        Me.LayoutControlItem41.Size = New System.Drawing.Size(310, 24)
         Me.LayoutControlItem41.Text = "Tabla 3:"
         Me.LayoutControlItem41.TextSize = New System.Drawing.Size(45, 13)
         '
@@ -1179,7 +1134,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem44.Control = Me.txtTabla6
         Me.LayoutControlItem44.Location = New System.Drawing.Point(0, 120)
         Me.LayoutControlItem44.Name = "LayoutControlItem44"
-        Me.LayoutControlItem44.Size = New System.Drawing.Size(316, 24)
+        Me.LayoutControlItem44.Size = New System.Drawing.Size(310, 24)
         Me.LayoutControlItem44.Text = "Tabla 6:"
         Me.LayoutControlItem44.TextSize = New System.Drawing.Size(45, 13)
         '
@@ -1188,7 +1143,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem45.Control = Me.txtTabla7
         Me.LayoutControlItem45.Location = New System.Drawing.Point(0, 144)
         Me.LayoutControlItem45.Name = "LayoutControlItem45"
-        Me.LayoutControlItem45.Size = New System.Drawing.Size(316, 24)
+        Me.LayoutControlItem45.Size = New System.Drawing.Size(310, 24)
         Me.LayoutControlItem45.Text = "Tabla 7:"
         Me.LayoutControlItem45.TextSize = New System.Drawing.Size(45, 13)
         '
@@ -1197,7 +1152,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem46.Control = Me.txtTabla8
         Me.LayoutControlItem46.Location = New System.Drawing.Point(0, 168)
         Me.LayoutControlItem46.Name = "LayoutControlItem46"
-        Me.LayoutControlItem46.Size = New System.Drawing.Size(316, 24)
+        Me.LayoutControlItem46.Size = New System.Drawing.Size(310, 24)
         Me.LayoutControlItem46.Text = "Tabla 8:"
         Me.LayoutControlItem46.TextSize = New System.Drawing.Size(45, 13)
         '
@@ -1206,7 +1161,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem38.Control = Me.txtTabla9
         Me.LayoutControlItem38.Location = New System.Drawing.Point(0, 192)
         Me.LayoutControlItem38.Name = "LayoutControlItem38"
-        Me.LayoutControlItem38.Size = New System.Drawing.Size(316, 24)
+        Me.LayoutControlItem38.Size = New System.Drawing.Size(310, 24)
         Me.LayoutControlItem38.Text = "Tabla 9:"
         Me.LayoutControlItem38.TextSize = New System.Drawing.Size(45, 13)
         '
@@ -1215,7 +1170,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem36.Control = Me.txtTabla10
         Me.LayoutControlItem36.Location = New System.Drawing.Point(0, 216)
         Me.LayoutControlItem36.Name = "LayoutControlItem36"
-        Me.LayoutControlItem36.Size = New System.Drawing.Size(316, 24)
+        Me.LayoutControlItem36.Size = New System.Drawing.Size(310, 24)
         Me.LayoutControlItem36.Text = "Tabla 10:"
         Me.LayoutControlItem36.TextSize = New System.Drawing.Size(45, 13)
         '
@@ -1224,7 +1179,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem47.Control = Me.txtTabla12
         Me.LayoutControlItem47.Location = New System.Drawing.Point(0, 264)
         Me.LayoutControlItem47.Name = "LayoutControlItem47"
-        Me.LayoutControlItem47.Size = New System.Drawing.Size(316, 112)
+        Me.LayoutControlItem47.Size = New System.Drawing.Size(310, 24)
         Me.LayoutControlItem47.Text = "Tabla 12:"
         Me.LayoutControlItem47.TextSize = New System.Drawing.Size(45, 13)
         '
@@ -1233,16 +1188,16 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem37.Control = Me.txtTabla11
         Me.LayoutControlItem37.Location = New System.Drawing.Point(0, 240)
         Me.LayoutControlItem37.Name = "LayoutControlItem37"
-        Me.LayoutControlItem37.Size = New System.Drawing.Size(316, 24)
+        Me.LayoutControlItem37.Size = New System.Drawing.Size(310, 24)
         Me.LayoutControlItem37.Text = "Tabla 11:"
         Me.LayoutControlItem37.TextSize = New System.Drawing.Size(45, 13)
         '
         'GroupControl3
         '
         Me.GroupControl3.Controls.Add(Me.LayoutControl4)
-        Me.GroupControl3.Location = New System.Drawing.Point(2, 227)
+        Me.GroupControl3.Location = New System.Drawing.Point(2, 223)
         Me.GroupControl3.Name = "GroupControl3"
-        Me.GroupControl3.Size = New System.Drawing.Size(325, 96)
+        Me.GroupControl3.Size = New System.Drawing.Size(319, 96)
         Me.GroupControl3.TabIndex = 6
         Me.GroupControl3.Text = "Destajos"
         '
@@ -1255,7 +1210,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControl4.Location = New System.Drawing.Point(2, 20)
         Me.LayoutControl4.Name = "LayoutControl4"
         Me.LayoutControl4.Root = Me.LayoutControlGroup4
-        Me.LayoutControl4.Size = New System.Drawing.Size(321, 74)
+        Me.LayoutControl4.Size = New System.Drawing.Size(315, 74)
         Me.LayoutControl4.TabIndex = 0
         Me.LayoutControl4.Text = "LayoutControl4"
         '
@@ -1263,7 +1218,7 @@ Partial Class AgregarSIMAC
         '
         Me.txtMinutoSemanales.Location = New System.Drawing.Point(98, 50)
         Me.txtMinutoSemanales.Name = "txtMinutoSemanales"
-        Me.txtMinutoSemanales.Size = New System.Drawing.Size(219, 20)
+        Me.txtMinutoSemanales.Size = New System.Drawing.Size(213, 20)
         Me.txtMinutoSemanales.StyleController = Me.LayoutControl4
         Me.txtMinutoSemanales.TabIndex = 7
         '
@@ -1272,7 +1227,7 @@ Partial Class AgregarSIMAC
         Me.cheSaldarDestajosAvanzar.Location = New System.Drawing.Point(4, 27)
         Me.cheSaldarDestajosAvanzar.Name = "cheSaldarDestajosAvanzar"
         Me.cheSaldarDestajosAvanzar.Properties.Caption = "Saldar destajos al avanzar"
-        Me.cheSaldarDestajosAvanzar.Size = New System.Drawing.Size(313, 19)
+        Me.cheSaldarDestajosAvanzar.Size = New System.Drawing.Size(307, 19)
         Me.cheSaldarDestajosAvanzar.StyleController = Me.LayoutControl4
         Me.cheSaldarDestajosAvanzar.TabIndex = 6
         '
@@ -1281,7 +1236,7 @@ Partial Class AgregarSIMAC
         Me.cheEditarCantidadPagoDestajos.Location = New System.Drawing.Point(4, 4)
         Me.cheEditarCantidadPagoDestajos.Name = "cheEditarCantidadPagoDestajos"
         Me.cheEditarCantidadPagoDestajos.Properties.Caption = "Editar cantidad en pago de destajos"
-        Me.cheEditarCantidadPagoDestajos.Size = New System.Drawing.Size(313, 19)
+        Me.cheEditarCantidadPagoDestajos.Size = New System.Drawing.Size(307, 19)
         Me.cheEditarCantidadPagoDestajos.StyleController = Me.LayoutControl4
         Me.cheEditarCantidadPagoDestajos.TabIndex = 4
         '
@@ -1293,7 +1248,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlGroup4.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup4.Name = "LayoutControlGroup4"
         Me.LayoutControlGroup4.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup4.Size = New System.Drawing.Size(321, 74)
+        Me.LayoutControlGroup4.Size = New System.Drawing.Size(315, 74)
         Me.LayoutControlGroup4.Spacing = New DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2)
         Me.LayoutControlGroup4.TextVisible = False
         '
@@ -1302,7 +1257,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem13.Control = Me.cheEditarCantidadPagoDestajos
         Me.LayoutControlItem13.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem13.Name = "LayoutControlItem13"
-        Me.LayoutControlItem13.Size = New System.Drawing.Size(317, 23)
+        Me.LayoutControlItem13.Size = New System.Drawing.Size(311, 23)
         Me.LayoutControlItem13.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem13.TextVisible = False
         '
@@ -1311,7 +1266,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem15.Control = Me.cheSaldarDestajosAvanzar
         Me.LayoutControlItem15.Location = New System.Drawing.Point(0, 23)
         Me.LayoutControlItem15.Name = "LayoutControlItem15"
-        Me.LayoutControlItem15.Size = New System.Drawing.Size(317, 23)
+        Me.LayoutControlItem15.Size = New System.Drawing.Size(311, 23)
         Me.LayoutControlItem15.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem15.TextVisible = False
         '
@@ -1320,16 +1275,16 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem16.Control = Me.txtMinutoSemanales
         Me.LayoutControlItem16.Location = New System.Drawing.Point(0, 46)
         Me.LayoutControlItem16.Name = "LayoutControlItem16"
-        Me.LayoutControlItem16.Size = New System.Drawing.Size(317, 24)
+        Me.LayoutControlItem16.Size = New System.Drawing.Size(311, 24)
         Me.LayoutControlItem16.Text = "Minutos Semanales"
         Me.LayoutControlItem16.TextSize = New System.Drawing.Size(91, 13)
         '
         'GroupControl2
         '
         Me.GroupControl2.Controls.Add(Me.LayoutControl3)
-        Me.GroupControl2.Location = New System.Drawing.Point(2, 127)
+        Me.GroupControl2.Location = New System.Drawing.Point(2, 123)
         Me.GroupControl2.Name = "GroupControl2"
-        Me.GroupControl2.Size = New System.Drawing.Size(325, 96)
+        Me.GroupControl2.Size = New System.Drawing.Size(319, 96)
         Me.GroupControl2.TabIndex = 5
         Me.GroupControl2.Text = "Hoja de Costos"
         '
@@ -1342,7 +1297,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControl3.Location = New System.Drawing.Point(2, 20)
         Me.LayoutControl3.Name = "LayoutControl3"
         Me.LayoutControl3.Root = Me.LayoutControlGroup3
-        Me.LayoutControl3.Size = New System.Drawing.Size(321, 74)
+        Me.LayoutControl3.Size = New System.Drawing.Size(315, 74)
         Me.LayoutControl3.TabIndex = 0
         Me.LayoutControl3.Text = "LayoutControl3"
         '
@@ -1351,7 +1306,7 @@ Partial Class AgregarSIMAC
         Me.cheModuloCalculoDesperdicio.Location = New System.Drawing.Point(4, 28)
         Me.cheModuloCalculoDesperdicio.Name = "cheModuloCalculoDesperdicio"
         Me.cheModuloCalculoDesperdicio.Properties.Caption = "Módulo Cálculo de Desperdicio"
-        Me.cheModuloCalculoDesperdicio.Size = New System.Drawing.Size(313, 19)
+        Me.cheModuloCalculoDesperdicio.Size = New System.Drawing.Size(307, 19)
         Me.cheModuloCalculoDesperdicio.StyleController = Me.LayoutControl3
         Me.cheModuloCalculoDesperdicio.TabIndex = 5
         '
@@ -1359,7 +1314,8 @@ Partial Class AgregarSIMAC
         '
         Me.txtDefaultMaximoLote.Location = New System.Drawing.Point(120, 4)
         Me.txtDefaultMaximoLote.Name = "txtDefaultMaximoLote"
-        Me.txtDefaultMaximoLote.Size = New System.Drawing.Size(197, 20)
+        Me.txtDefaultMaximoLote.Properties.Mask.EditMask = "0.00"
+        Me.txtDefaultMaximoLote.Size = New System.Drawing.Size(191, 20)
         Me.txtDefaultMaximoLote.StyleController = Me.LayoutControl3
         Me.txtDefaultMaximoLote.TabIndex = 4
         '
@@ -1368,7 +1324,7 @@ Partial Class AgregarSIMAC
         Me.cheEditarCostoPagoDestajos.Location = New System.Drawing.Point(4, 51)
         Me.cheEditarCostoPagoDestajos.Name = "cheEditarCostoPagoDestajos"
         Me.cheEditarCostoPagoDestajos.Properties.Caption = "Editar costo en pago de destajos"
-        Me.cheEditarCostoPagoDestajos.Size = New System.Drawing.Size(313, 19)
+        Me.cheEditarCostoPagoDestajos.Size = New System.Drawing.Size(307, 19)
         Me.cheEditarCostoPagoDestajos.StyleController = Me.LayoutControl3
         Me.cheEditarCostoPagoDestajos.TabIndex = 5
         '
@@ -1380,7 +1336,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlGroup3.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup3.Name = "LayoutControlGroup3"
         Me.LayoutControlGroup3.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup3.Size = New System.Drawing.Size(321, 74)
+        Me.LayoutControlGroup3.Size = New System.Drawing.Size(315, 74)
         Me.LayoutControlGroup3.Spacing = New DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2)
         Me.LayoutControlGroup3.TextVisible = False
         '
@@ -1389,7 +1345,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem11.Control = Me.txtDefaultMaximoLote
         Me.LayoutControlItem11.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem11.Name = "LayoutControlItem11"
-        Me.LayoutControlItem11.Size = New System.Drawing.Size(317, 24)
+        Me.LayoutControlItem11.Size = New System.Drawing.Size(311, 24)
         Me.LayoutControlItem11.Text = "Default Máximo de Lote"
         Me.LayoutControlItem11.TextSize = New System.Drawing.Size(113, 13)
         '
@@ -1398,7 +1354,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem12.Control = Me.cheModuloCalculoDesperdicio
         Me.LayoutControlItem12.Location = New System.Drawing.Point(0, 24)
         Me.LayoutControlItem12.Name = "LayoutControlItem12"
-        Me.LayoutControlItem12.Size = New System.Drawing.Size(317, 23)
+        Me.LayoutControlItem12.Size = New System.Drawing.Size(311, 23)
         Me.LayoutControlItem12.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem12.TextVisible = False
         '
@@ -1407,7 +1363,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem14.Control = Me.cheEditarCostoPagoDestajos
         Me.LayoutControlItem14.Location = New System.Drawing.Point(0, 47)
         Me.LayoutControlItem14.Name = "LayoutControlItem14"
-        Me.LayoutControlItem14.Size = New System.Drawing.Size(317, 23)
+        Me.LayoutControlItem14.Size = New System.Drawing.Size(311, 23)
         Me.LayoutControlItem14.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem14.TextVisible = False
         '
@@ -1416,7 +1372,7 @@ Partial Class AgregarSIMAC
         Me.GroupControl1.Controls.Add(Me.LayoutControl2)
         Me.GroupControl1.Location = New System.Drawing.Point(0, 0)
         Me.GroupControl1.Name = "GroupControl1"
-        Me.GroupControl1.Size = New System.Drawing.Size(329, 125)
+        Me.GroupControl1.Size = New System.Drawing.Size(323, 121)
         Me.GroupControl1.TabIndex = 4
         Me.GroupControl1.Text = "Parámetros"
         '
@@ -1430,7 +1386,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControl2.Location = New System.Drawing.Point(2, 20)
         Me.LayoutControl2.Name = "LayoutControl2"
         Me.LayoutControl2.Root = Me.LayoutControlGroup2
-        Me.LayoutControl2.Size = New System.Drawing.Size(325, 103)
+        Me.LayoutControl2.Size = New System.Drawing.Size(319, 99)
         Me.LayoutControl2.TabIndex = 0
         Me.LayoutControl2.Text = "LayoutControl2"
         '
@@ -1438,7 +1394,7 @@ Partial Class AgregarSIMAC
         '
         Me.txtNumeroActivacion.Location = New System.Drawing.Point(111, 28)
         Me.txtNumeroActivacion.Name = "txtNumeroActivacion"
-        Me.txtNumeroActivacion.Size = New System.Drawing.Size(210, 20)
+        Me.txtNumeroActivacion.Size = New System.Drawing.Size(204, 20)
         Me.txtNumeroActivacion.StyleController = Me.LayoutControl2
         Me.txtNumeroActivacion.TabIndex = 7
         '
@@ -1451,7 +1407,7 @@ Partial Class AgregarSIMAC
         Me.txtEmpresa.Properties.NullText = ""
         Me.txtEmpresa.Properties.ValueMember = "OID"
         Me.txtEmpresa.Properties.View = Me.GridView1
-        Me.txtEmpresa.Size = New System.Drawing.Size(210, 20)
+        Me.txtEmpresa.Size = New System.Drawing.Size(204, 20)
         Me.txtEmpresa.StyleController = Me.LayoutControl2
         Me.txtEmpresa.TabIndex = 6
         '
@@ -1486,7 +1442,7 @@ Partial Class AgregarSIMAC
         Me.cheManejaTenerias.Location = New System.Drawing.Point(4, 76)
         Me.cheManejaTenerias.Name = "cheManejaTenerias"
         Me.cheManejaTenerias.Properties.Caption = "Maneja Tenerias"
-        Me.cheManejaTenerias.Size = New System.Drawing.Size(317, 19)
+        Me.cheManejaTenerias.Size = New System.Drawing.Size(311, 19)
         Me.cheManejaTenerias.StyleController = Me.LayoutControl2
         Me.cheManejaTenerias.TabIndex = 5
         '
@@ -1500,7 +1456,7 @@ Partial Class AgregarSIMAC
         Me.txtBDSimac.Properties.NullText = ""
         Me.txtBDSimac.Properties.ValueMember = "name"
         Me.txtBDSimac.Properties.View = Me.GridLookUpEdit1View
-        Me.txtBDSimac.Size = New System.Drawing.Size(210, 20)
+        Me.txtBDSimac.Size = New System.Drawing.Size(204, 20)
         Me.txtBDSimac.StyleController = Me.LayoutControl2
         Me.txtBDSimac.TabIndex = 4
         '
@@ -1521,7 +1477,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlGroup2.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup2.Name = "LayoutControlGroup2"
         Me.LayoutControlGroup2.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup2.Size = New System.Drawing.Size(325, 103)
+        Me.LayoutControlGroup2.Size = New System.Drawing.Size(319, 99)
         Me.LayoutControlGroup2.Spacing = New DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2)
         Me.LayoutControlGroup2.TextVisible = False
         '
@@ -1530,7 +1486,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem9.Control = Me.txtBDSimac
         Me.LayoutControlItem9.Location = New System.Drawing.Point(0, 48)
         Me.LayoutControlItem9.Name = "LayoutControlItem9"
-        Me.LayoutControlItem9.Size = New System.Drawing.Size(321, 24)
+        Me.LayoutControlItem9.Size = New System.Drawing.Size(315, 24)
         Me.LayoutControlItem9.Text = "Base de Datos SIMAC"
         Me.LayoutControlItem9.TextSize = New System.Drawing.Size(104, 13)
         '
@@ -1539,7 +1495,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem10.Control = Me.cheManejaTenerias
         Me.LayoutControlItem10.Location = New System.Drawing.Point(0, 72)
         Me.LayoutControlItem10.Name = "LayoutControlItem10"
-        Me.LayoutControlItem10.Size = New System.Drawing.Size(321, 27)
+        Me.LayoutControlItem10.Size = New System.Drawing.Size(315, 23)
         Me.LayoutControlItem10.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem10.TextVisible = False
         '
@@ -1548,7 +1504,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem64.Control = Me.txtEmpresa
         Me.LayoutControlItem64.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem64.Name = "LayoutControlItem64"
-        Me.LayoutControlItem64.Size = New System.Drawing.Size(321, 24)
+        Me.LayoutControlItem64.Size = New System.Drawing.Size(315, 24)
         Me.LayoutControlItem64.Text = "Empresa"
         Me.LayoutControlItem64.TextSize = New System.Drawing.Size(104, 13)
         '
@@ -1557,7 +1513,7 @@ Partial Class AgregarSIMAC
         Me.txt.Control = Me.txtNumeroActivacion
         Me.txt.Location = New System.Drawing.Point(0, 24)
         Me.txt.Name = "txt"
-        Me.txt.Size = New System.Drawing.Size(321, 24)
+        Me.txt.Size = New System.Drawing.Size(315, 24)
         Me.txt.Text = "Código de activación"
         Me.txt.TextSize = New System.Drawing.Size(104, 13)
         '
@@ -1569,7 +1525,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlGroup1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup1.Name = "LayoutControlGroup1"
         Me.LayoutControlGroup1.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup1.Size = New System.Drawing.Size(892, 727)
+        Me.LayoutControlGroup1.Size = New System.Drawing.Size(875, 635)
         Me.LayoutControlGroup1.TextVisible = False
         '
         'LayoutControlItem1
@@ -1578,71 +1534,71 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem1.Name = "LayoutControlItem1"
         Me.LayoutControlItem1.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(329, 125)
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(323, 121)
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem1.TextVisible = False
         '
         'LayoutControlItem3
         '
         Me.LayoutControlItem3.Control = Me.GroupControl3
-        Me.LayoutControlItem3.Location = New System.Drawing.Point(0, 225)
+        Me.LayoutControlItem3.Location = New System.Drawing.Point(0, 221)
         Me.LayoutControlItem3.Name = "LayoutControlItem3"
-        Me.LayoutControlItem3.Size = New System.Drawing.Size(329, 100)
+        Me.LayoutControlItem3.Size = New System.Drawing.Size(323, 100)
         Me.LayoutControlItem3.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem3.TextVisible = False
         '
         'LayoutControlItem4
         '
         Me.LayoutControlItem4.Control = Me.GroupControl4
-        Me.LayoutControlItem4.Location = New System.Drawing.Point(0, 325)
+        Me.LayoutControlItem4.Location = New System.Drawing.Point(0, 321)
         Me.LayoutControlItem4.Name = "LayoutControlItem4"
         Me.LayoutControlItem4.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlItem4.Size = New System.Drawing.Size(324, 402)
+        Me.LayoutControlItem4.Size = New System.Drawing.Size(318, 314)
         Me.LayoutControlItem4.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem4.TextVisible = False
         '
         'LayoutControlItem2
         '
         Me.LayoutControlItem2.Control = Me.GroupControl2
-        Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 125)
+        Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 121)
         Me.LayoutControlItem2.Name = "LayoutControlItem2"
-        Me.LayoutControlItem2.Size = New System.Drawing.Size(329, 100)
+        Me.LayoutControlItem2.Size = New System.Drawing.Size(323, 100)
         Me.LayoutControlItem2.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem2.TextVisible = False
         '
         'LayoutControlItem5
         '
         Me.LayoutControlItem5.Control = Me.GroupControl5
-        Me.LayoutControlItem5.Location = New System.Drawing.Point(329, 0)
+        Me.LayoutControlItem5.Location = New System.Drawing.Point(323, 0)
         Me.LayoutControlItem5.Name = "LayoutControlItem5"
-        Me.LayoutControlItem5.Size = New System.Drawing.Size(290, 205)
+        Me.LayoutControlItem5.Size = New System.Drawing.Size(284, 202)
         Me.LayoutControlItem5.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem5.TextVisible = False
         '
         'LayoutControlItem6
         '
         Me.LayoutControlItem6.Control = Me.GroupControl6
-        Me.LayoutControlItem6.Location = New System.Drawing.Point(329, 205)
+        Me.LayoutControlItem6.Location = New System.Drawing.Point(323, 202)
         Me.LayoutControlItem6.Name = "LayoutControlItem6"
-        Me.LayoutControlItem6.Size = New System.Drawing.Size(290, 120)
+        Me.LayoutControlItem6.Size = New System.Drawing.Size(284, 119)
         Me.LayoutControlItem6.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem6.TextVisible = False
         '
         'LayoutControlItem7
         '
         Me.LayoutControlItem7.Control = Me.GroupControl7
-        Me.LayoutControlItem7.Location = New System.Drawing.Point(619, 0)
+        Me.LayoutControlItem7.Location = New System.Drawing.Point(607, 0)
         Me.LayoutControlItem7.Name = "LayoutControlItem7"
-        Me.LayoutControlItem7.Size = New System.Drawing.Size(273, 325)
+        Me.LayoutControlItem7.Size = New System.Drawing.Size(268, 321)
         Me.LayoutControlItem7.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem7.TextVisible = False
         '
         'LayoutControlItem8
         '
         Me.LayoutControlItem8.Control = Me.GroupControl8
-        Me.LayoutControlItem8.Location = New System.Drawing.Point(324, 325)
+        Me.LayoutControlItem8.Location = New System.Drawing.Point(318, 321)
         Me.LayoutControlItem8.Name = "LayoutControlItem8"
-        Me.LayoutControlItem8.Size = New System.Drawing.Size(568, 402)
+        Me.LayoutControlItem8.Size = New System.Drawing.Size(557, 314)
         Me.LayoutControlItem8.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem8.TextVisible = False
         '
@@ -1650,7 +1606,7 @@ Partial Class AgregarSIMAC
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(892, 727)
+        Me.ClientSize = New System.Drawing.Size(892, 514)
         Me.Controls.Add(Me.LayoutControl1)
         Me.Name = "AgregarSIMAC"
         Me.Text = "Nueva"
@@ -1671,9 +1627,6 @@ Partial Class AgregarSIMAC
         CType(Me.LayoutControlItem50, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem53, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem52, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem51, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EmptySpaceItem3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GroupControl7, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupControl7.ResumeLayout(False)
         CType(Me.LayoutControl7, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1930,16 +1883,11 @@ Partial Class AgregarSIMAC
     Friend WithEvents LayoutControlItem48 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents GridControl1 As DevExpress.XtraGrid.GridControl
     Friend WithEvents GridView3 As DevExpress.XtraGrid.Views.Grid.GridView
-    Friend WithEvents SimpleButton3 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents SimpleButton2 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents btnGuardarReporte As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents LayoutControlItem50 As DevExpress.XtraLayout.LayoutControlItem
-    Friend WithEvents LayoutControlItem52 As DevExpress.XtraLayout.LayoutControlItem
-    Friend WithEvents LayoutControlItem51 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem53 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents EmptySpaceItem1 As DevExpress.XtraLayout.EmptySpaceItem
     Friend WithEvents GridColumn3 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents EmptySpaceItem3 As DevExpress.XtraLayout.EmptySpaceItem
     Friend WithEvents GridColumn4 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn5 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents txtNumeroActivacion As DevExpress.XtraEditors.TextEdit

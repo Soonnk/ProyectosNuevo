@@ -91,7 +91,6 @@ Public Class AgregarSIMAC
                     'If Not ValidarCampos(camposVacios) Then Exit Sub
                     If oNegocio.InsertarSIMAC(llenarEntidades) = True Then
                         MessageBox.Show("Los datos han sido guardados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        CType(Owner, ConsultarMagnusCONTA).Cargar()
                         LimpiarCampos()
                     Else
                         MessageBox.Show("No se han podido guardar los datos solicitados", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
