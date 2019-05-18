@@ -35,9 +35,9 @@ Public Class AgregarTienda
 
     Private Sub CargarEmpresas()
         Dim dt As New DataTable
-        Dim nEmpresa As New Negocios.Empresa
+        Dim nEmpresa As New Negocios.Tienda
         Try
-            dt = nEmpresa.Cargar
+            dt = nEmpresa.CargarEmpresas
             txtEmpresa.Properties.DataSource = dt
         Catch ex As Exception
             MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)

@@ -199,8 +199,11 @@ Public Class SIMAC
             Dim conn = New SqlConnection(clsSQL.StringConn)
             conn.Open()
             Dim command = New SqlCommand(Query, conn)
+            'If Not entReporte.Archivo Is Nothing Then
             command.Parameters.Add("@Imagen", SqlDbType.VarBinary)
-            command.Parameters("@Imagen").Value = entReporte.Archivo
+                command.Parameters("@Imagen").Value = entReporte.Archivo
+            'End If
+
             command.ExecuteNonQuery()
             conn.Close()
         Catch ex As Exception

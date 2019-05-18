@@ -320,6 +320,7 @@ Partial Class AgregarMagnusCONTA
         '
         Me.txtConceptoNotaCredito.Location = New System.Drawing.Point(130, 2)
         Me.txtConceptoNotaCredito.Name = "txtConceptoNotaCredito"
+        Me.txtConceptoNotaCredito.Properties.MaxLength = 20
         Me.txtConceptoNotaCredito.Size = New System.Drawing.Size(178, 20)
         Me.txtConceptoNotaCredito.StyleController = Me.LayoutControl3
         Me.txtConceptoNotaCredito.TabIndex = 4
@@ -418,6 +419,7 @@ Partial Class AgregarMagnusCONTA
         '
         Me.txtEjercicioUno.Location = New System.Drawing.Point(104, 74)
         Me.txtEjercicioUno.Name = "txtEjercicioUno"
+        Me.txtEjercicioUno.Properties.MaxLength = 100
         Me.txtEjercicioUno.Size = New System.Drawing.Size(204, 20)
         Me.txtEjercicioUno.StyleController = Me.LayoutControl2
         Me.txtEjercicioUno.TabIndex = 5

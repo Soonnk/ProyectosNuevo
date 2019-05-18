@@ -196,4 +196,16 @@ Public Class Tienda
             Return Nothing
         End Try
     End Function
+
+    Public Function CargarEmpresa() As DataTable
+        Dim dt As New DataTable
+        Dim Query As String
+        Try
+            Query = "SELECT Empresas.OID, Empresas.Nombre from Empresas inner join Sistemas ON Empresas.OID = Sistemas.Empresa Where Sistemas.Nombre = 'Magnus Go!' "
+            dt = obj.RegresarDatos(Query)
+            Return dt
+        Finally
+
+        End Try
+    End Function
 End Class

@@ -6,4 +6,12 @@
         Return oMagnusERP.CargarEntidadMagnusERP(_OID)
     End Function
 
+    Public Function CargarEmpresas() As DataTable
+        Try
+            Return oMagnusERP.CargarEmpresa
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        End Try
+    End Function
 End Class

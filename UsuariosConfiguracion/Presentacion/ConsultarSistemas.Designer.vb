@@ -82,7 +82,7 @@ Partial Class ConsultarSistemas
         Me.GridColumn7.Name = "GridColumn7"
         Me.GridColumn7.Visible = True
         Me.GridColumn7.VisibleIndex = 1
-        Me.GridColumn7.Width = 118
+        Me.GridColumn7.Width = 149
         '
         'GridColumn2
         '
@@ -94,7 +94,7 @@ Partial Class ConsultarSistemas
         Me.GridColumn2.Name = "GridColumn2"
         Me.GridColumn2.Visible = True
         Me.GridColumn2.VisibleIndex = 2
-        Me.GridColumn2.Width = 115
+        Me.GridColumn2.Width = 150
         '
         'GridColumn3
         '
@@ -106,7 +106,7 @@ Partial Class ConsultarSistemas
         Me.GridColumn3.Name = "GridColumn3"
         Me.GridColumn3.Visible = True
         Me.GridColumn3.VisibleIndex = 3
-        Me.GridColumn3.Width = 109
+        Me.GridColumn3.Width = 166
         '
         'GridColumn4
         '
@@ -118,7 +118,7 @@ Partial Class ConsultarSistemas
         Me.GridColumn4.Name = "GridColumn4"
         Me.GridColumn4.Visible = True
         Me.GridColumn4.VisibleIndex = 4
-        Me.GridColumn4.Width = 89
+        Me.GridColumn4.Width = 179
         '
         'GridColumn5
         '
@@ -130,7 +130,7 @@ Partial Class ConsultarSistemas
         Me.GridColumn5.Name = "GridColumn5"
         Me.GridColumn5.Visible = True
         Me.GridColumn5.VisibleIndex = 5
-        Me.GridColumn5.Width = 99
+        Me.GridColumn5.Width = 182
         '
         'GridColumn6
         '
@@ -142,7 +142,7 @@ Partial Class ConsultarSistemas
         Me.GridColumn6.Name = "GridColumn6"
         Me.GridColumn6.Visible = True
         Me.GridColumn6.VisibleIndex = 6
-        Me.GridColumn6.Width = 91
+        Me.GridColumn6.Width = 176
         '
         'GridColumn1
         '
@@ -154,7 +154,7 @@ Partial Class ConsultarSistemas
         Me.GridColumn1.Name = "GridColumn1"
         Me.GridColumn1.Visible = True
         Me.GridColumn1.VisibleIndex = 0
-        Me.GridColumn1.Width = 91
+        Me.GridColumn1.Width = 92
         '
         'LayoutControlGroup1
         '

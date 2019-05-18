@@ -550,6 +550,7 @@ Partial Class AgregarTienda
         '
         Me.txtDescripcion.Location = New System.Drawing.Point(117, 52)
         Me.txtDescripcion.Name = "txtDescripcion"
+        Me.txtDescripcion.Properties.MaxLength = 100
         Me.txtDescripcion.Size = New System.Drawing.Size(353, 20)
         Me.txtDescripcion.StyleController = Me.LayoutControl2
         Me.txtDescripcion.TabIndex = 4

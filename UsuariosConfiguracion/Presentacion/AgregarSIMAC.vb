@@ -441,7 +441,7 @@ Public Class AgregarSIMAC
             Me.txtTipoReporte.EditValue = Nothing
             Me.txtNombreReporte.EditValue = Nothing
         Catch ex As Exception
-            'MsgBox(ex.Message)
+            MsgBox(ex.Message)
             Return Nothing
         End Try
     End Function
@@ -463,6 +463,8 @@ Public Class AgregarSIMAC
             Dim myStream As System.IO.Stream = Nothing
             If result = DialogResult.OK Then
                 myStream = opend.OpenFile()
+            Else
+                Return Nothing
             End If
             Dim FileBytes(CInt(myStream.Length)) As Byte
             myStream.Read(FileBytes, 0, FileBytes.Length)

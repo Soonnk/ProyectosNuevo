@@ -59,4 +59,13 @@
         Return oTienda.CargarEntidadTienda(_OID)
     End Function
 
+    Public Function CargarEmpresas() As DataTable
+        Try
+            Return oTienda.CargarEmpresa
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        End Try
+    End Function
+
 End Class
