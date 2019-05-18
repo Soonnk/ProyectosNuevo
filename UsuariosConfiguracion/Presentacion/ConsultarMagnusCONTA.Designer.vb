@@ -33,6 +33,14 @@ Partial Class ConsultarMagnusCONTA
         Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.GridColumn7 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn8 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn9 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn10 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn11 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn12 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn13 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn14 = New DevExpress.XtraGrid.Columns.GridColumn()
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl1.SuspendLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,7 +71,7 @@ Partial Class ConsultarMagnusCONTA
         '
         'GridView1
         '
-        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn2, Me.GridColumn3, Me.GridColumn4, Me.GridColumn5, Me.GridColumn6})
+        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn2, Me.GridColumn3, Me.GridColumn4, Me.GridColumn5, Me.GridColumn6, Me.GridColumn7, Me.GridColumn8, Me.GridColumn9, Me.GridColumn10, Me.GridColumn11, Me.GridColumn12, Me.GridColumn13, Me.GridColumn14})
         Me.GridView1.GridControl = Me.GridControl1
         Me.GridView1.Name = "GridView1"
         Me.GridView1.OptionsBehavior.Editable = False
@@ -78,7 +86,7 @@ Partial Class ConsultarMagnusCONTA
         Me.GridColumn1.Name = "GridColumn1"
         Me.GridColumn1.Visible = True
         Me.GridColumn1.VisibleIndex = 0
-        Me.GridColumn1.Width = 60
+        Me.GridColumn1.Width = 31
         '
         'GridColumn2
         '
@@ -87,7 +95,7 @@ Partial Class ConsultarMagnusCONTA
         Me.GridColumn2.Name = "GridColumn2"
         Me.GridColumn2.Visible = True
         Me.GridColumn2.VisibleIndex = 1
-        Me.GridColumn2.Width = 145
+        Me.GridColumn2.Width = 73
         '
         'GridColumn3
         '
@@ -96,7 +104,7 @@ Partial Class ConsultarMagnusCONTA
         Me.GridColumn3.Name = "GridColumn3"
         Me.GridColumn3.Visible = True
         Me.GridColumn3.VisibleIndex = 2
-        Me.GridColumn3.Width = 55
+        Me.GridColumn3.Width = 44
         '
         'GridColumn4
         '
@@ -105,7 +113,7 @@ Partial Class ConsultarMagnusCONTA
         Me.GridColumn4.Name = "GridColumn4"
         Me.GridColumn4.Visible = True
         Me.GridColumn4.VisibleIndex = 3
-        Me.GridColumn4.Width = 191
+        Me.GridColumn4.Width = 126
         '
         'GridColumn5
         '
@@ -114,7 +122,7 @@ Partial Class ConsultarMagnusCONTA
         Me.GridColumn5.Name = "GridColumn5"
         Me.GridColumn5.Visible = True
         Me.GridColumn5.VisibleIndex = 4
-        Me.GridColumn5.Width = 53
+        Me.GridColumn5.Width = 39
         '
         'GridColumn6
         '
@@ -123,7 +131,7 @@ Partial Class ConsultarMagnusCONTA
         Me.GridColumn6.Name = "GridColumn6"
         Me.GridColumn6.Visible = True
         Me.GridColumn6.VisibleIndex = 5
-        Me.GridColumn6.Width = 208
+        Me.GridColumn6.Width = 109
         '
         'LayoutControlGroup1
         '
@@ -145,6 +153,78 @@ Partial Class ConsultarMagnusCONTA
         Me.LayoutControlItem1.Size = New System.Drawing.Size(800, 450)
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem1.TextVisible = False
+        '
+        'GridColumn7
+        '
+        Me.GridColumn7.Caption = "Ejercicio uno"
+        Me.GridColumn7.FieldName = "EjercicioUno"
+        Me.GridColumn7.Name = "GridColumn7"
+        Me.GridColumn7.Visible = True
+        Me.GridColumn7.VisibleIndex = 6
+        Me.GridColumn7.Width = 66
+        '
+        'GridColumn8
+        '
+        Me.GridColumn8.Caption = "Concepto nota crédito"
+        Me.GridColumn8.FieldName = "ConceptoNotaCredito"
+        Me.GridColumn8.Name = "GridColumn8"
+        Me.GridColumn8.Visible = True
+        Me.GridColumn8.VisibleIndex = 7
+        Me.GridColumn8.Width = 104
+        '
+        'GridColumn9
+        '
+        Me.GridColumn9.Caption = "Autonumérico"
+        Me.GridColumn9.FieldName = "Autonumerico"
+        Me.GridColumn9.Name = "GridColumn9"
+        Me.GridColumn9.Visible = True
+        Me.GridColumn9.VisibleIndex = 8
+        Me.GridColumn9.Width = 74
+        '
+        'GridColumn10
+        '
+        Me.GridColumn10.Caption = "Manejar fiscal"
+        Me.GridColumn10.FieldName = "ManejarFiscal"
+        Me.GridColumn10.Name = "GridColumn10"
+        Me.GridColumn10.Visible = True
+        Me.GridColumn10.VisibleIndex = 9
+        Me.GridColumn10.Width = 73
+        '
+        'GridColumn11
+        '
+        Me.GridColumn11.Caption = "Reubicaciones"
+        Me.GridColumn11.FieldName = "Reubicaciones"
+        Me.GridColumn11.Name = "GridColumn11"
+        Me.GridColumn11.Visible = True
+        Me.GridColumn11.VisibleIndex = 10
+        Me.GridColumn11.Width = 66
+        '
+        'GridColumn12
+        '
+        Me.GridColumn12.Caption = "Por sucursal"
+        Me.GridColumn12.FieldName = "PorSucursal"
+        Me.GridColumn12.Name = "GridColumn12"
+        Me.GridColumn12.Visible = True
+        Me.GridColumn12.VisibleIndex = 11
+        Me.GridColumn12.Width = 57
+        '
+        'GridColumn13
+        '
+        Me.GridColumn13.Caption = "Contrapartida cancelación"
+        Me.GridColumn13.FieldName = "ContrapartidaCancelacion"
+        Me.GridColumn13.Name = "GridColumn13"
+        Me.GridColumn13.Visible = True
+        Me.GridColumn13.VisibleIndex = 12
+        Me.GridColumn13.Width = 131
+        '
+        'GridColumn14
+        '
+        Me.GridColumn14.Caption = "Vista previa"
+        Me.GridColumn14.FieldName = "VistaPrevia"
+        Me.GridColumn14.Name = "GridColumn14"
+        Me.GridColumn14.Visible = True
+        Me.GridColumn14.VisibleIndex = 13
+        Me.GridColumn14.Width = 101
         '
         'ConsultarMagnusCONTA
         '
@@ -175,4 +255,12 @@ Partial Class ConsultarMagnusCONTA
     Friend WithEvents GridColumn5 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn4 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn6 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn7 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn8 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn9 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn10 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn11 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn12 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn13 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn14 As DevExpress.XtraGrid.Columns.GridColumn
 End Class
