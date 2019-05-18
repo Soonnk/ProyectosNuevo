@@ -35,6 +35,7 @@
             _Logotipo = value
         End Set
     End Property
+
     Public Property OID() As Integer
         Get
             Return Me._OID
