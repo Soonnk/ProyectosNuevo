@@ -182,6 +182,12 @@
                             frmEditar.modo = ConsultarMagnusCONTA.tipo.Editar
                             frmEditar = frmActivo
                             frmEditar.ConsultarMagnusCONTA()
+                        Case "ConsultarSIMAC"
+
+                            Dim frmEditar As New ConsultarSIMAC
+                            frmEditar.modo = ConsultarSIMAC.tipo.Editar
+                            frmEditar = frmActivo
+                            frmEditar.ConsultarSIMAC()
                         Case "ConsultarMagnusGo"
 
                             Dim frmEditar As New ConsultarMagnusGo

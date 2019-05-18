@@ -96,7 +96,23 @@
         Me._ValidaUnidad = False
         Me._AutPedido = False
         Me._DestajosAvance = False
-
+        Me._ValidadSuPedido = False
+        Me._EntregaParcial = False
+        Me._CalculoDesperdicio = False
+        Me._ManejaTenerias = False
+        Me._PedProdAutorizado = False
+        Me._MinutosSemanales = False
+        Me._hcCarga = False
+        Me._hcDerivados = False
+        Me._hcMateriales = False
+        Me._rptFormulas = ""
+        Me._avancePorProceso = False
+        Me._dividirLote = False
+        Me._avanceNoValidarProg = False
+        Me._rptPreasignacion = ""
+        Me._rptExplosionFormulas = ""
+        Me._editarCantidadDestajo = False
+        Me._editarCostoDestaje = False
     End Sub
 
     Public Property OID() As Integer

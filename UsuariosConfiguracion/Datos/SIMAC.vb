@@ -90,7 +90,7 @@ Public Class SIMAC
         'Dim id = obj.Incrementar("Configuracion_Conta")
 
         Try
-            Query = "INSERT INTO Configuracion_Simac(SistemaAdmon, NoEmpresa, 
+            Query = "INSERT INTO Configuracion_Simac(SistemaAdmon, Empresa, 
                                                     ProductoTerminado, MateriaPrima,
                                                     MateriaTalla, Fracciones,
                                                     Procesos,Modelos,
@@ -106,7 +106,7 @@ Public Class SIMAC
                                                     Sistema,DBSimac,
                                                     ProgBase,ValidaUnidad,
                                                     AutPedido,DestajosAvance,
-                                                    ValidaSuPedido,EntregaParcial,
+                                                    ValidadSuPedido,EntregaParcial,
                                                     CalculoDesperdicio,ManejaTenerias,
                                                     PedProdAutorizado,MinutosSemanales,
                                                     hcCarga,hcDerivados,
@@ -117,7 +117,7 @@ Public Class SIMAC
                                                     Tabla8,Tabla9,
                                                     Tabla10,Tabla11,
                                                     Tabla12,rptExplosionFormulas,
-                                                    editarCantidadDestajo,editarCostoDestajo) 
+                                                    editarCantidadDestajo,editarCostoDestaje) 
                                                     VALUES ('" & simac.SistemaAdmon & "','" & simac.Empresa & "',
                                                     '" & simac.ProductoTerminado & "','" & simac.MateriaPrima & "',
                                                     '" & simac.MateriaTalla & "','" & simac.Fracciones & "',
@@ -130,7 +130,7 @@ Public Class SIMAC
                                                     '" & simac.CantAvance & "','" & simac.AutoAvance & "',
                                                     '" & simac.FechaAvance & "','" & simac.MultiAlmacen & "',
                                                     '" & simac.MaterialAlmacen & "','" & simac.ProductoAlmacen & "',
-                                                    '" & simac.MaxLote & "',
+                                                   '" & simac.MaxLote & "',
                                                     '" & simac.Sistema & "','" & simac.DBSimac & "',
                                                     '" & simac.ProgBase & "','" & simac.ValidaUnidad & "',
                                                     '" & simac.AutPedido & "','" & simac.DestajosAvance & "',
@@ -149,7 +149,7 @@ Public Class SIMAC
 
             Return obj.commandSQL(Query)
         Catch ex As Exception
-            'MsgBox(ex)
+            MsgBox(ex.ToString)
             Return False
         End Try
     End Function
@@ -277,6 +277,25 @@ Public Class SIMAC
         Dim Query As String
         Try
             Query = "SELECT Empresas.OID, Empresas.Nombre from Empresas inner join Sistemas ON Empresas.OID = Sistemas.Empresa Where Sistemas.Nombre = 'SIMAC' "
+            dt = obj.RegresarDatos(Query)
+            Return dt
+        Finally
+
+        End Try
+    End Function
+
+    Public Function CargarPrueba()
+        Dim dt As New DataTable
+        Dim Query As String
+        Try
+            Query = "Select Configuracion_Simac.OID,Configuracion_Simac.Empresa, SistemaAdmon, ProductoTerminado, MateriaPrima,MateriaTalla,Fracciones,Procesos,
+Modelos, Tabla1,Tabla2,Tabla3,Tabla4,Tabla5,Tabla6,FolioOrdenA,FolioOrdenB,FolioPedidoA,FolioPedidoB,
+CantAvance, AutoAvance, FechaAvance,MultiAlmacen,MaterialAlmacen,ProductoAlmacen,MaxLote,Configuracion_Simac.Sistema,DBSimac,
+ProgBase,ValidaUnidad,AutPedido,DestajosAvance,ValidadSuPedido,EntregaParcial,CalculoDesperdicio,ManejaTenerias,PedProdAutorizado,
+MinutosSemanales,hcCarga,hcDerivados,hcFormulas,hcMateriales,rptFormulas,avancePorProceso,dividirLote,
+avanceNoValidarProg,rptPreasignacion,Tabla7,Tabla8,Tabla9,Tabla10,Tabla11,Tabla12,rptExplosionFormulas,editarCantidadDestajo,editarCostoDestaje,
+Empresas.Nombre as nom, Sistemas.Nombre as sis from Configuracion_Simac inner join
+Empresas ON (Configuracion_Simac.Empresa = Empresas.OID) inner join Sistemas ON (Configuracion_Simac.Sistema = Sistemas.OID) WHERE Sistemas.Nombre ='SIMAC'"
             dt = obj.RegresarDatos(Query)
             Return dt
         Finally

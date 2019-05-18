@@ -19,12 +19,15 @@ Public Class AgregarSIMAC
     Private Sub AgregarSIMAC_Load(sender As Object, e As EventArgs) Handles Me.Load
         CargarDB()
         CargarEmpresas()
+        TipoReporte()
+        txtNumeroActivacion.ReadOnly = True
 
         If modo = tipo.Nuevo Then
             Me.GroupControl8.Enabled = False
         Else
-            'CargarReporte()
+
             Me.GroupControl8.Enabled = True
+            CargarReporte()
         End If
 
     End Sub
@@ -115,12 +118,12 @@ Public Class AgregarSIMAC
         eSimac.Empresa = Me.txtEmpresa.EditValue
         eSimac.Sistema = _IdSistema
         eSimac.ManejaTenerias = Me.cheManejaTenerias.Checked
-        eSimac.MaxLote = Me.txtDefaultMaximoLote.Text
+        eSimac.MaxLote = Me.txtDefaultMaximoLote.EditValue
         eSimac.CalculoDesperdicio = Me.cheModuloCalculoDesperdicio.Checked
         eSimac.editarCostoDestaje = Me.cheEditarCostoPagoDestajos.Checked
         eSimac.editarCantidadDestajo = Me.cheEditarCantidadPagoDestajos.Checked
         eSimac.DestajosAvance = Me.cheSaldarDestajosAvanzar.Checked
-        eSimac.MinutosSemanales = Me.txtMinutoSemanales.Text
+        eSimac.MinutosSemanales = Me.txtMinutoSemanales.EditValue
         eSimac.Tabla1 = Me.txtTabla1.Text
         eSimac.Tabla2 = Me.txtTabla2.Text
         eSimac.Tabla3 = Me.txtTabla3.Text
@@ -133,13 +136,13 @@ Public Class AgregarSIMAC
         eSimac.Tabla10 = Me.txtTabla10.Text
         eSimac.Tabla11 = Me.txtTabla11.Text
         eSimac.Tabla12 = Me.txtTabla12.Text
-        eSimac.FolioPedidoA = Me.txtFolioPedidoA.Text
-        eSimac.FolioPedidoB = Me.txtFolioPedidoB.Text
-        eSimac.FolioOrdenA = Me.txtFolioOrdenA.Text
-        eSimac.FolioOrdenB = Me.txtFolioOrdenB.Text
+        eSimac.FolioPedidoA = Me.txtFolioPedidoA.EditValue
+        eSimac.FolioPedidoB = Me.txtFolioPedidoB.EditValue
+        eSimac.FolioOrdenA = Me.txtFolioOrdenA.EditValue
+        eSimac.FolioOrdenB = Me.txtFolioOrdenB.EditValue
         eSimac.ValidadSuPedido = Me.cheValidarPedido.Checked
         eSimac.AutPedido = Me.cheAutorizarPedidosProduccion.Checked
-        'Falta Pedidos: cargar solo productos autorizados.
+        eSimac.PedProdAutorizado = Me.cheCargarSoloProductosAutorizados.Checked
         eSimac.ProgBase = Me.cheProgramarSistemaBase.Checked
         eSimac.EntregaParcial = cheEntregaParcial.Checked
         eSimac.dividirLote = Me.cheDividirLotes.Checked
@@ -150,8 +153,8 @@ Public Class AgregarSIMAC
         eSimac.avancePorProceso = Me.cheAvanceProceso.Checked
         eSimac.avanceNoValidarProg = Me.cheNoValidarFechaProgramacion.Checked
         eSimac.MultiAlmacen = Me.cheMultialmacen.Checked
-        eSimac.MaterialAlmacen = Me.txtAlmacenMateriaPrima.Text
-        eSimac.ProductoAlmacen = Me.txtAlmacenProductoTerminado.Text
+        eSimac.MaterialAlmacen = Me.txtAlmacenMateriaPrima.EditValue
+        eSimac.ProductoAlmacen = Me.txtAlmacenProductoTerminado.EditValue
         Return eSimac
     End Function
 
@@ -186,7 +189,7 @@ Public Class AgregarSIMAC
         eSimac.FolioOrdenB = Me.txtFolioOrdenB.Text
         eSimac.ValidadSuPedido = Me.cheValidarPedido.Checked
         eSimac.AutPedido = Me.cheAutorizarPedidosProduccion.Checked
-        'Falta Pedidos: cargar solo productos autorizados.
+        eSimac.PedProdAutorizado = Me.cheCargarSoloProductosAutorizados.Checked
         eSimac.ProgBase = Me.cheProgramarSistemaBase.Checked
         eSimac.EntregaParcial = cheEntregaParcial.Checked
         eSimac.dividirLote = Me.cheDividirLotes.Checked
@@ -249,6 +252,7 @@ Public Class AgregarSIMAC
     Public Sub consultarSIMAC(ByVal row As DataRow)
         Try
             txtNumeroActivacion.ReadOnly = True
+            txtEmpresa.ReadOnly = True
             _IdSimac = row("OID")
             Me.txtBDSimac.EditValue = row("DBSimac")
             Me.txtEmpresa.EditValue = row("Empresa")
@@ -278,7 +282,7 @@ Public Class AgregarSIMAC
             Me.txtFolioOrdenB.EditValue = row("FolioOrdenB")
             Me.cheValidarPedido.Checked = row("ValidadSuPedido")
             Me.cheAutorizarPedidosProduccion.Checked = row("AutPedido")
-            'Falta Pedidos: cargar solo productos autorizados.
+            Me.cheCargarSoloProductosAutorizados.Checked = row("PedProdAutorizado")
             Me.cheProgramarSistemaBase.Checked = row("ProgBase")
             Me.cheEntregaParcial.Checked = row("EntregaParcial")
             Me.cheDividirLotes.Checked = row("dividirLote")
@@ -295,45 +299,6 @@ Public Class AgregarSIMAC
             MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
-
-    'Public Sub Cargar()
-    '    Try
-    '        Select Case modo
-    '            Case tipo.Nuevo
-    '                Me.Text = "Agregar MagnusCONTA"
-    '            Case tipo.Editar
-    '                Me.Text = "Editar MagnusConta"
-    '                CargarMagnusCONTA()
-    '        End Select
-    '    Catch ex As Exception
-    '        'MessageBox.Show(ex.Message)
-    '    End Try
-    'End Sub
-
-    'Public Sub CargarMagnusCONTA()
-    '    Dim oNegocio As New Negocios.MagnusCONTA
-    '    Dim oEntidad As New Entidades.MagnusCONTA
-    '    Try
-    '        oEntidad = oNegocio.CargarMagnusCONTA(_IdMagnusC)
-    '        Me.txtBase.Text = oEntidad.DBConta
-    '        Me.txtEmpresa.Text = oEntidad.Empresa
-    '        idSistema = oEntidad.Sistema
-    '        Me.txtEjercicioUno.Text = oEntidad.EjercicioUno
-    '        Me.txtConceptoNotaCredito.Text = oEntidad.ConceptoNotaCredito
-    '        Me.ceAutonumerico.Checked = oEntidad.Autonumerico
-    '        Me.ceContrapartidaCancelacion.Checked = oEntidad.ContrapartidaCancelacion
-    '        Me.ceManejarFiscal.Checked = oEntidad.ManejarFiscal
-    '        Me.cePorSucursal.Checked = oEntidad.PorSucursal
-    '        Me.ceReubicaciones.Checked = oEntidad.Reubicaciones
-    '        Me.ceVistaPrevia.Checked = oEntidad.VistaPrevia
-    '    Catch ex As Exception
-    '        'MessageBox.Show(ex.Message)
-    '    End Try
-    'End Sub
-
-
-
-
 
     Private Sub txtEmpresa_EditValueChanged(sender As Object, e As EventArgs) Handles txtEmpresa.EditValueChanged
         Dim nSimac As New Negocios.SIMAC

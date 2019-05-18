@@ -187,6 +187,7 @@ Public Class AgregarTienda
         Try
             oEntidad = oNegocio.CargarTienda(_IdTienda)
 
+
             Me.txtBasePV.Text = oEntidad.BasePuntoVenta
             Me.txtDescripcion.Text = oEntidad.Descripcion
             Me.txtAlmacen.Text = oEntidad.IdAlmacen
@@ -203,6 +204,7 @@ Public Class AgregarTienda
     Public Sub consultarTienda(ByVal row As DataRow)
         Try
             _IdTienda = row("OID")
+            txtEmpresa.ReadOnly = True
             txtBasePV.EditValue = row("BasePuntoVenta")
             txtDescripcion.EditValue = row("Descripcion")
             txtAlmacen.EditValue = row("idAlmacen")

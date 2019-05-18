@@ -120,6 +120,7 @@
     Public Sub consultarMagnusCONTA(ByVal row As DataRow)
         Try
             txtNumeroActivacion.ReadOnly = True
+            txtEmpresa.ReadOnly = True
             _IdMagnusC = row("OID")
             txtBase.EditValue = row("DBConta")
             txtEmpresa.EditValue = row("Empresa")

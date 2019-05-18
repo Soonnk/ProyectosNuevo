@@ -3,7 +3,7 @@
 
     Public Function Cargar() As DataTable
         Try
-            Return oSimac.Cargar()
+            Return oSimac.CargarPrueba()
         Finally
         End Try
     End Function
