@@ -84,7 +84,7 @@ Public Class Tienda
             Query = "Select Tiendas.OID, Descripcion, idAlmacen, idFolio, Factura, BasePuntoVenta, BaseMagnus, ServidorLocal, 
                      ServidorRemoto, UsuarioLocal, UsuarioRemoto, PasswordLocal, PasswordRemoto, DynDns, PrecioMinimoVenta, FacturarPrecioMinimo,
                      Empresa, MuestraExistencia, Empresas.Nombre
-                     from Tiendas inner join Empresas on (Tiendas.Empresa = Empresas.OID)"
+                     from Tiendas inner join Empresas on (Tiendas.Empresa = Empresas.OID) WHERE Sistemas.Nombre ='Magnus Go!'"
             dt = obj.RegresarDatos(Query)
             Return dt
         Finally
@@ -201,11 +201,14 @@ Public Class Tienda
         Dim dt As New DataTable
         Dim Query As String
         Try
-            Query = "SELECT Empresas.OID, Empresas.Nombre from Empresas inner join Sistemas ON Empresas.OID = Sistemas.Empresa Where Sistemas.Nombre = 'Magnus Go!' "
+            Query = "Select * from Empresas
+				where OID in (Select Empresa from Sistemas 
+										where Empresa not in (Select Empresa from Tiendas) and Nombre = 'Magnus Go!')"
             dt = obj.RegresarDatos(Query)
             Return dt
         Finally
-
         End Try
     End Function
+
+
 End Class

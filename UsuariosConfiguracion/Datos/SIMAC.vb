@@ -23,7 +23,7 @@ Public Class SIMAC
             Dim dt As DataTable = obj.RegresarDatos(query)
             With dt.Rows(0)
                 simac.SistemaAdmon = .Item("SistemaAdmon")
-                simac.Empresa = .Item("NoEmpresa")
+                simac.Empresa = .Item("Empresa")
                 simac.ProductoTerminado = .Item("ProductoTerminado")
                 simac.MateriaPrima = .Item("MateriaPrima")
                 simac.MateriaTalla = .Item("MateriaTalla")
@@ -279,7 +279,9 @@ Public Class SIMAC
         Dim dt As New DataTable
         Dim Query As String
         Try
-            Query = "SELECT Empresas.OID, Empresas.Nombre from Empresas inner join Sistemas ON Empresas.OID = Sistemas.Empresa Where Sistemas.Nombre = 'SIMAC' "
+            Query = "Select * from Empresas
+				where OID in (Select Empresa from Sistemas 
+										where Empresa not in (Select Empresa from Configuracion_Simac) and Nombre = 'SIMAC') "
             dt = obj.RegresarDatos(Query)
             Return dt
         Finally

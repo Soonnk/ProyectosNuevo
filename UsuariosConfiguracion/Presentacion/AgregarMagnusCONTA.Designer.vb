@@ -68,6 +68,7 @@ Partial Class AgregarMagnusCONTA
         Me.LayoutControlItem5 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem3 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlGroup4 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.GridColumn3 = New DevExpress.XtraGrid.Columns.GridColumn()
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl1.SuspendLayout()
         CType(Me.GroupControl3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -394,6 +395,7 @@ Partial Class AgregarMagnusCONTA
         Me.GridLookUpEdit2View.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn2})
         Me.GridLookUpEdit2View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
         Me.GridLookUpEdit2View.Name = "GridLookUpEdit2View"
+        Me.GridLookUpEdit2View.OptionsBehavior.Editable = False
         Me.GridLookUpEdit2View.OptionsSelection.EnableAppearanceFocusedCell = False
         Me.GridLookUpEdit2View.OptionsView.ShowAutoFilterRow = True
         Me.GridLookUpEdit2View.OptionsView.ShowGroupPanel = False
@@ -406,6 +408,7 @@ Partial Class AgregarMagnusCONTA
         Me.GridColumn1.Name = "GridColumn1"
         Me.GridColumn1.Visible = True
         Me.GridColumn1.VisibleIndex = 0
+        Me.GridColumn1.Width = 228
         '
         'GridColumn2
         '
@@ -414,6 +417,7 @@ Partial Class AgregarMagnusCONTA
         Me.GridColumn2.Name = "GridColumn2"
         Me.GridColumn2.Visible = True
         Me.GridColumn2.VisibleIndex = 1
+        Me.GridColumn2.Width = 866
         '
         'txtEjercicioUno
         '
@@ -439,8 +443,10 @@ Partial Class AgregarMagnusCONTA
         '
         'GridLookUpEdit1View
         '
+        Me.GridLookUpEdit1View.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn3})
         Me.GridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
         Me.GridLookUpEdit1View.Name = "GridLookUpEdit1View"
+        Me.GridLookUpEdit1View.OptionsBehavior.Editable = False
         Me.GridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = False
         Me.GridLookUpEdit1View.OptionsView.ShowAutoFilterRow = True
         Me.GridLookUpEdit1View.OptionsView.ShowGroupPanel = False
@@ -568,6 +574,14 @@ Partial Class AgregarMagnusCONTA
         Me.LayoutControlGroup4.Name = "LayoutControlGroup4"
         Me.LayoutControlGroup4.Size = New System.Drawing.Size(180, 120)
         '
+        'GridColumn3
+        '
+        Me.GridColumn3.Caption = "Base de Datos"
+        Me.GridColumn3.FieldName = "name"
+        Me.GridColumn3.Name = "GridColumn3"
+        Me.GridColumn3.Visible = True
+        Me.GridColumn3.VisibleIndex = 0
+        '
         'AgregarMagnusCONTA
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -680,4 +694,5 @@ Partial Class AgregarMagnusCONTA
     Friend WithEvents GridColumn2 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents txtNumeroActivacion As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LayoutControlItem17 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents GridColumn3 As DevExpress.XtraGrid.Columns.GridColumn
 End Class

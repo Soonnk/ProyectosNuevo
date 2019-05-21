@@ -191,6 +191,7 @@ Partial Class AgregarSistema
         Me.GridLookUpEdit1View.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.cveEmpresa, Me.gcEmpresas})
         Me.GridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
         Me.GridLookUpEdit1View.Name = "GridLookUpEdit1View"
+        Me.GridLookUpEdit1View.OptionsBehavior.Editable = False
         Me.GridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = False
         Me.GridLookUpEdit1View.OptionsView.ShowAutoFilterRow = True
         Me.GridLookUpEdit1View.OptionsView.ShowGroupPanel = False
@@ -203,7 +204,7 @@ Partial Class AgregarSistema
         Me.cveEmpresa.Name = "cveEmpresa"
         Me.cveEmpresa.Visible = True
         Me.cveEmpresa.VisibleIndex = 0
-        Me.cveEmpresa.Width = 77
+        Me.cveEmpresa.Width = 141
         '
         'gcEmpresas
         '
@@ -212,7 +213,7 @@ Partial Class AgregarSistema
         Me.gcEmpresas.Name = "gcEmpresas"
         Me.gcEmpresas.Visible = True
         Me.gcEmpresas.VisibleIndex = 1
-        Me.gcEmpresas.Width = 635
+        Me.gcEmpresas.Width = 953
         '
         'LayoutControlGroup2
         '

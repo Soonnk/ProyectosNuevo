@@ -128,7 +128,9 @@ Empresas ON (Configuracion_Conta.Empresa = Empresas.OID) inner join Sistemas ON 
         Dim dt As New DataTable
         Dim Query As String
         Try
-            Query = "SELECT Empresas.OID, Empresas.Nombre from Empresas inner join Sistemas ON Empresas.OID = Sistemas.Empresa Where Sistemas.Nombre = 'Magnus CONTA' "
+            Query = "Select * from Empresas
+				where OID in (Select Empresa from Sistemas 
+										where Empresa not in (Select Empresa from Configuracion_Conta) and Nombre = 'Magnus CONTA')"
             dt = obj.RegresarDatos(Query)
             Return dt
         Finally

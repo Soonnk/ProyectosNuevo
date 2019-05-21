@@ -738,7 +738,7 @@
     End Property
 
     Private _CantidadTotalLote As Boolean
-    Public Property CantidadTotalLotes() As Boolean
+    Public Property CantidadTotalLote() As Boolean
         Get
             Return _CantidadTotalLote
         End Get
