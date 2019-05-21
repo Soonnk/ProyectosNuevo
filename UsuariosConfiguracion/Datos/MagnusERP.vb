@@ -326,6 +326,19 @@ Public Class MagnusERP
         End Try
     End Function
 
+    Public Function GetDB() As DataTable
+        Try
+            Dim query As String = ""
+            Dim obj As New clsSQL
+            query = "Select name From sys.databases Order By create_date Desc"
+            Return obj.RegresarDatos(query)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        End Try
+    End Function
+
+
     Public Function CargarEmpresa() As DataTable
         Dim dt As New DataTable
         Dim Query As String
