@@ -242,7 +242,69 @@ Public Class MagnusERP
         End Try
     End Function
 
-
+    Public Function EditarMagnusERP(ByRef magnusERP As Entidades.MagnusERP) As Boolean
+        Dim Query As String
+        With magnusERP
+            Query = "UPDATE Configuracion_Magnus SET
+                                         DBMagnus = '" & .DBMagnus & "', usuarioActivo = '" & .usuarioActivo & "',
+                                         autonumerico = '" & .autonumerico & "', server1 = '" & .server1 & "',
+                                         usuario = '" & .usuario & "', manejaRenta  = '" & .manejaRenta & "', 
+                                        manejaObras = '" & .manejaObras & "', manejaTransportes  = '" & .manejaTransportes & "',
+                                         pathCer = '" & .pathCer & "', pathXml = '" & .pathXml & "',
+                                         rutaReportes = '" & .rutaReportes & "', Lotes = '" & .Lotes & "',
+                                         manejaDesMax = '" & .manejaDesMax & "', desMax  = '" & .desMax & "',
+                                         desfinMax = '" & .desfinMax & "', mostrarExistencia  = '" & .mostrarExistencia & "',
+                                         edicionMoneda = '" & .edicionMoneda & "', edicionTC  = '" & .edicionTC & "',
+                                         edicionImpuesto = '" & .edicionImpuesto & "', existenciaBruta  = '" & .existenciaBruta & "',
+                                         desXP = '" & .desXP & "', impXP  = '" & .impXP & "',
+                                         numeroDecimalesC = '" & .numeroDecimalesC & "', numeroDecimalesV = '" & .numeroDecimalesV & "',
+                                         preview  = '" & .preview & "',
+                                         DesgloseDesc = '" & .DesgloseDesc & "', AgrupaTallasFactura  = '" & .AgrupaTallasFactura & "',
+                                         FormaPago = '" & .FormaPago & "', FoliosConta  = '" & .FoliosConta & "',
+                                         ManejarFiscal = '" & .ManejarFiscal & "', RutaEtiqueta  = '" & .RutaEtiqueta & "',
+                                         ReporteTraspaso= '" & .ReporteTraspaso & "', MostrarImagen  = '" & .MostrarImagen & "',
+                                         Simac = '" & .Simac & "', NDecimalesCosto  = '" & .NDecimalesCosto & "',
+                                      rutaImagenes = '" & .rutaImagenes & "', ReporteEmbarque  = '" & .ReporteEmbarque & "',
+                                         ReporteLiquidacion = '" & .ReporteLiquidacion & "', ReporteFaltante = '" & .ReporteFaltante & "',
+                                         PrecioOferta = '" & .PrecioOferta & "', ProductoCompras  = '" & .ProductoCompras & "',
+                                         IdConceptoSalidaEnsamble = '" & .IdConceptoSalidaEnsamble & "', IdConceptoEntradaKIT  = '" & .IdConceptoEntradaKIT & "',
+                                         ManejaViaje = '" & .ManejaViaje & "', ReporteViaje  = '" & .ReporteViaje & "',
+                                         PorSucursal = '" & .PorSucursal & "', ReporteGastoEmbarque = '" & .ReporteGastoEmbarque & "',
+                                         ElegirFormato = '" & .ElegirFormato & "', AutoAsignarClave = '" & .AutoAsignarClave & "',
+                                         GeneraEmbarque = '" & .GeneraEmbarque & "', ServicioFlete = '" & .ServicioFlete & "',
+                                         ServicioSeguro = '" & .ServicioSeguro & "', IdEsquemaFlete = '" & .IdEsquemaFlete & "',
+                                         EnvioCorreo = '" & .EnvioCorreo & "', AutorizarPagos = '" & .AutorizarPagos & "',
+                                         IdProductoEstimacion = '" & .IdProductoEstimacion & "', IdProductoEstimacionSub = '" & .IdProductoEstimacionSub & "',
+                                         ReporteHojaGeneradora = '" & .ReporteHojaGeneradora & "', ReporteEstimacion = '" & .ReporteEstimacion & "',
+                                         ReporteCaratulaEstimacion = '" & .ReporteCaratulaEstimacion & "', ValidacionCredito = '" & .ValidacionCredito & "',
+                                         PeriodoMaxMin = '" & .PeriodoMaxMin & "', NumLiquidacion = '" & .NumLiquidacion & "',
+                                         ConceptosLiquidaciones = '" & .ConceptosLiquidaciones & "', CuentasComplemento = '" & .CuentasComplemento & "',
+                                         DecimalesEntrada = '" & .DecimalesEntrada & "', DecimalesSalida = '" & .DecimalesSalida & "',
+                                         ServicioEmbarque = '" & .ServicioEmbarque & "', RevisionPagos = '" & .RevisionPagos & "',
+                                         RptEnlaces = '" & .RptEnlaces & "', AutonumeracionLotes = '" & .AutonumeracionLotes & "',
+                                         CantidadTotalLote = '" & .CantidadTotalLote & "', EditarComision = '" & .EditarComision & "',
+                                         PorcentajeEmpresa = '" & .PorcentajeEmpresa & "', PorcentajeOperador = '" & .PorcentajeOperador & "',
+                                         AgruparClavesIguales = '" & .AgruparClavesIguales & "', manejaMovil = '" & .manejaMovil & "',
+                                         nivelAlmacen = '" & .nivelAlmacen & "', EnlaceVarios = '" & .EnlaceVarios & "',
+                                         ReporteOEmbarques = '" & .ReporteOEmbarques & "', ReporteAutorizaciones = '" & .ReporteAutorizaciones & "',
+                                         ReportePeriodoAutorizaciones = '" & .ReportePeriodoAutorizaciones & "', ReportePeriodoEntregasEmbarque = '" & .ReportePeriodoEntregasEmbarque & "',
+                                         envioProduccion = '" & .envioProduccion & "', ReporteInventario = '" & .ReporteInventario & "',
+                                         EquivalenciaClientes = '" & .EquivalenciaClientes & "', ReporteLotesDocumento = '" & .ReporteLotesDocumento & "',
+                                         controLotes = '" & .controLotes & "', rptPendientesPorSurtir = '" & .rptPendientesPorSurtir & "',
+                                         ManejaDescuentoComision = '" & .ManejaDescuentoComision & "', EditarTipoPago = '" & .EditarTipoPago & "',
+                                         ServicioFleteFactura= '" & .ServicioFleteFactura & "', ProdServicioFlete = '" & .ProdServicioFlete & "',
+                                         LecturaPickingIncrementoUnidad = '" & .LecturaPickingIncrementoUnidad & "', ContabilizaNivelCuatro = '" & .ContabilizaNivelCuatro & "',
+                                         incluirDescuentoPrecioXML = '" & .incluirDescuentoPrecioXML & "', CentroCostosCompras = '" & .CentroCostosCompras & "',
+                                         enlazarParcialPicking = '" & .enlazarParcialPicking & "', equivalenciasDuplicadas = '" & .equivalenciasDuplicadas & "',
+                                         detallarLotesSIMAC = '" & .detallarLotesSIMAC & "', decimalesPrecio = '" & .decimalesPrecio & "',
+                                         ventaSoloListaPrecio = '" & .ventaSoloListaPrecio & "', envioPedidosSimac = '" & .envioPedidosSimac & "',
+                                         ClientePedido = '" & .ClientePedido & "', ReporteLiquidacionMovil = '" & .ReporteLiquidacionMovil & "',
+                                         ReporteAdeudoRetornable = '" & .ReporteAdeudoRetornable & "', 
+                                         ReporteListaPrecios = '" & .ReporteListaPrecios & "', cantidadPorPrecio = '" & .cantidadPorPrecio & "'
+                                         WHERE OID = " & .OID
+        End With
+        Return obj.commandSQL(Query)
+    End Function
 
 
     Public Function CargarEntidadMagnusERP(ByRef _OID As Integer) As Entidades.Sistema
