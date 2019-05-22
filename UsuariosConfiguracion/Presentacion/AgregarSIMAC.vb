@@ -82,7 +82,7 @@ Public Class AgregarSIMAC
         End Try
     End Sub
 
-    Public Sub Guardar()
+    Public Sub GuardarSIMAC()
         Dim oNegocio As New Negocios.SIMAC
         Try
             Dim camposVacios As String = ""

@@ -135,6 +135,11 @@
                             frmNuevo.modo = AgregarSistema.tipo.Nuevo
                             frmNuevo.Owner = Sistema
                             frmNuevo.ShowDialog()
+                        Case "ConsultarMagnusERP"
+                            Dim frmNuevo As New AgregarMagnusERP
+                            frmNuevo.modo = AgregarMagnusERP.tipo.Nuevo
+                            frmNuevo.MdiParent = Me
+                            frmNuevo.Show()
                         Case "ConsultarMagnusCONTA"
                             Dim frmNuevo As New AgregarMagnusCONTA
                             frmNuevo.modo = AgregarMagnusCONTA.tipo.Nuevo
@@ -149,6 +154,7 @@
                             oPresentacion.modo = AgregarTienda.tipo.Nuevo
                             oPresentacion.MdiParent = Me
                             oPresentacion.Show()
+
                     End Select
                 Case "Usuarios"
                     Select Case frmActivo.Name
@@ -189,11 +195,11 @@
                             frmEditar = frmActivo
                             frmEditar.ConsultarSIMAC()
                         Case "ConsultarMagnusGo"
-
                             Dim frmEditar As New ConsultarMagnusGo
                             frmEditar.modo = ConsultarMagnusGo.tipo.Editar
                             frmEditar = frmActivo
                             frmEditar.ConsultarMagnusGo()
+
                     End Select
                 Case "Usuarios"
                     Select Case frmActivo.Name
@@ -285,7 +291,7 @@
                     Case "AgregarSIMAC"
                         Dim frmEditar As New AgregarSIMAC
                         frmEditar = frmActivo
-                        frmEditar.Guardar()
+                        frmEditar.GuardarSIMAC()
                 End Select
             Case "Usuarios"
                 Select Case frmActivo.Name

@@ -142,6 +142,7 @@ Partial Class AgregarSIMAC
         Me.cheManejaTenerias = New DevExpress.XtraEditors.CheckEdit()
         Me.txtBDSimac = New DevExpress.XtraEditors.GridLookUpEdit()
         Me.GridLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.LayoutControlGroup2 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem9 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem10 = New DevExpress.XtraLayout.LayoutControlItem()
@@ -156,7 +157,6 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem6 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem7 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem8 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn()
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl1.SuspendLayout()
         CType(Me.GroupControl8, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -325,7 +325,7 @@ Partial Class AgregarSIMAC
         'GroupControl8
         '
         Me.GroupControl8.Controls.Add(Me.LayoutControl9)
-        Me.GroupControl8.Location = New System.Drawing.Point(320, 323)
+        Me.GroupControl8.Location = New System.Drawing.Point(320, 202)
         Me.GroupControl8.Name = "GroupControl8"
         Me.GroupControl8.Size = New System.Drawing.Size(553, 310)
         Me.GroupControl8.TabIndex = 11
@@ -489,7 +489,7 @@ Partial Class AgregarSIMAC
         'GroupControl7
         '
         Me.GroupControl7.Controls.Add(Me.LayoutControl7)
-        Me.GroupControl7.Location = New System.Drawing.Point(609, 2)
+        Me.GroupControl7.Location = New System.Drawing.Point(609, -119)
         Me.GroupControl7.Name = "GroupControl7"
         Me.GroupControl7.Size = New System.Drawing.Size(264, 317)
         Me.GroupControl7.TabIndex = 10
@@ -689,7 +689,7 @@ Partial Class AgregarSIMAC
         'GroupControl6
         '
         Me.GroupControl6.Controls.Add(Me.LayoutControl6)
-        Me.GroupControl6.Location = New System.Drawing.Point(325, 204)
+        Me.GroupControl6.Location = New System.Drawing.Point(325, 83)
         Me.GroupControl6.Name = "GroupControl6"
         Me.GroupControl6.Size = New System.Drawing.Size(280, 115)
         Me.GroupControl6.TabIndex = 9
@@ -777,7 +777,7 @@ Partial Class AgregarSIMAC
         'GroupControl5
         '
         Me.GroupControl5.Controls.Add(Me.LayoutControl5)
-        Me.GroupControl5.Location = New System.Drawing.Point(325, 2)
+        Me.GroupControl5.Location = New System.Drawing.Point(325, -119)
         Me.GroupControl5.Name = "GroupControl5"
         Me.GroupControl5.Size = New System.Drawing.Size(280, 198)
         Me.GroupControl5.TabIndex = 8
@@ -937,7 +937,7 @@ Partial Class AgregarSIMAC
         'GroupControl4
         '
         Me.GroupControl4.Controls.Add(Me.LayoutControl8)
-        Me.GroupControl4.Location = New System.Drawing.Point(0, 321)
+        Me.GroupControl4.Location = New System.Drawing.Point(0, 200)
         Me.GroupControl4.Name = "GroupControl4"
         Me.GroupControl4.Size = New System.Drawing.Size(318, 314)
         Me.GroupControl4.TabIndex = 7
@@ -1196,7 +1196,7 @@ Partial Class AgregarSIMAC
         'GroupControl3
         '
         Me.GroupControl3.Controls.Add(Me.LayoutControl4)
-        Me.GroupControl3.Location = New System.Drawing.Point(2, 223)
+        Me.GroupControl3.Location = New System.Drawing.Point(2, 102)
         Me.GroupControl3.Name = "GroupControl3"
         Me.GroupControl3.Size = New System.Drawing.Size(319, 96)
         Me.GroupControl3.TabIndex = 6
@@ -1283,7 +1283,7 @@ Partial Class AgregarSIMAC
         'GroupControl2
         '
         Me.GroupControl2.Controls.Add(Me.LayoutControl3)
-        Me.GroupControl2.Location = New System.Drawing.Point(2, 123)
+        Me.GroupControl2.Location = New System.Drawing.Point(2, 2)
         Me.GroupControl2.Name = "GroupControl2"
         Me.GroupControl2.Size = New System.Drawing.Size(319, 96)
         Me.GroupControl2.TabIndex = 5
@@ -1371,7 +1371,7 @@ Partial Class AgregarSIMAC
         'GroupControl1
         '
         Me.GroupControl1.Controls.Add(Me.LayoutControl2)
-        Me.GroupControl1.Location = New System.Drawing.Point(0, 0)
+        Me.GroupControl1.Location = New System.Drawing.Point(0, -121)
         Me.GroupControl1.Name = "GroupControl1"
         Me.GroupControl1.Size = New System.Drawing.Size(323, 121)
         Me.GroupControl1.TabIndex = 4
@@ -1475,6 +1475,14 @@ Partial Class AgregarSIMAC
         Me.GridLookUpEdit1View.OptionsView.ShowGroupPanel = False
         Me.GridLookUpEdit1View.OptionsView.ShowIndicator = False
         '
+        'GridColumn6
+        '
+        Me.GridColumn6.Caption = "Base de Datos"
+        Me.GridColumn6.FieldName = "name"
+        Me.GridColumn6.Name = "GridColumn6"
+        Me.GridColumn6.Visible = True
+        Me.GridColumn6.VisibleIndex = 0
+        '
         'LayoutControlGroup2
         '
         Me.LayoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
@@ -1528,7 +1536,7 @@ Partial Class AgregarSIMAC
         Me.LayoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
         Me.LayoutControlGroup1.GroupBordersVisible = False
         Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.LayoutControlItem3, Me.LayoutControlItem4, Me.LayoutControlItem2, Me.LayoutControlItem5, Me.LayoutControlItem6, Me.LayoutControlItem7, Me.LayoutControlItem8})
-        Me.LayoutControlGroup1.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlGroup1.Location = New System.Drawing.Point(0, -121)
         Me.LayoutControlGroup1.Name = "LayoutControlGroup1"
         Me.LayoutControlGroup1.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
         Me.LayoutControlGroup1.Size = New System.Drawing.Size(875, 635)
@@ -1607,14 +1615,6 @@ Partial Class AgregarSIMAC
         Me.LayoutControlItem8.Size = New System.Drawing.Size(557, 314)
         Me.LayoutControlItem8.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem8.TextVisible = False
-        '
-        'GridColumn6
-        '
-        Me.GridColumn6.Caption = "Base de Datos"
-        Me.GridColumn6.FieldName = "name"
-        Me.GridColumn6.Name = "GridColumn6"
-        Me.GridColumn6.Visible = True
-        Me.GridColumn6.VisibleIndex = 0
         '
         'AgregarSIMAC
         '
