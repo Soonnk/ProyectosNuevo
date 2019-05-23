@@ -1,7 +1,7 @@
 ﻿Public Class AgregarMagnusERP
     Public modo As tipo
     Private _mdiPrincipal As mdiPrincipal
-    Public _IdMagnusERP As Integer
+    Public _IdSimac As Integer
     Public _IdSistema As Integer
     Enum tipo
         Nuevo
@@ -13,9 +13,11 @@
         Nuevo
         Editar
     End Enum
+
     Private Sub AgregarMagnusERP_Load(sender As Object, e As EventArgs) Handles Me.Load
-        CargarDB()
         CargarEmpresas()
+        CargarDB()
+
     End Sub
 
     Private Sub CargarEmpresas()
@@ -30,7 +32,7 @@
     End Sub
 
     Public Sub CargarDB()
-        Dim oNegocioSimac As New Negocios.MagnusERP
+        Dim oNegocioSimac As New Negocios.SIMAC
         Try
             Me.txtBDMagnus.Properties.DataSource = oNegocioSimac.GetDB
         Catch ex As Exception
@@ -39,6 +41,5 @@
             oNegocioSimac = Nothing
         End Try
     End Sub
-
 
 End Class
