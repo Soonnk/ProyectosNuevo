@@ -15,4 +15,20 @@
             Return TryCast(Me.ParentForm, mdiPrincipal)
         End Get
     End Property
+
+
+    Private Sub ConsultarMagnusERP_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        Cargar()
+    End Sub
+
+    Public Sub Cargar()
+        Dim dt As New DataTable
+        Try
+            dt = onegocio.Cargar()
+            Me.GridControl1.DataSource = dt
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
 End Class

@@ -112,9 +112,9 @@ Partial Class AgregarMagnusERP
         Me.LayoutControlItem59 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem61 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem60 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.GroupControl5 = New DevExpress.XtraEditors.GroupControl()
+        Me.gcReportes = New DevExpress.XtraEditors.GroupControl()
         Me.LayoutControl6 = New DevExpress.XtraLayout.LayoutControl()
-        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
+        Me.brnGuardarReporte = New DevExpress.XtraEditors.SimpleButton()
         Me.txtNombreReporte = New DevExpress.XtraEditors.TextEdit()
         Me.txtTipoReporte = New DevExpress.XtraEditors.GridLookUpEdit()
         Me.GridLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
@@ -146,9 +146,9 @@ Partial Class AgregarMagnusERP
         Me.txtDescuentoMax = New DevExpress.XtraEditors.TextEdit()
         Me.txtDescuentoFinalMax = New DevExpress.XtraEditors.TextEdit()
         Me.LayoutControlGroup4 = New DevExpress.XtraLayout.LayoutControlGroup()
-        Me.LayoutControlItem8 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem12 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem13 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem12 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem8 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.GroupControl2 = New DevExpress.XtraEditors.GroupControl()
         Me.LayoutControl3 = New DevExpress.XtraLayout.LayoutControl()
         Me.cheManejaMovil = New DevExpress.XtraEditors.CheckEdit()
@@ -157,9 +157,9 @@ Partial Class AgregarMagnusERP
         Me.cheManejaRentas = New DevExpress.XtraEditors.CheckEdit()
         Me.LayoutControlGroup3 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem4 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem5 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem7 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem6 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem7 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem5 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
         Me.LayoutControl2 = New DevExpress.XtraLayout.LayoutControl()
         Me.txtEmpresa = New DevExpress.XtraEditors.GridLookUpEdit()
@@ -195,6 +195,9 @@ Partial Class AgregarMagnusERP
         Me.cheEditarFormaPago = New DevExpress.XtraEditors.CheckEdit()
         Me.cheEnvioPedidosProduccion = New DevExpress.XtraEditors.CheckEdit()
         Me.cheDetallarLotesSimac = New DevExpress.XtraEditors.CheckEdit()
+        Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn()
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl1.SuspendLayout()
         CType(Me.XtraTabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -300,8 +303,8 @@ Partial Class AgregarMagnusERP
         CType(Me.LayoutControlItem59, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem61, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem60, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GroupControl5, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupControl5.SuspendLayout()
+        CType(Me.gcReportes, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.gcReportes.SuspendLayout()
         CType(Me.LayoutControl6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl6.SuspendLayout()
         CType(Me.txtNombreReporte.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -336,9 +339,9 @@ Partial Class AgregarMagnusERP
         CType(Me.txtDescuentoMax.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtDescuentoFinalMax.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem13, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GroupControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl2.SuspendLayout()
         CType(Me.LayoutControl3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -349,9 +352,9 @@ Partial Class AgregarMagnusERP
         CType(Me.cheManejaRentas.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl1.SuspendLayout()
         CType(Me.LayoutControl2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -397,7 +400,7 @@ Partial Class AgregarMagnusERP
         Me.LayoutControl1.Controls.Add(Me.GroupControl9)
         Me.LayoutControl1.Controls.Add(Me.GroupControl8)
         Me.LayoutControl1.Controls.Add(Me.GroupControl7)
-        Me.LayoutControl1.Controls.Add(Me.GroupControl5)
+        Me.LayoutControl1.Controls.Add(Me.gcReportes)
         Me.LayoutControl1.Controls.Add(Me.GroupControl4)
         Me.LayoutControl1.Controls.Add(Me.GroupControl3)
         Me.LayoutControl1.Controls.Add(Me.GroupControl2)
@@ -423,7 +426,7 @@ Partial Class AgregarMagnusERP
         '
         Me.XtraTabPage1.Controls.Add(Me.LayoutControl11)
         Me.XtraTabPage1.Name = "XtraTabPage1"
-        Me.XtraTabPage1.Size = New System.Drawing.Size(507, 303)
+        Me.XtraTabPage1.Size = New System.Drawing.Size(534, 291)
         Me.XtraTabPage1.Text = "Compras"
         '
         'LayoutControl11
@@ -433,7 +436,7 @@ Partial Class AgregarMagnusERP
         Me.LayoutControl11.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControl11.Name = "LayoutControl11"
         Me.LayoutControl11.Root = Me.LayoutControlGroup11
-        Me.LayoutControl11.Size = New System.Drawing.Size(507, 303)
+        Me.LayoutControl11.Size = New System.Drawing.Size(534, 291)
         Me.LayoutControl11.TabIndex = 0
         Me.LayoutControl11.Text = "LayoutControl11"
         '
@@ -442,7 +445,7 @@ Partial Class AgregarMagnusERP
         Me.GroupControl6.Controls.Add(Me.LayoutControl16)
         Me.GroupControl6.Location = New System.Drawing.Point(2, 2)
         Me.GroupControl6.Name = "GroupControl6"
-        Me.GroupControl6.Size = New System.Drawing.Size(503, 299)
+        Me.GroupControl6.Size = New System.Drawing.Size(530, 287)
         Me.GroupControl6.TabIndex = 4
         Me.GroupControl6.Text = "Compras"
         '
@@ -452,7 +455,7 @@ Partial Class AgregarMagnusERP
         Me.LayoutControl16.Location = New System.Drawing.Point(2, 20)
         Me.LayoutControl16.Name = "LayoutControl16"
         Me.LayoutControl16.Root = Me.LayoutControlGroup16
-        Me.LayoutControl16.Size = New System.Drawing.Size(499, 277)
+        Me.LayoutControl16.Size = New System.Drawing.Size(526, 265)
         Me.LayoutControl16.TabIndex = 0
         Me.LayoutControl16.Text = "LayoutControl16"
         '
@@ -462,7 +465,7 @@ Partial Class AgregarMagnusERP
         Me.LayoutControlGroup16.GroupBordersVisible = False
         Me.LayoutControlGroup16.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup16.Name = "LayoutControlGroup16"
-        Me.LayoutControlGroup16.Size = New System.Drawing.Size(499, 277)
+        Me.LayoutControlGroup16.Size = New System.Drawing.Size(526, 265)
         Me.LayoutControlGroup16.TextVisible = False
         '
         'LayoutControlGroup11
@@ -473,7 +476,7 @@ Partial Class AgregarMagnusERP
         Me.LayoutControlGroup11.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup11.Name = "LayoutControlGroup11"
         Me.LayoutControlGroup11.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup11.Size = New System.Drawing.Size(507, 303)
+        Me.LayoutControlGroup11.Size = New System.Drawing.Size(534, 291)
         Me.LayoutControlGroup11.Spacing = New DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2)
         Me.LayoutControlGroup11.TextVisible = False
         '
@@ -483,7 +486,7 @@ Partial Class AgregarMagnusERP
         Me.LayoutControlItem20.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem20.Name = "LayoutControlItem20"
         Me.LayoutControlItem20.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlItem20.Size = New System.Drawing.Size(503, 299)
+        Me.LayoutControlItem20.Size = New System.Drawing.Size(530, 287)
         Me.LayoutControlItem20.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem20.TextVisible = False
         '
@@ -546,10 +549,10 @@ Partial Class AgregarMagnusERP
         '
         'cheImporteCantidadPrecio
         '
-        Me.cheImporteCantidadPrecio.Location = New System.Drawing.Point(254, 188)
+        Me.cheImporteCantidadPrecio.Location = New System.Drawing.Point(241, 188)
         Me.cheImporteCantidadPrecio.Name = "cheImporteCantidadPrecio"
         Me.cheImporteCantidadPrecio.Properties.Caption = "Importe = cantidad x precio"
-        Me.cheImporteCantidadPrecio.Size = New System.Drawing.Size(270, 19)
+        Me.cheImporteCantidadPrecio.Size = New System.Drawing.Size(283, 19)
         Me.cheImporteCantidadPrecio.StyleController = Me.LayoutControl15
         Me.cheImporteCantidadPrecio.TabIndex = 26
         '
@@ -728,7 +731,7 @@ Partial Class AgregarMagnusERP
         Me.LayoutControlGroup15.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup15.Name = "LayoutControlGroup15"
         Me.LayoutControlGroup15.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup15.Size = New System.Drawing.Size(526, 277)
+        Me.LayoutControlGroup15.Size = New System.Drawing.Size(526, 265)
         Me.LayoutControlGroup15.TextVisible = False
         '
         'LayoutControlItem39
@@ -880,9 +883,9 @@ Partial Class AgregarMagnusERP
         'LayoutControlItem51
         '
         Me.LayoutControlItem51.Control = Me.cheImporteCantidadPrecio
-        Me.LayoutControlItem51.Location = New System.Drawing.Point(252, 186)
+        Me.LayoutControlItem51.Location = New System.Drawing.Point(239, 186)
         Me.LayoutControlItem51.Name = "LayoutControlItem51"
-        Me.LayoutControlItem51.Size = New System.Drawing.Size(274, 23)
+        Me.LayoutControlItem51.Size = New System.Drawing.Size(287, 23)
         Me.LayoutControlItem51.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem51.TextVisible = False
         '
@@ -950,7 +953,7 @@ Partial Class AgregarMagnusERP
         '
         Me.XtraTabPage3.Controls.Add(Me.LayoutControl13)
         Me.XtraTabPage3.Name = "XtraTabPage3"
-        Me.XtraTabPage3.Size = New System.Drawing.Size(507, 303)
+        Me.XtraTabPage3.Size = New System.Drawing.Size(534, 291)
         Me.XtraTabPage3.Text = "Bloqueo Documentos"
         '
         'LayoutControl13
@@ -960,7 +963,7 @@ Partial Class AgregarMagnusERP
         Me.LayoutControl13.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControl13.Name = "LayoutControl13"
         Me.LayoutControl13.Root = Me.LayoutControlGroup13
-        Me.LayoutControl13.Size = New System.Drawing.Size(507, 303)
+        Me.LayoutControl13.Size = New System.Drawing.Size(534, 291)
         Me.LayoutControl13.TabIndex = 0
         Me.LayoutControl13.Text = "LayoutControl13"
         '
@@ -968,7 +971,7 @@ Partial Class AgregarMagnusERP
         '
         Me.GroupControl11.Location = New System.Drawing.Point(2, 2)
         Me.GroupControl11.Name = "GroupControl11"
-        Me.GroupControl11.Size = New System.Drawing.Size(503, 299)
+        Me.GroupControl11.Size = New System.Drawing.Size(530, 287)
         Me.GroupControl11.TabIndex = 4
         Me.GroupControl11.Text = "Bloqueo Documentos"
         '
@@ -980,7 +983,7 @@ Partial Class AgregarMagnusERP
         Me.LayoutControlGroup13.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup13.Name = "LayoutControlGroup13"
         Me.LayoutControlGroup13.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup13.Size = New System.Drawing.Size(507, 303)
+        Me.LayoutControlGroup13.Size = New System.Drawing.Size(534, 291)
         Me.LayoutControlGroup13.Spacing = New DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2)
         Me.LayoutControlGroup13.TextVisible = False
         '
@@ -990,7 +993,7 @@ Partial Class AgregarMagnusERP
         Me.LayoutControlItem36.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem36.Name = "LayoutControlItem36"
         Me.LayoutControlItem36.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlItem36.Size = New System.Drawing.Size(503, 299)
+        Me.LayoutControlItem36.Size = New System.Drawing.Size(530, 287)
         Me.LayoutControlItem36.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem36.TextVisible = False
         '
@@ -998,7 +1001,7 @@ Partial Class AgregarMagnusERP
         '
         Me.XtraTabPage4.Controls.Add(Me.LayoutControl14)
         Me.XtraTabPage4.Name = "XtraTabPage4"
-        Me.XtraTabPage4.Size = New System.Drawing.Size(507, 303)
+        Me.XtraTabPage4.Size = New System.Drawing.Size(534, 291)
         Me.XtraTabPage4.Text = "Inventarios"
         '
         'LayoutControl14
@@ -1008,7 +1011,7 @@ Partial Class AgregarMagnusERP
         Me.LayoutControl14.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControl14.Name = "LayoutControl14"
         Me.LayoutControl14.Root = Me.LayoutControlGroup14
-        Me.LayoutControl14.Size = New System.Drawing.Size(507, 303)
+        Me.LayoutControl14.Size = New System.Drawing.Size(534, 291)
         Me.LayoutControl14.TabIndex = 0
         Me.LayoutControl14.Text = "LayoutControl14"
         '
@@ -1016,7 +1019,7 @@ Partial Class AgregarMagnusERP
         '
         Me.GroupControl12.Location = New System.Drawing.Point(2, 2)
         Me.GroupControl12.Name = "GroupControl12"
-        Me.GroupControl12.Size = New System.Drawing.Size(503, 299)
+        Me.GroupControl12.Size = New System.Drawing.Size(530, 287)
         Me.GroupControl12.TabIndex = 4
         Me.GroupControl12.Text = "Inventarios"
         '
@@ -1028,7 +1031,7 @@ Partial Class AgregarMagnusERP
         Me.LayoutControlGroup14.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup14.Name = "LayoutControlGroup14"
         Me.LayoutControlGroup14.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup14.Size = New System.Drawing.Size(507, 303)
+        Me.LayoutControlGroup14.Size = New System.Drawing.Size(534, 291)
         Me.LayoutControlGroup14.Spacing = New DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2)
         Me.LayoutControlGroup14.TextVisible = False
         '
@@ -1038,18 +1041,18 @@ Partial Class AgregarMagnusERP
         Me.LayoutControlItem37.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem37.Name = "LayoutControlItem37"
         Me.LayoutControlItem37.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlItem37.Size = New System.Drawing.Size(503, 299)
+        Me.LayoutControlItem37.Size = New System.Drawing.Size(530, 287)
         Me.LayoutControlItem37.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem37.TextVisible = False
         '
         'GroupControl9
         '
         Me.GroupControl9.Controls.Add(Me.LayoutControl10)
-        Me.GroupControl9.Location = New System.Drawing.Point(546, 602)
+        Me.GroupControl9.Location = New System.Drawing.Point(546, 629)
         Me.GroupControl9.Name = "GroupControl9"
-        Me.GroupControl9.Size = New System.Drawing.Size(382, 145)
+        Me.GroupControl9.Size = New System.Drawing.Size(382, 118)
         Me.GroupControl9.TabIndex = 12
-        Me.GroupControl9.Text = "GroupControl9"
+        Me.GroupControl9.Text = "Equivalencias"
         '
         'LayoutControl10
         '
@@ -1059,7 +1062,7 @@ Partial Class AgregarMagnusERP
         Me.LayoutControl10.Location = New System.Drawing.Point(2, 20)
         Me.LayoutControl10.Name = "LayoutControl10"
         Me.LayoutControl10.Root = Me.LayoutControlGroup10
-        Me.LayoutControl10.Size = New System.Drawing.Size(378, 123)
+        Me.LayoutControl10.Size = New System.Drawing.Size(378, 96)
         Me.LayoutControl10.TabIndex = 0
         Me.LayoutControl10.Text = "LayoutControl10"
         '
@@ -1089,7 +1092,7 @@ Partial Class AgregarMagnusERP
         Me.LayoutControlGroup10.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup10.Name = "LayoutControlGroup10"
         Me.LayoutControlGroup10.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup10.Size = New System.Drawing.Size(378, 144)
+        Me.LayoutControlGroup10.Size = New System.Drawing.Size(378, 96)
         Me.LayoutControlGroup10.TextVisible = False
         '
         'LayoutControlItem62
@@ -1106,18 +1109,18 @@ Partial Class AgregarMagnusERP
         Me.LayoutControlItem63.Control = Me.cheEquivalenciasDuplicadas
         Me.LayoutControlItem63.Location = New System.Drawing.Point(0, 23)
         Me.LayoutControlItem63.Name = "LayoutControlItem63"
-        Me.LayoutControlItem63.Size = New System.Drawing.Size(378, 100)
+        Me.LayoutControlItem63.Size = New System.Drawing.Size(378, 73)
         Me.LayoutControlItem63.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem63.TextVisible = False
         '
         'GroupControl8
         '
         Me.GroupControl8.Controls.Add(Me.LayoutControl9)
-        Me.GroupControl8.Location = New System.Drawing.Point(546, 505)
+        Me.GroupControl8.Location = New System.Drawing.Point(546, 518)
         Me.GroupControl8.Name = "GroupControl8"
-        Me.GroupControl8.Size = New System.Drawing.Size(382, 93)
+        Me.GroupControl8.Size = New System.Drawing.Size(382, 107)
         Me.GroupControl8.TabIndex = 11
-        Me.GroupControl8.Text = "GroupControl8"
+        Me.GroupControl8.Text = "Autorización SIMAC"
         '
         'LayoutControl9
         '
@@ -1128,7 +1131,7 @@ Partial Class AgregarMagnusERP
         Me.LayoutControl9.Location = New System.Drawing.Point(2, 20)
         Me.LayoutControl9.Name = "LayoutControl9"
         Me.LayoutControl9.Root = Me.LayoutControlGroup9
-        Me.LayoutControl9.Size = New System.Drawing.Size(378, 71)
+        Me.LayoutControl9.Size = New System.Drawing.Size(378, 85)
         Me.LayoutControl9.TabIndex = 0
         Me.LayoutControl9.Text = "LayoutControl9"
         '
@@ -1138,7 +1141,7 @@ Partial Class AgregarMagnusERP
         Me.rgEnvio.Name = "rgEnvio"
         Me.rgEnvio.Properties.Columns = 1
         Me.rgEnvio.Properties.Items.AddRange(New DevExpress.XtraEditors.Controls.RadioGroupItem() {New DevExpress.XtraEditors.Controls.RadioGroupItem(Nothing, "Envío pedido detallado SIMAC"), New DevExpress.XtraEditors.Controls.RadioGroupItem(Nothing, "Envío pedido agrupado por cliente"), New DevExpress.XtraEditors.Controls.RadioGroupItem(Nothing, "Envío pedido agrupado a un solo cliente")})
-        Me.rgEnvio.Size = New System.Drawing.Size(378, 71)
+        Me.rgEnvio.Size = New System.Drawing.Size(378, 85)
         Me.rgEnvio.StyleController = Me.LayoutControl9
         Me.rgEnvio.TabIndex = 5
         '
@@ -1166,7 +1169,7 @@ Partial Class AgregarMagnusERP
         Me.LayoutControlGroup9.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup9.Name = "LayoutControlGroup9"
         Me.LayoutControlGroup9.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup9.Size = New System.Drawing.Size(378, 71)
+        Me.LayoutControlGroup9.Size = New System.Drawing.Size(378, 85)
         Me.LayoutControlGroup9.TextVisible = False
         '
         'LayoutControlItem65
@@ -1175,7 +1178,7 @@ Partial Class AgregarMagnusERP
         Me.LayoutControlItem65.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem65.Name = "LayoutControlItem65"
         Me.LayoutControlItem65.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlItem65.Size = New System.Drawing.Size(378, 71)
+        Me.LayoutControlItem65.Size = New System.Drawing.Size(378, 85)
         Me.LayoutControlItem65.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem65.TextVisible = False
         '
@@ -1184,7 +1187,7 @@ Partial Class AgregarMagnusERP
         Me.GroupControl7.Controls.Add(Me.LayoutControl8)
         Me.GroupControl7.Location = New System.Drawing.Point(546, 428)
         Me.GroupControl7.Name = "GroupControl7"
-        Me.GroupControl7.Size = New System.Drawing.Size(382, 73)
+        Me.GroupControl7.Size = New System.Drawing.Size(382, 86)
         Me.GroupControl7.TabIndex = 10
         Me.GroupControl7.Text = "SIMAC"
         '
@@ -1197,7 +1200,7 @@ Partial Class AgregarMagnusERP
         Me.LayoutControl8.Location = New System.Drawing.Point(2, 20)
         Me.LayoutControl8.Name = "LayoutControl8"
         Me.LayoutControl8.Root = Me.LayoutControlGroup8
-        Me.LayoutControl8.Size = New System.Drawing.Size(378, 51)
+        Me.LayoutControl8.Size = New System.Drawing.Size(378, 64)
         Me.LayoutControl8.TabIndex = 0
         Me.LayoutControl8.Text = "LayoutControl8"
         '
@@ -1235,7 +1238,7 @@ Partial Class AgregarMagnusERP
         Me.LayoutControlGroup8.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup8.Name = "LayoutControlGroup8"
         Me.LayoutControlGroup8.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup8.Size = New System.Drawing.Size(378, 47)
+        Me.LayoutControlGroup8.Size = New System.Drawing.Size(378, 64)
         Me.LayoutControlGroup8.TextVisible = False
         '
         'LayoutControlItem59
@@ -1253,7 +1256,7 @@ Partial Class AgregarMagnusERP
         Me.LayoutControlItem61.Control = Me.CheckEdit11
         Me.LayoutControlItem61.Location = New System.Drawing.Point(0, 24)
         Me.LayoutControlItem61.Name = "LayoutControlItem61"
-        Me.LayoutControlItem61.Size = New System.Drawing.Size(378, 27)
+        Me.LayoutControlItem61.Size = New System.Drawing.Size(378, 40)
         Me.LayoutControlItem61.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem61.TextVisible = False
         '
@@ -1266,18 +1269,18 @@ Partial Class AgregarMagnusERP
         Me.LayoutControlItem60.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem60.TextVisible = False
         '
-        'GroupControl5
+        'gcReportes
         '
-        Me.GroupControl5.Controls.Add(Me.LayoutControl6)
-        Me.GroupControl5.Location = New System.Drawing.Point(375, 131)
-        Me.GroupControl5.Name = "GroupControl5"
-        Me.GroupControl5.Size = New System.Drawing.Size(553, 293)
-        Me.GroupControl5.TabIndex = 8
-        Me.GroupControl5.Text = "GroupControl5"
+        Me.gcReportes.Controls.Add(Me.LayoutControl6)
+        Me.gcReportes.Location = New System.Drawing.Point(375, 131)
+        Me.gcReportes.Name = "gcReportes"
+        Me.gcReportes.Size = New System.Drawing.Size(553, 293)
+        Me.gcReportes.TabIndex = 8
+        Me.gcReportes.Text = "Reportes"
         '
         'LayoutControl6
         '
-        Me.LayoutControl6.Controls.Add(Me.SimpleButton1)
+        Me.LayoutControl6.Controls.Add(Me.brnGuardarReporte)
         Me.LayoutControl6.Controls.Add(Me.txtNombreReporte)
         Me.LayoutControl6.Controls.Add(Me.txtTipoReporte)
         Me.LayoutControl6.Controls.Add(Me.GridControl1)
@@ -1289,16 +1292,16 @@ Partial Class AgregarMagnusERP
         Me.LayoutControl6.TabIndex = 0
         Me.LayoutControl6.Text = "LayoutControl6"
         '
-        'SimpleButton1
+        'brnGuardarReporte
         '
-        Me.SimpleButton1.Location = New System.Drawing.Point(112, 52)
-        Me.SimpleButton1.MaximumSize = New System.Drawing.Size(80, 22)
-        Me.SimpleButton1.MinimumSize = New System.Drawing.Size(80, 22)
-        Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(80, 22)
-        Me.SimpleButton1.StyleController = Me.LayoutControl6
-        Me.SimpleButton1.TabIndex = 7
-        Me.SimpleButton1.Text = "SimpleButton1"
+        Me.brnGuardarReporte.Location = New System.Drawing.Point(112, 52)
+        Me.brnGuardarReporte.MaximumSize = New System.Drawing.Size(80, 22)
+        Me.brnGuardarReporte.MinimumSize = New System.Drawing.Size(80, 22)
+        Me.brnGuardarReporte.Name = "brnGuardarReporte"
+        Me.brnGuardarReporte.Size = New System.Drawing.Size(80, 22)
+        Me.brnGuardarReporte.StyleController = Me.LayoutControl6
+        Me.brnGuardarReporte.TabIndex = 7
+        Me.brnGuardarReporte.Text = "Guardar"
         '
         'txtNombreReporte
         '
@@ -1386,7 +1389,7 @@ Partial Class AgregarMagnusERP
         Me.EmptySpaceItem6.AllowHotTrack = False
         Me.EmptySpaceItem6.Location = New System.Drawing.Point(0, 74)
         Me.EmptySpaceItem6.Name = "EmptySpaceItem6"
-        Me.EmptySpaceItem6.Size = New System.Drawing.Size(182, 150)
+        Me.EmptySpaceItem6.Size = New System.Drawing.Size(192, 193)
         Me.EmptySpaceItem6.TextSize = New System.Drawing.Size(0, 0)
         '
         'LayoutControlItem21
@@ -1418,7 +1421,7 @@ Partial Class AgregarMagnusERP
         '
         'LayoutControlItem24
         '
-        Me.LayoutControlItem24.Control = Me.SimpleButton1
+        Me.LayoutControlItem24.Control = Me.brnGuardarReporte
         Me.LayoutControlItem24.Location = New System.Drawing.Point(108, 48)
         Me.LayoutControlItem24.Name = "LayoutControlItem24"
         Me.LayoutControlItem24.Size = New System.Drawing.Size(84, 26)
@@ -1430,7 +1433,7 @@ Partial Class AgregarMagnusERP
         Me.EmptySpaceItem7.AllowHotTrack = False
         Me.EmptySpaceItem7.Location = New System.Drawing.Point(0, 48)
         Me.EmptySpaceItem7.Name = "EmptySpaceItem7"
-        Me.EmptySpaceItem7.Size = New System.Drawing.Size(98, 26)
+        Me.EmptySpaceItem7.Size = New System.Drawing.Size(108, 26)
         Me.EmptySpaceItem7.TextSize = New System.Drawing.Size(0, 0)
         '
         'GroupControl4
@@ -1440,7 +1443,7 @@ Partial Class AgregarMagnusERP
         Me.GroupControl4.Name = "GroupControl4"
         Me.GroupControl4.Size = New System.Drawing.Size(369, 293)
         Me.GroupControl4.TabIndex = 7
-        Me.GroupControl4.Text = "GroupControl4"
+        Me.GroupControl4.Text = "Facturación electrónica"
         '
         'LayoutControl5
         '
@@ -1461,7 +1464,7 @@ Partial Class AgregarMagnusERP
         Me.rgEnvioCorreoAutomatico.Name = "rgEnvioCorreoAutomatico"
         Me.rgEnvioCorreoAutomatico.Properties.Columns = 3
         Me.rgEnvioCorreoAutomatico.Properties.Items.AddRange(New DevExpress.XtraEditors.Controls.RadioGroupItem() {New DevExpress.XtraEditors.Controls.RadioGroupItem(Nothing, "Desactivado"), New DevExpress.XtraEditors.Controls.RadioGroupItem(Nothing, "Contado"), New DevExpress.XtraEditors.Controls.RadioGroupItem(Nothing, "Siempre")})
-        Me.rgEnvioCorreoAutomatico.Size = New System.Drawing.Size(223, 43)
+        Me.rgEnvioCorreoAutomatico.Size = New System.Drawing.Size(223, 52)
         Me.rgEnvioCorreoAutomatico.StyleController = Me.LayoutControl5
         Me.rgEnvioCorreoAutomatico.TabIndex = 6
         '
@@ -1520,16 +1523,16 @@ Partial Class AgregarMagnusERP
         Me.LayoutControlItem38.Control = Me.rgEnvioCorreoAutomatico
         Me.LayoutControlItem38.Location = New System.Drawing.Point(0, 48)
         Me.LayoutControlItem38.Name = "LayoutControlItem38"
-        Me.LayoutControlItem38.Size = New System.Drawing.Size(361, 47)
+        Me.LayoutControlItem38.Size = New System.Drawing.Size(361, 56)
         Me.LayoutControlItem38.Text = "Envio de correo automático"
         Me.LayoutControlItem38.TextSize = New System.Drawing.Size(131, 13)
         '
         'EmptySpaceItem3
         '
         Me.EmptySpaceItem3.AllowHotTrack = False
-        Me.EmptySpaceItem3.Location = New System.Drawing.Point(0, 86)
+        Me.EmptySpaceItem3.Location = New System.Drawing.Point(0, 104)
         Me.EmptySpaceItem3.Name = "EmptySpaceItem3"
-        Me.EmptySpaceItem3.Size = New System.Drawing.Size(343, 138)
+        Me.EmptySpaceItem3.Size = New System.Drawing.Size(361, 163)
         Me.EmptySpaceItem3.TextSize = New System.Drawing.Size(0, 0)
         '
         'GroupControl3
@@ -1539,7 +1542,7 @@ Partial Class AgregarMagnusERP
         Me.GroupControl3.Name = "GroupControl3"
         Me.GroupControl3.Size = New System.Drawing.Size(354, 125)
         Me.GroupControl3.TabIndex = 6
-        Me.GroupControl3.Text = "GroupControl3"
+        Me.GroupControl3.Text = "Descuentos"
         '
         'LayoutControl4
         '
@@ -1587,19 +1590,18 @@ Partial Class AgregarMagnusERP
         Me.LayoutControlGroup4.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup4.Name = "LayoutControlGroup4"
         Me.LayoutControlGroup4.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup4.Size = New System.Drawing.Size(350, 96)
+        Me.LayoutControlGroup4.Size = New System.Drawing.Size(350, 103)
         Me.LayoutControlGroup4.Spacing = New DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2)
         Me.LayoutControlGroup4.TextVisible = False
         '
-        'LayoutControlItem8
+        'LayoutControlItem13
         '
-        Me.LayoutControlItem8.Control = Me.txtDescuentoMax
-        Me.LayoutControlItem8.CustomizationFormText = "Descuento máximo"
-        Me.LayoutControlItem8.Location = New System.Drawing.Point(0, 23)
-        Me.LayoutControlItem8.Name = "LayoutControlItem8"
-        Me.LayoutControlItem8.Size = New System.Drawing.Size(346, 24)
-        Me.LayoutControlItem8.Text = "Descuento máximo"
-        Me.LayoutControlItem8.TextSize = New System.Drawing.Size(113, 13)
+        Me.LayoutControlItem13.Control = Me.CheckEdit1
+        Me.LayoutControlItem13.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem13.Name = "LayoutControlItem13"
+        Me.LayoutControlItem13.Size = New System.Drawing.Size(346, 23)
+        Me.LayoutControlItem13.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem13.TextVisible = False
         '
         'LayoutControlItem12
         '
@@ -1611,14 +1613,15 @@ Partial Class AgregarMagnusERP
         Me.LayoutControlItem12.Text = "Descuento final máximo"
         Me.LayoutControlItem12.TextSize = New System.Drawing.Size(113, 13)
         '
-        'LayoutControlItem13
+        'LayoutControlItem8
         '
-        Me.LayoutControlItem13.Control = Me.CheckEdit1
-        Me.LayoutControlItem13.Location = New System.Drawing.Point(0, 0)
-        Me.LayoutControlItem13.Name = "LayoutControlItem13"
-        Me.LayoutControlItem13.Size = New System.Drawing.Size(346, 23)
-        Me.LayoutControlItem13.TextSize = New System.Drawing.Size(0, 0)
-        Me.LayoutControlItem13.TextVisible = False
+        Me.LayoutControlItem8.Control = Me.txtDescuentoMax
+        Me.LayoutControlItem8.CustomizationFormText = "Descuento máximo"
+        Me.LayoutControlItem8.Location = New System.Drawing.Point(0, 23)
+        Me.LayoutControlItem8.Name = "LayoutControlItem8"
+        Me.LayoutControlItem8.Size = New System.Drawing.Size(346, 24)
+        Me.LayoutControlItem8.Text = "Descuento máximo"
+        Me.LayoutControlItem8.TextSize = New System.Drawing.Size(113, 13)
         '
         'GroupControl2
         '
@@ -1627,7 +1630,7 @@ Partial Class AgregarMagnusERP
         Me.GroupControl2.Name = "GroupControl2"
         Me.GroupControl2.Size = New System.Drawing.Size(284, 125)
         Me.GroupControl2.TabIndex = 5
-        Me.GroupControl2.Text = "GroupControl2"
+        Me.GroupControl2.Text = "Módulos adicionales"
         '
         'LayoutControl3
         '
@@ -1687,7 +1690,7 @@ Partial Class AgregarMagnusERP
         Me.LayoutControlGroup3.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup3.Name = "LayoutControlGroup3"
         Me.LayoutControlGroup3.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup3.Size = New System.Drawing.Size(280, 96)
+        Me.LayoutControlGroup3.Size = New System.Drawing.Size(280, 103)
         Me.LayoutControlGroup3.Spacing = New DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2)
         Me.LayoutControlGroup3.TextVisible = False
         '
@@ -1700,14 +1703,14 @@ Partial Class AgregarMagnusERP
         Me.LayoutControlItem4.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem4.TextVisible = False
         '
-        'LayoutControlItem5
+        'LayoutControlItem6
         '
-        Me.LayoutControlItem5.Control = Me.cheManejaObras
-        Me.LayoutControlItem5.Location = New System.Drawing.Point(0, 23)
-        Me.LayoutControlItem5.Name = "LayoutControlItem5"
-        Me.LayoutControlItem5.Size = New System.Drawing.Size(276, 23)
-        Me.LayoutControlItem5.TextSize = New System.Drawing.Size(0, 0)
-        Me.LayoutControlItem5.TextVisible = False
+        Me.LayoutControlItem6.Control = Me.cheManejaTransportes
+        Me.LayoutControlItem6.Location = New System.Drawing.Point(0, 46)
+        Me.LayoutControlItem6.Name = "LayoutControlItem6"
+        Me.LayoutControlItem6.Size = New System.Drawing.Size(276, 23)
+        Me.LayoutControlItem6.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem6.TextVisible = False
         '
         'LayoutControlItem7
         '
@@ -1718,14 +1721,14 @@ Partial Class AgregarMagnusERP
         Me.LayoutControlItem7.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem7.TextVisible = False
         '
-        'LayoutControlItem6
+        'LayoutControlItem5
         '
-        Me.LayoutControlItem6.Control = Me.cheManejaTransportes
-        Me.LayoutControlItem6.Location = New System.Drawing.Point(0, 46)
-        Me.LayoutControlItem6.Name = "LayoutControlItem6"
-        Me.LayoutControlItem6.Size = New System.Drawing.Size(276, 23)
-        Me.LayoutControlItem6.TextSize = New System.Drawing.Size(0, 0)
-        Me.LayoutControlItem6.TextVisible = False
+        Me.LayoutControlItem5.Control = Me.cheManejaObras
+        Me.LayoutControlItem5.Location = New System.Drawing.Point(0, 23)
+        Me.LayoutControlItem5.Name = "LayoutControlItem5"
+        Me.LayoutControlItem5.Size = New System.Drawing.Size(276, 23)
+        Me.LayoutControlItem5.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem5.TextVisible = False
         '
         'GroupControl1
         '
@@ -1734,7 +1737,7 @@ Partial Class AgregarMagnusERP
         Me.GroupControl1.Name = "GroupControl1"
         Me.GroupControl1.Size = New System.Drawing.Size(280, 125)
         Me.GroupControl1.TabIndex = 4
-        Me.GroupControl1.Text = "GroupControl1"
+        Me.GroupControl1.Text = "Parámetros"
         '
         'LayoutControl2
         '
@@ -1754,7 +1757,9 @@ Partial Class AgregarMagnusERP
         Me.txtEmpresa.Location = New System.Drawing.Point(116, 4)
         Me.txtEmpresa.Name = "txtEmpresa"
         Me.txtEmpresa.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.txtEmpresa.Properties.DisplayMember = "Nombre"
         Me.txtEmpresa.Properties.NullText = ""
+        Me.txtEmpresa.Properties.ValueMember = "OID"
         Me.txtEmpresa.Properties.View = Me.GridView1
         Me.txtEmpresa.Size = New System.Drawing.Size(156, 20)
         Me.txtEmpresa.StyleController = Me.LayoutControl2
@@ -1762,17 +1767,23 @@ Partial Class AgregarMagnusERP
         '
         'GridView1
         '
+        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn4, Me.GridColumn5})
         Me.GridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
         Me.GridView1.Name = "GridView1"
+        Me.GridView1.OptionsBehavior.Editable = False
         Me.GridView1.OptionsSelection.EnableAppearanceFocusedCell = False
+        Me.GridView1.OptionsView.ShowAutoFilterRow = True
         Me.GridView1.OptionsView.ShowGroupPanel = False
+        Me.GridView1.OptionsView.ShowIndicator = False
         '
         'txtBDMagnus
         '
         Me.txtBDMagnus.Location = New System.Drawing.Point(116, 52)
         Me.txtBDMagnus.Name = "txtBDMagnus"
         Me.txtBDMagnus.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.txtBDMagnus.Properties.DisplayMember = "name"
         Me.txtBDMagnus.Properties.NullText = ""
+        Me.txtBDMagnus.Properties.ValueMember = "name"
         Me.txtBDMagnus.Properties.View = Me.GridView2
         Me.txtBDMagnus.Size = New System.Drawing.Size(156, 20)
         Me.txtBDMagnus.StyleController = Me.LayoutControl2
@@ -1780,10 +1791,14 @@ Partial Class AgregarMagnusERP
         '
         'GridView2
         '
+        Me.GridView2.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn6})
         Me.GridView2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
         Me.GridView2.Name = "GridView2"
+        Me.GridView2.OptionsBehavior.Editable = False
         Me.GridView2.OptionsSelection.EnableAppearanceFocusedCell = False
+        Me.GridView2.OptionsView.ShowAutoFilterRow = True
         Me.GridView2.OptionsView.ShowGroupPanel = False
+        Me.GridView2.OptionsView.ShowIndicator = False
         '
         'txtNumeroActivacion
         '
@@ -1801,7 +1816,7 @@ Partial Class AgregarMagnusERP
         Me.LayoutControlGroup2.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup2.Name = "LayoutControlGroup2"
         Me.LayoutControlGroup2.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.LayoutControlGroup2.Size = New System.Drawing.Size(276, 96)
+        Me.LayoutControlGroup2.Size = New System.Drawing.Size(276, 103)
         Me.LayoutControlGroup2.Spacing = New DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2)
         Me.LayoutControlGroup2.TextVisible = False
         '
@@ -1884,7 +1899,7 @@ Partial Class AgregarMagnusERP
         '
         'LayoutControlItem15
         '
-        Me.LayoutControlItem15.Control = Me.GroupControl5
+        Me.LayoutControlItem15.Control = Me.gcReportes
         Me.LayoutControlItem15.Location = New System.Drawing.Point(373, 129)
         Me.LayoutControlItem15.Name = "LayoutControlItem15"
         Me.LayoutControlItem15.Size = New System.Drawing.Size(557, 297)
@@ -1896,25 +1911,25 @@ Partial Class AgregarMagnusERP
         Me.LayoutControlItem17.Control = Me.GroupControl7
         Me.LayoutControlItem17.Location = New System.Drawing.Point(544, 426)
         Me.LayoutControlItem17.Name = "LayoutControlItem17"
-        Me.LayoutControlItem17.Size = New System.Drawing.Size(386, 77)
+        Me.LayoutControlItem17.Size = New System.Drawing.Size(386, 90)
         Me.LayoutControlItem17.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem17.TextVisible = False
         '
         'LayoutControlItem18
         '
         Me.LayoutControlItem18.Control = Me.GroupControl8
-        Me.LayoutControlItem18.Location = New System.Drawing.Point(544, 503)
+        Me.LayoutControlItem18.Location = New System.Drawing.Point(544, 516)
         Me.LayoutControlItem18.Name = "LayoutControlItem18"
-        Me.LayoutControlItem18.Size = New System.Drawing.Size(386, 97)
+        Me.LayoutControlItem18.Size = New System.Drawing.Size(386, 111)
         Me.LayoutControlItem18.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem18.TextVisible = False
         '
         'LayoutControlItem19
         '
         Me.LayoutControlItem19.Control = Me.GroupControl9
-        Me.LayoutControlItem19.Location = New System.Drawing.Point(544, 600)
+        Me.LayoutControlItem19.Location = New System.Drawing.Point(544, 627)
         Me.LayoutControlItem19.Name = "LayoutControlItem19"
-        Me.LayoutControlItem19.Size = New System.Drawing.Size(386, 149)
+        Me.LayoutControlItem19.Size = New System.Drawing.Size(386, 122)
         Me.LayoutControlItem19.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem19.TextVisible = False
         '
@@ -2041,6 +2056,32 @@ Partial Class AgregarMagnusERP
         Me.cheDetallarLotesSimac.Size = New System.Drawing.Size(200, 19)
         Me.cheDetallarLotesSimac.TabIndex = 6
         '
+        'GridColumn4
+        '
+        Me.GridColumn4.Caption = "Clave"
+        Me.GridColumn4.FieldName = "OID"
+        Me.GridColumn4.Name = "GridColumn4"
+        Me.GridColumn4.Visible = True
+        Me.GridColumn4.VisibleIndex = 0
+        Me.GridColumn4.Width = 154
+        '
+        'GridColumn5
+        '
+        Me.GridColumn5.Caption = "Empresa"
+        Me.GridColumn5.FieldName = "Nombre"
+        Me.GridColumn5.Name = "GridColumn5"
+        Me.GridColumn5.Visible = True
+        Me.GridColumn5.VisibleIndex = 1
+        Me.GridColumn5.Width = 924
+        '
+        'GridColumn6
+        '
+        Me.GridColumn6.Caption = "Base de Datos"
+        Me.GridColumn6.FieldName = "name"
+        Me.GridColumn6.Name = "GridColumn6"
+        Me.GridColumn6.Visible = True
+        Me.GridColumn6.VisibleIndex = 0
+        '
         'AgregarMagnusERP
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2048,7 +2089,7 @@ Partial Class AgregarMagnusERP
         Me.ClientSize = New System.Drawing.Size(930, 749)
         Me.Controls.Add(Me.LayoutControl1)
         Me.Name = "AgregarMagnusERP"
-        Me.Text = "AgregarMagnusERP2"
+        Me.Text = "Nueva"
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LayoutControl1.ResumeLayout(False)
         CType(Me.XtraTabControl1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2154,8 +2195,8 @@ Partial Class AgregarMagnusERP
         CType(Me.LayoutControlItem59, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem61, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem60, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GroupControl5, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupControl5.ResumeLayout(False)
+        CType(Me.gcReportes, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.gcReportes.ResumeLayout(False)
         CType(Me.LayoutControl6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LayoutControl6.ResumeLayout(False)
         CType(Me.txtNombreReporte.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2190,9 +2231,9 @@ Partial Class AgregarMagnusERP
         CType(Me.txtDescuentoMax.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtDescuentoFinalMax.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem12, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem13, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GroupControl2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupControl2.ResumeLayout(False)
         CType(Me.LayoutControl3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2203,9 +2244,9 @@ Partial Class AgregarMagnusERP
         CType(Me.cheManejaRentas.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupControl1.ResumeLayout(False)
         CType(Me.LayoutControl2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2279,7 +2320,7 @@ Partial Class AgregarMagnusERP
     Friend WithEvents LayoutControlItem7 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents GroupControl4 As DevExpress.XtraEditors.GroupControl
     Friend WithEvents LayoutControlItem14 As DevExpress.XtraLayout.LayoutControlItem
-    Friend WithEvents GroupControl5 As DevExpress.XtraEditors.GroupControl
+    Friend WithEvents gcReportes As DevExpress.XtraEditors.GroupControl
     Friend WithEvents LayoutControlItem15 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents GroupControl9 As DevExpress.XtraEditors.GroupControl
     Friend WithEvents GroupControl8 As DevExpress.XtraEditors.GroupControl
@@ -2405,7 +2446,7 @@ Partial Class AgregarMagnusERP
     Friend WithEvents rgEnvios As DevExpress.XtraEditors.RadioGroup
     Friend WithEvents LayoutControlItem64 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem65 As DevExpress.XtraLayout.LayoutControlItem
-    Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents brnGuardarReporte As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents txtNombreReporte As DevExpress.XtraEditors.TextEdit
     Friend WithEvents txtTipoReporte As DevExpress.XtraEditors.GridLookUpEdit
     Friend WithEvents GridLookUpEdit1View As DevExpress.XtraGrid.Views.Grid.GridView
@@ -2420,4 +2461,7 @@ Partial Class AgregarMagnusERP
     Friend WithEvents GridColumn2 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn3 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents EmptySpaceItem7 As DevExpress.XtraLayout.EmptySpaceItem
+    Friend WithEvents GridColumn4 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn5 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn6 As DevExpress.XtraGrid.Columns.GridColumn
 End Class

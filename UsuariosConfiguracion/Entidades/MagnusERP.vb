@@ -1107,6 +1107,121 @@
         End Set
     End Property
 
+    Public Sub New()
+        OID = 0
+        Empresa = 0
+        Sistema = 0
+        DBMagnus = ""
+        usuarioActivo = 0
+        autonumerico = ""
+        server1 = ""
+        usuario = ""
+        manejaRenta = 0
+        manejaObras = 0
+        manejaTransportes = 0
+        pathCer = ""
+        pathXml = ""
+        rutaReportes = ""
+        Lotes = 0
+        manejaDesMax = 0
+        desMax = 0
+        desfinMax = 0
+        mostrarExistencia = 0
+        edicionMoneda = 0
+        edicionTC = 0
+        edicionImpuesto = 0
+        existenciaBruta = 0
+        desXP = 0
+        impXP = 0
+        numeroDecimalesC = 0
+        numeroDecimalesV = 0
+        preview = 0
+        DesgloseDesc = False
+        AgrupaTallasFactura = False
+        FormaPago = False
+        FoliosConta = False
+        ManejarFiscal = False
+        RutaEtiqueta = ""
+        ReporteTraspaso = ""
+        MostrarImagen = False
+        Simac = ""
+        NDecimalesCosto = ""
+        rutaImagenes = ""
+        ReporteEmbarque = ""
+        ReporteLiquidacion nvarchar(100),
+	ReporteFaltante nvarchar(100),
+    PrecioOferta nvarchar(100),
+	ProductoCompras nvarchar(100),
+    IdConceptoSalidaEnsamble int,
+    IdConceptoEntradaKIT Int,
+    ManejaViaje bit,
+    ReporteViaje nvarchar(100),
+    PorSucursal bit,
+    ReporteGastoEmbarque nvarchar(100),
+    ElegirFormato bit,
+    AutoAsignarClave bit,
+    GeneraEmbarque bit,
+    ServicioFlete nvarchar(100),
+    ServicioSeguro nvarchar(100),
+	IdEsquemaFlete Int,
+    EnvioCorreo int,
+    AutorizarPagos bit,
+    IdProductoEstimacion nvarchar(100),
+	IdProductoEstimacionSub nvarchar(100),
+    ReporteHojaGeneradora nvarchar(100),
+	ReporteEstimacion nvarchar(100),
+    ReporteCaratulaEstimacion nvarchar(100),
+	ValidacionCredito Int,
+    PeriodoMaxMin int,
+    NumLiquidacion Int,
+    ConceptosLiquidaciones nvarchar(100),
+	CuentasComplemento bit,
+    DecimalesEntrada int,
+    DecimalesSalida Int,
+    ServicioEmbarque nvarchar(100),
+	RevisionPagos bit,
+    RptEnlaces nvarchar(100),
+	AutonumeracionLotes bit,
+    CantidadTotalLote bit,
+    EditarComision bit,
+    PorcentajeEmpresa int,
+    PorcentajeOperador Int,
+    AgruparClavesIguales bit,
+    manejaMovil Int,
+    nivelAlmacen int,
+    EnlaceVarios bit,
+    ReporteOEmbarques nvarchar(100),
+	ReporteAutorizaciones nvarchar(100),
+    ReportePeriodoAutorizaciones nvarchar(100),
+	ReportePeriodoEntregasEmbarque nvarchar(100),
+    envioProduccion bit,
+    ReporteInventario nvarchar(100),
+    EquivalenciaClientes bit,
+    ReporteLotesDocumento nvarchar(100),
+    controLotes bit,
+    rptPendientesPorSurtir nvarchar(100),
+    ManejaDescuentoComision bit,
+    EditarTipoPago bit,
+    ServicioFleteFactura bit,
+    ProdServicioFlete nvarchar(100),
+    LecturaPickingIncrementoUnidad bit,
+    ContabilizaNivelCuatro bit,
+    incluirDescuentoPrecioXML bit,
+    CentroCostosCompras bit,
+    enlazarParcialPicking bit,
+    equivalenciasDuplicadas bit,
+    detallarLotesSIMAC bit,
+    decimalesPrecio Int,
+    ventaSoloListaPrecio bit,
+    envioPedidosSimac Int,
+    ClientePedido nvarchar(100),
+	ReporteLiquidacionMovil nvarchar(100),
+    ReporteAdeudoRetornable nvarchar(100),
+	ReporteListaPrecios nvarchar(100),
+    cantidadPorPrecio bit
+    End Sub
+
+
 End Class
 
 

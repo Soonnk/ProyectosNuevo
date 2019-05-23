@@ -288,6 +288,10 @@
                         Dim frmEditar As New AgregarTienda
                         frmEditar = frmActivo
                         frmEditar.GuardarTienda()
+                    Case "AgregarMagnusERP"
+                        Dim frmEditar As New AgregarMagnusERP
+                        frmEditar = frmActivo
+                        frmEditar.GuardarMagnusERP()
                     Case "AgregarSIMAC"
                         Dim frmEditar As New AgregarSIMAC
                         frmEditar = frmActivo
