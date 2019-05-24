@@ -142,10 +142,16 @@ Public Class MagnusERP
         Try
             Query = "INSERT INTO Configuracion_Magnus(Empresa,Sistema,DBMagnus,usuarioActivo,
                                                       autonumerico,server1,usuario,manejaRenta,
-                                                    manejaObras,manejaTransportes,pathCer,pathXml)VALUES
+                                                    manejaObras,manejaTransportes,pathCer,pathXml,
+                                                    rutaReportes,Lotes,manejaDesMax,desMax,
+                                                    edicionImpuesto,existenciaBruta,desXP,impXP,
+                                                    numeroDecimalesC,numeroDecimalesV)VALUES
                                                     (" & magnusERP.Empresa & "," & magnusERP.Sistema & ",'" & magnusERP.DBMagnus & "'," & magnusERP.usuarioActivo & ",
                                                     '" & magnusERP.autonumerico & "','" & magnusERP.server1 & "','" & magnusERP.usuario & "'," & magnusERP.manejaRenta & ",
-                " & magnusERP.manejaObras & "," & magnusERP.manejaTransportes & ",'" & magnusERP.pathCer & "','" & magnusERP.pathXml & "')"
+                " & magnusERP.manejaObras & "," & magnusERP.manejaTransportes & ",'" & magnusERP.pathCer & "','" & magnusERP.pathXml & "',
+                                                    '" & magnusERP.rutaReportes & "'," & magnusERP.Lotes & ", '" & magnusERP.manejaDesMax & "','" & magnusERP.desMax & "',
+                '" & magnusERP.edicionImpuesto & "','" & magnusERP.existenciaBruta & "','" & magnusERP.desXP & "','" & magnusERP.impXP & "',
+                '" & magnusERP.numeroDecimalesC & "','" & magnusERP.numeroDecimalesV & "')"
             Return obj.commandSQL(Query)
         Catch ex As Exception
             MsgBox(ex.ToString)
@@ -165,7 +171,7 @@ Public Class MagnusERP
     '                                                rutaReportes,Lotes,manejaDesMax,desMax,
     '                                                desfinMax,mostrarExistencia,edicionMoneda,edicionTC,
     '                                                edicionImpuesto,existenciaBruta,desXP,impXP,
-    '                                                numeroDecimalesC,numeroDecimalesV,
+    '                                               numeroDecimalesC,numeroDecimalesV,
     '                                                preview,DesgloseDesc,AgrupaTallasFactura,
     '                                                FormaPago,FoliosConta,ManejarFiscal,RutaEtiqueta,
     '                                                ReporteTraspaso,MostrarImagen,Simac,NDecimalesCosto,

@@ -106,6 +106,7 @@
     Public Sub LimpiarCampos()
         txtBase.EditValue = ""
         ceAutonumerico.Checked = False
+        ceContrapartidaCancelacion.Checked = False
         txtEjercicioUno.EditValue = ""
         txtConceptoNotaCredito.EditValue = ""
         txtEmpresa.EditValue = ""

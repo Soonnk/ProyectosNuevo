@@ -216,10 +216,11 @@
         Try
             txtNumeroActivacion.ReadOnly = True
             txtEmpresa.ReadOnly = True
+            _IdSistema = row("Sistema")
             _idMagnusERP = row("OID")
             Me.txtBDMagnus.EditValue = row("DBMagnus")
             Me.txtEmpresa.EditValue = row("Empresa")
-            _IdSistema = row("Sistema")
+
             Me.cheManejaMovil.Checked = row("manejaMovil")
             Me.cheManejaObras.Checked = row("manejaObras")
             Me.cheManejaTransportes.Checked = row("manejaTransportes")
