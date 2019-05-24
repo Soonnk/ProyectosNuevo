@@ -18,14 +18,15 @@ Public Class AgregarSIMAC
 
     Private Sub AgregarSIMAC_Load(sender As Object, e As EventArgs) Handles Me.Load
         CargarDB()
-        CargarEmpresas()
+
         TipoReporte()
         txtNumeroActivacion.ReadOnly = True
 
         If modo = tipo.Nuevo Then
             Me.GroupControl8.Enabled = False
+            CargarEmpresas()
         Else
-
+            CargarEmpresa()
             Me.GroupControl8.Enabled = True
             CargarReporte()
         End If
@@ -38,6 +39,16 @@ Public Class AgregarSIMAC
         Try
             dt = nEmpresa.CargarEmpresas
             Me.txtEmpresa.Properties.DataSource = dt
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+    Private Sub CargarEmpresa()
+        Dim dt As New DataTable
+        Dim nEmpresa As New Negocios.Empresa
+        Try
+            dt = nEmpresa.Cargar
+            txtEmpresa.Properties.DataSource = dt
         Catch ex As Exception
             MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try

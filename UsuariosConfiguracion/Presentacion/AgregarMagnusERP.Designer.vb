@@ -164,8 +164,11 @@ Partial Class AgregarMagnusERP
         Me.LayoutControl2 = New DevExpress.XtraLayout.LayoutControl()
         Me.txtEmpresa = New DevExpress.XtraEditors.GridLookUpEdit()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.txtBDMagnus = New DevExpress.XtraEditors.GridLookUpEdit()
         Me.GridView2 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.txtNumeroActivacion = New DevExpress.XtraEditors.TextEdit()
         Me.LayoutControlGroup2 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem10 = New DevExpress.XtraLayout.LayoutControlItem()
@@ -195,9 +198,6 @@ Partial Class AgregarMagnusERP
         Me.cheEditarFormaPago = New DevExpress.XtraEditors.CheckEdit()
         Me.cheEnvioPedidosProduccion = New DevExpress.XtraEditors.CheckEdit()
         Me.cheDetallarLotesSimac = New DevExpress.XtraEditors.CheckEdit()
-        Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn()
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl1.SuspendLayout()
         CType(Me.XtraTabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1776,6 +1776,24 @@ Partial Class AgregarMagnusERP
         Me.GridView1.OptionsView.ShowGroupPanel = False
         Me.GridView1.OptionsView.ShowIndicator = False
         '
+        'GridColumn4
+        '
+        Me.GridColumn4.Caption = "Clave"
+        Me.GridColumn4.FieldName = "OID"
+        Me.GridColumn4.Name = "GridColumn4"
+        Me.GridColumn4.Visible = True
+        Me.GridColumn4.VisibleIndex = 0
+        Me.GridColumn4.Width = 154
+        '
+        'GridColumn5
+        '
+        Me.GridColumn5.Caption = "Empresa"
+        Me.GridColumn5.FieldName = "Nombre"
+        Me.GridColumn5.Name = "GridColumn5"
+        Me.GridColumn5.Visible = True
+        Me.GridColumn5.VisibleIndex = 1
+        Me.GridColumn5.Width = 924
+        '
         'txtBDMagnus
         '
         Me.txtBDMagnus.Location = New System.Drawing.Point(116, 52)
@@ -1799,6 +1817,14 @@ Partial Class AgregarMagnusERP
         Me.GridView2.OptionsView.ShowAutoFilterRow = True
         Me.GridView2.OptionsView.ShowGroupPanel = False
         Me.GridView2.OptionsView.ShowIndicator = False
+        '
+        'GridColumn6
+        '
+        Me.GridColumn6.Caption = "Base de Datos"
+        Me.GridColumn6.FieldName = "name"
+        Me.GridColumn6.Name = "GridColumn6"
+        Me.GridColumn6.Visible = True
+        Me.GridColumn6.VisibleIndex = 0
         '
         'txtNumeroActivacion
         '
@@ -2055,32 +2081,6 @@ Partial Class AgregarMagnusERP
         Me.cheDetallarLotesSimac.Properties.Caption = "Detallar lotes SIMAC"
         Me.cheDetallarLotesSimac.Size = New System.Drawing.Size(200, 19)
         Me.cheDetallarLotesSimac.TabIndex = 6
-        '
-        'GridColumn4
-        '
-        Me.GridColumn4.Caption = "Clave"
-        Me.GridColumn4.FieldName = "OID"
-        Me.GridColumn4.Name = "GridColumn4"
-        Me.GridColumn4.Visible = True
-        Me.GridColumn4.VisibleIndex = 0
-        Me.GridColumn4.Width = 154
-        '
-        'GridColumn5
-        '
-        Me.GridColumn5.Caption = "Empresa"
-        Me.GridColumn5.FieldName = "Nombre"
-        Me.GridColumn5.Name = "GridColumn5"
-        Me.GridColumn5.Visible = True
-        Me.GridColumn5.VisibleIndex = 1
-        Me.GridColumn5.Width = 924
-        '
-        'GridColumn6
-        '
-        Me.GridColumn6.Caption = "Base de Datos"
-        Me.GridColumn6.FieldName = "name"
-        Me.GridColumn6.Name = "GridColumn6"
-        Me.GridColumn6.Visible = True
-        Me.GridColumn6.VisibleIndex = 0
         '
         'AgregarMagnusERP
         '

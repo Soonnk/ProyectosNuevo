@@ -17,7 +17,7 @@ Public Class AgregarTienda
     End Enum
 
     Private Sub AgregarTienda_Load(sender As Object, e As EventArgs) Handles Me.Load
-        CargarEmpresas()
+
         CargarDB()
         CargarAlmacen()
         TipoReporte()
@@ -26,18 +26,32 @@ Public Class AgregarTienda
         If modo = tipo.Nuevo Then
             GroupControl2.Enabled = False
             GroupControl3.Enabled = False
+            CargarEmpresas()
         Else
             CargarReporte()
             GroupControl2.Enabled = True
             GroupControl3.Enabled = True
+            CargarEmpresa()
         End If
     End Sub
-
+    'Cargar solo las empresas que pertenecen al sistema cuando no está registrada la configuración de ese sistema
     Private Sub CargarEmpresas()
         Dim dt As New DataTable
         Dim nEmpresa As New Negocios.Tienda
         Try
             dt = nEmpresa.CargarEmpresas
+            txtEmpresa.Properties.DataSource = dt
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    'Cargar la empresa del registro, de otro modo no la muestra porque la consulta del método de arriba es NOT IN
+    Private Sub CargarEmpresa()
+        Dim dt As New DataTable
+        Dim nEmpresa As New Negocios.Empresa
+        Try
+            dt = nEmpresa.Cargar
             txtEmpresa.Properties.DataSource = dt
         Catch ex As Exception
             MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)

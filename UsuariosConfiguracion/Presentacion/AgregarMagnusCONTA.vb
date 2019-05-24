@@ -13,15 +13,32 @@
 
 
     Private Sub AgregarMagnusCONTA_Load(sender As Object, e As EventArgs) Handles Me.Load
-        CargarEmpresas()
-        CargarDB()
-    End Sub
 
+        CargarDB()
+        If modo = tipo.Nuevo Then
+            CargarEmpresas()
+        Else
+            CargarEmpresa()
+        End If
+
+    End Sub
+    'Cargar solo las empresas que pertenecen al sistema cuando no está registrada la configuración de ese sistema
     Private Sub CargarEmpresas()
         Dim dt As New DataTable
         Dim nEmpresa As New Negocios.MagnusCONTA
         Try
             dt = nEmpresa.CargarEmpresas
+            txtEmpresa.Properties.DataSource = dt
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+    'Cargar la empresa del registro, de otro modo no la muestra porque la consulta del método de arriba es NOT IN
+    Private Sub CargarEmpresa()
+        Dim dt As New DataTable
+        Dim nEmpresa As New Negocios.Empresa
+        Try
+            dt = nEmpresa.Cargar
             txtEmpresa.Properties.DataSource = dt
         Catch ex As Exception
             MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -124,7 +141,6 @@
             txtEmpresa.ReadOnly = True
             _IdMagnusC = row("OID")
             txtBase.EditValue = row("DBConta")
-            txtEmpresa.EditValue = row("Empresa")
             ceAutonumerico.Checked = row("Autonumerico")
             txtEjercicioUno.EditValue = row("EjercicioUno")
             ceManejarFiscal.Checked = row("ManejarFiscal")
@@ -133,6 +149,7 @@
             txtConceptoNotaCredito.EditValue = row("ConceptoNotaCredito")
             ceContrapartidaCancelacion.Checked = row("ContrapartidaCancelacion")
             ceVistaPrevia.Checked = row("VistaPrevia")
+            txtEmpresa.EditValue = row("Empresa")
         Catch ex As Exception
             'MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try

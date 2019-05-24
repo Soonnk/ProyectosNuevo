@@ -37,7 +37,7 @@
 
     Public Function CargarEmpresas() As DataTable
         Try
-            Return oMagnusERP.CargarEmpresa
+            Return oMagnusERP.CargarEmpresas
         Catch ex As Exception
             MsgBox(ex.Message)
             Return Nothing

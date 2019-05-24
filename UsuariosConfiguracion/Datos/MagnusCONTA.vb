@@ -119,7 +119,7 @@ Empresas ON (Configuracion_Conta.Empresa = Empresas.OID) inner join Sistemas ON 
             query = "Select name From sys.databases Order By create_date Desc"
             Return obj.RegresarDatos(query)
         Catch ex As Exception
-            'MsgBox(ex.Message)
+            MsgBox(ex.Message)
             Return Nothing
         End Try
     End Function

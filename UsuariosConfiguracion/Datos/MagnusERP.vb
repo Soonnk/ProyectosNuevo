@@ -362,7 +362,7 @@ Public Class MagnusERP
     End Function
 
 
-    Public Function CargarEmpresa() As DataTable
+    Public Function CargarEmpresas() As DataTable
         Dim dt As New DataTable
         Dim Query As String
         Try
