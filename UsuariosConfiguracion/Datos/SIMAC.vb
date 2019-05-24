@@ -289,7 +289,7 @@ Public Class SIMAC
         End Try
     End Function
 
-    Public Function CargarPrueba()
+    Public Function CargarInnerJoin()
         Dim dt As New DataTable
         Dim Query As String
         Try

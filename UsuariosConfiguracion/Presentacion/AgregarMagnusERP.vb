@@ -212,5 +212,54 @@
         _IdSistema = eSistemas.OID
         txtNumeroActivacion.ReadOnly = True
     End Sub
+    Public Sub consultarMagnusERP(ByVal row As DataRow)
+        Try
+            txtNumeroActivacion.ReadOnly = True
+            txtEmpresa.ReadOnly = True
+            _idMagnusERP = row("OID")
+            Me.txtBDMagnus.EditValue = row("DBMagnus")
+            Me.txtEmpresa.EditValue = row("Empresa")
+            _IdSistema = row("Sistema")
+            Me.cheManejaMovil.Checked = row("manejaMovil")
+            Me.cheManejaObras.Checked = row("manejaObras")
+            Me.cheManejaTransportes.Checked = row("manejaTransportes")
+            Me.cheManejaRentas.Checked = row("manejaRenta")
+            'eMagnusERP.m  maneja descuento
+            Me.txtDescuentoMax.EditValue = row("desMax")
+            Me.txtDescuentoFinalMax.EditValue = row("desfinMax")
+            'eMagnusERP.ru ruta certificado
+            'ruta almacenaje xml
+            Me.rgEnvioCorreoAutomatico.EditValue = row("EnvioCorreo")
+            Me.cheEditarFormaPago.Checked = row("EditarTipoPago")
+            Me.cheFormaPago.Checked = row("FormaPago")
+            Me.cheEditarComision.Checked = row("EditarComision")
+            Me.cheManejaDescuentoComision.Checked = row("ManejaDescuentoComision")
+            Me.cheVenderSobreListaPrecios.Checked = row("ventaSoloListaPrecio")
+            Me.cheAutoasignarClaveCliente.Checked = row("AutoAsignarClave")
+            Me.cheCuentasComplemento.Checked = row("CuentasComplemento")
+            'contabilizar por subdivision
+            Me.cheLotes.Checked = row("Lotes")
+            Me.cheLotesControlClave.Checked = row("controLotes")
+            Me.txtNumeroDecimalesCantidad.EditValue = row("numeroDecimalesC")
+            Me.txtValidarCredito.EditValue = row("ValidacionCredito")
+            Me.cheEntregarPickingParcial.Checked = row("enlazarParcialPicking")
+            Me.chePickingIncrementarUnidadLectura.Checked = row("LecturaPickingIncrementoUnidad")
+            Me.cheAgruparTallaDocumentos.Checked = row("AgrupaTallasFactura")
+            Me.cheAgregarServicioFleteFactura.Checked = row("ServicioFleteFactura")
+            Me.cheImporteCantidadPrecio.Checked = row("cantidadPorPrecio")
+            Me.txtNumeroDecimalesImporte.EditValue = row("numeroDecimalesV")
+            Me.txtServicioFlete.Text = row("ServicioFlete")
+            Me.btnReporteEnlaceDocumentos.EditValue = row("RptEnlaces")
+            Me.txtSimac.Text = row("Simac")
+            Me.cheEnvioPedidosProduccion.Checked = row("envioProduccion")
+            Me.cheDetallarLotesSimac.Checked = row("detallarLotesSIMAC")
+            'Group de autorización simac
+            Me.cheEquivalenciasDuplicadas.Checked = row("equivalenciasDuplicadas")
+            Me.cheMostrarSoloEquivalencias.Checked = row("EquivalenciaClientes")
+
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
 
 End Class

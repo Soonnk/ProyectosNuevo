@@ -4,7 +4,7 @@
 
     Public Function Cargar() As DataTable
         Try
-            Return oMagnusERP.Cargar
+            Return oMagnusERP.CargarInnerJoin
 
         Finally
         End Try

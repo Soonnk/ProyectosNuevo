@@ -137,110 +137,127 @@ Public Class MagnusERP
             Return Nothing
         End Try
     End Function
-
     Public Function InsertarMagnusERP(ByRef magnusERP As Entidades.MagnusERP) As Boolean
         Dim Query As String
-
         Try
             Query = "INSERT INTO Configuracion_Magnus(Empresa,Sistema,DBMagnus,usuarioActivo,
-                                                    autonumerico,server,usuario,manejaRenta,
-                                                    manejaObras,manejaTransportes,pathCer,pathXml,
-                                                    rutaReportes,Lotes,manejaDesMax,desMax,
-                                                    desfinMax,mostrarExistencia,edicionMoneda,edicionTC,
-                                                    edicionImpuesto,existenciaBruta,desXP,impXP,
-                                                    numeroDecimalesC,numeroDecimalesV,
-                                                    preview,DesgloseDesc,AgrupaTallasFactura,
-                                                    FormaPago,FoliosConta,ManejarFiscal,RutaEtiqueta,
-                                                    ReporteTraspaso,MostrarImagen,Simac,NDecimalesCosto,
-                                                    rutaImagenes,ReporteEmbarque,
-                                                    ReporteLiquidacion,ReporteFaltante,
-                                                    PrecioOferta,ProductoCompras,
-                                                    IdConceptoSalidaEnsamble,IdConceptoEntradaKIT,
-                                                    ManejaViaje,ReporteViaje,
-                                                    PorSucursal,ReporteGastoEmbarque,
-                                                    ElegirFormato,AutoAsignarClave,
-                                                    GeneraEmbarque,ServicioFlete,
-                                                    ServicioSeguro,IdEsquemaFlete,
-                                                    EnvioCorreo,AutorizarPagos,
-                                                    IdProductoEstimacion,IdProductoEstimacionSub,
-                                                    ReporteHojaGeneradora,ReporteEstimacion,
-                                                    ReporteCaratulaEstimacion,ValidacionCredito,
-                                                    PeriodoMaxMin,NumLiquidacion,
-                                                    ConceptosLiquidaciones,CuentasComplemento,
-                                                    DecimalesEntrada,DecimalesSalida,
-                                                    ServicioEmbarque,RevisionPagos,
-                                                    RptEnlaces,AutonumeracionLotes,
-                                                    CantidadTotalLote,EditarComision,
-                                                    PorcentajeEmpresa,PorcentajeOperador,
-                                                    AgruparClavesIguales,manejaMovil,
-                                                    nivelAlmacen,EnlaceVarios,
-                                                    ReporteOEmbarques,ReporteAutorizaciones,
-                                                    ReportePeriodoAutorizaciones,ReportePeriodoEntregasEmbarque,
-                                                    envioProduccion,ReporteInventario,
-                                                    EquivalenciaClientes,ReporteLotesDocumento,
-                                                    controLotes,rptPendientesPorSurtir,
-                                                    ManejaDescuentoComision,EditarTipoPago,
-                                                    ServicioFleteFactura,ProdServicioFlete,
-                                                    LecturaPickingIncrementoUnidad,ContabilizaNivelCuatro,
-                                                    incluirDescuentoPrecioXML,CentroCostosCompras,
-                                                    enlazarParcialPicking,equivalenciasDuplicadas,
-                                                    detallarLotesSIMAC,decimalesPrecio,
-                                                    ventaSoloListaPrecio,envioPedidosSimac,
-                                                    ClientePedido,ReporteLiquidacionMovil,
-                                                    ReporteAdeudoRetornable,ReporteListaPrecios,
-                                                    cantidadPorPrecio) 
-                VALUES ('" & magnusERP.Empresa & "','" & magnusERP.Sistema & "','" & magnusERP.DBMagnus & "','" & magnusERP.usuarioActivo & "',
-                '" & magnusERP.autonumerico & "','" & magnusERP.server1 & "','" & magnusERP.usuario & "','" & magnusERP.manejaRenta & "',
-                '" & magnusERP.manejaObras & "','" & magnusERP.manejaTransportes & "','" & magnusERP.pathCer & "','" & magnusERP.pathXml & "',
-                '" & magnusERP.rutaReportes & "','" & magnusERP.Lotes & "', '" & magnusERP.manejaDesMax & "','" & magnusERP.desMax & "',
-                '" & magnusERP.desfinMax & "','" & magnusERP.mostrarExistencia & "','" & magnusERP.edicionMoneda & "','" & magnusERP.edicionTC & "',
-                '" & magnusERP.edicionImpuesto & "','" & magnusERP.existenciaBruta & "','" & magnusERP.desXP & "','" & magnusERP.impXP & "',
-                '" & magnusERP.numeroDecimalesC & "','" & magnusERP.numeroDecimalesV & "',
-                '" & magnusERP.preview & "', '" & magnusERP.DesgloseDesc & "','" & magnusERP.AgrupaTallasFactura & "',
-                '" & magnusERP.FormaPago & "','" & magnusERP.FoliosConta & "','" & magnusERP.ManejarFiscal & "','" & magnusERP.RutaEtiqueta & "',
-                '" & magnusERP.ReporteTraspaso & "','" & magnusERP.MostrarImagen & "','" & magnusERP.Simac & "','" & magnusERP.NDecimalesCosto & "',
-                '" & magnusERP.rutaImagenes & "','" & magnusERP.ReporteEmbarque & "',
-                '" & magnusERP.ReporteLiquidacion & "','" & magnusERP.ReporteFaltante & "',
-                '" & magnusERP.PrecioOferta & "','" & magnusERP.ProductoCompras & "',
-                '" & magnusERP.IdConceptoSalidaEnsamble & "','" & magnusERP.IdConceptoEntradaKIT & "',
-                '" & magnusERP.ManejaViaje & "','" & magnusERP.ReporteViaje & "',
-                '" & magnusERP.PorSucursal & "','" & magnusERP.ReporteGastoEmbarque & "',
-                '" & magnusERP.ElegirFormato & "','" & magnusERP.AutoAsignarClave & "',
-                '" & magnusERP.GeneraEmbarque & "','" & magnusERP.ServicioFlete & "',
-                '" & magnusERP.ServicioSeguro & "','" & magnusERP.IdEsquemaFlete & "',
-                '" & magnusERP.EnvioCorreo & "','" & magnusERP.AutorizarPagos & "',
-                '" & magnusERP.IdProductoEstimacion & "','" & magnusERP.IdProductoEstimacionSub & "',
-                '" & magnusERP.ReporteHojaGeneradora & "','" & magnusERP.ReporteEstimacion & "',
-                '" & magnusERP.ReporteCaratulaEstimacion & "','" & magnusERP.ValidacionCredito & "',
-                '" & magnusERP.PeriodoMaxMin & "','" & magnusERP.NumLiquidacion & "',
-                '" & magnusERP.ConceptosLiquidaciones & "','" & magnusERP.CuentasComplemento & "',
-                '" & magnusERP.DecimalesEntrada & "','" & magnusERP.DecimalesSalida & "',
-                '" & magnusERP.ServicioEmbarque & "','" & magnusERP.RevisionPagos & "',
-                '" & magnusERP.RptEnlaces & "','" & magnusERP.AutonumeracionLotes & "',
-                '" & magnusERP.CantidadTotalLote & "','" & magnusERP.EditarComision & "',
-                '" & magnusERP.PorcentajeEmpresa & "','" & magnusERP.PorcentajeOperador & "',
-                '" & magnusERP.AgruparClavesIguales & "','" & magnusERP.manejaMovil & "',
-                '" & magnusERP.nivelAlmacen & "','" & magnusERP.EnlaceVarios & "',
-                '" & magnusERP.ReporteOEmbarques & "','" & magnusERP.ReporteAutorizaciones & "',
-                '" & magnusERP.ReportePeriodoAutorizaciones & "','" & magnusERP.ReportePeriodoEntregasEmbarque & "',
-                '" & magnusERP.envioProduccion & "','" & magnusERP.ReporteInventario & "',
-                '" & magnusERP.EquivalenciaClientes & "','" & magnusERP.ReporteLotesDocumento & "',
-                '" & magnusERP.ServicioFleteFactura & "','" & magnusERP.ProdServicioFlete & "',
-                '" & magnusERP.LecturaPickingIncrementoUnidad & "','" & magnusERP.ContabilizaNivelCuatro & "',
-                '" & magnusERP.incluirDescuentoPrecioXML & "','" & magnusERP.CentroCostosCompras & "',
-                '" & magnusERP.enlazarParcialPicking & "','" & magnusERP.equivalenciasDuplicadas & "',
-                '" & magnusERP.detallarLotesSIMAC & "','" & magnusERP.decimalesPrecio & "',
-                '" & magnusERP.ventaSoloListaPrecio & "','" & magnusERP.envioPedidosSimac & "',
-                '" & magnusERP.ClientePedido & "','" & magnusERP.ReporteLiquidacionMovil & "',
-                '" & magnusERP.ReporteAdeudoRetornable & "','" & magnusERP.ReporteListaPrecios & "',
-                                                    '" & magnusERP.cantidadPorPrecio & "')"
-
+                                                      autonumerico,server1,usuario,manejaRenta,
+                                                    manejaObras,manejaTransportes,pathCer,pathXml)VALUES
+                                                    (" & magnusERP.Empresa & "," & magnusERP.Sistema & ",'" & magnusERP.DBMagnus & "'," & magnusERP.usuarioActivo & ",
+                                                    '" & magnusERP.autonumerico & "','" & magnusERP.server1 & "','" & magnusERP.usuario & "'," & magnusERP.manejaRenta & ",
+                " & magnusERP.manejaObras & "," & magnusERP.manejaTransportes & ",'" & magnusERP.pathCer & "','" & magnusERP.pathXml & "')"
             Return obj.commandSQL(Query)
         Catch ex As Exception
             MsgBox(ex.ToString)
             Return False
         End Try
     End Function
+    '    
+
+
+    'Public Function InsertarMagnusERP(ByRef magnusERP As Entidades.MagnusERP) As Boolean
+    '    Dim Query As String
+
+    '    Try
+    '        Query = "INSERT INTO Configuracion_Magnus(Empresa,Sistema,DBMagnus,usuarioActivo,
+    '                                                autonumerico,server1,usuario,manejaRenta,
+    '                                                manejaObras,manejaTransportes,pathCer,pathXml,
+    '                                                rutaReportes,Lotes,manejaDesMax,desMax,
+    '                                                desfinMax,mostrarExistencia,edicionMoneda,edicionTC,
+    '                                                edicionImpuesto,existenciaBruta,desXP,impXP,
+    '                                                numeroDecimalesC,numeroDecimalesV,
+    '                                                preview,DesgloseDesc,AgrupaTallasFactura,
+    '                                                FormaPago,FoliosConta,ManejarFiscal,RutaEtiqueta,
+    '                                                ReporteTraspaso,MostrarImagen,Simac,NDecimalesCosto,
+    '                                                rutaImagenes,ReporteEmbarque,
+    '                                                ReporteLiquidacion,ReporteFaltante,
+    '                                                PrecioOferta,ProductoCompras,
+    '                                                IdConceptoSalidaEnsamble,IdConceptoEntradaKIT,
+    '                                                ManejaViaje,ReporteViaje,
+    '                                                PorSucursal,ReporteGastoEmbarque,
+    '                                                ElegirFormato,AutoAsignarClave,
+    '                                                GeneraEmbarque,ServicioFlete,
+    '                                                ServicioSeguro,IdEsquemaFlete,
+    '                                                EnvioCorreo,AutorizarPagos,
+    '                                                IdProductoEstimacion,IdProductoEstimacionSub,
+    '                                                ReporteHojaGeneradora,ReporteEstimacion,
+    '                                                ReporteCaratulaEstimacion,ValidacionCredito,
+    '                                                PeriodoMaxMin,NumLiquidacion,
+    '                                                ConceptosLiquidaciones,CuentasComplemento,
+    '                                                DecimalesEntrada,DecimalesSalida,
+    '                                                ServicioEmbarque,RevisionPagos,
+    '                                                RptEnlaces,AutonumeracionLotes,
+    '                                                CantidadTotalLote,EditarComision,
+    '                                                PorcentajeEmpresa,PorcentajeOperador,
+    '                                                AgruparClavesIguales,manejaMovil,
+    '                                                nivelAlmacen,EnlaceVarios,
+    '                                                ReporteOEmbarques,ReporteAutorizaciones,
+    '                                                ReportePeriodoAutorizaciones,ReportePeriodoEntregasEmbarque,
+    '                                                envioProduccion,ReporteInventario,
+    '                                                EquivalenciaClientes,ReporteLotesDocumento,
+    '                                                controLotes,rptPendientesPorSurtir,
+    '                                                ManejaDescuentoComision,EditarTipoPago,
+    '                                                ServicioFleteFactura,ProdServicioFlete,
+    '                                                LecturaPickingIncrementoUnidad,ContabilizaNivelCuatro,
+    '                                                incluirDescuentoPrecioXML,CentroCostosCompras,
+    '                                                enlazarParcialPicking,equivalenciasDuplicadas,
+    '                                                detallarLotesSIMAC,decimalesPrecio,
+    '                                                ventaSoloListaPrecio,envioPedidosSimac,
+    '                                                ClientePedido,ReporteLiquidacionMovil,
+    '                                                ReporteAdeudoRetornable,ReporteListaPrecios,
+    '                                                cantidadPorPrecio) 
+    '            VALUES (" & magnusERP.Empresa & "," & magnusERP.Sistema & ",'" & magnusERP.DBMagnus & "'," & magnusERP.usuarioActivo & ",
+    '            '" & magnusERP.autonumerico & "','" & magnusERP.server1 & "','" & magnusERP.usuario & "'," & magnusERP.manejaRenta & ",
+    '            " & magnusERP.manejaObras & "," & magnusERP.manejaTransportes & ",'" & magnusERP.pathCer & "','" & magnusERP.pathXml & "',
+    '            '" & magnusERP.rutaReportes & "'," & magnusERP.Lotes & ", '" & magnusERP.manejaDesMax & "','" & magnusERP.desMax & "',
+    '            '" & magnusERP.desfinMax & "','" & magnusERP.mostrarExistencia & "','" & magnusERP.edicionMoneda & "','" & magnusERP.edicionTC & "',
+    '            '" & magnusERP.edicionImpuesto & "','" & magnusERP.existenciaBruta & "','" & magnusERP.desXP & "','" & magnusERP.impXP & "',
+    '            '" & magnusERP.numeroDecimalesC & "','" & magnusERP.numeroDecimalesV & "',
+    '            '" & magnusERP.preview & "', '" & magnusERP.DesgloseDesc & "','" & magnusERP.AgrupaTallasFactura & "',
+    '            '" & magnusERP.FormaPago & "','" & magnusERP.FoliosConta & "','" & magnusERP.ManejarFiscal & "','" & magnusERP.RutaEtiqueta & "',
+    '            '" & magnusERP.ReporteTraspaso & "','" & magnusERP.MostrarImagen & "','" & magnusERP.Simac & "','" & magnusERP.NDecimalesCosto & "',
+    '            '" & magnusERP.rutaImagenes & "','" & magnusERP.ReporteEmbarque & "',
+    '            '" & magnusERP.ReporteLiquidacion & "','" & magnusERP.ReporteFaltante & "',
+    '            '" & magnusERP.PrecioOferta & "','" & magnusERP.ProductoCompras & "',
+    '            '" & magnusERP.IdConceptoSalidaEnsamble & "','" & magnusERP.IdConceptoEntradaKIT & "',
+    '            '" & magnusERP.ManejaViaje & "','" & magnusERP.ReporteViaje & "',
+    '            '" & magnusERP.PorSucursal & "','" & magnusERP.ReporteGastoEmbarque & "',
+    '            '" & magnusERP.ElegirFormato & "','" & magnusERP.AutoAsignarClave & "',
+    '            '" & magnusERP.GeneraEmbarque & "','" & magnusERP.ServicioFlete & "',
+    '            '" & magnusERP.ServicioSeguro & "','" & magnusERP.IdEsquemaFlete & "',
+    '            '" & magnusERP.EnvioCorreo & "','" & magnusERP.AutorizarPagos & "',
+    '            '" & magnusERP.IdProductoEstimacion & "','" & magnusERP.IdProductoEstimacionSub & "',
+    '            '" & magnusERP.ReporteHojaGeneradora & "','" & magnusERP.ReporteEstimacion & "',
+    '            '" & magnusERP.ReporteCaratulaEstimacion & "','" & magnusERP.ValidacionCredito & "',
+    '            '" & magnusERP.PeriodoMaxMin & "','" & magnusERP.NumLiquidacion & "',
+    '            '" & magnusERP.ConceptosLiquidaciones & "','" & magnusERP.CuentasComplemento & "',
+    '            '" & magnusERP.DecimalesEntrada & "','" & magnusERP.DecimalesSalida & "',
+    '            '" & magnusERP.ServicioEmbarque & "','" & magnusERP.RevisionPagos & "',
+    '            '" & magnusERP.RptEnlaces & "','" & magnusERP.AutonumeracionLotes & "',
+    '            '" & magnusERP.CantidadTotalLote & "','" & magnusERP.EditarComision & "',
+    '            '" & magnusERP.PorcentajeEmpresa & "','" & magnusERP.PorcentajeOperador & "',
+    '            '" & magnusERP.AgruparClavesIguales & "','" & magnusERP.manejaMovil & "',
+    '            '" & magnusERP.nivelAlmacen & "','" & magnusERP.EnlaceVarios & "',
+    '            '" & magnusERP.ReporteOEmbarques & "','" & magnusERP.ReporteAutorizaciones & "',
+    '            '" & magnusERP.ReportePeriodoAutorizaciones & "','" & magnusERP.ReportePeriodoEntregasEmbarque & "',
+    '            '" & magnusERP.envioProduccion & "','" & magnusERP.ReporteInventario & "',
+    '            '" & magnusERP.EquivalenciaClientes & "','" & magnusERP.ReporteLotesDocumento & "',
+    '            '" & magnusERP.ServicioFleteFactura & "','" & magnusERP.ProdServicioFlete & "',
+    '            '" & magnusERP.LecturaPickingIncrementoUnidad & "','" & magnusERP.ContabilizaNivelCuatro & "',
+    '            '" & magnusERP.incluirDescuentoPrecioXML & "','" & magnusERP.CentroCostosCompras & "',
+    '            '" & magnusERP.enlazarParcialPicking & "','" & magnusERP.equivalenciasDuplicadas & "',
+    '            '" & magnusERP.detallarLotesSIMAC & "','" & magnusERP.decimalesPrecio & "',
+    '            '" & magnusERP.ventaSoloListaPrecio & "','" & magnusERP.envioPedidosSimac & "',
+    '            '" & magnusERP.ClientePedido & "','" & magnusERP.ReporteLiquidacionMovil & "',
+    '            '" & magnusERP.ReporteAdeudoRetornable & "','" & magnusERP.ReporteListaPrecios & "',
+    '                                                '" & magnusERP.cantidadPorPrecio & "')"
+
+    '        Return obj.commandSQL(Query)
+    '    Catch ex As Exception
+    '        MsgBox(ex.ToString)
+    '        Return False
+    '    End Try
+    'End Function
 
     Public Function EditarMagnusERP(ByRef magnusERP As Entidades.MagnusERP) As Boolean
         Dim Query As String
@@ -343,7 +360,9 @@ Public Class MagnusERP
         Dim dt As New DataTable
         Dim Query As String
         Try
-            Query = "SELECT Empresas.OID, Empresas.Nombre from Empresas inner join Sistemas ON Empresas.OID = Sistemas.Empresa Where Sistemas.Nombre = 'Magnus ERP' "
+            Query = "Select * from Empresas
+				where OID in (Select Empresa from Sistemas 
+										where Empresa not in (Select Empresa from Configuracion_Magnus) and Nombre = 'Magnus ERP')"
             dt = obj.RegresarDatos(Query)
             Return dt
         Finally
@@ -351,6 +370,48 @@ Public Class MagnusERP
         End Try
     End Function
 
+    Public Function CargarInnerJoin()
+        Dim dt As New DataTable
+        Dim Query As String
+        Try
+            Query = "SELECT Configuracion_Magnus.OID,Configuracion_Magnus.Empresa,Configuracion_Magnus.Sistema
+                    ,DBMagnus,usuarioActivo,autonumerico,server1,usuario,manejaRenta,manejaObras
+                    ,manejaTransportes,pathCer,pathXml,rutaReportes,Lotes,manejaDesMax,desMax
+                    ,desfinMax,mostrarExistencia,edicionMoneda,edicionTC,edicionImpuesto
+                    ,existenciaBruta,desXP,impXP,numeroDecimalesC,numeroDecimalesV,preview
+                    ,DesgloseDesc,AgrupaTallasFactura,FormaPago,FoliosConta,ManejarFiscal
+                    ,RutaEtiqueta,ReporteTraspaso,MostrarImagen,Simac,NDecimalesCosto,rutaImagenes
+                    ,ReporteEmbarque,ReporteLiquidacion,ReporteFaltante,PrecioOferta
+                    ,ProductoCompras,IdConceptoSalidaEnsamble,IdConceptoEntradaKIT
+                    ,ManejaViaje,ReporteViaje,PorSucursal,ReporteGastoEmbarque,ElegirFormato
+                    ,AutoAsignarClave,GeneraEmbarque,ServicioFlete,ServicioSeguro
+                    ,IdEsquemaFlete,EnvioCorreo,AutorizarPagos,IdProductoEstimacion
+	                ,IdProductoEstimacionSub,ReporteHojaGeneradora,ReporteEstimacion
+                    ,ReporteCaratulaEstimacion,ValidacionCredito,PeriodoMaxMin
+                    ,NumLiquidacion,ConceptosLiquidaciones,CuentasComplemento
+                    ,DecimalesEntrada,DecimalesSalida,ServicioEmbarque,RevisionPagos
+                    ,RptEnlaces,AutonumeracionLotes,CantidadTotalLote,EditarComision
+                    ,PorcentajeEmpresa,PorcentajeOperador,AgruparClavesIguales
+                    ,manejaMovil,nivelAlmacen,EnlaceVarios,ReporteOEmbarques
+                    ,ReporteAutorizaciones,ReportePeriodoAutorizaciones
+                    ,ReportePeriodoEntregasEmbarque,envioProduccion,ReporteInventario
+                    ,EquivalenciaClientes,ReporteLotesDocumento,controLotes
+                    ,rptPendientesPorSurtir,ManejaDescuentoComision,EditarTipoPago
+                    ,ServicioFleteFactura,ProdServicioFlete,LecturaPickingIncrementoUnidad
+                    ,ContabilizaNivelCuatro,incluirDescuentoPrecioXML
+                    ,CentroCostosCompras,enlazarParcialPicking,equivalenciasDuplicadas
+                    ,detallarLotesSIMAC,decimalesPrecio,ventaSoloListaPrecio
+                    ,envioPedidosSimac,ClientePedido,ReporteLiquidacionMovil
+                    ,ReporteAdeudoRetornable,ReporteListaPrecios,cantidadPorPrecio,
+	                Empresas.Nombre AS nom,Sistemas.Nombre AS sis
+                    FROM Configuracion_Magnus INNER JOIN Empresas ON (Configuracion_Magnus.Empresa= Empresas.OID)
+                    INNER JOIN Sistemas ON (Configuracion_Magnus.Sistema = Sistemas.OID) WHERE Sistemas.Nombre = 'Magnus ERP'"
+            dt = obj.RegresarDatos(Query)
+            Return dt
+        Finally
+
+        End Try
+    End Function
 
 
 End Class

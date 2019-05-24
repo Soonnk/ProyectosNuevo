@@ -757,13 +757,13 @@
         End Set
     End Property
 
-    Private _ProcentajeEmpresa As Integer
+    Private _PorcentajeEmpresa As Integer
     Public Property PorcentajeEmpresa() As Integer
         Get
-            Return _ProcentajeEmpresa
+            Return _PorcentajeEmpresa
         End Get
         Set(ByVal value As Integer)
-            _ProcentajeEmpresa = value
+            _PorcentajeEmpresa = value
         End Set
     End Property
 
@@ -1108,117 +1108,117 @@
     End Property
 
     Public Sub New()
-        OID = 0
-        Empresa = 0
-        Sistema = 0
-        DBMagnus = ""
-        usuarioActivo = 0
-        autonumerico = ""
-        server1 = ""
-        usuario = ""
-        manejaRenta = 0
-        manejaObras = 0
-        manejaTransportes = 0
-        pathCer = ""
-        pathXml = ""
-        rutaReportes = ""
-        Lotes = 0
-        manejaDesMax = 0
-        desMax = 0
-        desfinMax = 0
-        mostrarExistencia = 0
-        edicionMoneda = 0
-        edicionTC = 0
-        edicionImpuesto = 0
-        existenciaBruta = 0
-        desXP = 0
-        impXP = 0
-        numeroDecimalesC = 0
-        numeroDecimalesV = 0
-        preview = 0
-        DesgloseDesc = False
-        AgrupaTallasFactura = False
-        FormaPago = False
-        FoliosConta = False
-        ManejarFiscal = False
-        RutaEtiqueta = ""
-        ReporteTraspaso = ""
-        MostrarImagen = False
-        Simac = ""
-        NDecimalesCosto = ""
-        rutaImagenes = ""
-        ReporteEmbarque = ""
-        ReporteLiquidacion nvarchar(100),
-	ReporteFaltante nvarchar(100),
-    PrecioOferta nvarchar(100),
-	ProductoCompras nvarchar(100),
-    IdConceptoSalidaEnsamble int,
-    IdConceptoEntradaKIT Int,
-    ManejaViaje bit,
-    ReporteViaje nvarchar(100),
-    PorSucursal bit,
-    ReporteGastoEmbarque nvarchar(100),
-    ElegirFormato bit,
-    AutoAsignarClave bit,
-    GeneraEmbarque bit,
-    ServicioFlete nvarchar(100),
-    ServicioSeguro nvarchar(100),
-	IdEsquemaFlete Int,
-    EnvioCorreo int,
-    AutorizarPagos bit,
-    IdProductoEstimacion nvarchar(100),
-	IdProductoEstimacionSub nvarchar(100),
-    ReporteHojaGeneradora nvarchar(100),
-	ReporteEstimacion nvarchar(100),
-    ReporteCaratulaEstimacion nvarchar(100),
-	ValidacionCredito Int,
-    PeriodoMaxMin int,
-    NumLiquidacion Int,
-    ConceptosLiquidaciones nvarchar(100),
-	CuentasComplemento bit,
-    DecimalesEntrada int,
-    DecimalesSalida Int,
-    ServicioEmbarque nvarchar(100),
-	RevisionPagos bit,
-    RptEnlaces nvarchar(100),
-	AutonumeracionLotes bit,
-    CantidadTotalLote bit,
-    EditarComision bit,
-    PorcentajeEmpresa int,
-    PorcentajeOperador Int,
-    AgruparClavesIguales bit,
-    manejaMovil Int,
-    nivelAlmacen int,
-    EnlaceVarios bit,
-    ReporteOEmbarques nvarchar(100),
-	ReporteAutorizaciones nvarchar(100),
-    ReportePeriodoAutorizaciones nvarchar(100),
-	ReportePeriodoEntregasEmbarque nvarchar(100),
-    envioProduccion bit,
-    ReporteInventario nvarchar(100),
-    EquivalenciaClientes bit,
-    ReporteLotesDocumento nvarchar(100),
-    controLotes bit,
-    rptPendientesPorSurtir nvarchar(100),
-    ManejaDescuentoComision bit,
-    EditarTipoPago bit,
-    ServicioFleteFactura bit,
-    ProdServicioFlete nvarchar(100),
-    LecturaPickingIncrementoUnidad bit,
-    ContabilizaNivelCuatro bit,
-    incluirDescuentoPrecioXML bit,
-    CentroCostosCompras bit,
-    enlazarParcialPicking bit,
-    equivalenciasDuplicadas bit,
-    detallarLotesSIMAC bit,
-    decimalesPrecio Int,
-    ventaSoloListaPrecio bit,
-    envioPedidosSimac Int,
-    ClientePedido nvarchar(100),
-	ReporteLiquidacionMovil nvarchar(100),
-    ReporteAdeudoRetornable nvarchar(100),
-	ReporteListaPrecios nvarchar(100),
-    cantidadPorPrecio bit
+        Me._OID = 0
+        Me._Empresa = 0
+        Me._Sistema = 0
+        Me._DBMagnus = ""
+        Me._usuarioActivo = 0
+        Me._autonumerico = ""
+        Me._server1 = ""
+        Me._usuario = ""
+        Me._manejaRenta = 0
+        Me._manejaObras = 0
+        Me._manejaTransportes = 0
+        Me._pathCer = ""
+        Me._pathXml = ""
+        Me._rutaReportes = ""
+        Me._Lotes = 0
+        Me._manejaDesMax = 0
+        Me._desMax = 0
+        Me._desfinMax = 0
+        Me._mostrarExistencia = 0
+        Me._edicionMoneda = 0
+        Me._edicionTC = 0
+        Me._edicionImpuesto = 0
+        Me._existenciaBruta = 0
+        Me._desXP = 0
+        Me._impXP = 0
+        Me._numeroDecimalesC = 0
+        Me._numeroDecimalesV = 0
+        Me._preview = 0
+        Me._DesgloseDesc = False
+        Me._AgrupaTallasFactura = False
+        Me._FormaPago = False
+        Me._FoliosConta = False
+        Me._ManejarFiscal = False
+        Me._RutaEtiqueta = ""
+        Me._ReporteTraspaso = ""
+        Me._MostrarImagen = False
+        Me._Simac = ""
+        Me._NDecimalesCosto = ""
+        Me._rutaImagenes = ""
+        Me._ReporteEmbarque = ""
+        Me._ReporteLiquidacion = ""
+        Me._ReporteFaltante = ""
+        Me._PrecioOferta = ""
+        Me._ProductoCompras = ""
+        Me._IdConceptoSalidaEnsamble = 0
+        Me._IdConceptoEntradaKIT = 0
+        Me._ManejaViaje = False
+        Me._ReporteViaje = ""
+        Me._PorSucursal = False
+        Me._ReporteGastoEmbarque = ""
+        Me._ElegirFormato = False
+        Me._AutoAsignarClave = False
+        Me._GeneraEmbarque = False
+        Me._ServicioFlete = ""
+        Me._ServicioSeguro = ""
+        Me._IdEsquemaFlete = 0
+        Me._EnvioCorreo = 0
+        Me._AutorizarPagos = False
+        Me._IdProductoEstimacion = ""
+        Me._IdProductoEstimacionSub = ""
+        Me._ReporteHojaGeneradora = ""
+        Me._ReporteEstimacion = ""
+        Me._ReporteCaratulaEstimacion = ""
+        Me._ValidacionCredito = 0
+        Me._PeriodoMaxMin = 0
+        Me._NumLiquidacion = 0
+        Me._ConceptosLiquidaciones = ""
+        Me._CuentasComplemento = False
+        Me._DecimalesEntrada = 0
+        Me._DecimalesSalida = 0
+        Me._ServicioEmbarque = ""
+        Me._RevisionPagos = False
+        Me._RptEnlaces = ""
+        Me._AutonumeracionLotes = False
+        Me._CantidadTotalLote = False
+        Me._EditarComision = False
+        Me._PorcentajeEmpresa = 0
+        Me._PorcentajeOperador = 0
+        Me._AgruparClavesIguales = False
+        Me._manejaMovil = 0
+        Me._nivelAlmacen = 0
+        Me._EnlaceVarios = False
+        Me._ReporteOEmbarques = ""
+        Me._ReporteAutorizaciones = ""
+        Me._ReportePeriodoAutorizaciones = ""
+        Me._ReportePeriodoEntregasEmbarque = ""
+        Me._envioProduccion = False
+        Me._ReporteInventario = ""
+        Me._EquivalenciaClientes = False
+        Me._ReporteLotesDocumento = ""
+        Me._controLotes = False
+        Me._rptPendientesPorSurtir = ""
+        Me._ManejaDescuentoComision = False
+        Me._EditarTipoPago = False
+        Me._ServicioFleteFactura = False
+        Me._ProdServicioFlete = ""
+        Me._LecturaPickingIncrementoUnidad = False
+        Me._ContabilizaNivelCuatro = False
+        Me._incluirDescuentoPrecioXML = False
+        Me._CentroCostosCompras = False
+        Me._enlazarParcialPicking = False
+        Me._equivalenciasDuplicadas = False
+        Me._detallarLotesSIMAC = False
+        Me._decimalesPrecio = 0
+        Me._ventaSoloListaPrecio = False
+        Me._envioPedidosSimac = 0
+        Me._ClientePedido = ""
+        Me._ReporteLiquidacionMovil = ""
+        Me._ReporteAdeudoRetornable = ""
+        Me._ReporteListaPrecios = ""
+        Me._cantidadPorPrecio = False
     End Sub
 
 

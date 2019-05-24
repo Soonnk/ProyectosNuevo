@@ -20,7 +20,22 @@
     Private Sub ConsultarMagnusERP_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         Cargar()
     End Sub
-
+    Public Sub ConsultarMagnusERP()
+        Try
+            Dim row As DataRow = GridView1.GetDataRow(GridView1.FocusedRowHandle)
+            Dim frmEditar As New AgregarMagnusERP
+            If Not row Is Nothing Then
+                frmEditar.modo = AgregarMagnusERP.tipo.Editar
+                frmEditar.Text = "Editar Magnus ERP"
+                frmEditar.consultarMagnusERP(GridView1.GetFocusedDataRow)
+                frmEditar.MdiParent = mdiPrincipal
+                frmEditar.Show()
+                Cargar()
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
     Public Sub Cargar()
         Dim dt As New DataTable
         Try
@@ -30,5 +45,7 @@
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+
+
 
 End Class

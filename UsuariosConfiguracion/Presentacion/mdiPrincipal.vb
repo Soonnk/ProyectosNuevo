@@ -183,13 +183,17 @@
                             frmEditar.modo = ConsultarSistemas.tipo.Editar
                             frmEditar = frmActivo
                             frmEditar.ConsultarSistema()
+                        Case "ConsultarMagnusERP"
+                            Dim frmEditar As New ConsultarMagnusERP
+                            frmEditar.modo = ConsultarMagnusERP.tipo.Editar
+                            frmEditar = frmActivo
+                            frmEditar.ConsultarMagnusERP()
                         Case "ConsultarMagnusCONTA"
                             Dim frmEditar As New ConsultarMagnusCONTA
                             frmEditar.modo = ConsultarMagnusCONTA.tipo.Editar
                             frmEditar = frmActivo
                             frmEditar.ConsultarMagnusCONTA()
                         Case "ConsultarSIMAC"
-
                             Dim frmEditar As New ConsultarSIMAC
                             frmEditar.modo = ConsultarSIMAC.tipo.Editar
                             frmEditar = frmActivo
